@@ -27,7 +27,7 @@ Web Console built by (nia) <a href="http://mhvtl-community-forums.966029.n3.nabb
 <br>
 <?php
 $output = `cat version`;
-echo "<pre><FONT COLOR=green ><b>Console Version $output</b></FONT></pre>";
+echo "<pre><FONT COLOR=green size=3 ><b>Console Version $output</b></FONT></pre>";
 ?>
 <br>
 <th><a href="http://www.gnu.org/licenses/gpl-2.0.html">License: GPL v2</a></th>

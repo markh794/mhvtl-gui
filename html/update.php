@@ -44,7 +44,7 @@ getID:function(el)
 </form>
 </td>
 <td>
-<font color=blue size=2><b> *** Internet Access Required </b></font>
+<font color=blue size=2><b> *** GIT + Internet Access Required </b></font>
 </td>
 </table>
 

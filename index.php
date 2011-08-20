@@ -34,7 +34,7 @@ echo "<pre><FONT COLOR=green ><b>Console Version $output</b></FONT></pre>";
 
 
 <?php
-$output = shell_exec('scripts/check_before_use.sh testphp');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
+/* $output = shell_exec('scripts/check_before_use.sh testphp');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>"; */
 $output = shell_exec('scripts/check_before_use.sh testsudo');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 $output = shell_exec('scripts/check_before_use.sh testmhvtl');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 $output = shell_exec('scripts/check_before_use.sh testlsscsi');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
@@ -43,10 +43,10 @@ $output = shell_exec('scripts/check_before_use.sh testmtx');echo "<pre><FONT COL
 $output = shell_exec('scripts/check_before_use.sh testsysstat');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 $output = shell_exec('scripts/check_before_use.sh testgit');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 $output = shell_exec('scripts/check_before_use.sh teststgt');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
+$output = shell_exec('scripts/check_before_use.sh testscst');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 
-$output = shell_exec('CHECK=`cat /tmp/test.required.components.* | grep -v "PASS" | sort -u`; if [ -z "$CHECK" ]; then echo "<pre><br><FONT COLOR=#00FF00>PASS: </FONT><FONT COLOR=#0000FF>All Required Components Verified </FONT></pre><FORM ACTION=go.php><INPUT TYPE=SUBMIT VALUE=Next></FORM>";else echo "<pre><FONT COLOR=#FF0000>FAILED: Sorry, You must pass all required checks before proceeding ... </FONT></pre>";fi');
+$output = shell_exec('CHECK=`cat /tmp/test.required.components.* | grep -v "PASS" | sort -u`; if [ -z "$CHECK" ]; then echo "<pre><br><FONT COLOR=#00FF00>PASS: </FONT><FONT COLOR=#0000FF>Required Components Verified </FONT></pre><br><FORM ACTION=go.php><INPUT TYPE=SUBMIT VALUE=Continue></FORM>";else echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></FONT></pre>";fi');
 echo "<pre>$output</pre>";
-
 ?>
 </table>
 

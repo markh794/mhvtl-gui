@@ -137,16 +137,6 @@ $output = shell_exec('CHECKD=`sudo -u root -S ../scripts/host_mon.sh disk 95`; i
 echo "<pre>$output</pre>";
 ?>
 
-<?php
-$output = shell_exec('CHECKU=`sudo -u root -S ../scripts/check_update.sh| grep -v "MHVTL is up-to-date"`; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/warning.png" /> $CHECKU" ; fi');
-echo "<pre>$output</pre>";
-?>
-
-<?php
-$output = shell_exec('CHECKU=`sudo -u root -S ../scripts/check_gui.update.sh| grep -v "MHVTL-GUI is up-to-date"` ; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/warning.png" /> $CHECKU" ; fi');
-echo "<pre>$output</pre>";
-?>
-
 <table>
 <div style="overflow:auto; height:100px;width:640px;">
 <?php

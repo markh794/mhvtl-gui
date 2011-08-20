@@ -101,11 +101,18 @@ echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 </div>
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<?php
+$output = shell_exec('CHECKU=`sudo -u root -S ../scripts/check_update.sh| grep -v "MHVTL is up-to-date"`; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/animated_alert.gif" /> $CHECKU" ; fi');
+echo "<pre>$output</pre>";
+?>
+
+<?php
+$output = shell_exec('CHECKU=`sudo -u root -S ../scripts/check_gui.update.sh| grep -v "MHVTL-GUI is up-to-date"` ; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/animated_alert.gif" /> $CHECKU" ; fi');
+echo "<pre>$output</pre>";
+?>
+
+
 <br>
 
 <?php echo "<pre><b><FONT size=2><a href='http://sites.google.com/site/linuxvtl2/'>MHVTL</a> - <a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
