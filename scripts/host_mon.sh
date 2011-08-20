@@ -1,0 +1,16 @@
+
+disk()
+{
+CHECK=`df -k /opt/mhvtl | cut -d "%" -f1 | awk '{print $NF}'| egrep ^[0-9]`
+if [ $CHECK -gt $2 ] ; then
+echo $CHECK
+fi
+}
+
+
+
+$1
+if [ -z "$1" ] ; then
+exit 0
+fi
+

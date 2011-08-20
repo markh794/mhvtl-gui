@@ -1,0 +1,56 @@
+body {
+  background-color:#eeeeee;
+  font-size: 12px;
+  font-family: bold small arial, verdana,'trebuchet ms',helvetica, sans-serif;
+  color:#000000;  
+  padding:2px 5px;
+  margin:1px;
+  border:1px;
+  text-align: left;
+  cursor:default;
+  zoom: 100%;
+text-decoration:none;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+.sameSize {
+width:100%;
+height:120%;
+padding:0%;
+margin:0%;
+text-align: center;
+font: bold small arial, verdana,'trebuchet ms',helvetica,sans-serif;
+display: inline;
+text-decoration:none;
+}
+
+.sameLook {
+width:100%;
+height:120%;
+padding:0%;
+margin:0%;
+text-align: left;
+font-size: 12px;
+font: bold small arial, verdana,'trebuchet ms',helvetica,sans-serif;
+display: inline;
+text-decoration:none;
+}
+
+
+#load{
+position:absolute;
+top:50%;
+left:25%;
+text-align:center;
+line-height:150px;
+font-family:"Trebuchet MS", verdana, arial,tahoma;
+font-size:100%;
+}
+
+
+.set_width { width:360px; }

@@ -1,0 +1,21 @@
+
+
+start()
+{
+sleep 10
+if [ -f /usr/sbin/tgtd ]; then 
+/usr/sbin/tgtd -d 1
+else 
+../stgt.git/usr/tgtd -d 1
+fi
+}
+
+stop()
+{
+echo Stopping STGT ...
+pkill -9 "tgtd"
+}
+
+if [ -f ../ENABLE_TGTD_SCSI_TARGET ]; then
+$1
+fi

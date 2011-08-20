@@ -1,0 +1,6 @@
+mhvtl.git
+mhvtl-gui.git
+stgt.git
+ENABLE_TGTD_SCSI_TARGET
+ENABLE_SCST_SCSI_TARGET
+STGT_TARGET_CONF
