@@ -37,7 +37,7 @@ echo "<pre><b><FONT COLOR=#FF0000>Warrning: This will permanently remove configu
 $cmd = `sudo -u root -S ../scripts/build_html_opts.sh libid`;
 echo "Select Library ID Number : $cmd<a href=# onClick=window.open('find.device.id.php', 'Deviceid', 'width = 600, height = 400');>Search</a>";
 echo "<br>";
-echo "Removal all tape media : <select name=kmed MAXLENGTH=2 type=text ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR=red>*</FONT></b>";
+echo "Remove all tape media : <select name=kmed MAXLENGTH=2 type=text ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR=red>*</FONT></b>";
 echo "<br>";
 echo "<table border=0 >";
 echo "<tr>";
