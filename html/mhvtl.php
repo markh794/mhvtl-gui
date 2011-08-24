@@ -5,7 +5,7 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 <frameset cols="215,*" frameborder="2" border="2" framespacing="0" >
 <frame src="html_contents.php" name="top" noresize scrolling=auto >
-<frame src="frame_a.php" name="bottom" noresize scrolling=auto >
+<frame src="frame_a.php" name="showframe" noresize scrolling=auto >
   <noframes>
     Sorry, your browser does not handle frames!
   </noframes>
