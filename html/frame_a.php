@@ -13,9 +13,10 @@
 </td>
 </tr>
 
+
 <?php
-$output = `uname -snrvp`;
-echo "<pre><b>$output</b></pre>";
+$output = `cat ../version`;
+echo "<pre><b><FONT COLOR=purple>Web Console Build: $output</FONT></b></pre>";
 ?>
 <br>
 
@@ -87,12 +88,18 @@ echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=
 </td>
 
 </table>
-<br>
+
 <!--
 <img src="images/libr_img.gif" ALIGN=top >
 -->
-<div style="overflow:auto;height:225px;width:570px;">
-<br>
+
+<?php
+$output = `uname -snrvp`;
+echo "<pre><b>$output</b></pre>";
+?>
+
+
+<div style="overflow:auto;height:200px;width:570px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "<img src=images/gear_red.png ALIGN=top> Virtual Tape Devices :<br>$DEVICES"; fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
@@ -100,7 +107,6 @@ echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 <Select>
 </div>
 
-<br>
 
 <?php
 $output = shell_exec('CHECKU=`sudo -u root -S ../scripts/check_update.sh| grep -v "MHVTL is up-to-date"`; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/animated_alert.gif" /> $CHECKU" ; fi');
@@ -111,9 +117,6 @@ echo "<pre>$output</pre>";
 $output = shell_exec('CHECKU=`sudo -u root -S ../scripts/check_gui.update.sh| grep -v "MHVTL-GUI is up-to-date"` ; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/animated_alert.gif" /> $CHECKU" ; fi');
 echo "<pre>$output</pre>";
 ?>
-
-
-<br>
 
 <?php echo "<pre><b><FONT size=2><a href='http://sites.google.com/site/linuxvtl2/'>MHVTL</a> - <a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 

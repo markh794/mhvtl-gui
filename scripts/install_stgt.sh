@@ -20,7 +20,7 @@ cd ../html
 fi
 
 cd ../stgt.git
-echo Current stgt release already loaded v.`usr/tgtadm -V`
+echo Current stgt release already loaded v.`./usr/tgtadm -V`
 echo Updating from git anyway ...
 echo "Executing git pull http://git.kernel.org/pub/scm/linux/kernel/git/tomo/tgt.git ..."
 sudo -u root -S git pull http://git.kernel.org/pub/scm/linux/kernel/git/tomo/tgt.git > /dev/null 2>&1

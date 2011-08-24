@@ -30,6 +30,15 @@ echo "<pre><b>Support :</b></pre>";
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe">MHVTL Community Forum
 </td>
 </tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='about.php'" target="showframe">About MHVTL & Console
+</td>
+</tr>
+
+
+
 </table>
 
 

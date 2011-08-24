@@ -12,8 +12,9 @@
 
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2');
-echo "<pre><b><FONT COLOR=purple>Release$output</FONT></b></pre>";
+echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 ?>
+
 <br>
 
 <table border="2" align="center" valign="middle" width="65%" height="60%" >
@@ -66,23 +67,11 @@ echo "<pre><b><FONT COLOR=purple>Release$output</FONT></b></pre>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" About " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='about.php'" target="showframe">
-</td>
-</tr>
-
-<tr>
-<td>
 <INPUT TYPE="button" VALUE="Exit" class="sameSize" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='logout.php'" target="showframe">
 </td>
 </tr>
 
 </table>
-
-<br>
-<?php
-$output = `cat ../version`;
-echo "<pre><b><FONT COLOR=#0000FF>Console Version<br>$output</FONT></b></pre>";
-?>
 
 </center>
 
