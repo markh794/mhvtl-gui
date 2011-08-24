@@ -11,7 +11,7 @@
 <tr><td align=center valign=middle><img src="images/mhvtl.png" ></td></tr>
 
 <?php
-$output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2');
+$output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
 echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 ?>
 

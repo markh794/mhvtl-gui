@@ -17,9 +17,9 @@ VERSION=`echo $VER.$REL`
 EXTRAVERSION=`sudo -u root -S git show-ref --head --abbrev|head -1|awk '{print $1}'`
 NEW_VERSION=`echo $VERSION-git-$EXTRAVERSION`
 INSTALLED_VERSION=`sudo -u root -S vtlcmd -V|awk '{print $2}'`
-
+DISPLAY_INSTALLED_VERSION=`sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| awk '{print $1}'`
 if [ "$NEW_VERSION" = "$INSTALLED_VERSION" ] ; then
-echo "<font color=green>MHVTL is up-to-date : <font color=blue>$INSTALLED_VERSION</font>"
+echo "<font color=green>MHVTL is up-to-date : <font color=blue>    $DISPLAY_INSTALLED_VERSION</font>"
 exit 0
 else
 echo "<font color=red>MHVTL Updates Available</font> : <font color=blue>$NEW_VERSION</font>"
