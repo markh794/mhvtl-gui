@@ -19,9 +19,9 @@ NEW_VERSION=`echo $VERSION-git-$EXTRAVERSION`
 INSTALLED_VERSION=`sudo -u root -S vtlcmd -V|awk '{print $2}'`
 
 if [ "$NEW_VERSION" = "$INSTALLED_VERSION" ] ; then
-echo "<font color=green>MHVTL is up-to-date</font>"
+echo "<font color=green>MHVTL is up-to-date : <font color=blue>$INSTALLED_VERSION</font>"
 exit 0
 else
-echo "<font color=red>MHVTL Updates Available</font> : <font color=blue>V.$NEW_VERSION</font>"
+echo "<font color=red>MHVTL Updates Available</font> : <font color=blue>$NEW_VERSION</font>"
 exit 1
 fi
