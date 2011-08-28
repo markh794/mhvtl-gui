@@ -1,3 +1,4 @@
+touch /tmp/mhvtl.last.update.check
 
 if [ ! -d ../mhvtl.git ]; then
 mkdir -p ../mhvtl.git

@@ -1,3 +1,4 @@
+touch /tmp/mhvtl.last.update.check
 
 if [ ! -d ../.git ]; then
 cd ../
@@ -8,7 +9,6 @@ fi
 
 cd ../
 git pull http://github.com/niadev67/mhvtl-gui.git > /dev/null 2>&1
-
 RELEASE=`cat version | cut -d "-" -f1`
 ONLINE_VERSION=`sudo -u root -S git log --pretty=oneline | head -1 | cut -c1-7`
 INSTALLED_VERSION=`sudo -u root -S cat version | cut -d "-" -f2`
