@@ -78,11 +78,11 @@ getID:function(el)
 <td>
 <?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
 {
-echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=scsi_target.php><FONT COLOR=#347C17 size=2> Enabled </FONT></b></a>";
+echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=scsi_target.php><FONT COLOR=#347C17 size=2> ON </FONT></b></a>";
 }
 else
 {
-echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=scsi_target.php><FONT COLOR=#FF0000 size=2> Disabled </FONT></b></a>";
+echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=scsi_target.php><FONT COLOR=#FF0000 size=2> OFF </FONT></b></a>";
 }
 ?>
 </td>
@@ -106,6 +106,14 @@ echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
 <Select>
 </div>
+
+
+<?php
+if (!file_exists('/tmp/mhvtl.last.update.check'))
+{
+$output = shell_exec('touch /tmp/mhvtl.last.update.check');
+}
+?>
 
 
 <?php
