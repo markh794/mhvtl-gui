@@ -1,4 +1,4 @@
-touch /tmp/mhvtl.last.update.check
+touch /tmp/mhvtl-gui.last.update.check
 
 if [ ! -d ../.git ]; then
 cd ../
