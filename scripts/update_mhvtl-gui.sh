@@ -1,26 +1,24 @@
 #!/bin/sh
 
-if [ ! -d ../mhvtl-gui.git ]; then
-mkdir -p ../mhvtl-gui.git
-cd ../mhvtl-gui.git
+if [ ! -d ../.git ]; then
+cd ../
 git init
 git pull http://github.com/niadev67/mhvtl-gui.git
-cd ../html
+cd html
 fi
+
 
 ../scripts/check_gui.update.sh
 if [ $? -eq 1 ] ; then
 echo "Updating MHVTL GUI ..."
-cd ../mhvtl-gui.git
-cp -Rf * ../
 if [ $? -eq 0 ] ; then
-echo Update Successful ...
+echo Update Successful $? ...
+cd ../
 ONLINE_VERSION=`sudo -u root -S git log --pretty=oneline | head -1 | cut -c1-7`
-CURRENT_RELEASE=`sudo -u root -S cat ../version | cut -d "-" -f1`
-echo $CURRENT_RELEASE-$ONLINE_VERSION >../version
-cd ../html
-echo MHVTL-GUI is now up-to-date with `sudo -u root -S cat ../version`
+CURRENT_RELEASE=`sudo -u root -S cat version | cut -d "-" -f1`
+echo $CURRENT_RELEASE-$ONLINE_VERSION >version
+echo MHVTL-GUI is now up-to-date with `sudo -u root -S cat version`
 else
-echo Update Failed ..
+echo Update Failed $?
 fi
 fi

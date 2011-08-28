@@ -1,20 +1,19 @@
 
-if [ ! -d ../mhvtl-gui.git ]; then
-mkdir -p ../mhvtl-gui.git
-cd ../mhvtl-gui.git
+if [ ! -d ../.git ]; then
+cd ../
 git init
 git pull http://github.com/niadev67/mhvtl-gui.git
-cd ../html
+cd html
 fi
 
-cd ../mhvtl-gui.git
+cd ../
 git pull http://github.com/niadev67/mhvtl-gui.git > /dev/null 2>&1
 
-RELEASE=`cat ../version | cut -d "-" -f1`
+RELEASE=`cat version | cut -d "-" -f1`
 ONLINE_VERSION=`sudo -u root -S git log --pretty=oneline | head -1 | cut -c1-7`
-INSTALLED_VERSION=`sudo -u root -S cat ../version | cut -d "-" -f2`
+INSTALLED_VERSION=`sudo -u root -S cat version | cut -d "-" -f2`
 
-cd ../html
+cd html
 
 if [ "$ONLINE_VERSION" = "$INSTALLED_VERSION" ] ; then
 echo "<font color=green>MHVTL-GUI is up-to-date : <font color=blue>$RELEASE-$INSTALLED_VERSION </font>"
