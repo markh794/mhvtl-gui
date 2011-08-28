@@ -17,11 +17,12 @@ echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 
 <br>
 
-<table border="2" align="center" valign="middle" width="65%" height="60%" >
+
+<table border="1">
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="  Control Center  " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
+<INPUT TYPE="button" VALUE="  Control Center  " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
 </td>
 </tr>
 
@@ -67,7 +68,7 @@ echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="Exit" class="sameSize" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='logout.php'" target="showframe">
+<INPUT TYPE="button" VALUE="Exit" class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='logout.php'" target="showframe">
 </td>
 </tr>
 

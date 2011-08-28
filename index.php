@@ -3,11 +3,12 @@
 <LINK REL="SHORTCUT ICON" HREF="favicon.ico">
 <link href="html/styles.css" rel="stylesheet" type="text/css">
 <body>
+<center>
 <hr width="100%" size=10 color="blue">
 
 <tr>
 <td>
-<img src="html/images/mhvtl.png" ALIGN="center" ><b><FONT COLOR=purple size=4>Linux Virtual Tape Library System</FONT></b>
+<img src="html/images/mhvtl.png" ALIGN="center" ><br><b><FONT COLOR=purple size=5>Linux Virtual Tape Library System</FONT></b>
 <br><a href="http://www.gnu.org/licenses/gpl-2.0.html">License: GPL v2</a>
 </td>
 </tr>
@@ -26,10 +27,10 @@ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.
 
 <?php
 $output = `cat version`;
-echo "<pre><FONT COLOR=green ><b>Console Version $output</b></FONT></pre>";
+echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></center></pre>";
 ?>
 
-<FONT SIZE=3 COLOR=#FF00FF ><b> Verifying all required components </b></FONT>
+<FONT SIZE=3 COLOR=#FF00FF ><center><b> Verifying all required components </b></center></FONT>
 <br>
 
 
@@ -47,12 +48,12 @@ $output = shell_exec('scripts/check_before_use.sh teststgt');echo "<pre><FONT CO
 $output = shell_exec('scripts/check_before_use.sh testscst');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 */
 
-$output = shell_exec('CHECK=`cat /tmp/test.required.components.* | grep -v "PASS" | sort -u`; if [ -z "$CHECK" ]; then echo "<pre><br><FONT COLOR=#00FF00>PASS: </FONT><FONT COLOR=#0000FF>Required Components Verified </FONT></pre><br><FORM ACTION=go.php><INPUT TYPE=SUBMIT VALUE=Continue></FORM>";else echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></FONT></pre>";fi');
+$login = include 'go.php';
+$output = shell_exec('CHECK=`cat /tmp/test.required.components.* | grep -v "PASS" | sort -u`; if [ -z "$CHECK" ]; then echo $login ;else echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></FONT></pre>";fi');
 echo "<pre>$output</pre>";
 ?>
 </table>
-
 <?php echo "<pre><b><FONT size=2><a href='http://sites.google.com/site/linuxvtl2/'>MHVTL</a> - <a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
-
+</center>
 </body>
 </html>

@@ -16,7 +16,7 @@
 
 <?php
 $output = `cat ../version`;
-echo "<pre><b><FONT COLOR=purple>Web Console Build: $output</FONT></b></pre>";
+echo "<pre><b><FONT COLOR=green>Web Console Build: $output</FONT></b></pre>";
 ?>
 <br>
 
@@ -39,7 +39,7 @@ getID:function(el)
 
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table border="2">
+<table border="1">
 
 <td>
 <form action="confirm.start_mhvtl.php" method="post" onsubmit="return ray.ajax()">
@@ -55,7 +55,7 @@ getID:function(el)
 
 <td>
 <form action="devices.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Virtual Devices ">
+<input TYPE="submit" class="sameSize" style="color: #800080" value=" Virtual Devices ">
 </form>
 </td>
 
@@ -78,11 +78,11 @@ getID:function(el)
 <td>
 <?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
 {
-echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> SCSI Target : </><a href=scsi_target.php><FONT COLOR=#347C17 size=2> Enabled </FONT></b></a>";
+echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=scsi_target.php><FONT COLOR=#347C17 size=2> Enabled </FONT></b></a>";
 }
 else
 {
-echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> SCSI Target : </><a href=scsi_target.php><FONT COLOR=#FF0000 size=2> Disabled </FONT></b></a>";
+echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=scsi_target.php><FONT COLOR=#FF0000 size=2> Disabled </FONT></b></a>";
 }
 ?>
 </td>

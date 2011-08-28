@@ -110,7 +110,7 @@ echo "<pre><b>Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off Library/Drives
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off Library/Drives
 </td>
 </tr>
 

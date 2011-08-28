@@ -24,7 +24,7 @@ LUN=1
 lsscsi -g | egrep "mediumx|tape" | awk '{print $2,$NF}' | while read type dev; do
 if [ "$type" = "mediumx" ] ; then
 echo "---------------------------------------"
-echo "Creating Target $IQN:mhvtl:stgt:1"
+echo "Creating Target for $type $dev"
 TARGET=$((TARGET+1))
 LUN=1
 echo TARGET $TARGET $IQN:mhvtl:stgt:$TARGET

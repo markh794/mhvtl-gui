@@ -29,11 +29,11 @@ echo "<pre><b><FONT COLOR=#000000>Remove all exsiting media = $VAR2 </FONT></b><
 ?>
 <br>
 
-<table border="0" >
+<table border="1" >
 
 <tr>
 <td>
-<INPUT TYPE=SUBMIT VALUE="Cancel" class="sameSize" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
+<INPUT TYPE=SUBMIT VALUE=" Cancel " class="sameSize" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
 </td>
 </tr>
 

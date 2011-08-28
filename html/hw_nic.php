@@ -38,7 +38,7 @@ getID:function(el)
 
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table border="2">
+<table border="1">
 
 <td>
 <form action="hw_cpu.php" method="post" onsubmit="return ray.ajax()">

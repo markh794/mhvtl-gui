@@ -21,13 +21,13 @@ echo "<pre><b>Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='form.setup.complete.php'" target="showframe"> Create New Tape Library and Drives
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.complete.php'" target="showframe"> Create New Tape Library and Drives
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='form.remove.library.php'" target="showframe"> Remove Existing Tape Library and Drives
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.library.php'" target="showframe"> Remove Existing Tape Library and Drives
 </td>
 </tr>
 
@@ -60,7 +60,7 @@ echo "<pre><b>Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Reset All Configuration
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Reset All Configuration
 </td>
 </tr>
 

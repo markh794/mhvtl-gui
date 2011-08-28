@@ -17,7 +17,7 @@ echo "<pre><b>Select configuration type :</b></pre>";
 ?>
 <br>
 
-<table border="0" align="left" valign="middle" >
+<table border="1" align="left" valign="middle" >
 
 <tr>
 <td>
@@ -38,7 +38,7 @@ echo "<pre><b>Select configuration type :</b></pre>";
 
 <tr>
 <td>
-<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT class="sameSize" style="color: #000000" VALUE="Return"> </FORM>
 </td>
 </tr>
 

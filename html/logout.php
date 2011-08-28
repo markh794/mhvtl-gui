@@ -22,7 +22,7 @@ echo "<pre><b>Exit :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="../go.php" name="out" input class="sameLook" style="color: #FF0000" target="_top"> Exit Now</a>
+<img src="images/tab_right.png" ALIGN="left" ><a href="../index.php" name="out" input class="sameLook" style="color: #FF0000" target="_top"> Exit Now</a>
 </td>
 </tr>
 

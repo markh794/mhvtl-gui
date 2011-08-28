@@ -39,15 +39,15 @@ echo "Select Library ID Number : $cmd<a href=# onClick=window.open('find.device.
 echo "<br>";
 echo "Remove all tape media : <select name=kmed MAXLENGTH=2 type=text ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR=red>*</FONT></b>";
 echo "<br>";
-echo "<table border=0 >";
+echo "<table border=1 >";
 echo "<tr>";
 echo "<td>";
-echo "<input type=submit VALUE= Continue  class=sameSize style=color: #FF0000 >";
+echo "<input type=submit VALUE=' Continue '  class=sameSize style=color: #FF0000 >";
 echo "</tr>";
 echo "</td>";
 echo "<tr>";
 echo "<td>";
-echo "<INPUT TYPE=button VALUE=Cancel class=sameSize input ONCLICK=parent.frames[1].location.href='setup.php' target=showframe>";
+echo "<INPUT TYPE=button VALUE=' Cancel ' class=sameSize input ONCLICK=parent.frames[1].location.href='setup.php' target=showframe>";
 echo "</td>";
 echo "</tr>";
 echo "</form>";

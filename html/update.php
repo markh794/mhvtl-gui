@@ -40,7 +40,7 @@ getID:function(el)
 
 <td>
 <form action="live_update.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Check for updates " >
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Check for updates  " >
 </form>
 </td>
 <td>

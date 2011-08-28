@@ -40,17 +40,19 @@ getID:function(el)
 </script>
 
 
-<table border="0" >
-<td>
-<FORM ACTION="frame_a.php"> <INPUT TYPE=SUBMIT style="color: #000000" VALUE="Return"></FORM>
-<a title="Close Window" href="Javascript:close();"><INPUT TYPE=SUBMIT style="color: #FF0000" VALUE="Close"></a>
-</td>
+<table border="1" >
 
 <td>
 <form action="activity.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" type="submit" class="sameSize" style="color: #0000FF" value=" Refresh ">
 </form>
 </td>
+
+<td>
+<FORM ACTION="frame_a.php"> <INPUT TYPE=SUBMIT style="color: #000000" VALUE="Return"></FORM>
+<a title="Close Window" href="Javascript:close();"><INPUT TYPE=SUBMIT style="color: #FF0000" VALUE="Close"></a>
+</td>
+
 
 </table>
 

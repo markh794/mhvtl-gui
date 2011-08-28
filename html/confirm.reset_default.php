@@ -28,7 +28,7 @@ echo "<pre><b><FONT COLOR=#FF0000>Warrning: This will remove all configured libr
 >>>> Remove all tape media : <select name="kmed" MAXLENGTH="2" type="text" ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR="red">*</FONT></b>
 <br>
 
-<table border="0" >
+<table border="1" >
 <tr>
 <td>
 <input type="submit" VALUE=" Continue " class="sameSize" style="color: #FF0000" >

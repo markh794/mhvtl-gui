@@ -53,7 +53,7 @@ getID:function(el)
 </script>
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table border="2">
+<table border="1">
 
 
 <td>

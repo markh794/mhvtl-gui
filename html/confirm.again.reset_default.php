@@ -26,7 +26,7 @@ echo "<pre><b><FONT COLOR=#FF0000>Please Confirm !!!! Remove all exsiting media 
 ?>
 <br>
 
-<table border="0" >
+<table border="1" >
 
 <tr>
 <td>
