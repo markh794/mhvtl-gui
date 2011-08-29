@@ -92,12 +92,10 @@ echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=
 <!--
 <img src="images/libr_img.gif" ALIGN=top >
 -->
-
 <?php
-$output = `uname -snrvp`;
+$output = `uname -snrp`;
 echo "<pre><b>$output</b></pre>";
 ?>
-
 
 <div style="overflow:auto;height:200px;width:570px;">
 <?php
@@ -137,9 +135,6 @@ $output = shell_exec('LASTCHECK=`find /tmp/mhvtl-gui.last.update.check -mtime +1
 fi');
 echo "<pre>$output</pre>";
 ?>
-
-
-<?php echo "<pre><b><FONT size=2><a href='http://sites.google.com/site/linuxvtl2/'>MHVTL</a> - <a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 
 </body>
 </html>

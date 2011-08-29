@@ -1,6 +1,6 @@
 body {
   background-color:#eeeeee;
-  font-size: 12px;
+  font-size: 100%;
   font-family: bold small arial, verdana,'trebuchet ms',helvetica, sans-serif;
   color:#000000;  
   padding:2px 5px;
@@ -8,7 +8,7 @@ body {
   border:1px;
   text-align: left;
   cursor:default;
-  zoom: 100%;
+  zoom: 90%;
 text-decoration:none;
 }
 
@@ -35,7 +35,7 @@ height:120%;
 padding:0%;
 margin:0%;
 text-align: left;
-font-size: 12px;
+font-size: 100%;
 font: bold small arial, verdana,'trebuchet ms',helvetica,sans-serif;
 display: inline;
 text-decoration:none;
