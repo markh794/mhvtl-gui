@@ -14,7 +14,7 @@
 </tr>
 
 <br>
-<a href="http://sites.google.com/site/linuxvtl2/"><b><font size=1>Developed by Mark Harvey & Community (markh794@gmail.com)<b>
+<a href="http://sites.google.com/site/linuxvtl2/"><b><font size=1>Developed by Mark Harvey & Community (markh794@gmail.com)<b></a>
 <br>
 Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.nabble.com/">mhvtl-community-forums</a>
 
@@ -33,8 +33,8 @@ echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></c
 <FONT SIZE=3 COLOR=#FF00FF ><center><b> Verifying all required components </b></center></FONT>
 <br>
 
-
 <?php
+
 /* $output = shell_exec('scripts/check_before_use.sh testphp');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>"; */
 $output = shell_exec('scripts/check_before_use.sh testsudo');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 $output = shell_exec('scripts/check_before_use.sh testmhvtl');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
@@ -48,10 +48,21 @@ $output = shell_exec('scripts/check_before_use.sh teststgt');echo "<pre><FONT CO
 $output = shell_exec('scripts/check_before_use.sh testscst');echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 */
 
-$login = include 'go.php';
-$output = shell_exec('CHECK=`cat /tmp/test.required.components.* | grep -v "PASS" | sort -u`; if [ -z "$CHECK" ]; then echo $login ;else echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></FONT></pre>";fi');
-echo "<pre>$output</pre>";
+$CMD = shell_exec('cat /tmp/test.required.components.* | grep -v "PASS" | sort -u|wc -l');
+
+if ($CMD == 0 ) 
+{
+include 'go.php' ;
+} 
+else 
+{
+echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></FONT></pre>";
+}
 ?>
+
+
+
+
 </table>
 <?php echo "<pre><b><FONT size=2><a href='http://sites.google.com/site/linuxvtl2/'>MHVTL</a> - <a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 </center>

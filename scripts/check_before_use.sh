@@ -1,10 +1,16 @@
 testmhvtl()
 {
+MAJORVER="1"
 MINRELEASE="17"
 MINVERSION="15"
-RELEASE=`sudo -u root -S vtlcmd -V| cut -d ":" -f2|cut -d "." -f2`
-VERSION=`sudo -u root -S vtlcmd -V| cut -d ":" -f2|cut -d "." -f3| cut -d"-" -f1`
-if [ $RELEASE -gt $MINRELEASE ] && [ $VERSION -gt $MINVERSION ] ; then
+_RELEASE=`sudo -u root -S vtlcmd -V| awk '{print $2}'|cut -d "-" -f1`
+MAJ=`echo $_RELEASE|awk -F. '{print $1}'`
+RELEASE=`echo $_RELEASE|awk -F. '{print $2}'`
+VERSION=`echo $_RELEASE|awk -F. '{print $3}'`
+if [ $MAJORVER -eq $MAJ ]; then # Version 1.0 is OK
+	echo '<img src="html/images/green_light.png" align=top />' PASS: MHVTL Version $MAJ.$RELEASE.$VERSION [INSTALLED]
+	echo "PASS" >/tmp/test.required.components.testmhvtl
+elif [ $RELEASE -gt $MINRELEASE ] && [ $VERSION -gt $MINVERSION ] ; then
 echo '<img src="html/images/green_light.png" align=top />' PASS: MHVTL Version $RELEASE.$VERSION [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testmhvtl
 else
