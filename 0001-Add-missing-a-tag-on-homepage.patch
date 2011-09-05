@@ -1,0 +1,26 @@
+From bc527dca26bb640b0f4eb235f19c9d0514cc464b Mon Sep 17 00:00:00 2001
+From: Mark Harvey <markh794@gmail.com>
+Date: Sun, 4 Sep 2011 12:55:44 +1000
+Subject: Add missing </a> tag on homepage.
+
+Signed-off-by: Mark Harvey <markh794@gmail.com>
+---
+ index.php |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/index.php b/index.php
+index 96aecb3..ef21408 100644
+--- a/index.php
++++ b/index.php
+@@ -14,7 +14,7 @@
+ </tr>
+ 
+ <br>
+-<a href="http://sites.google.com/site/linuxvtl2/"><b><font size=1>Developed by Mark Harvey & Community (markh794@gmail.com)<b>
++<a href="http://sites.google.com/site/linuxvtl2/"><b><font size=1>Developed by Mark Harvey & Community (markh794@gmail.com)<b></a>
+ <br>
+ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.nabble.com/">mhvtl-community-forums</a>
+ 
+-- 
+1.7.4.1
+
