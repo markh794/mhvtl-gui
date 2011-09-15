@@ -69,7 +69,7 @@ Compression enabled (ON=1 OFF=0) : <SELECT name="ce" MAXLENGTH="1" > <OPTION>1</
 Compression factor (Value 1-9) : <input name="cf" value="1" MAXLENGTH="1" type="number"><br>
 
 <hr width="100%" size=1 color="blue">
-
+<!-- Removed for now since it is no longer supported by MHVTL recent release
 <br><b>LTO DRIVE OPTIONS ONLY (Checked=Yes): <INPUT TYPE=checkbox NAME="doi" VALUE="no" > </b><br><br>
 
 READ_ONLY: <select name="ro"><option>LTO1</OPTION><option>LTO2</OPTION><OPTION>LTO3</option></select><INPUT TYPE=checkbox NAME="roc" VALUE="no"><br>
@@ -80,7 +80,7 @@ WORM:  <select name="wm"><option>LTO3</OPTION><option>LTO4</OPTION><OPTION>LTO5<
 WORM:  <select name="wm1"><option>LTO4</OPTION><OPTION>LTO3</option><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="wm1c" VALUE="no"><br>
 ENCRYPTION:  <select name="ecr"><option>LTO3</OPTION></option><option>LTO4</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="ecrc" VALUE="no"><br>
 ENCRYPTION:  <select name="ecr1"><option>LTO4</OPTION></option><option>LTO3</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="ecr1c" VALUE="no"><br>
-
+-->
 <hr width="100%" size=1 color="blue">
 
 <?php
