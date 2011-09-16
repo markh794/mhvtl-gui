@@ -15,7 +15,8 @@ echo "No STGT git directory found ! .. Installing new"
 mkdir -p ../stgt.git
 cd ../stgt.git
 git init
-git pull http://git.kernel.org/pub/scm/linux/kernel/git/tomo/tgt.git
+git pull http://github.com/fujita/tgt.git
+#git pull http://git.kernel.org/pub/scm/linux/kernel/git/tomo/tgt.git
 if [ $? = 0 ];then
 echo "git pull Succeeded $?"
 else
@@ -25,7 +26,8 @@ fi
 
 else
 cd ../stgt.git
-git pull http://git.kernel.org/pub/scm/linux/kernel/git/tomo/tgt.git
+git pull http://github.com/fujita/tgt.git
+#git pull http://git.kernel.org/pub/scm/linux/kernel/git/tomo/tgt.git
 if [ $? = 0 ];then
 echo "git pull Succeeded $?"
 else
@@ -41,9 +43,9 @@ if [ -z "$STGTVER_INSTALLED" ] ; then
 STGTVER_INSTALLED=0
 fi
 
-STGTVER_GIT=`usr/tgtadm -V`
+STGTVER_GIT=`../stgt.git/usr/tgtadm -V`
 if [ -z "$STGTVER_GIT" ] ; then
-STGTVER_GIT = 0
+STGTVER_GIT=0
 fi
 
 if [ $STGTVER_INSTALLED != $STGTVER_GIT ] ; then
