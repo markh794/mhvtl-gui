@@ -48,7 +48,7 @@ echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Remote Clients " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='scsi_target.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Remote Clients " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
 </td>
 </tr>
 

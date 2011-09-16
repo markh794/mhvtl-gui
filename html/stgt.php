@@ -14,7 +14,7 @@
 </tr>
 
 <?php
-echo "<pre><b>SCSI target framework (stgt) :</b></pre>";
+echo "<pre><b>Remote Clients via SCSI target framework (stgt) http://stgt.sourceforge.net :</b></pre>";
 ?>
 <br>
 
@@ -34,8 +34,6 @@ echo "<img src='images/green_light.png' align=left /><b><FONT COLOR=#000000 size
 }
 ?>
 </td>
-
-
 
 <td>
 <?php $filename = '../ENABLE_TGTD_SCSI_TARGET';if (file_exists($filename))
@@ -61,14 +59,14 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='confirm.install.standalone.stgt.php'" target="showframe"> Setup ( Standalone )<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='confirm.install.standalone.stgt.php'" target="showframe"> Install/Update Standalone<br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Install New or Upgrade<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Install/Update Regular <br>
 </td>
 </tr>
 
