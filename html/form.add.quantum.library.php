@@ -48,7 +48,7 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM
 <input TYPE=HIDDEN name="dlid" value=<?php echo $nextlid;?> READONLY type="number">
 <input TYPE=HIDDEN name="sn" value="01" READONLY type="number">
 <input TYPE=HIDDEN name="dvi" value="QUANTUM" READONLY type="text">
-Select Drive Model: <select name="pi"><OPTION>DLT-S4</option></select><b><FONT COLOR="red">*</FONT></b>
+Select Drive Model: <select name="pi"><OPTION>SuperDLT1</OPTION><OPTION>SDLT220</OPTION><OPTION>SDLT320</OPTION><OPTION>SDLT600</OPTION><OPTION>DLT-S4</option></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="prl" value="0A0A" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+60000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
@@ -62,12 +62,14 @@ Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required M
 
 <input TYPE=HIDDEN name="mt" value="SDLT4" READONLY MAXLENGTH="2" type="text">
 
+Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>SuperDLT1</option><OPTION>SDLT220</option><OPTION>SDLT320</option><OPTION>SDLT600</option><OPTION>DLT-S4</option></select><b><FONT COLOR="red">*</FONT></b><br>
+
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number"><br>
 
 
-Enter Media Barcode Prefix (Any unique 3 char only) i.e QUT : <input name="mp" value="QUT" required MAXLENGTH="3" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Barcode Prefix (Any unique 3 char only) i.e QUA : <input name="mp" value="QUA" required MAXLENGTH="3" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
 
 Enter Media Count MAX 998 : <input name="mc" value="20" min="1" max="998" required SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <hr width="100%" size=1 color="blue">

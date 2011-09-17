@@ -17,7 +17,7 @@ echo "<pre><b>Select Brand :</b></pre>";
 ?>
 <br>
 
-<table border="0" >
+<table border="1" >
 
 <tr>
 <td>

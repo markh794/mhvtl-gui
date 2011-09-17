@@ -63,7 +63,7 @@ Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required M
 
 <input TYPE=HIDDEN name="li" value=<?php echo $nextlid;?> READONLY type="number">
 
-Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>T10KA</option><OPTION>T10KB</option><OPTION>T10KC</option><OPTION>LTO4</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>T10000A</option><OPTION>T10000B</option><OPTION>T10000C</option><OPTION>HP Ultrium 4-SCSI</option><OPTION>9940B</option><OPTION>9840B</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number"><br>

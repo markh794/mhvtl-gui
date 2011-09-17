@@ -70,17 +70,37 @@ SDLT3) type=S3
 ;;
 SDLT4) type=S4
 ;;
+SuperDLT1) type=S1
+;;
+SDLT220) type=S2
+;;
+SDLT320) type=S3
+;;
+SDLT600) type=S3
+;;
+DLT-S4) type=S4
+;;
 T10KA) type=TA
 ;;
 T10KB) type=TB
 ;;
 T10KC) type=TC
 ;;
+T10000A) type=TA
+;;
+T10000B) type=TB
+;;
+T10000C) type=TC
+;;
+9840B|9940B) type=TA
+;;
 J1A) type=JA
 ;;
 E05) type=JB
 ;;
 E06) type=JB
+;;
+"HP Ultrium 4-SCSI") type=L4
 ;;
 *) type=XX
 ;;

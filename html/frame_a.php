@@ -16,7 +16,7 @@
 
 <?php
 $output = `cat ../version`;
-echo "<pre><b><FONT COLOR=green>Web Console Build: $output</FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#000000 >Console v$output</FONT></b></pre>";
 ?>
 <br>
 

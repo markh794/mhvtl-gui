@@ -12,7 +12,7 @@
 
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
-echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
+echo "<pre><FONT COLOR=purple><b>v$output</b></FONT></pre>";
 ?>
 
 <br>
@@ -73,6 +73,8 @@ echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 </tr>
 
 </table>
+
+<pre><a href="http://www.gnu.org/licenses/gpl-2.0.html" ONCLICK="parent.frames[1].location.href='http://www.gnu.org/licenses/gpl-2.0.html'" target="showframe">LICENSE GPLv2</a></pre>
 
 </center>
 
