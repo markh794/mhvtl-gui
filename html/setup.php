@@ -31,6 +31,20 @@ echo "<pre><b>Configuration :</b></pre>";
 </td>
 </tr>
 
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view_device.conf.php'" target="showframe"> View Current Device Configuration
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.options.php'" target="showframe"> View Current MHVTL Options
+</td>
+</tr>
+
 
 <tr>
 <td>
@@ -38,12 +52,6 @@ echo "<pre><b>Configuration :</b></pre>";
 </td>
 </tr>
 
-
-<tr>
-<td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view_device.conf.php'" target="showframe"> View Current Configuration
-</td>
-</tr>
 
 <tr>
 <td>

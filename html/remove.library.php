@@ -50,10 +50,10 @@ echo "<pre><FONT COLOR=#FFFFFF>$run</FONT></pre>";
 
 
 <form action="start_mhvtl.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #008000" value="Start MHVTL"></form>
+<form action="form.remove.library.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #008000" value="Remove More"></form>
 </TD>
 </TR>
 </TABLE>
-
 
 <FORM ACTION="setup.php">
 <INPUT TYPE=SUBMIT VALUE="Return">
