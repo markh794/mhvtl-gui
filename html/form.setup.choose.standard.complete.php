@@ -64,6 +64,13 @@ echo "<pre><b>Select Brand :</b></pre>";
 </tr>
 
 
+<tr>
+<td>
+<INPUT TYPE="button" VALUE=" Dell " input class="sameSize" ONCLICK="parent.frames[1].location.href='form.add.dell.library.php'" target="showframe">
+</td>
+</tr>
+
+
 
 </table>
 
