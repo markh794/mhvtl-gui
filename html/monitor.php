@@ -132,6 +132,14 @@ echo "<pre>$output</pre>";
 
 <FONT COLOR="blue"><b>Alerts & Error Messages : </b></FONT>
 
+<table>
+<td>
+<form action="view_syslog.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" SYSLOG ">
+</form>
+</td>
+</table>
+
 <?php
 $output = shell_exec('CHECKD=`sudo -u root -S ../scripts/host_mon.sh disk 95`; if [ ! -z "$CHECKD" ] ; then echo "<img src="images/alert.png" /> MHVTL Disk FS Threshold Exceeded = $CHECKD %" ; fi');
 echo "<pre>$output</pre>";
