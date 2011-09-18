@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Eject Volume :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="eject.tape.php">

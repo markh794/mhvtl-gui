@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Library Operation - Eject Volume :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 

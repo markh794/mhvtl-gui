@@ -12,10 +12,10 @@
 
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
-echo "<pre><FONT COLOR=purple><b>v$output</b></FONT></pre>";
+echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 ?>
 
-<br>
+
 
 
 <table border="1">
@@ -41,14 +41,7 @@ echo "<pre><FONT COLOR=purple><b>v$output</b></FONT></pre>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Hardware " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='hardware.php'" target="showframe">
-</td>
-</tr>
-
-
-<tr>
-<td>
-<INPUT TYPE="button" VALUE=" Remote Clients " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" iSCSI " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
 </td>
 </tr>
 
@@ -74,7 +67,11 @@ echo "<pre><FONT COLOR=purple><b>v$output</b></FONT></pre>";
 
 </table>
 
-<pre><a href="http://www.gnu.org/licenses/gpl-2.0.html" ONCLICK="parent.frames[1].location.href='http://www.gnu.org/licenses/gpl-2.0.html'" target="showframe">LICENSE GPLv2</a></pre>
+<?php
+$output = `cat ../version`;
+echo "<pre><b><FONT COLOR=green >Console<br>$output</FONT></b></pre>";
+?>
+
 
 </center>
 

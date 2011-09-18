@@ -47,7 +47,7 @@ getID:function(el)
 <?php
 echo "<pre><b>STGT Automatic Target Configuration :</b></pre>";
 ?>
-<br>
+
 
 <?php
 $filename = '../ENABLE_TGTD_SCSI_TARGET';

@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Dump Tape :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 <form method="post" action="dump.tape.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh tape`; ?>

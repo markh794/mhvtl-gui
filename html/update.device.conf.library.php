@@ -22,7 +22,7 @@ echo "<pre>$output</pre>";
 echo "<FONT COLOR=blue><b> ========= CONFIGURATION UPDATED ================ </b></FONT>";
 
 ?>
-<br>
+
 
 <hr width="100%" size=1 color="blue">
 <br>

@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Create additional media :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="vtlcmd.make.tape.php">

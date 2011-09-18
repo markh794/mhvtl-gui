@@ -13,9 +13,9 @@
 </tr>
 
 <?php
-echo "<pre><b>Library Operator Panel :</b></pre>";
+echo "<pre><b> Library Operator Panel :</b></pre>";
 ?>
-<br>
+
 
 <table border="0" ALIGN="left" >
 

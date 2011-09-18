@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Online Library :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="vtlcmd.online.php">

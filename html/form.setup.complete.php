@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Select configuration type :</b></pre>";
 ?>
-<br>
+
 
 <table border="1" align="left" valign="middle" >
 

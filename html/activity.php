@@ -17,7 +17,7 @@
 $output = shell_exec('sudo -u root -S uptime');
 echo "<pre>MHVTL $output</pre>";
 ?>
-<br>
+
 
 <META HTTP-EQUIV="refresh" CONTENT="30">
 

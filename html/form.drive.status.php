@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Drive Status :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="drive.status.php">

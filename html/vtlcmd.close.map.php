@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Close Map :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <?php

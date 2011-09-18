@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Start MHVTL Daemons:</b></pre>";
 ?>
-<br>
+
 
 
 <script type="text/javascript">

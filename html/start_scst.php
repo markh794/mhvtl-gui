@@ -11,7 +11,7 @@
 <img src="images/starting_mhvtl.png" >
 </td>
 </tr>
-<br>
+
 
 
 <?php

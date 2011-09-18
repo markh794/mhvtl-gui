@@ -16,13 +16,13 @@
 <?php
 echo "<pre><b>About MHVTL :</b></pre>";
 ?>
-<br>
+
 
 <table border="0" align="left" valign="middle" >
 
 <td>
 <pre><img src="images/tab_right.png" ALIGN="middle" ><a href="#" ONCLICK="parent.frames[1].location.href='http://www.gnu.org/licenses/gpl-2.0.html'" target="showframe"> GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</pre>
-<td>
+</td>
 
 <tr>
 

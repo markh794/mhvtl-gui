@@ -14,9 +14,9 @@
 </tr>
 
 <?php
-echo "<pre><b>Support :</b></pre>";
+echo "<pre><b> Support :</b></pre>";
 ?>
-<br>
+
 
 <table border="0" >
 <tr>

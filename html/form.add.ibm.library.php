@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>IBM :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 <?php
 $nextlid = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM += $1+20} END { print SUM}'| awk '{print $1}'`;

@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Library Operation - Offline Library :</b></pre>";
 ?>
-<br>
+
 
 
 <?php

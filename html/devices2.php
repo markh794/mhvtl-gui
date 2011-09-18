@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>MHVTL Virtual Devices :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <table border="0">

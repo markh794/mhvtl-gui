@@ -14,9 +14,9 @@
 </tr>
 
 <?php
-echo "<pre><b>Remote Clients via SCSI target framework (stgt) http://stgt.sourceforge.net :</b></pre>";
+echo "<pre><b>iSCSI Target via SCSI target framework (stgt) http://stgt.sourceforge.net :</b></pre>";
 ?>
-<br>
+
 
 <table border="1" >
 

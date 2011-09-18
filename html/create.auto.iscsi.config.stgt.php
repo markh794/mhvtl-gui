@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Automatic STGT iscsi Target :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <?php $filename = '../ENABLE_TGTD_SCSI_TARGET';

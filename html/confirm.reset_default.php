@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Reset all MHVTL Configurations :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 

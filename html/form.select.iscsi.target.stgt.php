@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Select STGT Target :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <?php

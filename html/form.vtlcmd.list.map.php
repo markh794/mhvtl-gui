@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>List Map :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="vtlcmd.list.map.php">

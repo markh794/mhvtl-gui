@@ -14,9 +14,9 @@
 </tr>
 
 <?php
-echo "<pre><b>SCSI Target System :</b></pre>";
+echo "<pre><b> SCSI Target System :</b></pre>";
 ?>
-<br>
+
 
 <table border="0" >
 

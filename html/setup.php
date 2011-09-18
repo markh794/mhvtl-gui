@@ -13,9 +13,9 @@
 </tr>
 
 <?php
-echo "<pre><b>Configuration :</b></pre>";
+echo "<pre><b> Configuration :</b></pre>";
 ?>
-<br>
+
 
 <table border="0" ALIGN="left" >
 

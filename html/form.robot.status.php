@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Robot Status :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 <form method="post" action="robot.status.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh robotdev`; ?>

@@ -11,7 +11,7 @@
 <img src="images/stopping_mhvtl.png" >
 </td>
 </tr>
-<br>
+
 
 <?php
 echo "<pre>Stopping MHVTL Daemons:</pre>";

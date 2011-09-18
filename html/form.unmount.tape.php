@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Unload Volume :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="vtlcmd.unmount.tape.php">

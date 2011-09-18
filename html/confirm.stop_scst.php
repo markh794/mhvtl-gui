@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Stop SCST Daemons:</b></pre>";
 ?>
-<br>
+
 
 
 <script type="text/javascript">

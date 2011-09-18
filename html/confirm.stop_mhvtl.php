@@ -11,7 +11,7 @@
 <img src="images/activity.png" >
 </td>
 </tr>
-<br>
+
 
 <script type="text/javascript">
 var ray={

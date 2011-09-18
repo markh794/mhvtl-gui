@@ -14,9 +14,9 @@
 </tr>
 
 <?php
-echo "<pre><b>Live Update :</b></pre>";
+echo "<pre><b> Live Update :</b></pre>";
 ?>
-<br>
+
 
 <script type="text/javascript">
 var ray={

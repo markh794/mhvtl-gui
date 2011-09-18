@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>MHVTL Console Update :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <script type="text/javascript">

@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Standard configuration type :</b></pre>";
 ?>
-<br>
+
 
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 align="left" valign="middle" >
 <TR>

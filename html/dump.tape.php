@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Dump Tape :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 

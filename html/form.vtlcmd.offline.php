@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Offline Library :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="vtlcmd.offline.php">

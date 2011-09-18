@@ -19,7 +19,7 @@
 $output = shell_exec('sudo -u root -S uptime');
 echo "<pre>$output</pre>";
 ?>
-<br>
+
 
 <script type="text/javascript">
 function toggleMe(a){

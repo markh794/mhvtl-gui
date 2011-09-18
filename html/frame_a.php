@@ -13,12 +13,12 @@
 </td>
 </tr>
 
-
 <?php
-$output = `cat ../version`;
-echo "<pre><b><FONT COLOR=#000000 >Console v$output</FONT></b></pre>";
+$output = `uname -snrp`;
+echo "<pre><b> $output</b></pre>";
 ?>
-<br>
+
+
 
 <script type="text/javascript">
 var ray={
@@ -76,13 +76,19 @@ getID:function(el)
 
 
 <td>
+<INPUT TYPE="button" VALUE=" Hardware " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='hardware.php'" target="showframe">
+</td>
+
+
+
+<td>
 <?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
 {
-echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=stgt.php><FONT COLOR=#347C17 size=2> ON </FONT></b></a>";
+echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> iSCSI : </><a href=stgt.php><FONT COLOR=#347C17 size=2> ON </FONT></b></a>";
 }
 else
 {
-echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> Remote Clients : </><a href=stgt.php><FONT COLOR=#FF0000 size=2> OFF </FONT></b></a>";
+echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> iSCSI : </><a href=stgt.php><FONT COLOR=#FF0000 size=2> OFF </FONT></b></a>";
 }
 ?>
 </td>
@@ -92,14 +98,10 @@ echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=
 <!--
 <img src="images/libr_img.gif" ALIGN=top >
 -->
-<?php
-$output = `uname -snrp`;
-echo "<pre><b>$output</b></pre>";
-?>
 
 <div style="overflow:auto;height:200px;width:570px;">
 <?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "<img src=images/gear_red.png ALIGN=top> Virtual Tape Devices :<br>$DEVICES"; fi');
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "<br><img src=images/gear_red.png ALIGN=top> Virtual Tape Devices :<br>$DEVICES"; fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
 <Select>

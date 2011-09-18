@@ -12,7 +12,7 @@
 <img src="images/mhvtl_procs.png">
 </td>
 </tr>
-<br>
+
 
 <?php
 $output = shell_exec('sudo -u root -S uptime');

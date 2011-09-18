@@ -49,7 +49,7 @@ getID:function(el)
 <?php
 echo "<pre><b>Installing stgt :</b></pre>";
 ?>
-<br>
+
 
 <table border="0" valign="middle" >
 

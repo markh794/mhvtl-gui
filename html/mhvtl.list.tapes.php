@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>List all tapes in use :</b></pre>";
 ?>
-<br>
+
 <hr width="100%" size=1 color="blue">
 
 

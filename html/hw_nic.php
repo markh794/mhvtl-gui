@@ -16,7 +16,7 @@
 <?php
 echo "<pre><b>Hardware Information :</b></pre>";
 ?>
-<br>
+
 
 
 <script type="text/javascript">

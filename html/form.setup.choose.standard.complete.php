@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Select Brand :</b></pre>";
 ?>
-<br>
+
 
 <table border="1" >
 

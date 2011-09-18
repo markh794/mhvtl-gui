@@ -15,7 +15,7 @@
 <?php
 echo "<pre><b>Library Operation - Online Library :</b></pre>";
 ?>
-<br>
+
 
 <?php
 $VAR = $_REQUEST['libid'];
