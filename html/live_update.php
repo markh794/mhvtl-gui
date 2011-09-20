@@ -82,5 +82,6 @@ echo "<td><pre><img src=images/green_light.png align=top /></pre></td>";
 ?>
 
 </table>
+
 </body>
 </html>

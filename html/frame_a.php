@@ -4,7 +4,7 @@
 
 <body>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>Control Center</font><b>
+<b><FONT COLOR=purple > Control Center</FONT><FONT COLOR=black></FONT></b>
 <hr width="100%" size=1 color="blue">
 
 <tr>
@@ -17,7 +17,6 @@
 $output = `uname -snrp`;
 echo "<pre><b> $output</b></pre>";
 ?>
-
 
 
 <script type="text/javascript">
@@ -81,27 +80,16 @@ getID:function(el)
 
 
 
-<td>
-<?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
-{
-echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> iSCSI : </><a href=stgt.php><FONT COLOR=#347C17 size=2> ON </FONT></b></a>";
-}
-else
-{
-echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> iSCSI : </><a href=stgt.php><FONT COLOR=#FF0000 size=2> OFF </FONT></b></a>";
-}
-?>
-</td>
-
 </table>
 
 <!--
+</br>
 <img src="images/libr_img.gif" ALIGN=top >
 -->
 
-<div style="overflow:auto;height:200px;width:570px;">
+<div style="overflow:auto;height:170px;width:570px;">
 <?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "<br><img src=images/gear_red.png ALIGN=top> Virtual Tape Devices :<br>$DEVICES"; fi');
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "$DEVICES"; fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
 <Select>
@@ -137,6 +125,8 @@ $output = shell_exec('LASTCHECK=`find /tmp/mhvtl-gui.last.update.check -mtime +1
 fi');
 echo "<pre>$output</pre>";
 ?>
+
+</table>
 
 </body>
 </html>

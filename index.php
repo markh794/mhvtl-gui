@@ -9,7 +9,6 @@
 <tr>
 <td>
 <img src="html/images/mhvtl.png" ALIGN="center" ><br><b><FONT COLOR=purple size=5>Linux Virtual Tape Library System</FONT></b>
-<br><a href="http://www.gnu.org/licenses/gpl-2.0.html">License: GPL v2</a>
 </td>
 </tr>
 
@@ -27,11 +26,9 @@ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.
 
 <?php
 $output = `cat version`;
-echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></center></pre>";
+echo "<pre><center><FONT COLOR=#2B60DE ><b>Web Console Release $output</b></FONT></center></pre>";
 ?>
 
-<FONT SIZE=3 COLOR=#FF00FF ><center><b> Verifying all required components </b></center></FONT>
-<br>
 
 <?php
 
@@ -64,7 +61,7 @@ echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></
 
 
 </table>
-<?php echo "<pre><b><FONT size=2><a href='http://sites.google.com/site/linuxvtl2/'>MHVTL</a> - <a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPL v2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
+<?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 </center>
 </body>
 </html>

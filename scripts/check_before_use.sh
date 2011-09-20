@@ -8,13 +8,10 @@ MAJ=`echo $_RELEASE|awk -F. '{print $1}'`
 RELEASE=`echo $_RELEASE|awk -F. '{print $2}'`
 VERSION=`echo $_RELEASE|awk -F. '{print $3}'`
 if [ $MAJORVER -eq $MAJ ]; then # Version 1.0 is OK
-	echo '<img src="html/images/green_light.png" align=top />' PASS: MHVTL Version $MAJ.$RELEASE.$VERSION [INSTALLED]
 	echo "PASS" >/tmp/test.required.components.testmhvtl
 elif [ $RELEASE -gt $MINRELEASE ] && [ $VERSION -gt $MINVERSION ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: MHVTL Version $RELEASE.$VERSION [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testmhvtl
 else
-echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: MHVTL not detected</FONT>'
 echo "FAIL" >/tmp/test.required.components.testmhvtl
 fi
 }
@@ -24,7 +21,6 @@ testphp()
 {
 CHECKPHP=`php html/testphp.php | grep ^"PHP Version"`
 if [ ! -z "$CHECKPHP" ]; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: $CHECKPHP [Detected]
 echo "PASS" >/tmp/test.required.components.testphp
 else
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: PHP not detected</FONT>'
@@ -37,7 +33,6 @@ testsudo()
 {
 CHECK=`sudo -u root -S date`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top /> PASS: Sudo Access [OK]'
 echo "PASS" >/tmp/test.required.components.testsudo
 else
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: Sudo Access not configured</FONT>'
@@ -51,7 +46,6 @@ testlsscsi()
 {
 CHECK=`lsscsi`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: lsscsi [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testlsscsi
 else
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: lsscsi not installed</FONT>'
@@ -63,7 +57,6 @@ testmt()
 (
 CHECK=`mt -v`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: `mt --version` [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testmt
 else
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: mt not installed</FONT>'
@@ -76,7 +69,6 @@ testmtx()
 {
 CHECK=`ls /usr/sbin/mtx`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: mtx [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testmtx
 else
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: mtx not installed</FONT>'
@@ -88,12 +80,10 @@ testgit()
 (
 CHECK=`git --version`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: `git --version` [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testgit
 else
 CHECKAGAIN=`/usr/local/bin/git --version`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: `git --version` [INSTALLED]
 echo "PASS" >/tmp/test.required.components.testgit
 else
 echo '<img src="html/images/warning.png" align=top /><FONT COLOR=yellow> WARN: git not installed</FONT>'
@@ -107,7 +97,6 @@ testsysstat()
 (
 CHECK=`iostat`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top /> PASS: sysstat [INSTALLED]'
 echo "PASS" >/tmp/test.required.components.testsysstat
 else
 echo '<img src="html/images/warning.png" align=top /><FONT COLOR=yellow> WARN: sysstat not installed</FONT>'
@@ -133,7 +122,6 @@ fi
 
 CHECK=`$TGTADM --help`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top />' PASS: stgt `$TGTD --version` [INSTALLED]
 echo "PASS" >/tmp/test.required.components.teststgt
 else
 echo '<img src="html/images/warning.png" align=top /><FONT COLOR=yellow> WARN: stgt not installed</FONT>'
@@ -145,7 +133,6 @@ testscst()
 (
 CHECK=`ls /usr/local/sbin/iscsi-scstd`
 if [ $? = 0 ] ; then
-echo '<img src="html/images/green_light.png" align=top /> PASS: scst [INSTALLED]'
 echo "PASS" >/tmp/test.required.components.testscst
 else
 echo '<img src="html/images/warning.png" align=top /><FONT COLOR=yellow> WARN: scst not installed</FONT>'

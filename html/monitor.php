@@ -84,6 +84,19 @@ echo "<pre>$output</pre>";
 </td>
 
 <td>
+<?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
+{
+echo "<img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> iSCSI : </><a href=stgt.php><FONT COLOR=#347C17 size=2> ON </FONT></b></a>";
+}
+else
+{
+echo "<img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=2> iSCSI : </><a href=stgt.php><FONT COLOR=#FF0000 size=2> OFF </FONT></b></a>";
+}
+?>
+</td>
+
+
+<td>
 <?php
 $output = shell_exec ('ACTIVITY=`sudo -u root -S lsscsi -g | grep mediumx | cut -d"/" -f2,3 | while read each; do sudo -u root -S mtx -f /$each status | grep "Loaded" ;done`;if [ -z "$ACTIVITY" ] ; then echo "<img src="images/green_light.png" align=top /><b>""<a href="activity.php" style="text-decoration:none" >" "STATUS:<FONT COLOR="green">IDLE </FONT></b>";else echo "<img src="images/warning.png" align=top /><b>""<a href="activity.php" style="text-decoration:none" >" "STATUS:<FONT COLOR="orange">Active </FONT></b>";fi');
 echo "<pre>$output</pre>";

@@ -4,17 +4,18 @@
 <body>
 <center>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>Web Console</font><b>
+<img src=images/gear_red.png ALIGN=top><b><FONT COLOR=purple > Web Console</FONT><FONT COLOR=black></FONT></b>
 <hr width="100%" size=1 color="blue">
 <META HTTP-EQUIV="refresh" CONTENT="30">
 
 <tr><td align=center valign=middle><img src="images/mhvtl.png" ></td></tr>
 
+<pre>
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
-echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
+echo "<b><FONT COLOR=green >$output</FONT></b>";
 ?>
-
+</pre>
 
 
 
@@ -54,7 +55,7 @@ echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Help " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='online-support.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Help " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='help.php'" target="showframe">
 </td>
 </tr>
 
@@ -67,13 +68,6 @@ echo "<pre><FONT COLOR=purple><b>$output</b></FONT></pre>";
 
 </table>
 
-<?php
-$output = `cat ../version`;
-echo "<pre><b><FONT COLOR=green >Console<br>$output</FONT></b></pre>";
-?>
-
-
 </center>
-
 </body>
 </html>
