@@ -14,8 +14,9 @@
 </tr>
 
 <?php
-echo "<pre><b>iSCSI Target via SCSI target framework (stgt) http://stgt.sourceforge.net :</b></pre>";
+echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe>http://stgt.sourceforge.net</a></FONT></b></pre>";
 ?>
+
 
 
 <table border="1" >
@@ -51,24 +52,32 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 </td>
 
 
+<td>
+<INPUT TYPE="button" VALUE=" Check for updates " class="sameSize"  style="color: #0000FF" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe">
+</td>
+
+
 </table>
 
 <table border="0" >
 
 <br>
 
+<!--
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='confirm.install.standalone.stgt.php'" target="showframe"> Install/Update Standalone<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='confirm.install.standalone.stgt.php'" target="showframe"> Standalone Install or Live Update<br>
+</td>
+</tr>
+-->
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Download & Install STGT<br>
 </td>
 </tr>
 
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Install/Update Regular <br>
-</td>
-</tr>
 
 <tr>
 <td>

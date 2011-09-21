@@ -61,7 +61,7 @@ echo "<pre><b>Installing stgt :</b></pre>";
 
 <td>
 <FORM ACTION="stgt.php">
-<INPUT TYPE=SUBMIT VALUE="Cancel">
+<INPUT TYPE=SUBMIT class="sameSize" style="color: #000000" VALUE=" Cancel ">
 </FORM>
 </td>
 </table>

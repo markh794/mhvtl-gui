@@ -67,7 +67,7 @@ echo "<b><FONT COLOR=green >$output</FONT></b>";
 </tr>
 
 </table>
-
 </center>
+
 </body>
 </html>

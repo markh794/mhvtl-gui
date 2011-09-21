@@ -25,7 +25,7 @@ echo "<pre><b>Installing stgt :</b></pre>";
 
 <?php
 
-$url = "http://git.kernel.org/?p=linux/kernel/git/tomo/tgt.git;a=summary";
+$url = "http://github.com/fujita";
 if (fopen($url, "r")) {
 echo "<pre><font color=#FFFFFF>Internet Connectivity : OK</font><br></pre>";
 } else {

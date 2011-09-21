@@ -144,11 +144,10 @@ echo "<pre>$output</pre>";
 ?>
 
 <FONT COLOR="blue"><b>Alerts & Error Messages : </b></FONT>
-
 <table>
 <td>
 <form action="view_syslog.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" SYSLOG ">
+<input TYPE="submit" class="sameLook" style="color: #000000" value=" View System Log ">
 </form>
 </td>
 </table>

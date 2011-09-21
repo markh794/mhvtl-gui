@@ -87,7 +87,7 @@ getID:function(el)
 <img src="images/libr_img.gif" ALIGN=top >
 -->
 
-<div style="overflow:auto;height:170px;width:570px;">
+<div style="overflow:auto;height:140px;width:570px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "$DEVICES"; fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
@@ -127,6 +127,16 @@ echo "<pre>$output</pre>";
 ?>
 
 </table>
+
+<!--
+<pre>
+<FONT COLOR=blue size=4>Trademark Disclaimer:</FONT>
+<FONT COLOR=black size=3> Product names, logos, brands, and other trademarks featured or referred to within
+ MHVTL Web Console are the property of their respective trademark holders.
+ These trademark holders are not affiliated with MHVTL Web Console, nor
+ they sponsor or endorse any of our solutions.
+</FONT></pre>
+-->
 
 </body>
 </html>

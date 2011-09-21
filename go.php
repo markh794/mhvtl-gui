@@ -23,7 +23,6 @@ if ( $password == "mhvtl" ) { //Replace with your password
   }
    }
 ?>
-<br>
 <FONT COLOR=green><b>Enter Password </b></FONT>
 <br>
 <form method="post" action="">

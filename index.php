@@ -58,9 +58,12 @@ echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></
 ?>
 
 
-
+</TR>
+</TD>
 
 </table>
+
+
 <?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 </center>
 </body>
