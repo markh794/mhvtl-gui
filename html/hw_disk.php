@@ -4,7 +4,7 @@
 
 <body>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>Control Center</font><b>
+<b><font color=purple size=3>Hardware</font><b>
 <hr width="100%" size=1 color="blue">
 
 <tr>

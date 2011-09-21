@@ -49,8 +49,11 @@ getID:function(el)
 </td>
 
 <td>
-<FORM ACTION="frame_a.php"> <INPUT TYPE=SUBMIT style="color: #000000" VALUE="Return"></FORM>
-<a title="Close Window" href="Javascript:close();"><INPUT TYPE=SUBMIT style="color: #FF0000" VALUE="Close"></a>
+<FORM ACTION="frame_a.php"> <INPUT TYPE=SUBMIT class="sameSize" style="color: #000000" VALUE=" Return "></FORM>
+</td>
+
+<td>
+<a title="Close Window" href="Javascript:close();"><INPUT TYPE=SUBMIT class="sameSize" style="color: #FF0000" VALUE=" Close "></a>
 </td>
 
 
