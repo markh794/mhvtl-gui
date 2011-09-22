@@ -32,6 +32,11 @@ echo "<pre><FONT COLOR=#FFFFFF>$result</FONT></pre>";
 </TD>
 </TR>
 </TABLE>
+
+<form action="display_stgt.initiator.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" style="color: #0000FF" value=" Refresh ">
+</form>
+
 <FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </div>
 
