@@ -53,7 +53,7 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 
 <td>
-<INPUT TYPE="button" VALUE=" Check for updates " class="sameSize"  style="color: #0000FF" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Check for updates " class="sameSize"  style="color: #0000FF" ONCLICK="parent.frames[1].location.href='confirm.check_updates.stgt.php'" target="showframe">
 </td>
 
 

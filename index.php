@@ -18,9 +18,8 @@
 Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.nabble.com/">mhvtl-community-forums</a>
 
 <hr width="100%" size=1 color="blue">
-
+<br><br>
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
-
 <TR>
 <TD>
 
@@ -60,10 +59,8 @@ echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></
 
 </TR>
 </TD>
-
 </table>
-
-
+<br><br>
 <?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 </center>
 </body>

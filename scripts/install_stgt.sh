@@ -69,10 +69,13 @@ STGTVER_GIT=0000000
 fi
 
 if [ $STGTVER_INSTALLED-$LAST_STGT_GIT_UPDATE != $STGTVER_GIT-$GITEXTRAVERSION ] ; then
-#echo "Current stgt release already installed = "`echo $STGTVER_INSTALLED-$LAST_STGT_GIT_UPDATE`
 echo "New updates available = "`echo $STGTVER_GIT-$GITEXTRAVERSION`
 cd ../html
+
+echo '<form action="confirm.install.stgt.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #008000" value=" Update "></form>'
+
 else
+
 echo "<FONT COLOR=green>Current stgt release already installed </FONT> = "`echo $STGTVER_INSTALLED-$LAST_STGT_GIT_UPDATE`
 echo "<FONT COLOR=green>Current stgt updates available in git  </FONT> = "`echo $STGTVER_GIT-$GITEXTRAVERSION`
 echo "<FONT COLOR=blue>No new updates available at this time...</FONT>"
@@ -119,11 +122,9 @@ cd ../html
 run()
 {
 if [ "$1" = "check_updates" ] ; then check_if_upgrade_required
-else
-if [ "$1" = "standalone" ] ; then standalone_install
+elif [ "$1" = "standalone" ] ; then standalone_install
 else
 regular_install
-fi
 fi
 }
 

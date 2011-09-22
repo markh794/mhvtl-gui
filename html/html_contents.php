@@ -67,6 +67,12 @@ echo "<b><FONT COLOR=green >$output</FONT></b>";
 </tr>
 
 </table>
+
+<!--
+<br>
+<tr><td align=center valign=middle><img src="images/gplv2.gif" ></td></tr>
+-->
+
 </center>
 
 </body>
