@@ -21,7 +21,7 @@ echo "<pre><b>Drive Status :</b></pre>";
 
 <?php
 $VAR = $_REQUEST['drivedev'];
-$cmdoutfile = `sudo -u root -S mt -f $VAR status >/tmp/drive.status.tmp 2>&1`;
+$cmdoutfile = `sudo -u root -S mtx -f $VAR inquiry >/tmp/drive.status.tmp 2>&1`;
 $output = shell_exec('cat /tmp/drive.status.tmp');
 echo "<pre>$output</pre>";
 ?>
