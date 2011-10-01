@@ -20,7 +20,7 @@ echo "<pre><b>Library Operation - Offline Library :</b></pre>";
 
 <?php
 $VAR = $_REQUEST['libid'];
-$output = `sudo -u root -S vtlcmd $VAR online`;
+$output = `sudo -u root -S vtlcmd $VAR offline`;
 echo "<pre>OK: $output</pre>";
 ?>
 
