@@ -72,7 +72,7 @@ if [ $STGTVER_INSTALLED-$LAST_STGT_GIT_UPDATE != $STGTVER_GIT-$GITEXTRAVERSION ]
 echo "New updates available = "`echo $STGTVER_GIT-$GITEXTRAVERSION`
 cd ../html
 
-echo '<form action="confirm.install.stgt.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #008000" value=" Update "></form>'
+#echo '<form action="confirm.install.stgt.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #008000" value=" Update "></form>'
 
 else
 

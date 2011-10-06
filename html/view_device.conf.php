@@ -18,10 +18,20 @@ echo "<pre><b>MHVTL Configuration :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
+<TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
+<TR>
+<TD>
+<div style="overflow:auto;height:250px;width:400px;">
+
 <?php
 $output = shell_exec('sudo -u root -S cat /etc/mhvtl/device.conf| grep -v ^#');
-echo "<pre>$output</pre>";
+echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
+
+</div>
+</TR>
+</TD>
+</TABLE>
 
 <FORM ACTION="setup.php">
 <INPUT TYPE=SUBMIT VALUE=" Return ">

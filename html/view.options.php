@@ -18,10 +18,19 @@ echo "<pre><b>View MHVTL Options  :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
+<TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
+<TR>
+<TD>
+
+
 <?php
 $output = `sudo -u root -S cat /etc/mhvtl/mhvtl.conf`;
-echo "<pre>$output</pre>";
+echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
+
+</TR>
+</TD>
+</TABLE>
 
 <FORM ACTION="setup.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 

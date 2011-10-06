@@ -3,7 +3,7 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 <body>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>MHVTL LIVE UPDATE</font></b>
+<b><font color=purple size=3> LIVE UPDATE</font></b>
 <hr width="100%" size=1 color="blue">
 
 
@@ -80,6 +80,32 @@ else
 echo "<td><pre><img src=images/green_light.png align=top /></pre></td>";
 }
 ?>
+
+
+
+<tr>
+
+<td>
+<?php
+$tgtver = shell_exec('sudo -u root -S ../scripts/check_tgt.update.sh >/tmp/check_tgt.update.sh.tmp');
+$OUTPUT=`sudo -u root -S cat /tmp/check_tgt.update.sh.tmp`;
+echo "<pre><b> $OUTPUT</b></pre>";
+?>
+</td>
+
+<?php
+$IFNEEDUPDATE = shell_exec('sudo -u root -S grep "is up-to-date" /tmp/check_tgt.update.sh.tmp');
+if ( '' == $IFNEEDUPDATE )
+{
+echo "<td><form action=confirm.update_tgt.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=Update ></form></td>";
+}
+else
+{
+echo "<td><pre><img src=images/green_light.png align=top /></pre></td>";
+}
+?>
+
+
 
 </table>
 

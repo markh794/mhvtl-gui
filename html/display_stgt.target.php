@@ -13,12 +13,10 @@
 </tr>
 
 
-
 <?php
 echo "<pre>Display STGT Targets:</pre>";
 ?>
 
-<br>
 <div style="overflow:auto; height:330px;width:600px;">
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>

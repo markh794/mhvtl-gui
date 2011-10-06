@@ -73,7 +73,7 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Download & Install STGT<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Download & Install or Update STGT<br>
 </td>
 </tr>
 

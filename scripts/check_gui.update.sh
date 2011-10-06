@@ -16,7 +16,7 @@ INSTALLED_VERSION=`sudo -u root -S cat version | cut -d "-" -f2`
 cd html
 
 if [ "$ONLINE_VERSION" = "$INSTALLED_VERSION" ] ; then
-echo "<font color=green>MHVTL-GUI is up-to-date : <font color=blue>$RELEASE-$INSTALLED_VERSION </font>"
+echo "<font color=green>MHVTL-GUI is up-to-date  <font color=blue>$RELEASE-$INSTALLED_VERSION </font>"
 exit 0
 else
 echo "<font color=red>MHVTL-GUI Updates Available</font> : <font color=blue>$RELEASE-$ONLINE_VERSION </font>"

@@ -3,7 +3,7 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 <body>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>LIVE UPDATE</font></b>
+<b><font color=purple size=3>MHVTL LIVE UPDATE</font></b>
 <hr width="100%" size=1 color="blue">
 
 
@@ -14,9 +14,10 @@
 </tr>
 
 <?php
-echo "<pre><b> Live Update :</b></pre>";
+echo "<pre><b>TGT Update :</b></pre>";
 ?>
 
+<hr width="100%" size=1 color="blue">
 
 <script type="text/javascript">
 var ray={
@@ -36,17 +37,26 @@ getID:function(el)
 </script>
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table border="1" align="left" valign="middle" >
+<table border="0" >
 
 <td>
-<form action="live_update.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Check for updates  " >
+<form action="install.stgt.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" type="submit" class="sameSize" style="color: #0000FF" value=" Update ">
 </form>
-</td>
 <td>
-<font color=blue size=2><b> *** GIT + Internet Access Required </b></font>
-</td>
+
+<td>
+<form action="update.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" type="submit" class="sameSize" style="color: #000000" value="  Cancel  ">
+</form>
+<td>
+
 </table>
+
+</body>
+</html>
+
+
 
 </body>
 </html>
