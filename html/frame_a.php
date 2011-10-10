@@ -87,6 +87,52 @@ getID:function(el)
 <img src="images/libr_img.gif" ALIGN=top >
 -->
 
+<!--
+</br>
+<TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000;color: #736AFF" >
+<TR>
+<TD>
+
+<div style="overflow:auto;height:100px;width:410px;">
+<?php
+$adjperm = `sudo -u root -S chmod 777 /tmp/mhvtl`;
+$fifo = fopen("/tmp/mhvtl", "r+");
+if ($fifo) {
+        stream_set_blocking($fifo, false); /* Don't want to block waiting for data */
+} else {
+        echo "<br>OFFLINE<br>";
+}
+
+echo "<p>Ready ...</p>";
+while (($data = fgets($fifo)) !== false) {
+
+        if (strlen($data) > 0) {
+                echo "$data";
+                if (preg_match('/idle/i', $data, $match)) {
+                        echo "....<br>";
+                } else {
+                        echo "<br>";
+                }
+
+                if (preg_match('/(\d\d:)\s*Moving\s*([_A-Za-z0-9]*)\s*from\s*([A-Za-z0-9]*)/', $data, $match)) {
+                        echo "$match[1]<br>";
+                        echo "$match[2]<br>";
+                        echo "$match[3]<br>";
+                }
+        } else {
+                echo "<p>***</p>";
+        }
+}
+
+echo "<p>OK</p>";
+fclose($fifo);
+?>
+
+</div>
+</table>
+-->
+
+
 <div style="overflow:auto;height:140px;width:570px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "$DEVICES"; fi');
