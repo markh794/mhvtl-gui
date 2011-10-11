@@ -17,7 +17,6 @@
 echo "<pre>Stopping MHVTL Daemons:</pre>";
 ?>
 
-<br>
 <TABLE BORDER=4 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT> 
 <TR>
  <TD>

@@ -35,7 +35,6 @@ getID:function(el)
 <?php
 echo "<pre><b>Stop MHVTL Daemons:</b></pre>";
 ?>
-<br>
 
 <table border="0" >
 <td>
