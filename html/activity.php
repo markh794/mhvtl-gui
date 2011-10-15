@@ -62,7 +62,7 @@ getID:function(el)
 
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 <?php
-$cmdout = shell_exec ('sudo -u root -S rm -f /tmp/mhvtl.act.tmp; sudo -u root -S lsscsi -g | grep mediumx | cut -d"/" -f2,3 | while read each; do  sudo -u root -S lsscsi -g | grep /$each$; sudo -u root -S mtx -f /$each status | sudo -u root -S grep "Loaded"; done >>/tmp/mhvtl.act.tmp');
+$cmdout = shell_exec ('sudo -u root -S rm -f /tmp/mhvtl.act.tmp; sudo -u root -S lsscsi -g | grep mediumx | grep -o "[^dev]*$" | while read each; do  sudo -u root -S lsscsi -g | grep /dev$each$; sudo -u root -S mtx -f /dev$each status | sudo -u root -S grep "Loaded"; done >>/tmp/mhvtl.act.tmp');
 $ACTIVITY=`sudo -u root -S cat /tmp/mhvtl.act.tmp| grep -v mediumx`;
 $cmdout2 = shell_exec ('sudo -u root -S cat /tmp/mhvtl.act.tmp| grep -v mediumx | while read eachone; do echo "<img src=images/animated_dot.gif align=top />" $eachone ; done');
 $output1=`if [ ! -z "$ACTIVITY" ] ; then echo "$cmdout2" ;fi`;
