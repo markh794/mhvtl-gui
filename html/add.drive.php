@@ -38,6 +38,8 @@ $output2 = `echo " Product identification: "'$VAR6' >>/tmp/device.conf.tmp`;
 $output3 = `echo " Product revision level: "'$VAR7' >>/tmp/device.conf.tmp'`;
 $output4 = `echo " Unit serial number: "'$VAR8' >>/tmp/device.conf.tmp`;
 $output5 = `echo " NAA: "'$VAR1:11:22:33:ab:$VAR2:$VAR3:$VAR4' >>/tmp/device.conf.tmp`;
+$outputf = `echo " fifo: /var/tmp/mhvtl" >>/tmp/device.conf.tmp`;
+<!-- Removed for now since it is no longer supported by MHVTL recent release
 $output6 = `echo " READ_ONLY: "'$VARc' >>/tmp/device.conf.tmp`;
 $output7 = `echo " READ_ONLY: "'$VARd' >>/tmp/device.conf.tmp`;
 $output8 = `echo " READ_WRITE: "'$VARe' >>/tmp/device.conf.tmp`;
@@ -46,7 +48,7 @@ $outputx = `echo " WORM: "'$VARg' >>/tmp/device.conf.tmp`;
 $outputy = `echo " WORM: "'$VARh' >>/tmp/device.conf.tmp`;
 $outputz = `echo " ENCRYPTION: "'$VARi' >>/tmp/device.conf.tmp`;
 $outputq = `echo " ENCRYPTION: "'$VARj' >>/tmp/device.conf.tmp`;
-
+-->
 
 $output = `cat /tmp/device.conf.tmp`;
 echo "<pre>$output</pre>";
