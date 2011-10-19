@@ -114,7 +114,7 @@ getID:function(el)
 					{
 						if (/4|^complete$/.test($http.readyState)) {
 							document.getElementById('ReloadThis').innerHTML = $http.responseText;
-							setTimeout(function(){$self();}, 2000);
+							setTimeout(function(){$self();}, 1000);
 						}
 					};
 					$http.open('GET', 'mhvtl_fifo.php' + '?' + new Date().getTime(), true);
@@ -125,7 +125,7 @@ getID:function(el)
 
 		</script>
                 <script type="text/javascript">
-                        setTimeout(function() {Ajax();}, 2000);
+                        setTimeout(function() {Ajax();}, 1000);
                 </script>
 
 <TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" >
