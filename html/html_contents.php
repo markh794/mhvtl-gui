@@ -9,7 +9,6 @@
 <img src=images/gear_red.png ALIGN=top><a ONCLICK="parent.frames[1].location.href='about_console.php'" target="showframe" ><b><FONT COLOR=purple> Web Console</FONT></b> </a>
 
 <hr width="100%" size=1 color="blue">
-<META HTTP-EQUIV="refresh" CONTENT="30">
 
 <tr><td align=center valign=middle><img src="images/mhvtl.png" ></td></tr>
 
