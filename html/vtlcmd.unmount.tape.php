@@ -20,10 +20,10 @@ echo "<pre><b>Library Operation - Unload Volume :</b></pre>";
 
 
 <?php
+
 $VAR1 = $_REQUEST['robotdev'];
 $VAR2 = $_REQUEST['drdev'];
 $VAR3 = $_REQUEST['voltag'];
-
 $cmd1 = `sudo -u root -S mtx -f $VAR1 unload $VAR2 $VAR3 >/tmp/unmount.tape.tmp 2>&1`;
 $output1 = shell_exec('cat /tmp/unmount.tape.tmp');
 echo "<pre>$output1</pre>";

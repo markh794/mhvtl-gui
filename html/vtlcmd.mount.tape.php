@@ -19,10 +19,10 @@ echo "<pre><b>Library Operation - Load Volume :</b></pre>";
 <hr width="100%" size=1 color="blue">
 
 <?php
+
 $VAR1 = $_REQUEST['robotdev'];
 $VAR2 = $_REQUEST['drdev'];
 $VAR3 = $_REQUEST['voltag'];
-
 $cmd1 = `sudo -u root -S mtx -f $VAR1 load $VAR2 $VAR3 >/tmp/mount.tape.tmp 2>&1`;
 $cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep Loaded >/tmp/mount.status.tmp 2>&1`;
 $output1 = shell_exec('cat /tmp/mount.tape.tmp');
