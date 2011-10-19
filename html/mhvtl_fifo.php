@@ -12,7 +12,7 @@ sleep(0);
 echo "<FONT COLOR=#736AFF>$data</FONT><br>";
 
     } else {
-  echo "<b><FONT COLOR=white>Pipe: </FONT><FONT COLOR=red>Offline</FONT></b>";
+  echo "<b><FONT COLOR=white>Pipe: </FONT><FONT COLOR=red>Offline</FONT><FONT COLOR=white> or option</FONT><FONT COLOR=yellow> disabled</FONT></b>";
     }
 fclose($fifo);
 ?>
