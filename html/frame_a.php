@@ -128,6 +128,7 @@ getID:function(el)
                         setTimeout(function() {Ajax();}, 1000);
                 </script>
 
+
 <TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" >
 <TR>
 <TD>
@@ -138,7 +139,6 @@ include 'mhvtl_fifo.php' ;
 </div>
 </table>
 
-
 <div style="overflow:auto;height:200px;width:500px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "$DEVICES"; fi');
@@ -146,6 +146,7 @@ echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
 <Select>
 </div>
+
 
 <?php
 if (!file_exists('/tmp/mhvtl.last.update.check'))
@@ -186,5 +187,6 @@ echo "<pre>$output</pre>";
  they sponsor or endorse any of our solutions.
 </FONT></pre>
 -->
+
 </body>
 </html>

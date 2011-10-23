@@ -7,10 +7,9 @@ if ($fifo) {
   echo "<b><FONT COLOR=white>$dtt </FONT></b><br>";
 
 $data = fgets($fifo);
-if ($data === false) echo "<FONT COLOR=green>Ready ...</FONT><br>";
+if ($data === false) echo "<FONT COLOR=#00ff00>Ready ...</FONT><br>";
 sleep(0);
 echo "<FONT COLOR=#736AFF>$data</FONT><br>";
-
     } else {
   echo "<b><FONT COLOR=white>Pipe: </FONT><FONT COLOR=red>Offline</FONT><FONT COLOR=white> or option</FONT><FONT COLOR=yellow> disabled</FONT></b>";
     }

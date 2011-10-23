@@ -54,6 +54,12 @@ echo "<b><FONT COLOR=green >$output</FONT></b>";
 </td>
 </tr>
 
+<tr>
+<td>
+<INPUT TYPE="button" VALUE=" Terminal " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='terminal.php'" target="showframe">
+</td>
+</tr>
+
 
 <tr>
 <td>

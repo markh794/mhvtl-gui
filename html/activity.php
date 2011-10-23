@@ -12,14 +12,10 @@
 </td>
 </tr>
 
-
 <?php
-$output = shell_exec('sudo -u root -S uptime');
-echo "<pre>MHVTL $output</pre>";
+echo "<pre><b> Activity Monitor</b></pre>";
 ?>
 
-
-<META HTTP-EQUIV="refresh" CONTENT="30">
 
 
 <script type="text/javascript">
@@ -39,25 +35,6 @@ getID:function(el)
 }
 </script>
 
-
-<table border="1" >
-
-<td>
-<form action="activity.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" type="submit" class="sameSize" style="color: #0000FF" value=" Refresh ">
-</form>
-</td>
-
-<td>
-<FORM ACTION="frame_a.php"> <INPUT TYPE=SUBMIT class="sameSize" style="color: #000000" VALUE=" Return "></FORM>
-</td>
-
-<td>
-<a title="Close Window" href="Javascript:close();"><INPUT TYPE=SUBMIT class="sameSize" style="color: #FF0000" VALUE=" Close "></a>
-</td>
-
-
-</table>
 
 <script type="text/javascript">
 
