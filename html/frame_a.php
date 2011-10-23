@@ -12,11 +12,7 @@
 </td>
 </tr>
 
-<?php
-$output = `uname -snrp`;
-echo "<pre><b> $output</b></pre>";
-?>
-
+<?php $output = `uname -snrp`; echo "<pre><b> $output</b></pre>"; ?>
 
 <script type="text/javascript">
 var ray={
