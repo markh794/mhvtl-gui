@@ -128,7 +128,7 @@ getID:function(el)
 <TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" >
 <TR>
 <TD>
-<div style="overflow:auto;height:60px;width:450px;" id="ReloadThis" >
+<div style="overflow:auto;height:100px;width:450px;" id="ReloadThis" >
 <?php
 include 'mhvtl_fifo.php' ;
 ?>
