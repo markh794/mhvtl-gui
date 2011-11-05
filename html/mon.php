@@ -1,18 +1,5 @@
-<html>
-<head><title>MHVTL Web Console</title></head>
-<link href="styles.css" rel="stylesheet" type="text/css">
-
-<body>
-
-<?php
-$output = shell_exec('sudo -u root -S uptime');
-echo "<pre>$output</pre>";
-?>
-
 
 <table border="1">
-
-
 <td>
 <?php
 $output = shell_exec('RUNNING=`ps -ef | egrep "vtltape|vtllibrary"|egrep -v egrep|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>" "STATE:<FONT COLOR="green">ONLINE </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>" "STATE:<FONT COLOR="red">OFFLINE </FONT></b>";fi');
@@ -76,11 +63,13 @@ echo "<pre>$output</pre>";
 ?>
 </td>
 
-
-
 </table>
 
-<br>
+<?php
+$output = shell_exec('sudo -u root -S uptime');
+echo "<pre>$output</pre>";
+?>
+
 <FONT COLOR="blue"><b>CPU & Device Utilization : </b></FONT>
 <?php
 $cmd = shell_exec('sudo -u root -S iostat -c >/tmp/mnitor.iostat.tmp 2>&1');
@@ -116,6 +105,3 @@ echo "<pre>$output</pre>";
 ?>
 </div>
 </table>
-
-</body>
-</html>

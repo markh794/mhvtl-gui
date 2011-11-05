@@ -1,18 +1,23 @@
 <html>
 <head><title>MHVTL Web Console</title></head>
 <link href="styles.css" rel="stylesheet" type="text/css">
-
 <body>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>MHVTL Monitor</font><b>
+<b><font color=purple size=3>Active Monitor</font><b>
 <hr width="100%" size=1 color="blue">
-<style type="text/css"></style>
 
 <tr>
 <td align=left valign=middle>
 <img src="images/monitoring.png" >
 </td>
 </tr>
+
+<?php
+echo "<pre><FONT COLOR=blue><b> Active Monitor</FONT></b></pre>";
+?>
+
+
+
 <script type="text/javascript">
                         function Ajax()
                         {
