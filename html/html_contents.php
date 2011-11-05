@@ -44,7 +44,7 @@ echo "<b><FONT COLOR=green >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" iSCSI " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" iSCSI Target " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
 </td>
 </tr>
 
