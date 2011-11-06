@@ -50,7 +50,7 @@ echo "<pre><b> $OUTPUT</b></pre>";
 $IFNEEDUPDATE = shell_exec('sudo -u root -S grep "is up-to-date" /tmp/check_update.sh.tmp');
 if ( '' == $IFNEEDUPDATE )
 {
-echo "<td><form action=confirm.update_mhvtl.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=Update ></form></td>";
+echo "<td><form action=confirm.update_mhvtl.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=' Update ' ></form></td>";
 }
 else
 {
@@ -73,7 +73,7 @@ echo "<pre><b> $OUTPUT</b></pre>";
 $IFNEEDUPDATE = shell_exec('sudo -u root -S grep "is up-to-date" /tmp/check_gui.update.sh.tmp');
 if ( '' == $IFNEEDUPDATE )
 {
-echo "<td><form action=confirm.update_mhvtl-gui.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=Update ></form></td>";
+echo "<td><form action=confirm.update_mhvtl-gui.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=' Update ' ></form></td>";
 }
 else
 {
@@ -97,7 +97,7 @@ echo "<pre><b> $OUTPUT</b></pre>";
 $IFNEEDUPDATE = shell_exec('sudo -u root -S grep "is up-to-date" /tmp/check_tgt.update.sh.tmp');
 if ( '' == $IFNEEDUPDATE )
 {
-echo "<td><form action=confirm.update_tgt.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=Update ></form></td>";
+echo "<td><form action=confirm.update_tgt.php method=post onsubmit=return ray.ajax() ><input TYPE=submit class=sameSize value=' Update ' ></form></td>";
 }
 else
 {
