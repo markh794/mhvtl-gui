@@ -15,7 +15,7 @@
 <pre>
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
-echo "<b><FONT COLOR=green >$output</FONT></b>";
+echo "<b><FONT COLOR=blue >$output</FONT></b>";
 ?>
 </pre>
 

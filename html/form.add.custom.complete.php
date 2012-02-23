@@ -67,6 +67,7 @@ Unit serial number: <input name="usn" value=<?php echo $nextlid+10000001;?>  typ
 NAA: <input name="naa" value="Auto-Generated" READONLY type="text" style="color: #000000; font-family: Verdana; font-weight: bold; font-size: 14px; background-color: #DDDDDD;" size="15" ><br>
 Compression enabled (ON=1 OFF=0) : <SELECT name="ce" MAXLENGTH="1" > <OPTION>1</option><OPTION>0</option></select><br>
 Compression factor (Value 1-9) : <input name="cf" value="1" MAXLENGTH="1" type="number"><br>
+Compression Type (lzo or zlib) : <SELECT name="ctt" MAXLENGTH="4" ><OPTION>lzo</option><OPTION>zlib</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <hr width="100%" size=1 color="blue">
 <!-- Removed for now since it is no longer supported by MHVTL recent release

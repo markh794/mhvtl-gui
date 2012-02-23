@@ -21,6 +21,9 @@ $VAR8 = $_REQUEST['usn'];
 $VAR0 = $_REQUEST['naa'];
 $VARa = $_REQUEST['ce'];
 $VARb = $_REQUEST['cf'];
+$VCTT = $_REQUEST['ctt'];
+
+<!-- Removed for now since it is no longer supported by MHVTL recent release
 $VARc = $_REQUEST['ro'];
 $VARd = $_REQUEST['ro1'];
 $VARe = $_REQUEST['rw'];
@@ -29,7 +32,7 @@ $VARg = $_REQUEST['wm'];
 $VARh = $_REQUEST['wm1'];
 $VARi = $_REQUEST['ecr'];
 $VARj = $_REQUEST['ecr1'];
-
+-->
 $outputa = `echo >>/tmp/device.conf.tmp`;
 $outputd = `echo "Drive: "'$VARx'" CHANNEL: "'$VAR2'" TARGET: "'$VAR3'" LUN: "'$VAR4' >>/tmp/device.conf.tmp`;
 $output0 = `echo " Library ID: "'$VAR1'" Slot: "'$VARr' >>/tmp/device.conf.tmp`;
@@ -38,7 +41,9 @@ $output2 = `echo " Product identification: "'$VAR6' >>/tmp/device.conf.tmp`;
 $output3 = `echo " Product revision level: "'$VAR7' >>/tmp/device.conf.tmp'`;
 $output4 = `echo " Unit serial number: "'$VAR8' >>/tmp/device.conf.tmp`;
 $output5 = `echo " NAA: "'$VAR1:11:22:33:ab:$VAR2:$VAR3:$VAR4' >>/tmp/device.conf.tmp`;
+$output6 = `echo " Compression type: "'$VCTT' >>/tmp/device.conf.tmp`;
 $outputf = `echo " fifo: /var/tmp/mhvtl" >>/tmp/device.conf.tmp`;
+
 <!-- Removed for now since it is no longer supported by MHVTL recent release
 $output6 = `echo " READ_ONLY: "'$VARc' >>/tmp/device.conf.tmp`;
 $output7 = `echo " READ_ONLY: "'$VARd' >>/tmp/device.conf.tmp`;
