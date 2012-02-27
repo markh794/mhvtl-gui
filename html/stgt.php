@@ -22,6 +22,13 @@ echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<
 <table border="1" >
 
 <td>
+<?php
+$output = shell_exec('sudo -u root -S /usr/sbin/tgtadm -V');
+echo "<img src='images/tab_right.png' ALIGN='left' ><b><FONT COLOR=black >TGT installed :</FONT><FONT COLOR=blue > $output</FONT></b>";
+?>
+</td>
+
+<td>
 
 <?php
 $STGTPROCS = shell_exec('ps -ef | egrep "tgtd"|egrep -v egrep');
