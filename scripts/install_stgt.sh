@@ -31,7 +31,7 @@ fi
 make clean > /dev/null 2>&1
 if [ $? != 0 ];then
 echo "<FONT COLOR=red>make clean Failed $? ... Exiting ...</FONT>"
-exit 0
+#exit 0
 fi
 
 make | tee /tmp/install.update.stgp.make.log > /dev/null 2>&1
