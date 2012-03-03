@@ -5,11 +5,12 @@ $adjperm = `sudo -u root -S chmod 777 /var/tmp/mhvtl`;
 $fifo = fopen("/var/tmp/mhvtl", "r+");
 if ($fifo) {
     stream_set_blocking($fifo, false);
-  echo "<b><FONT COLOR=white>$dtt </FONT></b><br>";
+  echo "<b><FONT COLOR=white>$dtt</FONT></b><br>";
 $data = fgets($fifo);
-if ($data === false) echo "<br><FONT COLOR=#736AFF>MHVTL Release $mhvtl_ver </FONT><FONT COLOR=#6FFF00><br>Ready ...</FONT>";
+if ($data === false) echo "<br><FONT COLOR=#00FFFF>MHVTL</FONT><br><FONT COLOR=#FF00FF>Release $mhvtl_ver </FONT><FONT COLOR=#6FFF00><br>Ready ...</FONT>";
 sleep(0);
-echo "<FONT COLOR=#736AFF ><br>$data</FONT><br>";
+$a= strstr($data, '-', false);
+echo "<FONT COLOR=#736AFF ><br>$a</FONT><br>";
     } else {
   echo "<b><FONT COLOR=white>Pipe: </FONT><FONT COLOR=red>Offline</FONT><FONT COLOR=white> or option</FONT><FONT COLOR=yellow> disabled</FONT></b>";
     }
