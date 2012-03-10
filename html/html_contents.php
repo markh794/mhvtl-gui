@@ -76,10 +76,13 @@ echo "<b><FONT COLOR=blue >$output</FONT></b>";
 
 </table>
 
-<!--
-<br>
-<tr><td align=center valign=middle><img src="images/gplv2.gif" ></td></tr>
--->
+<?php
+$gui_ver = `cat ../version`;
+echo "<pre><b><FONT COLOR=purple >Web Console<br></FONT><FONT COLOR=black>$gui_ver </FONT></b></pre>";
+echo "<td align=center valign=middle><img src='images/gplv2.gif' ></td>"
+?>
+
+
 
 </center>
 

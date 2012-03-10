@@ -183,6 +183,8 @@ echo "<pre>$output</pre>";
  they sponsor or endorse any of our solutions.
 </FONT></pre>
 -->
+<?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
+
 
 </body>
 </html>

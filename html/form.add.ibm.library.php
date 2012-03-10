@@ -27,7 +27,7 @@ $nextcid = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f3|awk '{
 <input TYPE=HIDDEN name="ltarget" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="lun" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="vi" value="IBM" READONLY type="text">
-Select Library Model:<select name="lpi" ><option>03584L22</OPTION><option>03584L32</OPTION><OPTION>3577-TL</OPTION><option>3573-TL</OPTION><option>03590H11</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+Select Library Model:<select name="lpi" ><option>03584L22</OPTION><option>03584L32</OPTION><option>ULT3582-TL</OPTION><OPTION>3577-TL</OPTION><option>3573-TL</OPTION><option>03590H11</OPTION></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="lprl" value="4.02" READONLY type="text">
 <input TYPE=HIDDEN name="lusn" value=<?php echo $nextlid+70000000;?> READONLY MAXLENGTH="8" type="text" />
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text">

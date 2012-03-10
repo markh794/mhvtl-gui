@@ -1,5 +1,6 @@
 Device    : Description                             Vendor    Driver query string Firmware 
 Library   : IBM TS3500 (TotalStorage 3584) L32      IBM       03584L32            4.02     
+Library   : IBM 3582 Ultrium Scalable               IBM       ULT3582-TL          205B
 Library   : HP StorageWorks MLS 6000                HP        MSL6000 Series      0430     
 Library   : HP ESL E-Series                         HP        ESL E-Series        2.00     
 Library   : Sun StorageTek L700                     STK       L700                0315     
