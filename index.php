@@ -23,6 +23,9 @@ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.
 <TR>
 <TD>
 
+<?php $output = `uname -a`; echo "<pre><b><FONT COLOR=#FFFFFF> $output</FONT></b></pre>"; ?>
+<?php $output = `sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2`; echo "<pre><center><b><FONT COLOR=#FFFF00>MHVTL Release $output</FONT></b></center></pre>"; ?>
+
 <?php
 $output = `cat version`;
 echo "<pre><center><FONT COLOR=#2B60DE ><b>Web Console Release $output</b></FONT></center></pre>";
