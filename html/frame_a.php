@@ -110,10 +110,10 @@ getID:function(el)
 					{
 						if (/4|^complete$/.test($http.readyState)) {
 							document.getElementById('ReloadThis').innerHTML = $http.responseText;
-							setTimeout(function(){$self();}, 1000);
+							setTimeout(function(){$self();}, 100);
 						}
 					};
-					$http.open('GET', 'mhvtl_fifo.php' + '?' + new Date().getTime(), true);
+					$http.open('GET', 'fdisplay.php' + '?' + new Date().getTime(), true);
 					$http.send(null);
 				}
 
@@ -121,7 +121,7 @@ getID:function(el)
 
 		</script>
                 <script type="text/javascript">
-                        setTimeout(function() {Ajax();}, 1000);
+                        setTimeout(function() {Ajax();}, 100);
                 </script>
 
 
@@ -130,14 +130,14 @@ getID:function(el)
 <TD>
 <div style="overflow:auto;height:120px;width:450px;" id="ReloadThis" >
 <?php
-include 'mhvtl_fifo.php' ;
+include 'fdisplay.php' ;
 ?>
 </div>
 </table>
 
 <div style="overflow:auto;height:200px;width:500px;">
 <?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<img src="images/red_light.png" align=center /> *** System maybe offline *** <a href=procs_quick.php style=text-decoration:none >is MHVTL running ? </a>"; else echo "$DEVICES"; fi');
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
 <Select>

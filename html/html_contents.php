@@ -15,7 +15,7 @@
 <pre>
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
-echo "<b><FONT COLOR=blue >$output</FONT></b>";
+echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 ?>
 </pre>
 
@@ -25,19 +25,20 @@ echo "<b><FONT COLOR=blue >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="  Control Center  " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
+<INPUT TYPE="button" VALUE="     Dashboard     " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
 </td>
 </tr>
+
+<tr>
+<td>
+<INPUT TYPE="button" VALUE=" Operator " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
+</td>
+</tr>
+
 
 <tr>
 <td>
 <INPUT TYPE="button" VALUE=" Configuration " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
-</td>
-</tr>
-
-<tr>
-<td>
-<INPUT TYPE="button" VALUE=" Operator Panel " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
 </td>
 </tr>
 
@@ -56,14 +57,14 @@ echo "<b><FONT COLOR=blue >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Terminal " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='terminal.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" System " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='system.php'" target="showframe">
 </td>
 </tr>
 
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Help " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='help.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Support " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='help.php'" target="showframe">
 </td>
 </tr>
 

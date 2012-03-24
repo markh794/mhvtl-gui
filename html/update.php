@@ -40,11 +40,11 @@ getID:function(el)
 
 <td>
 <form action="live_update.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Check for updates  " >
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" GitHub  " >
 </form>
 </td>
 <td>
-<font color=blue size=2><b> *** GIT + Internet Access Required </b></font>
+<font color=blue size=2><b> *** GIT + Internet Connectivity Required </b></font>
 </td>
 </table>
 

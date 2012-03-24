@@ -14,7 +14,7 @@
 </tr>
 
 <?php
-echo "<pre><b> Exit :</b></pre>";
+echo "<pre><b> Exit MHVTL :</b></pre>";
 ?>
 
 
@@ -22,7 +22,7 @@ echo "<pre><b> Exit :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="../index.php" name="out" input class="sameLook" style="color: #FF0000" target="_top"> Exit</a>
+<img src="images/tab_right.png" ALIGN="left" ><a href="../index.php" name="out" input class="sameLook" style="color: #FF0000" target="_top"> Log Off Now</a>
 </td>
 </tr>
 
