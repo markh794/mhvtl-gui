@@ -1,4 +1,4 @@
-php act.php >/dev/null
+sudo -u root -S php act.php >/dev/null
 
 cat /tmp/mhvtl.act.tmp| grep VolumeTag | awk '{print $NF}' | while read each; do
 
