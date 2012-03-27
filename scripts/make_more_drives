@@ -57,7 +57,6 @@ echo " Unit serial number: "$VAR8 >>/tmp/device.conf.tmp
 echo " NAA: $VAR1:11:22:33:ab:$VAR2:$VAR3:$VAR4" >>/tmp/device.conf.tmp
 echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp
 echo " Compression type: "$VCTT >>/tmp/device.conf.tmp;
-echo " fifo: /var/tmp/mhvtl" >>/tmp/device.conf.tmp
 
 if [ "$DOI" = "yes" ]&&[ "$ROC" = "yes" ] ; then
 echo " READ_ONLY: "$VARc >>/tmp/device.conf.tmp

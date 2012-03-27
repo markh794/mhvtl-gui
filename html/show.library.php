@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Show Library Operation :</b></pre>";
+echo "<pre><b>Show Library :</b></pre>";
 ?>
 
 

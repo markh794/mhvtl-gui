@@ -10,6 +10,7 @@
 
 <?php
 $outfile = shell_exec('sudo -u root -S ls -1 /opt/mhvtl >/tmp/list.tapes.tmp 2>&1');
+
 $output = shell_exec('sudo -u root -S cat /tmp/list.tapes.tmp');
 echo "<pre>$output</pre>";
 ?>

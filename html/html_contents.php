@@ -1,5 +1,5 @@
 <html>
-<head><title>MHVTL Web Console</title></head>
+<head><title>MHVTL Web Console </title></head>
 <link href="styles.css" rel="stylesheet" type="text/css">
 <body>
 <center>

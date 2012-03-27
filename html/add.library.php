@@ -26,7 +26,6 @@ $t2 = `echo " Product identification: "$V6 >>/tmp/device.conf.tmp`;
 $t3 = `echo " Product revision level: "$V7 >>/tmp/device.conf.tmp`;
 $t4 = `echo " Unit serial number: "$V8 >>/tmp/device.conf.tmp`;
 $t5 = `echo " NAA: "'$V1:11:22:33:ab:$V2:$V3:00' >>/tmp/device.conf.tmp`;
-$tf = `echo " fifo: /var/tmp/mhvtl" >>/tmp/device.conf.tmp`;
 
 $VRN = $_REQUEST['nod'];
 $VARx = $_REQUEST['did'];
@@ -70,7 +69,6 @@ $oput4 = `echo " Unit serial number: "'$VAR8' >>/tmp/device.conf.tmp`;
 $oput5 = `echo " NAA: "'$VAR1:11:22:33:ab:$VAR2:$VAR3d:$VAR4' >>/tmp/device.conf.tmp`;
 $oputu = `echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp`;
 $output6 = `echo " Compression type: "'$VCTT' >>/tmp/device.conf.tmp`;
-$oputf = `echo " fifo: /var/tmp/mhvtl" >>/tmp/device.conf.tmp`;
 
 $oput6 = `if [ $DOI = "yes" ]&& [ $ROC = "yes" ] ; then echo " READ_ONLY: "'$VARc' >>/tmp/device.conf.tmp; fi`;
 $oput7 = `if [ $DOI = "yes" ]&& [ $RO1C = "yes" ] ; then echo " READ_ONLY: "'$VARd' >>/tmp/device.conf.tmp; fi`;
