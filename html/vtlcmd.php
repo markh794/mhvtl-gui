@@ -19,6 +19,13 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <table border="0" ALIGN="left" >
 
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.show.library.php'" target="showframe"> Show Library
+</td>
+</tr>
+
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.open.map.php'" target="showframe"> Open Map
