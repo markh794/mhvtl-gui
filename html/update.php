@@ -14,7 +14,7 @@
 </tr>
 
 <?php
-echo "<pre><b> Live Update :</b></pre>";
+echo "<pre><b>Live Update via GitHub :</b><font color=red><b> *** Git + Online Access Required</b></font></pre>";
 ?>
 
 
@@ -34,17 +34,14 @@ getID:function(el)
         }
 }
 </script>
-<div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
+<div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 <table border="1" align="left" valign="middle" >
 
 <td>
 <form action="live_update.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" GitHub  " >
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Check for updates now  " >
 </form>
-</td>
-<td>
-<font color=blue size=2><b> *** GIT + Internet Connectivity Required </b></font>
 </td>
 </table>
 

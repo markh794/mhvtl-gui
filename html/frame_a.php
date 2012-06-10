@@ -12,7 +12,7 @@
 </td>
 </tr>
 
-<?php $output = `uname -snrp`; echo "<pre><b> $output</b></pre>"; ?>
+<?php $output = `sudo -u root -S ../scripts/os_release.sh`; echo "<pre><b> $output</b></pre>"; ?>
 
 <script type="text/javascript">
 var ray={

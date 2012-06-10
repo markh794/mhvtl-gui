@@ -45,9 +45,9 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM
 <input TYPE=HIDDEN name="lun" value="01" READONLY type="number">
 <input TYPE=HIDDEN name="dlid" value=<?php echo $nextlid;?> READONLY type="number">
 <input TYPE=HIDDEN name="sn" value="01" READONLY type="number">
-<input TYPE=HIDDEN name="dvi" value="DELL" READONLY type="text">
-Select Drive Model: <select name="pi"><OPTION>PV-136T-LTO</option><OPTION></option></select><b><FONT COLOR="red">*</FONT></b>
-<input TYPE=HIDDEN name="prl" value="E15V" READONLY type="text">
+<input TYPE=HIDDEN name="dvi" value="IBM" READONLY type="text">
+Select Drive Model: <select name="pi"><OPTION>ULTRIUM-TD1</option><OPTION></option></select><b><FONT COLOR="red">*</FONT></b>
+<input TYPE=HIDDEN name="prl" value="54K1" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+70000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
 Compression enabled (ON=1 OFF=0) : <SELECT name="ce" MAXLENGTH="1" > <OPTION>1</option><OPTION>0</option></select><b><FONT COLOR="red">*</FONT></b><br>
