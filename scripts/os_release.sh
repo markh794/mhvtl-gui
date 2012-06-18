@@ -20,6 +20,10 @@ if [ "${OS}" = "Linux" ] ; then
 	elif [ -f /etc/SUSE-release ] ; then
 		DIST=`cat /etc/SUSE-release | tr "\n" ' '| sed s/VERSION.*//`
 		REV=`cat /etc/SUSE-release | tr "\n" ' ' | sed s/.*=\ //`
+        elif [ -f /etc/SuSE-release ] ; then
+                DIST=`cat /etc/SuSE-release | tr "\n" ' '| sed s/VERSION.*//`
+                REV=`cat /etc/SuSE-release | tr "\n" ' ' | sed s/.*=\ //`
+
 	elif [ -f /etc/mandrake-release ] ; then
 		DIST='Mandrake'
 		PSUEDONAME=`cat /etc/mandrake-release | sed s/.*\(// | sed s/\)//`

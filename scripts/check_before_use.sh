@@ -55,12 +55,17 @@ fi
 
 testmt()
 (
-CHECK=`mt -v`
+CHECK=`mt -v 2>/dev/null`
+if [ $? = 0 ] ; then 
+echo "PASS" >/tmp/test.required.components.testmt
+else
+CHECK=`mt -V 2>/dev/null`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testmt
 else
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: mt not installed</FONT>'
 echo "FAIL" >/tmp/test.required.components.testmt
+fi
 fi
 )
 
