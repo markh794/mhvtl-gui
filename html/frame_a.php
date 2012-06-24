@@ -11,8 +11,7 @@
 <img src="images/tux.png" ALIGN="middle" ><b><FONT COLOR=blue size=4> Linux Virtual Tape Library System</FONT></b>
 </td>
 </tr>
-
-<?php $output = `sudo -u root -S ../scripts/os_release.sh`; echo "<pre><b> $output</b></pre>"; ?>
+<?php $output = `sudo -u root -S ../scripts/os_release.sh`; echo "<pre><b>$output</b></pre>"; ?>
 
 <script type="text/javascript">
 var ray={

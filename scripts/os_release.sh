@@ -4,6 +4,7 @@
 OS=`uname -s`
 REV=`uname -r`
 MACH=`uname -m`
+HOST=`hostname`
 
 GetVersionFromFile()
 {
@@ -73,7 +74,7 @@ if [ "${OS}" = "Linux" ] ; then
 		DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
 	fi
 	
-	OSSTR="${OS} ${DIST} ${REV}(${PSUEDONAME} ${KERNEL} ${MACH})"
+	OSSTR="$HOST - ${OS} ${DIST} ${REV}(${PSUEDONAME} ${KERNEL} ${MACH})"
 
 fi
 echo ${OSSTR}
