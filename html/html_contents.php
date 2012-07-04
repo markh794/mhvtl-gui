@@ -25,13 +25,13 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="     Dashboard     " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
+<INPUT TYPE="button" VALUE="   Start Menu   " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
 </td>
 </tr>
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Operator " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Operation " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
 </td>
 </tr>
 

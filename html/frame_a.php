@@ -30,26 +30,25 @@ getID:function(el)
 }
 </script>
 
-
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table border="1" >
 
+<table border="1" width="470" >
 <td>
 <form action="confirm.start_mhvtl.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #008000" value="     Run     ">
+<input TYPE="submit" class="sameSize" style="color: #008000" value="Run">
 </form>
 </td>
 
 <td>
 <form action="confirm.stop_mhvtl.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #FF0000" value="     Halt     ">
+<input TYPE="submit" class="sameSize" style="color: #FF0000" value="Halt">
 </form>
 </td>
 
 <td>
-<form action="devices.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #800080" value=" Virtual Devices ">
+<form action="monitor.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" class="sameSize" style="color: #800080" value="Monitor" >
 </form>
 </td>
 
@@ -57,34 +56,20 @@ getID:function(el)
 
 <td>
 <form action="activity.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #F87217" value="  Activity    ">
+<input TYPE="submit" class="sameSize" style="color: #F87217" value="Activity">
 </form>
 </td>
 
-
-<td>
-<form action="monitor.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #0000FF" value="   Monitor   " >
-</form>
-</td>
-<td>
-<INPUT TYPE="button" VALUE=" Hardware " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='hardware.php'" target="showframe">
-</td>
-
-<!--
 <td>
 <form action="frame_a.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #808000" value=" Refresh  ">
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Refresh  ">
 </form>
 </td>
--->
-
 </table>
 
-<!--
-<img src="images/libr_img.gif" ALIGN=top >
--->
 <br>
+
+
 
 <script type="text/javascript">
 
@@ -125,6 +110,7 @@ getID:function(el)
 
 
 <TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" >
+
 <TR>
 <TD>
 <div style="overflow:auto;height:120px;width:450px;" id="ReloadThis" >

@@ -16,6 +16,14 @@
 
 <table border="0" ALIGN="left" >
 
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='hardware.php'" target="showframe"> Hardware
+</td>
+</tr>
+
+
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='terminal.php'" target="showframe"> Terminal

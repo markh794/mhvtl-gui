@@ -32,7 +32,7 @@ echo "<pre><B>$output</B></pre>";
 <br>
 <table border="0" >
 <td>
-<FORM ACTION="frame_a.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 </td>
 </table>
 </body>

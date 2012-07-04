@@ -121,6 +121,11 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </td>
 </tr>
 
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='devices.php'" target="showframe"> List Tape Devices (lsscsi)
+</td>
+</tr>
 
 
 </table>
