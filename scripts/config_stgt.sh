@@ -8,7 +8,7 @@ fi
 case $1 in
 save)
 echo "Saving STGT Configuratrion in /etc/tgt/targets.conf"
-$TGTADMIN --dump >>/etc/tgt/targets.conf
+sudo PATH=/usr/sbin:sudo /usr/sbin/tgt-admin --dump >/etc/tgt/targets.conf
 if [ $? = 0 ];then
 echo "STATUS $? Succeeded ...."
 else

@@ -35,7 +35,7 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 <TD>
 
 <?php
-$output = shell_exec('sudo -u root -S /bin/sh ../scripts/config_stgt.sh save');
+$output = shell_exec('sudo -u root ../scripts/config_stgt.sh save');
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
 

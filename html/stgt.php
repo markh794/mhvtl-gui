@@ -22,10 +22,20 @@ echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<
 <table border="1" >
 
 <td>
+
 <?php
+$filename = '/usr/sbin/tgtadm';if (file_exists($filename))
+{
 $output = shell_exec('sudo -u root -S /usr/sbin/tgtadm -V');
 echo "<img src='images/tab_right.png' ALIGN='left' ><b><FONT COLOR=black >TGT installed :</FONT><FONT COLOR=blue > $output</FONT></b>";
+}
+else
+{
+echo "<img src='images/red_light.png' align=left /><b><FONT COLOR=#000000 size=2>TGT: </><FONT COLOR=red> ? </FONT></b><td><form action='confirm.install.stgt.php' method=post onsubmit=return ray.ajax()><input TYPE=submit class=sameSize style='color: #0000FF' value=' Install ' ></form></td>";
+
+}
 ?>
+
 </td>
 
 <td>
@@ -58,33 +68,11 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 ?>
 </td>
 
-<!--
-<td>
-<INPUT TYPE="button" VALUE=" Check for updates " class="sameSize"  style="color: #0000FF" ONCLICK="parent.frames[1].location.href='confirm.check_updates.stgt.php'" target="showframe">
-</td>
--->
-
 </table>
 
 <table border="0" >
 
 <br>
-
-<!--
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='confirm.install.standalone.stgt.php'" target="showframe"> Standalone Install or Live Update<br>
-</td>
-</tr>
--->
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000"" ONCLICK="parent.frames[1].location.href='confirm.install.stgt.php'" target="showframe"> Download & Install or Update STGT<br>
-</td>
-</tr>
-
-
 
 <tr>
 <td>
@@ -147,13 +135,14 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 </td>
 </tr>
 
-<!--
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration<br>
 </td>
 </tr>
 
+
+<!--
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='execute.iscsi.target.config.stgt.php'" target="showframe"> Restore Saved Configuration<br>
