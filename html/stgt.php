@@ -148,13 +148,12 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='execute.iscsi.target.config.stgt.php'" target="showframe"> Restore Saved Configuration<br>
 </td>
 </tr>
-
+-->
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='reset.iscsi.target.config.stgt.php'" target="showframe"> Reset Saved Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='reset.iscsi.target.config.stgt.php'" target="showframe"> Remove Saved Configuration<br>
 </td>
 </tr>
--->
 
 
 </table>
