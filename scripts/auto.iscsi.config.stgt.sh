@@ -14,7 +14,7 @@ fi
 
 
 
-IQN=`cut -d "=" -f2 /etc/iscsi/initiatorname.iscsi 2>/dev/null`
+IQN=`grep "InitiatorName=iqn." /etc/iscsi/initiatorname.iscsi|cut -d "=" -f2 2>/dev/null`
 if [ -z "$IQN" ] ; then
 IQN="iqn.2001-04.com.example:`hostname`"
 fi
