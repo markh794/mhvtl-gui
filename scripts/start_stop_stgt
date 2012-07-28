@@ -5,8 +5,10 @@ start()
 sleep 10
 if [ -f /usr/sbin/tgtd ]; then 
 /usr/sbin/tgtd -d 1
+/usr/sbin/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl
 else 
 ../stgt.git/usr/tgtd -d 1
+../stgt.git/scripts/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl
 fi
 }
 
