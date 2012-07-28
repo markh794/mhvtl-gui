@@ -32,7 +32,7 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 $filename = '/etc/iscsi/initiatorname.iscsi';
 if (file_exists($filename))
 {
-$miqn = `sudo -u root -S cut -d "=" -f2 /etc/iscsi/initiatorname.iscsi`;
+$miqn = `sudo -u root -S grep "InitiatorName=iqn." /etc/iscsi/initiatorname.iscsi|cut -d "=" -f2`;
 }
 else
 {
