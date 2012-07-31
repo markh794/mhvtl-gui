@@ -32,7 +32,7 @@ echo '</SELECT>'
 drivedev()
 {
 echo '<SELECT name="drivedev" min="1" type="number" required >'
-lsscsi -g | egrep "tape" | awk '{print $NF}' | while read each; do
+lsscsi -g | egrep "tape" | awk '{print $6}' | while read each; do
 echo '<OPTION>'$each'</OPTION>'
 done
 echo '</SELECT>'
