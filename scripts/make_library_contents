@@ -109,6 +109,8 @@ esac
 prefix=$2
 total=$3
 count=0
+freeslots=5
+totalslots=$(($total+$freeslots))
 
 CHECK_UNIQUE_TYPE=`sudo -u root -S ls -1d /opt/mhvtl/$2*$type`
 if [ ! -z "$CHECK_UNIQUE_TYPE" ] ; then
@@ -117,8 +119,12 @@ fi
 
 while true; do
 count=$((count+1))
-if [ $count -gt $total ] ; then
+
+if [ $count -gt $totalslots ] ; then
 exit
+
+elif [ $count -gt $total ]; then
+echo "Slot" $count:
 
 elif [ $count -lt 10 ]; then
 if [ $count -eq $total ] ; then
