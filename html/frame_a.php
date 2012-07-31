@@ -61,10 +61,12 @@ getID:function(el)
 </td>
 
 <td>
-<form action="frame_a.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Refresh  ">
+<form action="help.php" method="post" >
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Support  ">
 </form>
 </td>
+
+
 </table>
 
 <br>
