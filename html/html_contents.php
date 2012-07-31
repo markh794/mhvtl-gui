@@ -61,13 +61,6 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 </td>
 </tr>
 
-
-<tr>
-<td>
-<INPUT TYPE="button" VALUE="Exit" class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='logout.php'" target="showframe">
-</td>
-</tr>
-
 </table>
 
 <?php
