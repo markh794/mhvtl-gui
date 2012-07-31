@@ -23,8 +23,16 @@ echo "<pre><b>View TGT Configuration file  :</b></pre>";
 
 
 <?php
+$filename = "/etc/tgt/targets.conf.mhvtl";
+if (!file_exists($filename))
+{
+echo "<pre><FONT COLOR=#FF0000>No Configurations Present</FONT></pre>";
+}
+else
+{
 $output = `sudo -u root -S cat /etc/tgt/targets.conf.mhvtl`;
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
+}
 ?>
 
 </TR>
