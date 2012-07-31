@@ -57,13 +57,6 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" System " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='system.php'" target="showframe">
-</td>
-</tr>
-
-
-<tr>
-<td>
 <INPUT TYPE="button" VALUE=" Support " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='help.php'" target="showframe">
 </td>
 </tr>
