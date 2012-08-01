@@ -72,7 +72,6 @@ getID:function(el)
 <br>
 
 
-
 <script type="text/javascript">
 
 			function Ajax()
@@ -122,12 +121,7 @@ include 'fdisplay.php' ;
 </div>
 </table>
 
-<div style="overflow:auto;height:200px;width:500px;">
-<?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
-echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
-?>
-</div>
+
 
 
 <?php
@@ -144,8 +138,6 @@ $output = shell_exec('touch -t 200001010000.00 /tmp/mhvtl-gui.last.update.check'
 }
 ?>
 
-
-
 <?php
 $output = shell_exec('LASTCHECK=`find /tmp/mhvtl.last.update.check -mtime +1`; if [ ! -z "$LASTCHECK" ]; then CHECKU=`sudo -u root -S ../scripts/check_update.sh| grep -v "MHVTL is up-to-date"`; if [ ! -z "$CHECKU" ] ; then echo "<img src="images/animated_alert.gif" /> $CHECKU" ;fi;
 fi');
@@ -158,19 +150,36 @@ fi');
 echo "<pre>$output</pre>";
 ?>
 
+<script language="javascript">
+function toggle() {
+        var ele = document.getElementById("toggleText");
+        var text = document.getElementById("displayText");
+        if(ele.style.display == "block") {
+                ele.style.display = "none";
+                text.innerHTML = "<br>Show Virtual Devices";
+        }
+        else {
+                ele.style.display = "block";
+                text.innerHTML = "<br>Hide Virtual Devices";
+        }
+}
+</script>
+
+<a id="displayText" href="javascript:toggle();"><br><input TYPE="submit" value="Show Virtual Devices"></a>
+
+<table>
+<div id="toggleText"  style="display: none;overflow:auto;height:200px;width:500px;">
+<?php
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
+echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
+?>
+</div>
 </table>
 
-<!--
-<pre>
-<FONT COLOR=blue size=4>Trademark Disclaimer:</FONT>
-<FONT COLOR=black size=3> Product names, logos, brands, and other trademarks featured or referred to within
- MHVTL Web Console are the property of their respective trademark holders.
- These trademark holders are not affiliated with MHVTL Web Console, nor
- they sponsor or endorse any of our solutions.
-</FONT></pre>
--->
-<?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 
+
+
+<?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved. </a></FONT></b></pre>";?>
 
 </body>
 </html>
