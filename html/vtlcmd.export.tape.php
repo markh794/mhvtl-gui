@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Library Operation - Eject Volume :</b></pre>";
+echo "<pre><b>Library Operation - Export Volume :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -24,13 +24,16 @@ $VAR1 = $_REQUEST['robotdev'];
 $VAR2 = $_REQUEST['vol'];
 $VAR3 = $_REQUEST['maps'];
 
-$cmd = `sudo -u root -S mtx -f $VAR1 transfer $VAR2 $VAR3 >/tmp/eject.tape.tmp 2>&1`;
-$output = shell_exec('cat /tmp/eject.tape.tmp');
-echo "<pre>OK<br>$output</pre>";
+$cmd = `sudo -u root -S mtx -f $VAR1 transfer $VAR2 $VAR3 >/tmp/export.tape.tmp 2>&1`;
+$output = shell_exec('sudo -u root -S cat /tmp/export.tape.tmp');
+$cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep $VAR2 >/tmp/export.tape.tmp2 2>&1`;
+$output2 = shell_exec('sudo -u root -S cat /tmp/export.tape.tmp2');
+echo "<pre>$output<br></pre>";
+echo "<pre>$output2</pre>";
 ?>
 
 
-<FORM ACTION="form.eject.tape.php">
+<FORM ACTION="form.export.tape.php">
 <INPUT TYPE=SUBMIT VALUE="Return">
 </FORM>
 

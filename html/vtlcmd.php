@@ -19,12 +19,12 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <table border="0" ALIGN="left" >
 
-
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.show.library.php'" target="showframe"> Show Library
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Library Status
 </td>
 </tr>
+
 
 <tr>
 <td>
@@ -58,9 +58,16 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Library Status
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mount.tape.php'" target="showframe"> Load Tape
 </td>
 </tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.unmount.tape.php'" target="showframe"> Unload Tape
+</td>
+</tr>
+
 
 <tr>
 <td>
@@ -74,6 +81,33 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <table border="0" ALIGN="left" >
 
 
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.show.library.php'" target="showframe"> Show (library_contents.X)
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.import.tape.php'" target="showframe"> Import Tape
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.export.tape.php'" target="showframe"> Export Tape
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.eject.tape.php'" target="showframe"> Eject Tape
+</td>
+</tr>
+
 
 <tr>
 <td>
@@ -81,23 +115,14 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </td>
 </tr>
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mount.tape.php'" target="showframe"> Load Tape
-</td>
-</tr>
+
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.unmount.tape.php'" target="showframe"> Unload Tape
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='devices.php'" target="showframe"> List Tape Devices (lsscsi)
 </td>
 </tr>
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.eject.tape.php'" target="showframe"> Eject Tape
-</td>
-</tr>
 
 
 <tr>
@@ -121,12 +146,10 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </td>
 </tr>
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='devices.php'" target="showframe"> List Tape Devices (lsscsi)
-</td>
-</tr>
 
+</table>
+
+<table border="0" ALIGN="left" >
 
 </table>
 
