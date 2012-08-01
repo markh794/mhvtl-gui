@@ -20,20 +20,23 @@ echo "<pre><b>Library Operation - Export Volume :</b></pre>";
 
 
 <?php
-$VAR1 = $_REQUEST['robotdev'];
-$VAR2 = $_REQUEST['vol'];
-$VAR3 = $_REQUEST['maps'];
+$VAR1 = $_REQUEST['robot'];
+$VAR2 = $_REQUEST['slot'];
+$VAR3 = $_REQUEST['map'];
+
+settype($VAR2, "integer");
+settype($VAR3, "integer");
 
 $cmd = `sudo -u root -S mtx -f $VAR1 transfer $VAR2 $VAR3 >/tmp/export.tape.tmp 2>&1`;
 $output = shell_exec('sudo -u root -S cat /tmp/export.tape.tmp');
-$cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep $VAR2 >/tmp/export.tape.tmp2 2>&1`;
+$cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep IMPORT/EXPORT| grep "$VAR3" >/tmp/export.tape.tmp2 2>&1`;
 $output2 = shell_exec('sudo -u root -S cat /tmp/export.tape.tmp2');
 echo "<pre>$output<br></pre>";
 echo "<pre>$output2</pre>";
 ?>
 
 
-<FORM ACTION="form.export.tape.php">
+<FORM ACTION="form1.export.tape.php">
 <INPUT TYPE=SUBMIT VALUE="Return">
 </FORM>
 
