@@ -13,20 +13,26 @@
 </tr>
 
 <?php
-echo "<pre><b>Library Operation - Unload Volume :</b></pre>";
+echo "<pre><b>Library Operation - Load Volume :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
 
-
 <?php
 
-$VAR1 = $_REQUEST['robotdev'];
-$VAR2 = $_REQUEST['drdev'];
-$VAR3 = $_REQUEST['voltag'];
+$VAR1 = $_REQUEST['robot'];
+$VAR2 = $_REQUEST['slotf'];
+$VAR3 = $_REQUEST['driveslot'];
+
+settype($VAR2, "integer");
+settype($VAR3, "integer");
+
 $cmd1 = `sudo -u root -S mtx -f $VAR1 unload $VAR2 $VAR3 >/tmp/unmount.tape.tmp 2>&1`;
+$cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep  "Storage Element $VAR3:Full :VolumeTag=" >/tmp/unmount.status.tmp 2>&1`;
 $output1 = shell_exec('cat /tmp/unmount.tape.tmp');
+$output2 = shell_exec('cat /tmp/unmount.status.tmp');
 echo "<pre>$output1</pre>";
+echo "<pre>$output2</pre>";
 ?>
 
 

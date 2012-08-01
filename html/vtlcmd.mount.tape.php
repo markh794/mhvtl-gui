@@ -20,11 +20,17 @@ echo "<pre><b>Library Operation - Load Volume :</b></pre>";
 
 <?php
 
-$VAR1 = $_REQUEST['robotdev'];
-$VAR2 = $_REQUEST['drdev'];
-$VAR3 = $_REQUEST['voltag'];
+$VAR1 = $_REQUEST['robot'];
+$VAR2 = $_REQUEST['slot'];
+$VAR3 = $_REQUEST['driveslotf'];
+
+settype($VAR2, "integer");
+settype($VAR3, "integer");
+
+
+
 $cmd1 = `sudo -u root -S mtx -f $VAR1 load $VAR2 $VAR3 >/tmp/mount.tape.tmp 2>&1`;
-$cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep Loaded >/tmp/mount.status.tmp 2>&1`;
+$cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep Loaded | grep  "Data Transfer Element $VAR3:Full" >/tmp/mount.status.tmp 2>&1`;
 $output1 = shell_exec('cat /tmp/mount.tape.tmp');
 $output2 = shell_exec('cat /tmp/mount.status.tmp');
 echo "<pre>$output1</pre>";

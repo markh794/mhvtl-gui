@@ -18,10 +18,21 @@ echo "<pre><b>Mount Tape :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="form1.mount.tape.php">
-<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh robotdev`; ?>
-Select Robot Device : <?php echo $cmd;?><a href="#" onClick="window.open('list.robot.devices.php', 'Devices', 'width = 600, height = 400');">Search</a>
+<form method="post" action="vtlcmd.mount.tape.php">
+
+<?php $robot = $_REQUEST['robotdev']; ?>
+Library Robot Device : <input type="text" readonly="readonly" value="<?php echo $robot;?>" name="robot" />
 <br>
+
+<?php $slot = `sudo -u root -S ../scripts/build_html_opts.sh slot ignore $robot`; ?>
+Select Element - Slot : <?php echo $slot;?>
+<br>
+
+<?php $driveslotf = `sudo -u root -S ../scripts/build_html_opts.sh driveslotf ignore $robot`; ?>
+Select Element - Drive : <?php echo $driveslotf;?>
+<br>
+
+
 
 <input type="submit">
 </form>
