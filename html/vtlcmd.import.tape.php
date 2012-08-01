@@ -21,7 +21,7 @@ echo "<pre><b>Library Operation - Import Volume :</b></pre>";
 
 <?php
 $VAR1 = $_REQUEST['robot'];
-$VAR2 = $_REQUEST['slot'];
+$VAR2 = $_REQUEST['slotf'];
 $VAR3 = $_REQUEST['map'];
 
 settype($VAR2, "integer");

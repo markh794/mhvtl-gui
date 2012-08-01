@@ -22,7 +22,7 @@ echo "<pre><b>Library Operation - Export Volume :</b></pre>";
 <?php
 $VAR1 = $_REQUEST['robot'];
 $VAR2 = $_REQUEST['slot'];
-$VAR3 = $_REQUEST['map'];
+$VAR3 = $_REQUEST['mapf'];
 
 settype($VAR2, "integer");
 settype($VAR3, "integer");
