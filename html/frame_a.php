@@ -67,47 +67,16 @@ getID:function(el)
 </td>
 
 
+<td>
+<form action="frame_a.php" method="post" >
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Refresh  ">
+</form>
+</td>
+
+
 </table>
 
 <br>
-
-
-<script type="text/javascript">
-
-			function Ajax()
-			{
-				var
-					$http,
-					$self = arguments.callee;
-
-				if (window.XMLHttpRequest) {
-					$http = new XMLHttpRequest();
-				} else if (window.ActiveXObject) {
-					try {
-						$http = new ActiveXObject('Msxml2.XMLHTTP');
-					} catch(e) {
-						$http = new ActiveXObject('Microsoft.XMLHTTP');
-					}
-				}
-
-				if ($http) {
-					$http.onreadystatechange = function()
-					{
-						if (/4|^complete$/.test($http.readyState)) {
-							document.getElementById('ReloadThis').innerHTML = $http.responseText;
-							setTimeout(function(){$self();}, 100);
-						}
-					};
-					$http.open('GET', 'fdisplay.php' + '?' + new Date().getTime(), true);
-					$http.send(null);
-				}
-
-			}
-
-		</script>
-                <script type="text/javascript">
-                        setTimeout(function() {Ajax();}, 100);
-                </script>
 
 
 <TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" >
@@ -151,6 +120,7 @@ echo "<pre>$output</pre>";
 ?>
 
 <script language="javascript">
+
 function toggle() {
         var ele = document.getElementById("toggleText");
         var text = document.getElementById("displayText");

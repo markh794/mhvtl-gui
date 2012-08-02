@@ -5,9 +5,6 @@ $mhvtl_verg = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":
 $dtt = `date`;
 echo "<b><FONT COLOR=#FFFFFF>$dtt</FONT><br><br>";
 
-$cmdout = shell_exec ('sudo -u root -S rm -f /tmp/mhvtl.act.tmp; sudo -u root -S lsscsi -g | grep mediumx | grep -o "[^dev]*$" | while read each; do  sudo -u root -S lsscsi -g | grep /dev$each$|cut -d "]" -f2 ; sudo -u root -S mtx -f /dev$each status | sudo -u root -S grep "Loaded"; done >>/tmp/mhvtl.act.tmp');
-
-
 $dm = `sudo -u root -S ../scripts/pandisp.sh`;
 if ($dm=="")
 {

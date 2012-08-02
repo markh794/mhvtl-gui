@@ -1,7 +1,4 @@
-##### removing for now due to system overhead
 exit 0
-##### removing for now due to system overhead
-
 cat /tmp/mhvtl.act.tmp| grep VolumeTag | awk '{print $NF}' | while read each; do
 
 VAL1=`ls -l /opt/mhvtl/$each/data| awk '{print $5}'`

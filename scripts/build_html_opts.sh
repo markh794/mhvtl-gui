@@ -39,6 +39,62 @@ echo '</SELECT>'
 }
 
 
+slot()
+{
+echo '<SELECT name="slot" min="1" type="number" required >'
+mtx -f $2 status| grep -v "Data Transfer Element" | grep Full | grep -v "IMPORT/EXPORT"| grep -v "Storage Changer"| awk '{print $3,$4}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+slotf()
+{
+echo '<SELECT name="slotf" min="1" type="number" required >'
+mtx -f $2 status| grep -v "Data Transfer Element" | grep Empty | grep -v "IMPORT/EXPORT"| grep -v "Storage Changer"| awk '{print $3,$4}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+map()
+{
+echo '<SELECT name="map" min="1" type="number" required >'
+mtx -f $2 status | grep "IMPORT/EXPORT" | grep Full | awk '{print $3,$4,$5}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+
+mapf()
+{
+echo '<SELECT name="mapf" min="1" type="number" required >'
+mtx -f $2 status | grep "IMPORT/EXPORT" | grep Empty | awk '{print $3,$4}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+
+driveslotf()
+{
+echo '<SELECT name="driveslotf" min="1" type="number" required >'
+mtx -f $2 status| grep "Data Transfer Element" | grep Empty | awk '{print $1,$2,$3,$4}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+driveslot()
+{
+echo '<SELECT name="driveslot" min="1" type="number" required >'
+mtx -f $2 status| grep "Data Transfer Element" | grep -v Empty | awk '{print $4,$5,$6,$7,$8,$9,$10}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
 device()
 {
 echo '<SELECT name="device" min="1" type="number" required >'
@@ -149,4 +205,4 @@ fi
 }
 
 
-$1 $2
+$1 $2 $3
