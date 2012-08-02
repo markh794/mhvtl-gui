@@ -54,6 +54,8 @@ Select Drive Model: <select name="pi"><OPTION>Ultrium 1-SCSI</option><OPTION>Ult
 Compression enabled (ON=1 OFF=0) : <SELECT name="ce" MAXLENGTH="1" > <OPTION>1</option><OPTION>0</option></select><b><FONT COLOR="red">*</FONT></b><br>
 Compression factor (Value 1-9) : <SELECT name="cf" MAXLENGTH="1"> <OPTION>1</option><OPTION>2</option><OPTION>3</option><OPTION>4</option><OPTION>5</option><OPTION>6</option><OPTION>7</option><OPTION>8</option><OPTION>9</option></select><b><FONT COLOR="red">*</FONT></b><br>
 Compression Type (lzo or zlib) : <SELECT name="ctt" MAXLENGTH="4" ><OPTION>lzo</option><OPTION>zlib</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Backoff Value (Default:1000): <select name="bkfv" MAXLENGTH="7" type="number" ><OPTION>Default</option><OPTION>100</option><OPTION>10</option></select><b><FONT COLOR="red">*</FONT></b><br>
+
 Enter Number of Drives : <input name="nod" value="5" min="1" max="19" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
 Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
 <!-- Removed for now since it is no longer supported by MHVTL recent release
@@ -80,6 +82,11 @@ CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?
 
 Enter Media Barcode Prefix (Any unique 3 char only) i.e HPS : <input name="mp" value="HPS" required MAXLENGTH="3" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
 Enter Media Count MAX 998 : <input name="mc" value="20" min="1" max="998" required SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+<br>
+
+Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>Default</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
+
+
 <hr width="100%" size=1 color="blue">
 
 <br><input type="submit" /> </form>
