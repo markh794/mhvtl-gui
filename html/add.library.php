@@ -19,6 +19,7 @@ $V6 = $_REQUEST['lpi'];
 $V7 = $_REQUEST['lprl'];
 $V8 = $_REQUEST['lusn'];
 $V0 = $_REQUEST['naa'];
+$V9 = $_REQUEST['llp'];
 
 $t0 = `echo "Library: "'$V1'" CHANNEL: "'$V2'" TARGET: "'$V3'" LUN: "'00' >/tmp/device.conf.tmp`;
 $t1 = `echo " Vendor identification: "$V5>>/tmp/device.conf.tmp`;
@@ -26,6 +27,15 @@ $t2 = `echo " Product identification: "$V6 >>/tmp/device.conf.tmp`;
 $t3 = `echo " Product revision level: "$V7 >>/tmp/device.conf.tmp`;
 $t4 = `echo " Unit serial number: "$V8 >>/tmp/device.conf.tmp`;
 $t5 = `echo " NAA: "'$V1:11:22:33:ab:$V2:$V3:00' >>/tmp/device.conf.tmp`;
+
+if ( "$V9" == "Default" )
+{
+$cmd = `echo " Home directory: /opt/mhvtl" >>/tmp/device.conf.tmp`;
+}
+else
+{
+$cmd = `echo " Home directory:" $V9 >>/tmp/device.conf.tmp`;
+}
 
 $VRN = $_REQUEST['nod'];
 $VARx = $_REQUEST['did'];
@@ -58,6 +68,7 @@ $WM1C = $_REQUEST['wm1c'];
 $ECRC = $_REQUEST['ecrc'];
 $ECR1C = $_REQUEST['ecr1c'];
 $VCTT = $_REQUEST['ctt'];
+$VBK = $_REQUEST['bkfv'];
 
 $oputa = `echo >>/tmp/device.conf.tmp`;
 $oputd = `echo "Drive: $VARx CHANNEL: $VAR2 TARGET: $VAR3d LUN: $VAR4" >>/tmp/device.conf.tmp`;
@@ -70,6 +81,16 @@ $oput5 = `echo " NAA: "'$VAR1:11:22:33:ab:$VAR2:$VAR3d:$VAR4' >>/tmp/device.conf
 $oputu = `echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp`;
 $output6 = `echo " Compression type: "'$VCTT' >>/tmp/device.conf.tmp`;
 
+if ( "$VBK" == "Default" )
+{
+$cmd = `echo " Backoff: 1000"  >>/tmp/device.conf.tmp`;
+}
+else
+{
+$cmd = `echo " Backoff:" $VBK  >>/tmp/device.conf.tmp`;
+}
+
+
 $oput6 = `if [ $DOI = "yes" ]&& [ $ROC = "yes" ] ; then echo " READ_ONLY: "'$VARc' >>/tmp/device.conf.tmp; fi`;
 $oput7 = `if [ $DOI = "yes" ]&& [ $RO1C = "yes" ] ; then echo " READ_ONLY: "'$VARd' >>/tmp/device.conf.tmp; fi`;
 $oput8 = `if [ $DOI = "yes" ]&& [ $RWC = "yes" ] ; then echo " READ_WRITE: "'$VARe' >>/tmp/device.conf.tmp;fi`;
@@ -79,7 +100,7 @@ $oputy = `if [ $DOI = "yes" ]&& [ $WM1C = "yes" ] ; then echo " WORM: "'$VARh' >
 $oputz = `if [ $DOI = "yes" ]&& [ $ECRC = "yes" ] ; then echo " ENCRYPTION: "'$VARi' >>/tmp/device.conf.tmp;fi`;
 $oputq = `if [ $DOI = "yes" ]&& [ $ECR1C = "yes" ] ; then echo " ENCRYPTION: "'$VARj' >>/tmp/device.conf.tmp;fi`;
 
-$makemoredrives = `sudo -u root ../scripts/make_more_drives "$VRN" "$VARx" "$VARr" "$VAR1" "$VAR2" "$VAR3d" "$VAR4" "$VAR5" "$VAR6" "$VAR7" "$VAR8" "$VAR0" "$VARa" "$VARb" "$VARc" "$VARd" "$VARe" "$VARf" "$VARg" "$VARh" "$VARi" "$VARj" "$DOI" "$ROC" "$RO1C" "$RWC" "$RW1C" "$WMC" "$WM1C" "$ECRC" "$ECR1C" "$VCTT" `;
+$makemoredrives = `sudo -u root ../scripts/make_more_drives "$VRN" "$VARx" "$VARr" "$VAR1" "$VAR2" "$VAR3d" "$VAR4" "$VAR5" "$VAR6" "$VAR7" "$VAR8" "$VAR0" "$VARa" "$VARb" "$VARc" "$VARd" "$VARe" "$VARf" "$VARg" "$VARh" "$VARi" "$VARj" "$DOI" "$ROC" "$RO1C" "$RWC" "$RW1C" "$WMC" "$WM1C" "$ECRC" "$ECR1C" "$VCTT" "$VBK" `;
 
 $output = `cat /tmp/device.conf.tmp`;
 echo "<pre>$output</pre>";
