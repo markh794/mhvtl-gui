@@ -34,6 +34,7 @@ WM1C=${29}
 ECRC=${30}
 ECR1C=${31}
 VCTT=${32}
+VBK=${33}
 
 if [ $count -eq $number ] ; then
 exit
@@ -56,7 +57,8 @@ echo " Product revision level: "$VAR7 >>/tmp/device.conf.tmp
 echo " Unit serial number: "$VAR8 >>/tmp/device.conf.tmp
 echo " NAA: $VAR1:11:22:33:ab:$VAR2:$VAR3:$VAR4" >>/tmp/device.conf.tmp
 echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp
-echo " Compression type: "$VCTT >>/tmp/device.conf.tmp;
+echo " Compression type: "$VCTT >>/tmp/device.conf.tmp
+if [ $VBK != "Default" ] ; then echo " Backoff:" $VBK  >>/tmp/device.conf.tmp; else echo " Backoff:" 1000  >>/tmp/device.conf.tmp; fi
 
 if [ "$DOI" = "yes" ]&&[ "$ROC" = "yes" ] ; then
 echo " READ_ONLY: "$VARc >>/tmp/device.conf.tmp
