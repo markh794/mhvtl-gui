@@ -1,3 +1,4 @@
+#!/bin/sh
 
 VAR1=`echo $1 | sed 's/ //g'`
 VAR2=`echo $2 | sed 's/ //g'`
@@ -21,10 +22,15 @@ echo "<pre><FONT COLOR=#FF0000><b>*** Library : $VAR1 Removed </b></FONT></pre>"
 
 if [ "$VAR2" = "YES" ]; then
 echo "<FONT COLOR=#FF00FF><b>Removing all existing tape media ...</b></FONT>"
-grep ^Slot /etc/mhvtl/library_contents."$VAR1"| awk '{print $NF}'| while read each; do
+if [ -d /opt/mhvtl/$VAR1 ] ; then
+rm -Rf /opt/mhvtl/$VAR1
+else
+grep ^Slot /etc/mhvtl/library_contents."$VAR1" | awk '{print $NF}'| cut -d ":" -f2 | grep -v ^$ | while read each; do
 rm -Rf /opt/mhvtl/$each
 done
+fi
 rm -f /etc/mhvtl/library_contents."$VAR1"
+
 echo "<FONT COLOR=#FF0000><b>All existing tape media removed</b></FONT>"
 else
 echo "<FONT COLOR=#00FF00><b>Keeping all existing tape media ...</b></FONT>"
