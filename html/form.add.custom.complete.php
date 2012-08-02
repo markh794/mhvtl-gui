@@ -68,6 +68,7 @@ NAA: <input name="naa" value="Auto-Generated" READONLY type="text" style="color:
 Compression enabled (ON=1 OFF=0) : <SELECT name="ce" MAXLENGTH="1" > <OPTION>1</option><OPTION>0</option></select><br>
 Compression factor (Value 1-9) : <input name="cf" value="1" MAXLENGTH="1" type="number"><br>
 Compression Type (lzo or zlib) : <SELECT name="ctt" MAXLENGTH="4" ><OPTION>lzo</option><OPTION>zlib</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Backoff Value (Default:1000): <select name="bkfv" MAXLENGTH="7" type="number" ><OPTION>Default</option><OPTION>100</option><OPTION>10</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <hr width="100%" size=1 color="blue">
 <!-- Removed for now since it is no longer supported by MHVTL recent release
@@ -98,6 +99,7 @@ CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?
 Select Media Density Type : <SELECT name="mt" ><OPTION SELECTED>AIT4<option>AIT1</OPTION><option>AIT2</OPTION><option>AIT3</OPTION><option>AIT4</OPTION><option>DDS1</OPTION><option>DDS2</OPTION><option>DDS3</OPTION><option>DDS4</OPTION><option>DLT3</OPTION><option>DLT4</OPTION><option>LTO1</OPTION><option>LTO2</OPTION><option>LTO3</OPTION><option>LTO4</OPTION><option>LTO5</OPTION><option>SDLT1</OPTION><option>SDLT2</OPTION><option>SDLT3</OPTION><option>SDLT4</OPTION><option>T10KA</OPTION><option>T10KB</OPTION><option>T10KC</OPTION><option>J1A</OPTION><option>E05</OPTION><option>E06</OPTION></select><br>
 Enter Media Prefix ( 3 Char i.e SNY ) : <input name="mp" value="SNY" required MAXLENGTH="3" type="text"><br>
 Enter Media Count MAX 998 : <input name="mc" value="20" min="1" max="998" required type="number"><br>
+Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>Default</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 
 <br><input type="submit" /> </form>
