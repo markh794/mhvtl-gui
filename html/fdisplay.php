@@ -8,7 +8,7 @@ echo "<b><FONT COLOR=#FFFFFF>$dtt</FONT><br><br>";
 $dm = `sudo -u root -S ../scripts/pandisp.sh`;
 if ($dm=="")
 {
-echo "<FONT COLOR=#736AFF>MHVTL </FONT><FONT COLOR=#00FFFF> $mhvtl_verm(git-$mhvtl_verg)</FONT></FONT>";
+echo "<FONT COLOR=#FFFF00>MHVTL </FONT><FONT COLOR=#00FFFF> $mhvtl_verm(git-$mhvtl_verg)</FONT></FONT>";
 
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<br><br><img src="images/red_light.png" align=center /><FONT COLOR=#FF0000> System Offline</FONT>"; else echo "<br><br><FONT COLOR=#00FF00>System Online : idle</FONT></b>"; fi');
 echo "<b>$output</b>";
