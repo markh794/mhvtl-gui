@@ -9,12 +9,10 @@
 
 
 <?php
-$outfile = shell_exec('sudo -u root -S ls -1 /opt/mhvtl >/tmp/list.tapes.tmp 2>&1');
-
+$cmd = shell_exec('sudo -u root -S find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"|sort -n  >/tmp/list.tapes.tmp');
 $output = shell_exec('sudo -u root -S cat /tmp/list.tapes.tmp');
 echo "<pre>$output</pre>";
 ?>
-
 <a title="Close Window" href="Javascript:close();"><INPUT TYPE=SUBMIT VALUE="Close"></a>
 
 </body>

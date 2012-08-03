@@ -12,7 +12,7 @@ echo '</SELECT>'
 tape()
 {
 echo '<SELECT name="tape" type="text" required >'
-ls -1 /opt/mhvtl | while read each1; do
+find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -n | while read each1; do
 echo '<OPTION>'$each1'</OPTION>'
 done
 echo '</SELECT>'
