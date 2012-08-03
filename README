@@ -22,13 +22,13 @@ MHVTL GUI Requirement  :
 * Comment out the line "Defaults requiretty" in /etc/sudoers
 * You may need to disable selinux to run sudo from httpd, Reported by crippa.andrea/MHVTL Forum
 
-3) Install some OS utility tools (Required ) :
+3) Install some OS utility tools :
 
-* lsscsi (yum install lsscsi)
-* mtx (yum install mtx)
-* mt-st (yum install mt-st)
-* git version 1.7.4.1 or higher (http://git-scm.com or http://kernel.org/pub/software/scm/)
-* sysstat (yum install sysstat)
+* lsscsi (yum install lsscsi) (Required) 
+* mtx (yum install mtx) (Required)
+* mt-st (yum install mt-st) (Required)
+* git version 1.7.4.1 or higher (Optional - needed for LIVE UPDATE Feature)
+* sysstat (yum install sysstat) (Optional)
 
 4) Install MHVTL / Minimum Release 0.18 Version 15 ] e.g. Version: 0.18.15-git-xxxxxx (Required )
 
@@ -36,7 +36,7 @@ MHVTL GUI Requirement  :
 
 5) Internet connectivity for LIVE UPDATE Feature (Optional)
 
-6) tgt 1.17 or higher from http://stgt.sourceforge.net/ (Optional)
+6) tgt 1.17 or higher from http://stgt.sourceforge.net/ (Optional) used for iSCSI Target
 
 7) Supported Internet Browser : Internet Explorer 8, FireFox, and Google Chrome (Application mode ) for better experience
 
@@ -57,7 +57,7 @@ Alias /mhvtl "/var/www/html/mhvtl"
 
 2) Copy all MHVTL GUI files to the aliased directory specified above.
 
-3) Access MHVTL GUI via your Internet Browser e.g. http:10.0.0.10/mhvtl/
+3) Access MHVTL GUI via your Internet Browser e.g. http://localhost/mhvtl/ or http://10.0.0.10/mhvtl/
 
 4) Log on with password: "mhvtl"
 
