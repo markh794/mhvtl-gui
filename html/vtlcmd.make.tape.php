@@ -18,16 +18,18 @@ echo "<pre><b>Create additional media :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
+<?php $libid = $_REQUEST['libid']; ?>
+
 <?php
 $VAR1 = $_REQUEST['size'];
 $VAR2 = $_REQUEST['type'];
 $VAR3 = $_REQUEST['density'];
 $VAR4 = $_REQUEST['pcl'];
 
-$checkunique = `sudo -u root ls /opt/mhvtl/$VAR4 |wc -l`;
+$checkunique = `sudo -u root -S find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"|sort -n| grep $VAR4 |wc -l`;
 if ($checkunique == 0 )
 {
-$cmd = `sudo -u root -S mktape -m $VAR4 -s $VAR1 -t $VAR2 -d $VAR3 >/tmp/vtlcmd.create.tape.tmp 2>&1`;
+$cmd = `sudo -u root -S mktape -l $libid -m $VAR4 -s $VAR1 -t $VAR2 -d $VAR3 >/tmp/vtlcmd.create.tape.tmp 2>&1`;
 $output = shell_exec('cat /tmp/vtlcmd.create.tape.tmp');
 echo "<pre>Created $VAR4 .. $output</pre>";
 }
