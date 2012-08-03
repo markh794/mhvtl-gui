@@ -36,19 +36,19 @@ getID:function(el)
 <table border="1" width="470" >
 <td>
 <form action="confirm.start_mhvtl.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #008000" value="Run">
+<input TYPE="submit" class="sameSize" style="color: #008000" value=" Start ">
 </form>
 </td>
 
 <td>
 <form action="confirm.stop_mhvtl.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #FF0000" value="Halt">
+<input TYPE="submit" class="sameSize" style="color: #FF0000" value=" Stop ">
 </form>
 </td>
 
 <td>
 <form action="monitor.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #800080" value="Monitor" >
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Monitor " >
 </form>
 </td>
 
@@ -56,20 +56,20 @@ getID:function(el)
 
 <td>
 <form action="activity.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #F87217" value="Activity">
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Activity ">
 </form>
 </td>
 
 <td>
 <form action="help.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Support  ">
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Support ">
 </form>
 </td>
 
 
 <td>
 <form action="frame_a.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Refresh  ">
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Refresh ">
 </form>
 </td>
 
