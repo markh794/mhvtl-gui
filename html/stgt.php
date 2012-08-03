@@ -27,7 +27,7 @@ echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename))
 {
 $output = shell_exec('sudo -u root -S /usr/sbin/tgtadm -V');
-echo "<img src='images/tab_right.png' ALIGN='left' ><b><FONT COLOR=black >TGT installed :</FONT><FONT COLOR=blue > $output</FONT></b>";
+echo "<img src='images/tab_right.png' ALIGN='left' ><b><FONT COLOR=black >TGT installed :</FONT><FONT COLOR=blue > $output </FONT></b> ";
 }
 else
 {
@@ -70,7 +70,7 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 </table>
 
-<table border="0" >
+<table border="0" ALIGN="left" >
 
 <br>
 
@@ -119,9 +119,6 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 </td>
 </tr>
 
-</table>
-
-<table border="0" >
 
 <tr>
 <td>
@@ -135,11 +132,15 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 </td>
 </tr>
 
+<table border="0" ALIGN="left" >
+
+
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration<br>
 </td>
 </tr>
+
 
 
 <tr>

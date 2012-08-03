@@ -18,13 +18,20 @@ echo "<pre><b>Robot Status :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
+<TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
+<TR>
+<TD>
 
 <?php
 $VAR = $_REQUEST['robotdev'];
 $cmdoutfile = `sudo -u root -S mtx -f $VAR status >/tmp/robot.status.tmp 2>&1`;
 $output = shell_exec('cat /tmp/robot.status.tmp');
-echo "<pre>$output</pre>";
+echo "<pre><FONT COLOR=#FFFF00>$output</FONT></pre>";
 ?>
+
+</TR>
+</TD>
+</TABLE>
 
 
 <FORM ACTION="form.robot.status.php">

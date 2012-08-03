@@ -105,7 +105,6 @@ $makemoredrives = `sudo -u root ../scripts/make_more_drives "$VRN" "$VARx" "$VAR
 $output = `cat /tmp/device.conf.tmp`;
 echo "<pre>$output</pre>";
 
-
 echo "<hr width=100% size=1 color=blue>";
 $VMN = $_REQUEST['nom'];
 $VRN = $_REQUEST['nod'];

@@ -8,7 +8,7 @@ fi
 
 RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v egrep`
 if [ -z "$RUNNING" ]; then
-echo "<table valign='middle' ><td><b>STGT is currently not running </b><form action='confirm.start_stgt.php' method='post' ><input TYPE='submit' value=' Start '></form></td></table>"
+echo "<table valign='middle' ><td><b><FONT COLOR=#FFFF00>STGT is currently not running </FONT></b><form action='confirm.start_stgt.php' method='post' ><input TYPE='submit' value=' Start '></form></td></table>"
 exit 0
 fi 
 
