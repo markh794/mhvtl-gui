@@ -31,7 +31,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Configuration " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
+<INPUT TYPE="button" VALUE="  Configuration  " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
 </td>
 </tr>
 

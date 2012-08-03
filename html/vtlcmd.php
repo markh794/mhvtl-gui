@@ -21,7 +21,14 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Library Status
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Show Library Status
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.drive.status.php'" target="showframe"> Show Drive Status
 </td>
 </tr>
 
@@ -69,12 +76,6 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </tr>
 
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.drive.status.php'" target="showframe"> Drive Status
-</td>
-</tr>
-
 </table>
 
 
@@ -83,7 +84,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.show.library.php'" target="showframe"> Show (library_contents.X)
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.show.library.php'" target="showframe"> Show Library Configuration
 </td>
 </tr>
 

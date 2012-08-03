@@ -76,19 +76,19 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.auto.iscsi.config.stgt.php'" target="showframe"> Create Automatic iSCSI Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.auto.iscsi.config.stgt.php'" target="showframe"> Create Automatic Configuration<br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.iscsi.target.stgt.php'" target="showframe"> Create Cusom iSCSI Target<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.iscsi.target.stgt.php'" target="showframe"> Create Cusom Target<br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.target.stgt.php'" target="showframe"> Create Custom iSCSI LUNS<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.target.stgt.php'" target="showframe"> Create Custom LUNS<br>
 </td>
 </tr>
 
@@ -101,7 +101,7 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.stgt.iscsi.clients.php'" target="showframe"> Add iSCSI Initiator Client Host<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.stgt.iscsi.clients.php'" target="showframe"> Add Initiator Client Host<br>
 </td>
 </tr>
 
@@ -109,26 +109,26 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.iscsi.target.stgt.php'" target="showframe"> Remove iSCSI Target<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.iscsi.target.stgt.php'" target="showframe"> Remove Target<br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.lun.stgt.php'" target="showframe"> Remove iSCSI LUNS<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.lun.stgt.php'" target="showframe"> Remove LUNS<br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.stgt.iscsi.clients.php'" target="showframe"> Remove iSCSI Initiator Client Host<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.stgt.iscsi.clients.php'" target="showframe"> Remove Initiator Client Host<br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.initiator.php'" target="showframe"> Show iSCSI Initiator Client Connections<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.initiator.php'" target="showframe"> Show Initiator Client Connections<br>
 </td>
 </tr>
 
