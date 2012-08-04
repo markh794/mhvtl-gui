@@ -17,32 +17,26 @@ echo "<pre><b>Select configuration type :</b></pre>";
 ?>
 
 
-<table border="1" align="left" valign="middle" >
+<table border="0" >
+
 
 <tr>
 <td>
-<form action="form.setup.standard.next.library.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Standard " >
-</form>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.standard.next.library.php'" target="showframe"> Standard<br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<form action="form.setup.custom.next.library.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Custom " >
-</form>
-</td>
-</tr>
-
-<tr>
-<td>
-<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT class="sameSize" style="color: #000000" VALUE="Return"> </FORM>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.custom.next.library.php'" target="showframe"> Custom<br>
 </td>
 </tr>
 
 </table>
+<br>
+
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT style="color: #000000" VALUE="Return"> </FORM>
 
 </body>
 </html>

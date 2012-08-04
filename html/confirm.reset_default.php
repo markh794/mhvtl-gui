@@ -28,16 +28,11 @@ echo "<pre><b><FONT COLOR=#FF0000>Warrning: This will remove all configured libr
 >>>> Remove all tape media : <select name="kmed" MAXLENGTH="2" type="text" ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR="red">*</FONT></b>
 <br>
 
-<table border="1" >
+<table border="0" >
 <tr>
 <td>
-<input type="submit" VALUE=" Continue " class="sameSize" style="color: #FF0000" >
-</tr>
-</td>
-
-<tr>
-<td>
-<INPUT TYPE=button VALUE="Cancel" class="sameSize" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
+<INPUT TYPE=button VALUE="Cancel" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
+<input type="submit" VALUE=" Continue " style="color: #FF0000" >
 </td>
 </tr>
 </form>

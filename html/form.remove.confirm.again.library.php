@@ -29,20 +29,16 @@ echo "<pre><b><FONT COLOR=#000000>Remove all exsiting media = $VAR2 </FONT></b><
 ?>
 <br>
 
-<table border="1" >
+<table border="0" >
 
 <tr>
 <td>
-<INPUT TYPE=SUBMIT VALUE=" Cancel " class="sameSize" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
-</td>
-</tr>
+<INPUT TYPE=SUBMIT VALUE=" Cancel " input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
 
 <form method="post" action="remove.library.php">
-<tr>
-<td>
 <input TYPE=HIDDEN name="ckmed" value=<?php echo $VAR2;?> READONLY >
 <input TYPE=HIDDEN name="clibid" value=<?php echo $VAR1;?> READONLY >
-<INPUT TYPE="submit" VALUE=" Continue " class="sameSize" style="color: #FF0000" >
+<INPUT TYPE="submit" VALUE=" Continue " style="color: #FF0000" >
 </tr>
 </td>
 </form>

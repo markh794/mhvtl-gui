@@ -26,19 +26,13 @@ echo "<pre><b><FONT COLOR=#FF0000>Please Confirm !!!! Remove all exsiting media 
 ?>
 <br>
 
-<table border="1" >
-
+<table border="0" >
 <tr>
 <td>
-<INPUT TYPE=SUBMIT VALUE="Cancel" class="sameSize" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
-</td>
-</tr>
-
+<INPUT TYPE=SUBMIT VALUE="Cancel" input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
 <form method="post" action="reset_default.php">
-<tr>
-<td>
 <input TYPE=HIDDEN name="ckmed" value=<?php echo $VAR;?> READONLY >
-<INPUT TYPE="submit" VALUE=" Continue " class="sameSize" style="color: #FF0000" >
+<INPUT TYPE="submit" VALUE=" Continue " style="color: #FF0000" >
 </tr>
 </td>
 </form>

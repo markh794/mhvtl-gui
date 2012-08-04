@@ -36,13 +36,17 @@ getID:function(el)
 </script>
 
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
-<table border="1" align="left" valign="middle" >
+<table border="0" align="left" valign="middle" >
 
 <td>
 <form action="live_update.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Check Status " >
+<img src="images/tab_right.png" ALIGN="left" ><input TYPE="submit" style="color: #000000" value="Check" >
 </form>
 </td>
+
+
+
+
 </table>
 
 </body>
