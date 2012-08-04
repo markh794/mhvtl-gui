@@ -70,6 +70,7 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 </table>
 
+<br>
 <table border="0" ALIGN="left" >
 
 <tr>
@@ -108,9 +109,9 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.initiator.php'" target="showframe"> Show Initiator Client Connections<br>
 </td>
 </tr>
+</table>
 
 <table border="0" ALIGN="left" >
-
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration<br>
