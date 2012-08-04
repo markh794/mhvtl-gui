@@ -70,7 +70,7 @@ Enter Media Barcode Prefix (Any unique 3 char only) i.e QUA : <input name="mp" v
 Enter Media Count MAX 998 : <input name="mc" value="20" min="1" max="998" required SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
-Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>Default</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 
 <hr width="100%" size=1 color="blue">

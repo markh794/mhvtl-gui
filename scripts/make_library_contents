@@ -112,7 +112,7 @@ count=0
 freeslots=5
 totalslots=$(($total+$freeslots))
 
-CHECK_UNIQUE_TYPE=`sudo -u root -S ls -1d /opt/mhvtl/$2*$type`
+CHECK_UNIQUE_TYPE=`sudo -u root -S ls -1d $6/$2*$type`
 if [ ! -z "$CHECK_UNIQUE_TYPE" ] ; then
 echo "<b><FONT COLOR="red">#Media barcde is not unique .. You may need to  select a different barcode ..</FONT></b><br>"
 fi

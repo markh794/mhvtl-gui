@@ -26,7 +26,7 @@ $VAR2 = $_REQUEST['type'];
 $VAR3 = $_REQUEST['density'];
 $VAR4 = $_REQUEST['pcl'];
 
-$checkunique = `sudo -u root -S find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"|sort -n| grep $VAR4 |wc -l`;
+$checkunique = `sudo -u root -S find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"|sort -n| sort -u| grep $VAR4 |wc -l`;
 if ($checkunique == 0 )
 {
 $cmd = `sudo -u root -S mktape -l $libid -m $VAR4 -s $VAR1 -t $VAR2 -d $VAR3 >/tmp/vtlcmd.create.tape.tmp 2>&1`;

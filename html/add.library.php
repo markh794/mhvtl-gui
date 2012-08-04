@@ -27,15 +27,7 @@ $t2 = `echo " Product identification: "$V6 >>/tmp/device.conf.tmp`;
 $t3 = `echo " Product revision level: "$V7 >>/tmp/device.conf.tmp`;
 $t4 = `echo " Unit serial number: "$V8 >>/tmp/device.conf.tmp`;
 $t5 = `echo " NAA: "'$V1:11:22:33:ab:$V2:$V3:00' >>/tmp/device.conf.tmp`;
-
-if ( "$V9" == "Default" )
-{
-$cmd = `echo " Home directory: /opt/mhvtl" >>/tmp/device.conf.tmp`;
-}
-else
-{
 $cmd = `echo " Home directory:" $V9 >>/tmp/device.conf.tmp`;
-}
 
 $VRN = $_REQUEST['nod'];
 $VARx = $_REQUEST['did'];
@@ -114,7 +106,7 @@ $VR2 = $_REQUEST['mp'];
 $VR3 = $_REQUEST['mc'];
 
 
-$run = `sudo -u root ../scripts/make_library_contents "$VR1" "$VR2" "$VR3" "$VRN" "$VMN" >/tmp/library_contents.$VR0`;
+$run = `sudo -u root ../scripts/make_library_contents "$VR1" "$VR2" "$VR3" "$VRN" "$VMN" "$V9" >/tmp/library_contents.$VR0`;
 $checkunique = `sudo -u root grep unique /tmp/library_contents.$VR0|wc -l`;
 $run2 = `sudo -u root cp -f /tmp/library_contents.$VR0 /etc/mhvtl/library_contents.$VR0`;
 $out2 = `sudo -u root cat /etc/mhvtl/library_contents.$VR0`;
