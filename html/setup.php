@@ -68,6 +68,13 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <tr>
 <td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='devices.php'" target="showframe"> List Tape Devices (lsscsi)
+</td>
+</tr>
+
+
+<tr>
+<td>
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Restore Defaults
 </td>
 </tr>

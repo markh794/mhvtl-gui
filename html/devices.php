@@ -43,7 +43,7 @@ echo "<pre><B><FONT COLOR=#FFFF00>$output</FONT></B></pre>";
 <br>
 <table border="0" >
 <td>
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 </td>
 </table>
 </body>
