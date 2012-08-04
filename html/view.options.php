@@ -23,7 +23,7 @@ echo "<pre><b>View MHVTL Options  :</b></pre>";
 
 
 <?php
-$output = `sudo -u root -S cat /etc/mhvtl/mhvtl.conf`;
+$output = `sudo -u root -S cat /etc/mhvtl/mhvtl.conf|grep -v ^#| grep -v ^$`;
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
 
