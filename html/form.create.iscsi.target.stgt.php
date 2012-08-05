@@ -36,7 +36,7 @@ $miqn = `sudo -u root -S grep "InitiatorName=iqn." /etc/iscsi/initiatorname.iscs
 }
 else
 {
-$thost = `sudo -u root -S hostname`;
+$thost = `sudo -u root -S hostname -s`;
 $miqn = `sudo -u root -S echo iqn.2001-04.com.example:$thost`;
 }
 ?>
