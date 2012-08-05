@@ -6,7 +6,7 @@ echo "<b><FONT COLOR=#FFFFFF>$dtt</FONT>";
 $dm = `sudo -u root -S ../scripts/pandisp.sh`;
 if ($dm=="")
 {
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<br><br><img src="images/red_light.png" align=center /><FONT COLOR=#FF0000> SYSTEM OFFLINE</FONT>"; else echo "<br><br><FONT COLOR=#00FF00>SYSTEM ONLINE </FONT></b>"; fi');
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ -z "$DEVICES" ]; then echo "<br><br><img src="images/fd_red_light.png" align=center /><FONT COLOR=#FF0000> SYSTEM OFFLINE</FONT>"; else echo "<br><br><img src="images/fd_green_light.png" align=center /><FONT COLOR=#00FF00> SYSTEM ONLINE </FONT></b>"; fi');
 echo "<b>$output</b>";
 echo "<BR><BR>";
 $RC=`sudo -u root -S lsscsi -g | grep mediumx| wc -l`;
