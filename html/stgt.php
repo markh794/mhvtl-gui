@@ -27,7 +27,7 @@ echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename))
 {
 $output = shell_exec('sudo -u root -S /usr/sbin/tgtadm -V');
-echo "<img src='images/green_light.png' ALIGN='left' /><b><FONT COLOR=black >TGT installed :</FONT><FONT COLOR=blue > $output </FONT></b> ";
+echo "<img src='images/green_light.png' ALIGN='left' /><b><FONT COLOR=black >TGT:</FONT><FONT COLOR=blue > $output </FONT></b> ";
 }
 else
 {
