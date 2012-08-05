@@ -5,6 +5,10 @@ else
 TGTADMIN="../stgt.git/scripts/tgt-admin"
 fi
 
+if [ ! -d /etc/tgt ]; then
+mkdir  -p /etc/tgt
+fi
+
 case $1 in
 save)
 echo "Saving STGT Configuratrion in /etc/tgt/targets.conf.mhvtl"

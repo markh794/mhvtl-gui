@@ -14,7 +14,10 @@ fi
 
 
 
+if [ -f /etc/iscsi/initiatorname.iscsi ] ;then
 IQN=`grep "InitiatorName=iqn." /etc/iscsi/initiatorname.iscsi|cut -d "=" -f2 2>/dev/null`
+fi
+
 if [ -z "$IQN" ] ; then
 IQN="iqn.2001-04.com.example:`hostname`"
 fi
@@ -64,4 +67,4 @@ exit 0
 fi
 done
 echo "---------------------------------------"
-sh ../scripts/config_stgt.sh save
+../scripts/config_stgt.sh save

@@ -1,11 +1,18 @@
 testmhvtl()
 {
+set -xv
 MAJORVER="1"
 MINRELEASE="17"
 MINVERSION="15"
-_RELEASE=`sudo -u root -S vtlcmd -V| awk '{print $2}'|cut -d "-" -f1`
+_RELEASE=`sudo -u root -S /usr/bin/vtlcmd -V| awk '{print $2}'|cut -d "-" -f1`
+if [ -z "$_RELEASE" ]; then
+_RELEASE=0
+fi
 MAJ=`echo $_RELEASE|awk -F. '{print $1}'`
 RELEASE=`echo $_RELEASE|awk -F. '{print $2}'`
+if [ -z "$RELEASE" ]; then
+RELEASE=0
+fi
 VERSION=`echo $_RELEASE|awk -F. '{print $3}'`
 if [ $MAJORVER -eq $MAJ ]; then # Version 1.0 is OK
 	echo "PASS" >/tmp/test.required.components.testmhvtl
@@ -13,6 +20,7 @@ elif [ $RELEASE -gt $MINRELEASE ] && [ $VERSION -gt $MINVERSION ] ; then
 echo "PASS" >/tmp/test.required.components.testmhvtl
 else
 echo "FAIL" >/tmp/test.required.components.testmhvtl
+echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: MHVTL not detected</FONT>'
 fi
 }
 
