@@ -27,8 +27,9 @@ MHVTL GUI Requirement  :
 * lsscsi (yum install lsscsi) (Required) 
 * mtx (yum install mtx) (Required)
 * mt-st (yum install mt-st) (Required)
-* git version 1.7.4.1 or higher (Optional - needed for LIVE UPDATE Feature)
+* git version 1.7.4.1 or higher yum install git (Optional - for LIVE UPDATE Feature)
 * sysstat (yum install sysstat) (Optional)
+* sg3_utils (Optional) yum install sg3_utils
 
 4) Install MHVTL / Minimum Release 0.18 Version 15 ] e.g. Version: 0.18.15-git-xxxxxx (Required )
 
