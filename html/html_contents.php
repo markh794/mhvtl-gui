@@ -21,7 +21,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 
 
-<table border="1">
+<table border="0">
 
 <tr>
 <td>

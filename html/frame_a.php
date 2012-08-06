@@ -33,7 +33,7 @@ getID:function(el)
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
 
-<table border="1" width="470" >
+<table border="0" width="470" >
 <td>
 <form action="confirm.start_mhvtl.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" class="sameSize" style="color: #008000" value=" Start ">
