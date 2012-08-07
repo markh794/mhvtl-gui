@@ -42,6 +42,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.list.map.php'" target="showframe"> List Map
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -60,6 +61,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.map.php'" target="showframe"> Empty Map
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -112,6 +114,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.dump.tape.php'" target="showframe"> Dump Tape
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -132,21 +135,24 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off Library/Drives
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Empty
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Empty
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='mhvtl.list.tapes.php'" target="showframe"> List Media
 </td>
 </tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='devices.php'" target="showframe"> List Tape Devices (lsscsi)
+</td>
+</tr>
+
 
 <tr>
 <td>

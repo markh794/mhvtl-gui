@@ -60,20 +60,6 @@ getID:function(el)
 </form>
 </td>
 
-<td>
-<form action="help.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Support ">
-</form>
-</td>
-
-
-<td>
-<form action="frame_a.php" method="post" >
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Refresh ">
-</form>
-</td>
-
-
 </table>
 
 <br>
@@ -119,23 +105,24 @@ fi');
 echo "<pre>$output</pre>";
 ?>
 
-<script language="javascript">
+<form action="frame_a.php" method="post" ><input TYPE="submit" style="color: #000000" value=" Refresh "></form>
 
+<script language="javascript">
 function toggle() {
         var ele = document.getElementById("toggleText");
         var text = document.getElementById("displayText");
         if(ele.style.display == "block") {
                 ele.style.display = "none";
-                text.innerHTML = "<br>Show Virtual Devices";
+                text.innerHTML = "Show Virtual Devices";
         }
         else {
                 ele.style.display = "block";
-                text.innerHTML = "<br>Hide Virtual Devices";
+                text.innerHTML = "Hide Virtual Devices";
         }
 }
 </script>
 
-<a id="displayText" href="javascript:toggle();"><br><input TYPE="submit" value="Show Virtual Devices"></a>
+<a id="displayText" href="javascript:toggle();"><input TYPE="submit" value="Show Virtual Devices"></a>
 
 <table>
 <div id="toggleText"  style="display: none;overflow:auto;height:200px;width:500px;">
@@ -145,9 +132,6 @@ echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
 </div>
 </table>
-
-
-
 
 <?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved. </a></FONT></b></pre>";?>
 

@@ -21,15 +21,39 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.complete.php'" target="showframe"> Add New Library
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.complete.php'" target="showframe"> Create New Configuration (Library/Drives/Media)
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.library.php'" target="showframe"> Remove Library
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.library.php'" target="showframe"> Remove (Library/Drives/Media)
 </td>
 </tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.options.php'" target="showframe"> Edit Options
+</td>
+</tr>
+
+
+<tr>
+<td>
+<hr width="100%" size=1 color="blue">
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Reset Original Settings (Restore Default)
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe"> Setup iSCSI Target (tgt)
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
+
 
 <tr>
 <td>
@@ -48,38 +72,13 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.options.php'" target="showframe"> Edit Options
-</td>
-</tr>
-
-
-<tr>
-<td>
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.make.tape.php'" target="showframe"> Create Media
 </td>
 </tr>
 
-<tr>
-<td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='mhvtl.list.tapes.php'" target="showframe"> List Media
-</td>
-</tr>
-
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='devices.php'" target="showframe"> List Tape Devices (lsscsi)
-</td>
-</tr>
-
-
-<tr>
-<td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Restore Defaults
-</td>
-</tr>
 
 </table>
+
 
 </body>
 </html>

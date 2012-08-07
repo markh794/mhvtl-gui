@@ -26,7 +26,7 @@ echo "<pre>$output</pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
-<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 
 </body>
 </html>
