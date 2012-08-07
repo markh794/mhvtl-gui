@@ -42,21 +42,22 @@ echo "<pre><b> Configuration :</b></pre>";
 <td>
 <hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Reset Original Settings (Restore Default)
-<hr width="100%" size=1 color="blue">
 </td>
+<td>
 </tr>
 
 
 <tr>
 <td>
+<hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe"> Setup iSCSI Target (tgt)
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
+<hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view_device.conf.php'" target="showframe"> View Configuration
 </td>
 </tr>

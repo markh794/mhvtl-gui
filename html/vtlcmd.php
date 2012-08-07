@@ -42,12 +42,12 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.list.map.php'" target="showframe"> List Map
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 <tr>
 <td>
+<hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form1.import.tape.php'" target="showframe"> Import
 </td>
 </tr>
@@ -61,13 +61,13 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.map.php'" target="showframe"> Empty Map
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
+<hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mount.tape.php'" target="showframe"> Mount Cartridge
 </td>
 </tr>
@@ -114,7 +114,6 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.dump.tape.php'" target="showframe"> Dump Tape
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -122,6 +121,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
+<hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.offline.php'" target="showframe"> Offline Library
 </td>
 </tr>
@@ -135,13 +135,13 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off Library/Drives
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
+<hr width="100%" size=1 color="blue">
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='mhvtl.list.tapes.php'" target="showframe"> List Media
 </td>
 </tr>
