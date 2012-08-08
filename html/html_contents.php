@@ -31,14 +31,14 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="  Operator Menu  " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Setup " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
 </td>
 </tr>
 
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Setup " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
+<INPUT TYPE="button" VALUE="  Operation  " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
 </td>
 </tr>
 

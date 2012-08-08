@@ -99,12 +99,32 @@ CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?
 Select Media Density Type : <SELECT name="mt" ><OPTION SELECTED>AIT4<option>AIT1</OPTION><option>AIT2</OPTION><option>AIT3</OPTION><option>AIT4</OPTION><option>DDS1</OPTION><option>DDS2</OPTION><option>DDS3</OPTION><option>DDS4</OPTION><option>DLT3</OPTION><option>DLT4</OPTION><option>LTO1</OPTION><option>LTO2</OPTION><option>LTO3</OPTION><option>LTO4</OPTION><option>LTO5</OPTION><option>SDLT1</OPTION><option>SDLT2</OPTION><option>SDLT3</OPTION><option>SDLT4</OPTION><option>T10KA</OPTION><option>T10KB</OPTION><option>T10KC</OPTION><option>J1A</OPTION><option>E05</OPTION><option>E06</OPTION></select><br>
 Enter Media Prefix ( 3 Char i.e SNY ) : <input name="mp" value="SNY" required MAXLENGTH="3" type="text"><br>
 Enter Media Count MAX 998 : <input name="mc" value="20" min="1" max="998" required type="number"><br>
-Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
 
+<!--
+Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
+-->
+
+
+<script type="text/javascript">
+    function OnDropDownChange(dropDown)
+    {
+       var selectedValue = dropDown.options[dropDown.selectedIndex].value;
+       document.getElementById("SelectOther").value = selectedValue;
+    }
+</script>
+Enter Library Media PATH (Default:/opt/mhvtl):
+     <select name = "llp" MAXLENGTH="7" type="text" required onChange="OnDropDownChange(this);">
+        <option value="/opt/mhvtl">/opt/mhvtl</option>
+        <option value="/opt/mhvtl/<?php echo $nextlid;?>">/opt/mhvtl/<?php echo $nextlid;?></option>
+        <option value="">Other</option>
+      </select>
+            <input type="text" id="SelectOther" name="llp" value="/opt/mhvtl" required style="background-color: #6AFB92;" />
+<br><font color="#FF0000" SIZE="1" >** NOTE: If you select Library Media PATH Other, if path is not under /opt/mhvtl, then must already exist with permission set to "vtl:vtl"</font>
+
+<hr width="100%" size=1 color="blue">
 
 <br><input type="submit" /> </form>
 <FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
-<hr width="100%" size=1 color="blue">
 
 </body>
 </html>

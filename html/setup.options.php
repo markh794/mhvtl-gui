@@ -26,7 +26,7 @@ $optdeb  = `sudo -u root -S grep ^"VTL_DEBUG" /etc/mhvtl/mhvtl.conf| cut -d"=" -
 ?>
 
 <form action="add.options.php" method="post" >
-Set Configuration Path <input name="mcp" value=<?php echo $optpath;?> type="text" required><br>
+MHVTL Configuration Path <input name="mcp" READONLY value=<?php echo $optpath;?> type="text" required style="background-color: #C0C0C0;"><br>
 Set Tape Capacity Size (Mbytes) <input name="c" min="1" value=<?php echo $optcap;?> type="number" required ><br>
 Select Log Verbosity Level <SELECT name="v"><OPTION><?php echo $optverb;?></option><OPTION>0</option><OPTION>1</option> <OPTION>2</option><OPTION>3</option></select> <br>
 Select kernel Debug Level <SELECT name="vd"><OPTION><?php echo $optdeb;?></option><OPTION>0</option><OPTION>1</option></select><br>

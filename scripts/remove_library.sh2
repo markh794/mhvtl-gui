@@ -1,0 +1,31 @@
+
+VAR1=`echo $1 | sed 's/ //g'`
+VAR2=`echo $2 | sed 's/ //g'`
+
+if [ "$VAR2" = "YES" ]; then
+awk 'BEGIN{RS="" } /Library: 30/' /etc/mhvtl/device.conf
+
+HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$VAR1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
+if [ "$HOMEDIR" = "" ] ; then
+echo "<FONT COLOR=#FF0000><b>Library $VAR1: Media Home directory = ? $HOMEDIR , setting to /opt/mhvtl</b></FONT><br>"
+HOMEDIR="/opt/mhvtl"
+fi
+
+echo "<FONT COLOR=#FF0000><b>Removing all existing tape media ...</b></FONT><br>"
+
+grep ^Slot /etc/mhvtl/library_contents."$VAR1" | awk '{print $NF}'| cut -d ":" -f2 | grep -v ^$ | while read each; do
+
+if [ -d $HOMEDIR/$each ] ; then
+sudo -u vtl -S rm -Rf $HOMEDIR/$each
+STATUS=$?
+echo "<FONT COLOR=#FFFFFF>Removed </FONT><FONT COLOR=#FFA500> $HOMEDIR/$each </FONT><FONT COLOR=#FFFFFF>EXIT:$STATUS</FONT><br>"
+else
+echo "<pre><FONT COLOR=#FFFF00><b>Unable to find Media Path for $each, please remove manually </b></FONT>"
+fi
+
+done
+echo "<FONT COLOR=#008000><b>Done ...</b></FONT>"
+
+else
+echo "<FONT COLOR=#00FF00><b>Keeping all existing tape media ...</b></FONT>"
+fi

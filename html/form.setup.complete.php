@@ -22,14 +22,14 @@ echo "<pre><b>Select configuration type :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.standard.next.library.php'" target="showframe"> Standard<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.standard.next.library.php'" target="showframe"> Standard (Predefined Configuration)<br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.custom.next.library.php'" target="showframe"> Custom<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.custom.next.library.php'" target="showframe"> Custom (Advanced User)<br>
 </td>
 </tr>
 

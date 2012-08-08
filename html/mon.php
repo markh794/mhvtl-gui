@@ -36,7 +36,7 @@ echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 
 
 <td>
 <?php
-$output = shell_exec ('ACTIVITY=`sudo -u root -S lsscsi -g | grep mediumx | grep -o "[^dev]*$" | while read each; do sudo -u root -S mtx -f /dev/$each status | grep "Loaded" ;done`;if [ -z "$ACTIVITY" ] ; then echo "<img src="images/green_light.png" align=top /><b>""<a href="activity.php" style="text-decoration:none" >" "STATUS:<FONT COLOR="green">IDLE </FONT></b>";else echo "<img src="images/warning.png" align=top /><b>""<a href="activity.php" style="text-decoration:none" >" "STATUS:<FONT COLOR="orange">Active </FONT></b>";fi');
+$output = shell_exec ('ACTIVITY=`sudo -u root -S lsscsi -g | grep mediumx | grep -o "[^dev]*$" | while read each; do sudo -u root -S mtx -f /dev/$each status | grep "Loaded" ;done`;if [ -z "$ACTIVITY" ] ; then echo "<img src="images/green_light.png" align=top /><b>""<a href="activity.php" style="text-decoration:none" >" "ACTIVITY:<FONT COLOR="green">IDLE </FONT></b>";else echo "<img src="images/warning.png" align=top /><b>""<a href="activity.php" style="text-decoration:none" >" "ACTIVITY:<FONT COLOR="orange">Active </FONT></b>";fi');
 echo "<pre>$output</pre>";
 ?>
 </td>
