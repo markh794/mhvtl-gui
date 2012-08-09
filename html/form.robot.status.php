@@ -17,9 +17,9 @@ echo "<pre><b>Robot Status :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
-<form method="post" action="robot.status.php">
+<form method="post" action="form1.robot.status.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh robotdev`; ?>
-Select Robot Device : <?php echo $cmd;?><a href="#" onClick="window.open('list.robot.devices.php', 'Devices', 'width = 600, height = 400');">Search</a>
+Select Library <?php echo $cmd;?>
 <input type="submit">
 </form>
 <FORM ACTION="vtlcmd.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>

@@ -21,6 +21,7 @@ echo "<pre><b>Unmount Tape :</b></pre>";
 <form method="post" action="vtlcmd.unmount.tape.php">
 
 <?php $robot = $_REQUEST['robotdev']; ?>
+<?php $robot = ` echo $robot| sed -e "s/^.* //" `; ?>
 Library Robot Device : <input type="text" readonly="readonly" value="<?php echo $robot;?>" name="robot" />
 <br>
 

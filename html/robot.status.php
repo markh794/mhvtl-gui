@@ -23,7 +23,7 @@ echo "<pre><b>Robot Status :</b></pre>";
 <TD>
 
 <?php
-$VAR = $_REQUEST['robotdev'];
+$VAR = $_REQUEST['rrobotdev'];
 $cmdoutfile = `sudo -u root -S mtx -f $VAR status >/tmp/robot.status.tmp 2>&1`;
 $output = shell_exec('cat /tmp/robot.status.tmp');
 echo "<pre><FONT COLOR=#FFFF00>$output</FONT></pre>";

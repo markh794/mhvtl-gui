@@ -25,7 +25,8 @@ echo '</SELECT>'
 robotdev()
 {
 echo '<SELECT name="robotdev" min="1" type="number" required >'
-lsscsi -g | egrep "mediumx" | awk '{print $NF}' | while read each; do
+#lsscsi -g | egrep "mediumx" | awk '{print $NF}' | while read each; do
+lsscsi -g | egrep "mediumx" | while read each; do
 echo '<OPTION>'$each'</OPTION>'
 done
 echo '</SELECT>'
