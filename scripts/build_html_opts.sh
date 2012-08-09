@@ -14,7 +14,7 @@ echo '</SELECT>'
 
 tape()
 {
-echo '<SELECT name="tape" type="text" required >'
+echo '<SELECT name="tape" type="text" style="background-color: #00FFFF;" required >'
 find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -n | while read each1; do
 echo '<OPTION>'$each1'</OPTION>'
 done

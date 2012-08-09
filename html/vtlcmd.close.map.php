@@ -20,7 +20,7 @@ echo "<pre><b>Close Map :</b></pre>";
 <hr width="100%" size=1 color="blue">
 
 <?php
-$VAR = $_REQUEST['libid'];
+$VAR = $_REQUEST['clibid'];
 $output = `sudo -u root -S vtlcmd $VAR close map`;
 echo "<pre>$output</pre>";
 ?>

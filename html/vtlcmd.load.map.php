@@ -20,8 +20,8 @@ echo "<pre><b>Load Map :</b></pre>";
 <hr width="100%" size=1 color="blue">
 
 <?php
-$VAR = $_REQUEST['libid'];
-$VAR2 = $_REQUEST['tape'];
+$VAR = $_REQUEST['clibid'];
+$VAR2 = $_REQUEST['ctape'];
 $output = `sudo -u root -S vtlcmd $VAR load map $VAR2`;
 echo "<pre>$output</pre>";
 ?>

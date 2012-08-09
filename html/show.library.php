@@ -21,7 +21,7 @@ echo "<pre><b>Show Library :</b></pre>";
 <TD>
 <div style="overflow:auto;height:250px;width:400px;">
 <?php
-$VAR = $_REQUEST['libid'];
+$VAR = $_REQUEST['clibid'];
 $output = `sudo -u root -S cat /etc/mhvtl/library_contents.$VAR| grep -v ^#`;
 echo "<pre><FONT COLOR=#FFFF00>$output</FONT></pre>";
 ?>

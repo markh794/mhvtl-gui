@@ -19,11 +19,14 @@ echo "<pre><b>Show Library :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="show.library.php">
+<form method="post" action="form.show.confirm.again.library.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-Select Library ID Number : <?php echo $cmd;?><a href="#" onClick="window.open('find.device.id.php', 'Deviceid', 'width = 600, height = 400');">Search</a>
+
+Select Library <?php echo $cmd ; ?>
+
 <input type="submit">
 </form>
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
+
+<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </body>
 </html>

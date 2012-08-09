@@ -19,15 +19,13 @@ echo "<pre><b>Load Map :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="vtlcmd.load.map.php">
-
-<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh tape`; ?>
-Select Volume : <?php echo $cmd;?><a href="#" onClick="window.open('list.tapes.php', 'Devices', 'width = 600, height = 400');">Search</a>
-
-<br>
+<form method="post" action="vtlcmd.load.map.confirm.again.php">
 
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-Select Library ID Number : <?php echo $cmd;?><a href="#" onClick="window.open('find.device.id.php', 'Deviceid', 'width = 600, height = 400');">Search</a>
+Select Library <?php echo $cmd;?>
+<br>
+<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh tape`; ?>
+Select Volume <?php echo $cmd;?>
 
 <br>
 <input type="submit"></form>
