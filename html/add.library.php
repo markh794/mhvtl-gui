@@ -20,6 +20,7 @@ $V7 = $_REQUEST['lprl'];
 $V8 = $_REQUEST['lusn'];
 $V0 = $_REQUEST['naa'];
 $V9 = $_REQUEST['llp'];
+$VBK = $_REQUEST['bkfv'];
 
 $t0 = `echo "Library: "'$V1'" CHANNEL: "'$V2'" TARGET: "'$V3'" LUN: "'00' >/tmp/device.conf.tmp`;
 $t1 = `echo " Vendor identification: "$V5>>/tmp/device.conf.tmp`;
@@ -28,6 +29,17 @@ $t3 = `echo " Product revision level: "$V7 >>/tmp/device.conf.tmp`;
 $t4 = `echo " Unit serial number: "$V8 >>/tmp/device.conf.tmp`;
 $t5 = `echo " NAA: "'$V1:11:22:33:ab:$V2:$V3:00' >>/tmp/device.conf.tmp`;
 $cmd = `echo " Home directory:" $V9 >>/tmp/device.conf.tmp`;
+
+if ( "$VBK" == "Default" )
+{
+$cmd = `echo " Backoff: 400"  >>/tmp/device.conf.tmp`;
+}
+else
+{
+$cmd = `echo " Backoff:" $VBK  >>/tmp/device.conf.tmp`;
+}
+
+
 
 $VRN = $_REQUEST['nod'];
 $VARx = $_REQUEST['did'];
