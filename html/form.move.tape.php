@@ -20,14 +20,7 @@ echo "<pre><b>Move Tape :</b></pre>";
 
 <form method="post" action="form1.move.tape.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh robotdev`; ?>
-Select Robot Device : <?php echo $cmd;?><a href="#" onClick="window.open('list.robot.devices.php', 'Devices', 'width = 600, height = 400');">Search</a>
-<br>
-
-<input type="submit">
-</form>
-<FORM ACTION="vtlcmd.php">
-<INPUT TYPE=SUBMIT VALUE="Return">
-</FORM>
+Select Robot Device : <?php echo $cmd;?><input type="submit"></form><FORM ACTION="vtlcmd.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

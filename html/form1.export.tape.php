@@ -22,14 +22,8 @@ echo "<pre><b>Export Volume :</b></pre>";
 <form method="post" action="form2.export.tape.php">
 
 <?php $robot = `sudo -u root -S ../scripts/build_html_opts.sh robotdev`; ?>
-Select Library Robot Device : <?php echo $robot;?><a href="#" onClick="window.open('list.robot.devices.php', 'Devices', 'width = 600, height = 400');">Search</a>
-<br>
-
-<input type="submit"></form>
-
-<FORM ACTION="vtlcmd.php">
-<INPUT TYPE=SUBMIT VALUE="Return">
-</FORM>
+Select Library Robot Device : <?php echo $robot;?>
+<input type="submit"></form><FORM ACTION="vtlcmd.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

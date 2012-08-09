@@ -22,6 +22,8 @@ echo "<pre><b>Export Volume :</b></pre>";
 <form method="post" action="vtlcmd.export.tape.php">
 
 <?php $robot = $_REQUEST['robotdev']; ?>
+<?php $robot = ` echo $robot| sed -e "s/^.* //"` ; ?>
+
 Library Robot Device : <input type="text" readonly="readonly" value="<?php echo $robot;?>" name="robot" />
 <br>
 

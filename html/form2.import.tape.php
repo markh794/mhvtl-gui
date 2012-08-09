@@ -22,6 +22,8 @@ echo "<pre><b>Import Volume :</b></pre>";
 <form method="post" action="vtlcmd.import.tape.php">
 
 <?php $robot = $_REQUEST['robotdev']; ?>
+<?php $robot = ` echo $robot| sed -e "s/^.* //"` ; ?>
+
 Library Robot Device : <input type="text" readonly="readonly" value="<?php echo $robot;?>" name="robot" />
 <br>
 

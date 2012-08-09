@@ -19,11 +19,11 @@ echo "<pre><b>Dump Tape :</b></pre>";
 <hr width="100%" size=1 color="blue">
 <form method="post" action="dump.tape.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh tape`; ?>
-Select Volume : <?php echo $cmd;?><a href="#" onClick="window.open('list.tapes.php', 'Devices', 'width = 600, height = 400');">Search</a>
+Select Volume : <?php echo $cmd;?>
 <input type="submit">
 </form>
 <FORM ACTION="vtlcmd.php">
-<INPUT TYPE=SUBMIT VALUE="Return">
+<INPUT TYPE=SUBMIT VALUE="Cancel">
 </FORM>
 
 </body>

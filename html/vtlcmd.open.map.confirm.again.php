@@ -23,22 +23,14 @@ echo "<pre><b>Open Map :</b></pre>";
 <?php
 $VAR = $_REQUEST['libid'];
 $VAR1 = `echo $VAR| cut -d ":" -f1`;
-echo "<pre><b><FONT COLOR=#000000>Open Map for library = $VAR1 </FONT></b></pre>";
 ?>
 
-<table border="0" >
-
-<tr>
-<td>
-<INPUT TYPE=SUBMIT VALUE=" Cancel " input ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
 <form method="post" action="vtlcmd.open.map.php">
+<?php echo "<FONT COLOR=#000000>Open Map for library = $VAR1 </FONT>"; ?>
 <input TYPE=HIDDEN name="clibid" value=<?php echo $VAR1;?> READONLY >
 <INPUT TYPE="submit" VALUE=" Continue " style="color: #000000" >
-</tr>
-</td>
 </form>
-
-</table>
+<INPUT TYPE=SUBMIT VALUE=" Cancel " input ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
 
 </body>
 </html>
