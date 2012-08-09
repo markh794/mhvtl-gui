@@ -68,7 +68,8 @@ NAA: <input name="naa" value="Auto-Generated" READONLY type="text" style="color:
 Compression enabled (ON=1 OFF=0) : <SELECT name="ce" MAXLENGTH="1" > <OPTION>1</option><OPTION>0</option></select><br>
 Compression factor (Value 1-9) : <input name="cf" value="1" MAXLENGTH="1" type="number"><br>
 Compression Type (lzo or zlib) : <SELECT name="ctt" MAXLENGTH="4" ><OPTION>lzo</option><OPTION>zlib</option></select><b><FONT COLOR="red">*</FONT></b><br>
-Enter Backoff Value (Default:1000): <select name="bkfv" MAXLENGTH="7" type="number" ><OPTION>Default</option><OPTION>100</option><OPTION>10</option></select><b><FONT COLOR="red">*</FONT></b><br>
+
+Enter Backoff Value (Default:400): <select name="bkfv" MAXLENGTH="7" type="number" ><OPTION>Default</option><OPTION>200</option><OPTION>100</option><OPTION>10</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <hr width="100%" size=1 color="blue">
 <!-- Removed for now since it is no longer supported by MHVTL recent release

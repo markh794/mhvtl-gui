@@ -75,7 +75,7 @@ $output6 = `echo " Compression type: "'$VCTT' >>/tmp/device.conf.tmp`;
 
 if ( "$VBK" == "Default" )
 {
-$cmd = `echo " Backoff: 1000"  >>/tmp/device.conf.tmp`;
+$cmd = `echo " Backoff: 400"  >>/tmp/device.conf.tmp`;
 }
 else
 {
