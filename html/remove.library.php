@@ -42,9 +42,11 @@ echo "<pre><b>Remove Library Configurations :</b></pre>";
 
 
 <?php
-$VAL1 = $_REQUEST['clibid'];
+$LIBRID = $_REQUEST['clibid'];
 $VAL2 = $_REQUEST['ckmed'];
-$run = system("sudo -u root -S ../scripts/remove_library.sh $VAL1 $VAL2 ");
+$VAL1 = `echo $LIBRID| cut -d ":" -f1`;
+
+$run = system("sudo -u root -S ../scripts/remove_library.sh $VAL2 $VAL1 ");
 echo "<pre><FONT COLOR=#FFFFFF>$run</FONT></pre>";
 ?>
 

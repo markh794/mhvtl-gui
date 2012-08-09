@@ -1,9 +1,12 @@
 
 libid()
 {
-echo '<SELECT name="libid" min="1" type="number" required >'
+echo '<SELECT name="libid" min="1" type="number" style="background-color: #FFFF00;" required >'
 grep ^Library /etc/mhvtl/device.conf| cut -d ":" -f2| awk '{print $1}'| while read each; do
-echo '<OPTION>'$each'</OPTION>'
+LIBRVI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
+LIBRPI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
+LIBRSN=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
+echo '<OPTION>'$each: $LIBRVI : $LIBRPI : SN# $LIBRSN'</OPTION>'
 done
 echo '</SELECT>'
 }

@@ -24,7 +24,7 @@ echo "<pre><b>Remove Library Configurations :</b></pre>";
 $VAR1 = $_REQUEST['libid'];
 $VAR2 = $_REQUEST['kmed'];
 echo "<pre><b><FONT COLOR=#FF0000>Please Confirm !!!!</FONT></b></pre>";
-echo "<pre><b><FONT COLOR=#000000>Remove configuration for library/Drives ID = $VAR1 </FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#000000>Remove configuration for library/Drives = $VAR1 </FONT></b></pre>";
 echo "<pre><b><FONT COLOR=#000000>Remove all exsiting media = $VAR2 </FONT></b></pre>";
 ?>
 <br>

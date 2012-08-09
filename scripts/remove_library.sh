@@ -1,5 +1,5 @@
-VAR1=`echo $1 | sed 's/ //g'`
-VAR2=`echo $2 | sed 's/ //g'`
+VAR1=`echo $2 | sed 's/ //g'`
+VAR2=`echo $1 | sed 's/ //g'`
 STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`
 if [ $STGTPROCS -gt 0 ]; then 
 echo "<FONT COLOR=#FFFF00><b>Shutting down STGT ...</b></FONT>"
