@@ -26,7 +26,7 @@ echo "<pre><b>Drive Status :</b></pre>";
 $VAR = $_REQUEST['drivedev'];
 $cmdoutfile = `sudo -u root -S mt -f $VAR status >/tmp/drive.status.tmp 2>&1`;
 $output = shell_exec('cat /tmp/drive.status.tmp');
-echo "<pre><FONT COLOR=#FFFF00>$output</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
 
 </TR>

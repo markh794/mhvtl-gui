@@ -23,7 +23,7 @@ echo "<pre><b>Show Library :</b></pre>";
 <?php
 $VAR = $_REQUEST['clibid'];
 $output = `sudo -u root -S cat /etc/mhvtl/library_contents.$VAR| grep -v ^#`;
-echo "<pre><FONT COLOR=#FFFF00>$output</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
 </div>
 </TR>

@@ -19,13 +19,13 @@ echo "<pre><b>Drive Status :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="drive.status.php">
+<form method="post" action="form1.drive.status.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh drivedev`; ?>
-Select Device : <?php echo $cmd;?><a href="#" onClick="window.open('list.tape.devices.php', 'Devices', 'width = 600, height = 400');">Search</a>
+Select Drive <?php echo $cmd;?>
 <input type="submit">
 </form>
 <FORM ACTION="vtlcmd.php">
-<INPUT TYPE=SUBMIT VALUE="Return">
+<INPUT TYPE=SUBMIT VALUE="Cancel">
 </FORM>
 
 </body>

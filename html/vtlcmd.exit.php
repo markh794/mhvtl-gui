@@ -19,7 +19,7 @@ echo "<pre><b>Power Off Library/Drives :</b></pre>";
 <hr width="100%" size=1 color="blue">
 
 <?php
-$VAR = $_REQUEST['libdid'];
+$VAR = $_REQUEST['clibidwd'];
 $cmd = `sudo -u root -S vtlcmd $VAR exit >/tmp/vtlcmd.exit.tmp 2>&1`;
 $output = shell_exec('cat /tmp/vtlcmd.exit.tmp');
 echo "<pre>OK: $output</pre>";
