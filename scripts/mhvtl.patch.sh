@@ -19,7 +19,7 @@ fi
 
 OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
 echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
-echo '<br><FORM ACTION="update_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
+echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
 rm -f /tmp/mhvtl.ptaching.tmp
 }
 
@@ -32,7 +32,7 @@ make distclean >/dev/null 2>&1
 patch -R < $FILENAME >/tmp/mhvtl.ptaching.tmp 2>&1
 OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
 echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
-echo '<br><FORM ACTION="update_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
+echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
 rm -f /tmp/mhvtl.ptaching.tmp
 }
 
