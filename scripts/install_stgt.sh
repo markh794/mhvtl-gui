@@ -36,6 +36,7 @@ fi
 
 make | tee /tmp/install.update.stgp.make.log > /dev/null 2>&1
 if [ $? != 0 ];then
+cat /tmp/install.update.stgp.make.log
 echo "<FONT COLOR=red>make Failed $? ... Exiting ...</FONT>"
 exit 0
 fi
@@ -104,6 +105,7 @@ sleep 2
 echo "Installing stgt git version $GITEXTRAVERSION ...."
 make install | tee /tmp/install.update.stgp.make.install.log > /dev/null 2>&1
 if [ $? = 0 ];then
+cat /tmp/install.update.stgp.make.install.log
 echo "<FONT COLOR=green>Install Succeeded $?</FONT>"
 echo $GITEXTRAVERSION > ../LAST_STGT_GIT_UPDATE
 else

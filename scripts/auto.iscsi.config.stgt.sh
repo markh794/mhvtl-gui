@@ -19,7 +19,7 @@ IQN=`grep "InitiatorName=iqn." /etc/iscsi/initiatorname.iscsi|cut -d "=" -f2 2>/
 fi
 
 if [ -z "$IQN" ] ; then
-IQN="iqn.2001-04.com.example:`hostname`"
+IQN="iqn.2011-04.com.nia:`hostname -s`"
 fi
 TARGET=0
 LUN=1
