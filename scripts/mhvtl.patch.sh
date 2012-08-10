@@ -2,6 +2,11 @@
 install ()
 {
 FILENAME=$1
+if [ "$FILENAME" = "Empty" ] ; then
+echo '<pre><FONT COLOR=#FFFFFF>'"Patch is Empty !"'</FONT></pre>'
+exit 0
+fi
+
 cd ../mhvtl.git/
 make distclean >/dev/null 2>&1
 echo '<pre><FONT COLOR=#FFFF00>'">>> Testing patch only:"'</FONT></pre>'
@@ -27,6 +32,12 @@ rm -f /tmp/mhvtl.ptaching.tmp
 uninstall ()
 {
 FILENAME=$1
+
+if [ "$FILENAME" = "Empty" ] ; then
+echo '<pre><FONT COLOR=#FFFFFF>'"Patch is Empty !"'</FONT></pre>'
+exit 0
+fi
+
 cd ../mhvtl.git/
 make distclean >/dev/null 2>&1
 patch -R < $FILENAME >/tmp/mhvtl.ptaching.tmp 2>&1
@@ -38,7 +49,7 @@ rm -f /tmp/mhvtl.ptaching.tmp
 
 
 if [ -z "$1" ] || [ -z "$2" ] ; then
-echo An Error Occured !
+echo '<pre><FONT COLOR=#FFFFFF>'"An Error Occured !"'</FONT></pre>'
 exit 0
 fi
 

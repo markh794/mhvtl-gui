@@ -23,7 +23,7 @@ echo "<pre><b> Support :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.mhvtl.php" method="post" >
-<input TYPE="submit" style="color: #000000" value=" Apply Patches ">
+<input TYPE="submit" style="color: #000000" value=" Apply Patch ">
 </form>
 <hr width="100%" size=1 color="blue">
 </td>
