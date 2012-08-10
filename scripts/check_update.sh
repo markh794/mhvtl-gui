@@ -2,6 +2,8 @@ touch /tmp/mhvtl.last.update.check
 
 if [ ! -d ../mhvtl.git ]; then
 mkdir -p ../mhvtl.git
+mkdir -p ../mhvtl.git/patches
+chmod 777 ../mhvtl.git/patches
 cd ../mhvtl.git
 git init
 git pull http://github.com/markh794/mhvtl.git

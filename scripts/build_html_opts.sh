@@ -231,4 +231,25 @@ fi
 }
 
 
+patch()
+{
+if [ ! -f ../mhvtl.git/mhvtl-utils.spec ] ; then
+echo '</form>'
+echo '<font color="red">No Source Code Detected !</font>'
+echo '<FORM ACTION="download_mhvtl.php"><INPUT TYPE=SUBMIT VALUE="Download via GitHub"></FORM>'
+else
+echo '<SELECT name="patch" type="text" style="background-color: #FFFF00;" required >'
+if [ ! -f ../mhvtl.git/patches/* ] ; then
+echo '<OPTION>'Empty'</OPTION>'
+else
+ls -lat ../mhvtl.git/patches/* | awk '{print $6,$7,$8,$9,$10}' | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+fi
+echo '</SELECT>'
+fi
+}
+
+
+
 $1 $2 $3
