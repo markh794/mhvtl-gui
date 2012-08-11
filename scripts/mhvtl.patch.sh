@@ -24,7 +24,7 @@ fi
 
 OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
 echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
-echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
+echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel">'
 rm -f /tmp/mhvtl.ptaching.tmp
 }
 
@@ -40,10 +40,13 @@ fi
 
 cd ../mhvtl.git/
 make distclean >/dev/null 2>&1
-patch -R < $FILENAME >/tmp/mhvtl.ptaching.tmp 2>&1
+patch -p1 -R < $FILENAME >/tmp/mhvtl.ptaching.tmp 2>&1
+if [ $? -eq 0 ]; then
+echo '<pre><FONT COLOR=#00FF00>'"* Success *"'</FONT></pre>'
+fi
 OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
 echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
-echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
+echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
 rm -f /tmp/mhvtl.ptaching.tmp
 }
 
