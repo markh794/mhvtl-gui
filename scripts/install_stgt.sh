@@ -34,7 +34,8 @@ echo "<FONT COLOR=red>make clean Failed $? ... Exiting ...</FONT>"
 #exit 0
 fi
 
-make | tee /tmp/install.update.stgp.make.log > /dev/null 2>&1
+#make | tee /tmp/install.update.stgp.make.log >/dev/null 2>&1
+make | tee /tmp/install.update.stgp.make.log
 if [ $? != 0 ];then
 cat /tmp/install.update.stgp.make.log
 echo "<FONT COLOR=red>make Failed $? ... Exiting ...</FONT>"
@@ -103,7 +104,8 @@ echo "<FONT COLOR=yellow>Shutting down stgt .... </FONT>"
 pkill -9 tgtd
 sleep 2
 echo "Installing stgt git version $GITEXTRAVERSION ...."
-make install | tee /tmp/install.update.stgp.make.install.log > /dev/null 2>&1
+#make install | tee /tmp/install.update.stgp.make.install.log > /dev/null 2>&1
+make install | tee /tmp/install.update.stgp.make.install.log
 if [ $? = 0 ];then
 cat /tmp/install.update.stgp.make.install.log
 echo "<FONT COLOR=green>Install Succeeded $?</FONT>"
