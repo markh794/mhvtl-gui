@@ -24,7 +24,6 @@ echo '<pre><FONT COLOR=#FF0000>'"*** Error ***"'</FONT></pre>'
 echo '<pre><FONT COLOR=#FF00FF>'"OUTPUT says:"'</FONT></pre>'
 OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
 echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
-exit 0
 fi
 
 echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel">'
@@ -48,7 +47,13 @@ if [ $? -eq 0 ]; then
 OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
 echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
 echo '<pre><FONT COLOR=#00FF00>'"* Success *"'</FONT></pre>'
+else
+echo '<pre><FONT COLOR=#FF0000>'"*** Error ***"'</FONT></pre>'
+echo '<pre><FONT COLOR=#FF00FF>'"OUTPUT says:"'</FONT></pre>'
+OUTPUT=`cat /tmp/mhvtl.ptaching.tmp`
+echo '<pre><FONT COLOR=#FFFFFF>'"$OUTPUT"'</FONT></pre>'
 fi
+
 echo '<br><FORM ACTION="confirm.install_mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Activate"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM><FORM ACTION="form.patch.mhvtl.php"> <INPUT TYPE=SUBMIT VALUE="Cancel">'
 rm -f /tmp/mhvtl.ptaching.tmp
 }
