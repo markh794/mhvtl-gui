@@ -5,8 +5,8 @@ echo "FAIL" >/tmp/test.required.components.testmhvtl
 echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: MHVTL not detected</FONT>'
 else
 MAJORVER="1"
-MINRELEASE="17"
-MINVERSION="15"
+MINRELEASE="0"
+MINVERSION="0"
 _RELEASE=`sudo -u root -S /usr/bin/vtlcmd -V| awk '{print $2}'|cut -d "-" -f1`
 MAJ=`echo $_RELEASE|awk -F. '{print $1}'`
 RELEASE=`echo $_RELEASE|awk -F. '{print $2}'`
@@ -17,7 +17,7 @@ elif [ $RELEASE -gt $MINRELEASE ] && [ $VERSION -gt $MINVERSION ] ; then
 echo "PASS" >/tmp/test.required.components.testmhvtl
 else
 echo "FAIL" >/tmp/test.required.components.testmhvtl
-echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: Old MHVTL versoin detected: need =>1.17.15 </FONT>'
+echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: Old MHVTL versoin detected: need =>1.0.0 </FONT>'
 fi
 fi
 }
