@@ -20,29 +20,30 @@ echo "<pre><b> Support :</b></pre>";
 
 <table border="0" >
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.mhvtl.php" method="post" >
-<input TYPE="submit" style="color: #FF0000" value=" Apply Patch ">
-</form>
-<hr width="100%" size=1 color="blue">
-</td>
-</tr>
-
-
 
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><form action="update.php" method="post" >
-<input TYPE="submit" style="color: #008000" value=" Live Update ">
+<input TYPE="submit" style="color: #008000" value="  Live Update   ">
 </form>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
+
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe"><input TYPE="submit" style="color: #0000FF" value=" Support Forums ">
+<img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.mhvtl.php" method="post" >
+<input TYPE="submit" style="color: #FF0000" value="Apply Patches ">
+</form>
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe"><input TYPE="submit" style="color: #0000FF" value="Support Forum">
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
