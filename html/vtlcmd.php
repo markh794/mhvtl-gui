@@ -156,7 +156,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Empty
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Send TapeAlert flags
 </td>
 </tr>
 
