@@ -26,7 +26,7 @@ echo "<pre><b>View TGT Configuration file  :</b></pre>";
 $filename = "/etc/tgt/targets.conf.mhvtl";
 if (!file_exists($filename))
 {
-echo "<pre><FONT COLOR=#FFFF00>No Saved Configuration Present</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFF00>Configuration not saved</FONT></pre>";
 }
 else
 {

@@ -75,9 +75,11 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.auto.iscsi.config.stgt.php'" target="showframe"> Create Automatic Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='form.create.auto.iscsi.config.stgt.php'" target="showframe"> Automatic Configuration<br>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
+
 
 <tr>
 <td>
@@ -93,14 +95,8 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.target.php'" target="showframe"> Display Target<br>
-</td>
-</tr>
-
-
-<tr>
-<td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.stgt.iscsi.clients.php'" target="showframe"> Add Initiator ACL<br>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -109,27 +105,26 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.initiator.php'" target="showframe"> Show Connections<br>
 </td>
 </tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.target.php'" target="showframe"> Display Target<br>
+</td>
+</tr>
+
+
+
 </table>
 
 <table border="0" ALIGN="left" >
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration<br>
-</td>
-</tr>
-
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.tgt.conf.php'" target="showframe"> View Saved Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.tgt.conf.php'" target="showframe"> View Configuration<br>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='reset.iscsi.target.config.stgt.php'" target="showframe"> Remove Saved Configuration<br>
-</td>
-</tr>
 
 <tr>
 <td>
@@ -147,6 +142,20 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.stgt.iscsi.clients.php'" target="showframe"> Remove Initiator ACL<br>
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration<br>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='reset.iscsi.target.config.stgt.php'" target="showframe"> Clear Configuration<br>
 </td>
 </tr>
 

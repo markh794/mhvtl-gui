@@ -45,7 +45,7 @@ getID:function(el)
 </tr>
 
 <?php
-echo "<pre><b>STGT Automatic Target Configuration :</b></pre>";
+echo "<pre><b>Automatic Configuration :</b></pre>";
 ?>
 
 
@@ -64,13 +64,13 @@ exit("<FONT COLOR='#000000'><b>STGT Disabled</b></FONT>");
 <tr>
 <td>
 <br>
-<br>
-<br>
-<b><font color=purple size=2>
-This will create STGT Target/LUNS on all running MHVTL devices,<br>
-And add ACL "ALL" to any iSCSI inititator client hosts ...</b></font>
-<br>
-<br>
+<b><font color=red size=2>
+
+(1) Create Targets/LUNS on All Devices<br>
+(2) Enable All Inititator Client Hosts<br>
+(3) Save Configuration<br>
+
+</b></font>
 <br>
 </tr>
 
