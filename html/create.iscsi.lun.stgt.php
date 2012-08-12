@@ -13,29 +13,30 @@
 </tr>
 
 <?php
-echo "<pre><b>Create additional media :</b></pre>";
+echo "<pre><b>Create STGT iscsi LUN :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
 
 <?php
 
-$VAR0 = $_REQUEST['mode'];
-$VAR1 = $_REQUEST['cn'];
-$VAR2 = $_REQUEST['add'];
 $VAR3 = $_REQUEST['tid'];
 $VAR4 = $_REQUEST['lun'];
 $VAR5 = $_REQUEST['device'];
-$tidn = `echo $VAR3 | cut -d ":" -f1`;
+$TID = `echo $VAR3|cut -d ":" -f1`;
+$DEV = `echo $VAR5 | cut -d "/" -f3 `;
 
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --op bind --mode target --tid "$tidn" -I "$VAR1" >/tmp/add.iscsi.client.stgt.tmp 2>&1;`;
-$output = shell_exec('sudo -u root -S cat /tmp/add.iscsi.client.stgt.tmp');
-echo "<pre>Added $VAR1 to TID $tidn <br>$output</pre>";
+$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --op new --mode logicalunit --tid "$TID" --lun $VAR4 --bstype=sg --device-type=pt -b /dev/$DEV >/tmp/create.iscsi.lun.stgt.tmp 2>&1`;
+$output = shell_exec('cat /tmp/create.iscsi.lun.stgt.tmp');
+echo "<pre>LUN:$VAR4 Created on Target $TID Device = /dev/$DEV</pre>";
+echo "<pre>$output</pre>";
+
+
 ?>
 
 <hr width="100%" size=1 color="blue">
-<FORM ACTION="form.add.stgt.iscsi.clients.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="stgt.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 
 </body>
 </html>

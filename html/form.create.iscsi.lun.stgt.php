@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Create STGT Logical Unit :</b></pre>";
+echo "<pre><b>Create TGT Logical Unit :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -27,21 +27,16 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
 ?>
 <?php $target = $_REQUEST['tid']; ?>
-<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh device`; ?>
-<?php $nextlun = `sudo -u root -S ../scripts/build_html_opts.sh nlun $target`; ?>
+<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh devices`; ?>
+<?php $tid = `echo $target| cut -d ":" -f1`; ?>
+<?php $nextlun = `sudo -u root -S ../scripts/build_html_opts.sh nlun $tid`; ?>
 
-<form method="post" action="create.iscsi.target.stgt.php">
-Mode : <Select name="mode" ><option>logicalunit</OPTION></Select>
-<br>
-Target ID Number  : <Select name="tid" ><option><?php echo $target;?></OPTION></Select>
-<br>
-Select LUN Number : <?php echo $nextlun;?> <a href="#" onClick="window.open('search_stgt.luns.php', 'targetid', 'width = 600, height = 400');">Search</a>
-<br>
-Select Backing store device : <?php echo $cmd;?><a href="#" onClick="window.open('devices.php', 'Deviceid', 'width = 600, height = 400');">Search</a>
-<br>
+<form method="post" action="create.iscsi.lun.stgt.php" >
+<input name="tid" value="<?php echo $target;?>" hidden readonly>
+LUN <?php echo $nextlun;?>
+Select Device : <?php echo $cmd;?>
 <INPUT TYPE=SUBMIT VALUE="Create">
 </FORM>
-
 <br>
 <hr width="100%" size=1 color="blue">
 <FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>

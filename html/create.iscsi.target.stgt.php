@@ -29,12 +29,10 @@ $VAR4 = $_REQUEST['lun'];
 $VAR5 = $_REQUEST['device'];
 
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$cmd = `if [ "$VAR0" = "target" ];then sudo -u root -S $TGTADMCMD --lld iscsi --op new --mode $VAR0 --tid $VAR3 -T $VAR1:$VAR2:$VAR6:$VAR3 >/tmp/create.iscsi.target.stgt.tmp 2>&1; else sudo -u root -S $TGTADMCMD --lld iscsi --op new --mode $VAR0 --tid $VAR3 --lun $VAR4 --bstype=sg --device-type=pt -b $VAR5 >/tmp/create.iscsi.target.stgt.tmp 2>&1; fi`;
+$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --op new --mode target --tid $VAR3 -T $VAR1:$VAR2:$VAR6:$VAR3 >/tmp/create.iscsi.target.stgt.tmp 2>&1`;
 $output = shell_exec('cat /tmp/create.iscsi.target.stgt.tmp');
-echo "<pre>Created $VAR0:$VAR1:$VAR6:$VAR2:$VAR3:$VAR4:$VAR5</pre>";
+echo "<pre>Created $VAR0:$VAR1:$VAR6:$VAR2:$VAR3</pre>";
 echo "<pre>$output</pre>";
-
-
 ?>
 
 <hr width="100%" size=1 color="blue">

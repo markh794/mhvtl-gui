@@ -15,7 +15,7 @@
 
 
 <?php
-echo "<pre>Display STGT Targets:</pre>";
+echo "<pre>TGT Active Connections:</pre>";
 ?>
 
 <div style="overflow:auto; height:330px;width:600px;">
@@ -25,7 +25,7 @@ echo "<pre>Display STGT Targets:</pre>";
 <?php
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
 $output = shell_exec("sudo -u root -S $TGTADMCMD --lld iscsi --op show --mode target | grep Initiator >/tmp/display.stgt.init");
-$result = shell_exec('CHECK=`grep "Initiator: iqn" /tmp/display.stgt.init`;if [ -z "$CHECK" ]; then echo No initiator connection present ; else egrep -n3 "Initiator" /tmp/display.stgt.init; fi');
+$result = shell_exec('CHECK=`grep "Initiator: iqn" /tmp/display.stgt.init`;if [ -z "$CHECK" ]; then echo 0:Sessions ; else egrep -n3 "Initiator" /tmp/display.stgt.init; fi');
 echo "<pre><FONT COLOR=#FFFFFF>$result</FONT></pre>";
 ?>
 </TD>

@@ -33,11 +33,8 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 
 
 <form method="post" action="remove.iscsi.lun.stgt.php">
-Target ID Number  : <Select name="tid" ><option><?php echo $target;?></OPTION></Select>
-<br>
-Select LUN Number : <?php echo $lun;?> <a href="#" onClick="window.open('search_stgt.luns.php', 'targetid', 'width = 600, height = 400');">Search</a>
-<br>
-
+Target <Select name="tid" ><option><?php echo $target;?></OPTION></Select>
+LUN <?php echo $lun;?>
 <INPUT TYPE=SUBMIT VALUE="Remove">
 </FORM>
 <br>

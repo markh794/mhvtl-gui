@@ -23,12 +23,12 @@ echo "<pre><b>Remove STGT iscsi LUN :</b></pre>";
 
 $VAR3 = $_REQUEST['tid'];
 $VAR4 = $_REQUEST['lun'];
-
+$TID = ` echo $VAR3| cut -d ":" -f1`;
 
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --mode logicalunit --op delete --tid $VAR3 --lun $VAR4 >/tmp/delete.iscsi.lun.stgt.tmp 2>&1`;
+$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --mode logicalunit --op delete --tid "$TID" --lun "$VAR4" >/tmp/delete.iscsi.lun.stgt.tmp 2>&1`;
 $output = shell_exec('cat /tmp/delete.iscsi.lun.stgt.tmp');
-echo "<pre>Deleted Target $VAR3 LUN $VAR4 </pre>";
+echo "<pre>Deleted Target $TID LUN $VAR4 </pre>";
 echo "<pre>$output</pre>";
 ?>
 

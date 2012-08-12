@@ -21,11 +21,12 @@ echo "<pre><b>Remove STGT iscsi Target :</b></pre>";
 <?php
 
 $VAR3 = $_REQUEST['tid'];
+$TID = ` echo $VAR3 | cut -d ":" -f1`;
 
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --mode target --op delete --tid $VAR3 >/tmp/delete.iscsi.target.stgt.tmp 2>&1`;
+$cmd = `sudo -u root -S $TGTADMCMD --lld iscsi --mode target --op delete --tid $TID >/tmp/delete.iscsi.target.stgt.tmp 2>&1`;
 $output = shell_exec('cat /tmp/delete.iscsi.target.stgt.tmp');
-echo "<pre>Deleted Target $VAR3</pre>";
+echo "<pre>Deleted Target $TID</pre>";
 echo "<pre>$output</pre>";
 ?>
 

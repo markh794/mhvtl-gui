@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Enable iSCSI Remote Clients :</b></pre>";
+echo "<pre><b>Add ACL :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -31,10 +31,9 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 <?php $target = `sudo -u root -S ../scripts/build_html_opts.sh target`; ?>
 
 <form method="post" action="add.stgt.iscsi.clients.php">
-
-Enter Remote Client IP, Net or "ALL" to allow any - Example : <input name="iqn" type="text" size="20" value="198.51.100.0/24" required >
+Select Target <?php echo $target;?>
 <br>
-Select Target ID Number  : <?php echo $target;?><a href="#" onClick="window.open('search_stgt.target.php', 'targetid', 'width = 600, height = 400');">Search</a>
+Enter Host, IP, Network or "ALL" <input name="cn" type="text" size="20" value="ALL" required >
 <br>
 <input type="submit">
 </form>

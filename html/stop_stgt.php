@@ -39,8 +39,8 @@ $output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v eg
 $file = "/tmp/starting.stgt";
 $result = file_get_contents($file);
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
-echo "<pre><FONT COLOR=#FFFFFF>Please wait ...<br><br><br>$result</FONT></pre>";
-echo "<pre><FONT COLOR=#FFFFFF>Done<br><br><br></FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>Please wait ...<br>$result</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>Done<br></FONT></pre>";
 ?>
 
 </TD>

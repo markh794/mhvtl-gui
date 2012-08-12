@@ -55,6 +55,6 @@ Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value
 </table>
 <br>
 <FORM ACTION="help.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
-
+<form action="form.patch.mhvtl.php" method="post" ><input TYPE="submit" style="color: #000000" value=" Refresh "></form>
 </body>
 </html>

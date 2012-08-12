@@ -37,20 +37,19 @@ $miqn = `sudo -u root -S grep "InitiatorName=iqn." /etc/iscsi/initiatorname.iscs
 else
 {
 $thost = `sudo -u root -S hostname -s`;
-$miqn = `sudo -u root -S echo iqn.2001-04.com.example:$thost`;
+$miqn = `sudo -u root -S echo iqn.2011-04.com.nia:$thost`;
 }
 ?>
 
 <form method="post" action="create.iscsi.target.stgt.php">
 <?php $nexttarget = `sudo -u root -S ../scripts/build_html_opts.sh nexttarget`; ?>
 
-Enter STGT iSCSI Target Name (Example Auto Detected) : <input name="iqn" type="text" size="50" value=<?php echo $miqn;?> required >
+Enter Target-iqn : <input name="iqn" type="text" size="50" value=<?php echo $miqn;?> required >
+<input name="mode" value="target" hidden readonly >
 <br>
-Mode : <SELECT name="mode" ><option>target</OPTION></select>
+Enter Identifier1 : <input name="idn1" type="text" value="mhvtl" required >
 <br>
-Enter Identifier Name1 - Example : <input name="idn1" type="text" value="mhvtl" required >
-<br>
-Enter Identifier Name2 - Example : <input name="idn2" type="text" value="stgt" required >
+Enter Identifier2 : <input name="idn2" type="text" value="tgt" required >
 <br>
 Target ID Number  : <?php echo $nexttarget;?>
 <br>

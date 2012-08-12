@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Remove Remote Client :</b></pre>";
+echo "<pre><b>Remove ACL :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -28,16 +28,15 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 ?>
 
 <?php $target = `sudo -u root -S ../scripts/build_html_opts.sh target`; ?>
+<?php $isct = `sudo -u root -S ../scripts/build_html_opts.sh iscsiclient`; ?>
 
 <form method="post" action="remove.stgt.iscsi.clients.php">
-Enter Remote Client IP, Net or "ALL" for any - Example : <input name="iqn" type="text" size="20" value="198.51.100.0/24" required ><a href="#" onClick="window.open('search_stgt.all.php', 'iscsitgt', 'width = 600, height = 400');">Search</a>
-
+Select  Target <?php echo $target;?>
 <br>
-Mode : <SELECT name="mode" ><option>target</OPTION></select>
+Select Initiator <?php echo $isct ;?>
+<SELECT name="mode" hidden readonly><option>target</OPTION></select>
 <br>
-Select Target ID Number  : <?php echo $target;?><a href="#" onClick="window.open('search_stgt.target.php', 'targetid', 'width = 600, height = 400');">Search</a>
-<br>
-
+<hr width="100%" size=1 color="blue">
 <input type="submit">
 </form>
 <FORM ACTION="stgt.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>

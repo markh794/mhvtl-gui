@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Remove additional media :</b></pre>";
+echo "<pre><b>Remove ACL :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -24,11 +24,12 @@ $VAR0 = $_REQUEST['mode'];
 $VAR1 = $_REQUEST['iqn'];
 $VAR3 = $_REQUEST['tid'];
 $VAR4 = $_REQUEST['lun'];
+$tidn = `echo $VAR3 | cut -d ":" -f1`;
 
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$cmd = `if [ "$VAR0" = "target" ];then sudo -u root -S $TGTADMCMD --lld iscsi --op unbind --mode $VAR0 --tid $VAR3 -I $VAR1 >/tmp/remove.iscsi.target.stgt.tmp 2>&1; else sudo -u root -S $TGTADMCMD --lld iscsi --op unbind --mode $VAR0 --tid $VAR3 --lun $VAR4 -I $VAR1 >/tmp/remove.iscsi.target.stgt.tmp 2>&1; fi`;
+$cmd = `if [ "$VAR0" = "target" ];then sudo -u root -S $TGTADMCMD --lld iscsi --op unbind --mode "$VAR0" --tid "$tidn" -I "$VAR1" >/tmp/remove.iscsi.target.stgt.tmp 2>&1; else sudo -u root -S $TGTADMCMD --lld iscsi --op unbind --mode "$VAR0" --tid "$tidn" --lun "$VAR4" -I "$VAR1" >/tmp/remove.iscsi.target.stgt.tmp 2>&1; fi`;
 $output = shell_exec('cat /tmp/remove.iscsi.target.stgt.tmp');
-echo "<pre>Removed $VAR0 $VAR1 $VAR2 $VAR3 $VAR4  .. $output</pre>";
+echo "<pre>Removed $VAR1 from Target $tidn $output</pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">

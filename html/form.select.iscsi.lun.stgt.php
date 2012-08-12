@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Select STGT Target :</b></pre>";
+echo "<pre><b>Select TGT Target :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -31,7 +31,7 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 <?php $target = `sudo -u root -S ../scripts/build_html_opts.sh target`; ?>
 
 <form method="post" action="form.remove.iscsi.lun.stgt.php">
-Select Target ID Number  : <?php echo $target;?><a href="#" onClick="window.open('search_stgt.target.php', 'targetid', 'width = 600, height = 400');">Search</a>
+Select Target <?php echo $target;?>
 <INPUT TYPE=SUBMIT VALUE="SUBMIT">
 
 </FORM>

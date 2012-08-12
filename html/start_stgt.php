@@ -38,10 +38,10 @@ $restoreconfig = shell_exec('sudo PATH=/usr/sbin:sudo /usr/sbin/tgt-admin -e --c
 $file = "/tmp/starting.stgt";
 $result = file_get_contents($file);
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
-echo "<pre><FONT COLOR=#FFFFFF>Please wait ...<br><br><br>$result</FONT></pre>";
-echo "<pre><FONT COLOR=#FFFF00>Restoring Saved Configuration ... [if exist in /etc/tgt/targets.conf.mhvtl]<br><br><br>$result</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>Please wait ...<br>$result</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFF00>Restoring Saved Configuration ...<br>$result</FONT></pre>";
 echo "<pre><FONT COLOR=#FFFFFF>$restoreconfig</FONT></pre>";
-echo "<pre><FONT COLOR=#FFFFFF>Done<br><br><br></FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>Done<br></FONT></pre>";
 ?>
 
 

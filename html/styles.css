@@ -1,7 +1,7 @@
 body {
   background-color:#eeeeee;
   font-size: 100%;
-  font-family: bold small arial, verdana,'trebuchet ms',helvetica, sans-serif;
+  font-family: bold medium Tahoma, arial, verdana,'trebuchet ms',helvetica, sans-serif;
   color:#000000;  
   padding:2px 5px;
   margin:1px;
@@ -24,7 +24,7 @@ height:35px;
 padding:0%;
 margin:0%;
 text-align: center;
-font: bold medium arial, verdana,'trebuchet ms',helvetica,sans-serif;
+font: bold medium Tahoma, arial, verdana,'trebuchet ms',helvetica,sans-serif;
 display: inline;
 text-decoration:none;
 }
