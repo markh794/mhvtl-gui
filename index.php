@@ -23,12 +23,16 @@ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.
 <TR>
 <TD>
 
-<?php $output = `sudo -u root -S  scripts/os_release.sh`; echo "<pre><b><FONT COLOR=#FFFFFF> $output</FONT></b></pre>"; ?>
+<div style="overflow:auto;height:200px;width:300px;" >
+
+
+<?php $MHVTLHOST = shell_exec('sudo -u root -S hostname');?>
+<?php echo "<b><FONT COLOR=#FFFFFF><center> $MHVTLHOST </center></FONT></b>"; ?>
 <?php $output = `sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2`; echo "<pre><center><b><FONT COLOR=#FFFF00>MHVTL Release $output</FONT></b></center></pre>"; ?>
 
 <?php
 $output = `cat version`;
-echo "<pre><center><FONT COLOR=#2B60DE ><b>Web Console Release $output</b></FONT></center></pre>";
+echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></center></pre>";
 ?>
 
 
@@ -59,7 +63,7 @@ echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></
 }
 ?>
 
-
+</div>
 </TR>
 </TD>
 </table>

@@ -25,7 +25,7 @@ echo "<pre><b>MHVTL Virtual Devices :</b></pre>";
 
 <table border="0">
 <td>
-<div style="overflow:auto;height:325px;width:650px;">
+<div style="overflow:auto;height:225px;width:600px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S lsscsi -g | egrep "tape|mediumx"`; if [ -z "$DEVICES" ]; then echo "No MHVTL Virtual Devices Present"; else echo "$DEVICES"; fi');
 echo "<pre><B><FONT COLOR=#FFFFFF>$output</FONT></B></pre>";
@@ -43,7 +43,7 @@ echo "<pre><B><FONT COLOR=#FFFFFF>$output</FONT></B></pre>";
 <br>
 <table border="0" >
 <td>
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="tools.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 </td>
 </table>
 </body>

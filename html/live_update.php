@@ -109,5 +109,8 @@ echo "<td><pre><img src=images/green_light.png align=top /></pre></td>";
 
 </table>
 
+<br>
+<FORM ACTION="tools.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+
 </body>
 </html>

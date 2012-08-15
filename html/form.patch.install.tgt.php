@@ -23,7 +23,10 @@ This function is currently not implemented
 
 <hr width="100%" size=1 color="blue">
 <br>
-<FORM ACTION="vtlcmd.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<input type="submit"></form>
+<FORM ACTION="form.patch.mhvtl.php">
+<INPUT TYPE=SUBMIT VALUE="Return">
+</FORM>
 
 </body>
 </html>

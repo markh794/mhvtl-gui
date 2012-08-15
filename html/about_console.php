@@ -25,6 +25,10 @@ $gui_ver = `cat ../version`;
 echo "<pre><b><FONT COLOR=purple >Web Console Release </FONT><FONT COLOR=black>$gui_ver <a href=# ONCLICK=parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com' target=showframe> Built by nia</a></FONT></b></pre>";
 ?>
 
+
+<?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved. </a></FONT></b></pre>";?>
+
+
 <pre>
 <FONT COLOR=blue size=4>Trademark Disclaimer:</FONT>
 <FONT COLOR=black size=3> Product names, logos, brands, and other trademarks featured or referred to within
@@ -35,15 +39,15 @@ echo "<pre><b><FONT COLOR=purple >Web Console Release </FONT><FONT COLOR=black>$
 
 <pre>
 <FONT COLOR=blue size=4>SOFTWARE Disclaimer:</FONT>
-This SOFTWARE PRODUCT is provided by me "as is" and "with all faults." 
-I make no representations or warranties of any kind concerning the safety, 
-suitability, lack of viruses, inaccuracies, typographical errors, or other harmful
-components of this SOFTWARE PRODUCT. There are inherent dangers in the use
-of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT
-is compatible with your equipment and other software installed on your equipment.
-You are also solely responsible for the protection of your equipment and backup of your data,
-and I will not be liable for any damages you may suffer in connection with using,
-modifying, or distributing this SOFTWARE PRODUCT. 
+ This SOFTWARE PRODUCT is provided by me "as is" and "with all faults." 
+ I make no representations or warranties of any kind concerning the safety, 
+ suitability, lack of viruses, inaccuracies, typographical errors, or other harmful
+ components of this SOFTWARE PRODUCT. There are inherent dangers in the use
+ of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT
+ is compatible with your equipment and other software installed on your equipment.
+ You are also solely responsible for the protection of your equipment and backup of your data,
+ and I will not be liable for any damages you may suffer in connection with using,
+ modifying, or distributing this SOFTWARE PRODUCT. 
 </FONT></pre>
 
 </table>

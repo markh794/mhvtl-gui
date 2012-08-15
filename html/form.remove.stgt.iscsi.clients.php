@@ -25,21 +25,31 @@ if (!file_exists($filename))
 echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
 exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
+
+$target = `sudo -u root -S ../scripts/build_html_opts.sh target`;
+$isct = `sudo -u root -S ../scripts/build_html_opts.sh iscsiclient`;
+
+if ( "$isct" == "" )
+{
+echo "<FONT COLOR=#FF0000>No ACL Exist</FONT>";
+echo "</FORM>";
+echo "<br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "</table>";
+}
+else
+{
+echo "<form method='post' action='remove.stgt.iscsi.clients.php'>";
+echo "Select  Target $target";
+echo "<br>";
+echo "Select Initiator $isct";
+echo "<SELECT name='mode' hidden readonly><option>target</OPTION></select>";
+echo "<br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<input type='submit'></form>";
+echo "<FORM ACTION='stgt.php'> <INPUT TYPE=SUBMIT VALUE='Return'> <INPUT TYPE=SUBMIT VALUE='Cancel'> </FORM>";
+}
 ?>
-
-<?php $target = `sudo -u root -S ../scripts/build_html_opts.sh target`; ?>
-<?php $isct = `sudo -u root -S ../scripts/build_html_opts.sh iscsiclient`; ?>
-
-<form method="post" action="remove.stgt.iscsi.clients.php">
-Select  Target <?php echo $target;?>
-<br>
-Select Initiator <?php echo $isct ;?>
-<SELECT name="mode" hidden readonly><option>target</OPTION></select>
-<br>
-<hr width="100%" size=1 color="blue">
-<input type="submit">
-</form>
-<FORM ACTION="stgt.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
-
 </body>
 </html>

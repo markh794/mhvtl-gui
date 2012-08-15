@@ -24,7 +24,14 @@ fi
 TARGET=0
 LUN=1
 
+CHECK=`lsscsi -g | egrep "mediumx|tape" | awk '{print $NF}'`
+if [ -z "$CHECK" ]; then
+echo Exit 0 : Tape devices not online
+exit 0
+fi
+
 lsscsi -g | egrep "mediumx|tape" | awk '{print $2,$NF}' | while read type dev; do
+
 if [ "$type" = "mediumx" ] ; then
 echo "---------------------------------------"
 echo "Creating Target for $type $dev"

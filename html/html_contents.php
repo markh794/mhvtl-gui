@@ -5,11 +5,10 @@
 <center>
 <hr width="100%" size=10 color="blue">
 
-
-<img src=images/gear_red.png ALIGN=top><a ONCLICK="parent.frames[1].location.href='about_console.php'" target="showframe" ><b><FONT COLOR=purple> Web Console</FONT></b> </a>
+<?php $MHVTLHOST = shell_exec('sudo -u root -S hostname -s');?>
+<img src="images/gear_red.png" ALIGN="top" ><b>Server: <FONT COLOR=purple><?php echo $MHVTLHOST ;?></FONT></b>
 
 <hr width="100%" size=1 color="blue">
-
 <tr><td align=center valign=middle><img src="images/mhvtl.png" ></td></tr>
 
 <pre>
@@ -20,8 +19,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 </pre>
 
 
-
-<table border="0">
+<table border="2">
 
 <tr>
 <td>
@@ -38,7 +36,14 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="  Operator  " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
+<INPUT TYPE="button" VALUE="  Operation  " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
+</td>
+</tr>
+
+
+<tr>
+<td>
+<INPUT TYPE="button" VALUE=" Tools " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='tools.php'" target="showframe">
 </td>
 </tr>
 
@@ -52,12 +57,8 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 </table>
 
-<?php
-$gui_ver = `cat ../version`;
-echo "<pre><b><FONT COLOR=purple >Web Console<br></FONT><FONT COLOR=black>$gui_ver </FONT></b></pre>";
-echo "<td align=center valign=middle><img src='images/gplv2.gif' ></td>"
-?>
-
+<br>
+<td align=center valign=middle><img src='images/gplv2.gif' ></td>
 </center>
 
 </body>

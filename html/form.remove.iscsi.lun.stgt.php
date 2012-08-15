@@ -27,19 +27,30 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
 ?>
 
+<?php
+$target = $_REQUEST['tid'];
+$lun = `sudo -u root -S ../scripts/build_html_opts.sh lun $target`;
 
-<?php $target = $_REQUEST['tid']; ?>
-<?php $lun = `sudo -u root -S ../scripts/build_html_opts.sh lun $target`; ?>
+if ( $lun == "" )
+{
+echo "<FONT COLOR=#FF0000>No LUNS Exist</FONT>";
+echo "</FORM>";
+echo "<br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "</table>";
+}
+else
+{
+echo "<form method='post' action='remove.iscsi.lun.stgt.php'>";
+echo "Target <Select name='tid'><option>$target</OPTION></Select>";
+echo "LUN $lun";
+echo "<INPUT TYPE=SUBMIT VALUE='Remove'></FORM><br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'> </FORM>";
+}
+?>
 
-
-<form method="post" action="remove.iscsi.lun.stgt.php">
-Target <Select name="tid" ><option><?php echo $target;?></OPTION></Select>
-LUN <?php echo $lun;?>
-<INPUT TYPE=SUBMIT VALUE="Remove">
-</FORM>
-<br>
-<hr width="100%" size=1 color="blue">
-<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 </table>
 
 </body>

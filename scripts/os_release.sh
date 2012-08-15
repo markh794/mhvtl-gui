@@ -74,7 +74,7 @@ if [ "${OS}" = "Linux" ] ; then
 		DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
 	fi
 	
-	OSSTR="$HOST - ${OS} ${DIST} ${REV}(${PSUEDONAME} ${KERNEL})"
+	OSSTR="${OS} ${DIST} ${REV}(${PSUEDONAME} ${KERNEL})"
 
 fi
 echo ${OSSTR}

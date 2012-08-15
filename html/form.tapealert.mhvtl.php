@@ -23,7 +23,7 @@ This function is currently not implemented
 
 <hr width="100%" size=1 color="blue">
 <br>
-<FORM ACTION="vtlcmd.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="tools.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

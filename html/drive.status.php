@@ -16,8 +16,6 @@
 echo "<pre><b>Drive Status :</b></pre>";
 ?>
 
-<hr width="100%" size=1 color="blue">
-
 <TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
 <TR>
 <TD>

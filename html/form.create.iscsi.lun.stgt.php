@@ -34,13 +34,27 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 <form method="post" action="create.iscsi.lun.stgt.php" >
 <input name="tid" value="<?php echo $target;?>" hidden readonly>
 LUN <?php echo $nextlun;?>
-Select Device : <?php echo $cmd;?>
-<INPUT TYPE=SUBMIT VALUE="Create">
-</FORM>
-<br>
-<hr width="100%" size=1 color="blue">
-<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
-</table>
+
+<?php
+if ( $cmd == "" )
+{
+echo "<FONT COLOR=#FF0000>Tape Devices not online</FONT>";
+echo "</FORM>";
+echo "<br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "</table>";
+}
+else
+{
+echo "Select Device : $cmd";
+echo "<INPUT TYPE=SUBMIT VALUE='Create'></FORM>";
+echo "<br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "</table>";
+}
+?>
 
 </body>
 </html>

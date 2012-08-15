@@ -27,6 +27,6 @@ Select Library <?php echo $cmd ; ?>
 <input type="submit">
 </form>
 
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </body>
 </html>

@@ -18,16 +18,13 @@ echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<
 ?>
 
 
-
 <table border="1" >
-
 <td>
-
 <?php
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename))
 {
 $output = shell_exec('sudo -u root -S /usr/sbin/tgtadm -V');
-echo "<img src='images/green_light.png' ALIGN='left' /><b><FONT COLOR=black >TGT:</FONT><FONT COLOR=blue > $output </FONT></b> ";
+echo "<img src='images/green_light.png' ALIGN='left' /><b><FONT COLOR=#000000 >TGT:</FONT><FONT COLOR=green > $output </FONT></b> ";
 }
 else
 {
@@ -71,11 +68,12 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 </table>
 
 <br>
+
 <table border="0" ALIGN="left" >
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='form.create.auto.iscsi.config.stgt.php'" target="showframe"> Automatic Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='form.create.auto.iscsi.config.stgt.php'" target="showframe"> Auto-configuration </a><br>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
@@ -83,32 +81,32 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.iscsi.target.stgt.php'" target="showframe"> Create Target<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.create.iscsi.target.stgt.php'" target="showframe"> Create Target</a><br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.target.stgt.php'" target="showframe"> Create LUN<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.target.stgt.php'" target="showframe"> Create LUN</a><br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.stgt.iscsi.clients.php'" target="showframe"> Add Initiator ACL<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.stgt.iscsi.clients.php'" target="showframe"> Add Initiator ACL</a><br>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.initiator.php'" target="showframe"> Show Connections<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.initiator.php'" target="showframe"> Show Connections</a><br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.target.php'" target="showframe"> Display Target<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='display_stgt.target.php'" target="showframe"> Display Target</a><br>
 </td>
 </tr>
 
@@ -120,7 +118,7 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.tgt.conf.php'" target="showframe"> View Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.tgt.conf.php'" target="showframe"> View Configuration</a><br>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
@@ -128,34 +126,34 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.iscsi.target.stgt.php'" target="showframe"> Remove Target<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.iscsi.target.stgt.php'" target="showframe"> Remove Target</a><br>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.lun.stgt.php'" target="showframe"> Remove LUN<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.select.iscsi.lun.stgt.php'" target="showframe"> Remove LUN</a><br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.stgt.iscsi.clients.php'" target="showframe"> Remove Initiator ACL<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.remove.stgt.iscsi.clients.php'" target="showframe"> Remove Initiator ACL</a><br>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='save.iscsi.target.config.stgt.php'" target="showframe"> Save Configuration</a><br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='reset.iscsi.target.config.stgt.php'" target="showframe"> Clear Configuration<br>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='reset.iscsi.target.config.stgt.php'" target="showframe"> Clear Configuration</a><br>
 </td>
 </tr>
 

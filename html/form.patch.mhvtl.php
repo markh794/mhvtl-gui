@@ -20,15 +20,13 @@ echo "<pre><b> Apply Patches :</b></pre>";
 
 <table border="0" >
 
-
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><form enctype="multipart/form-data" action="uploader.php" method="POST">
+<img src="images/tab_right.png" ALIGN="left" ><form enctype="multipart/form-data" action="uploader.php" method="POST"><b><font color=red>MHVTL </font></b>
 <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
 <input name="uploadedfile" type="file" />
 <input type="submit" value=" Upload " />
 </form>
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -43,18 +41,42 @@ Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value
 <img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.uninstall.mhvtl.php" method="post" >
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch`; ?>
 Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" Undo "></FORM>
-
-
 <br>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
+<!--
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><form enctype="multipart/form-data" action="tgt_uploader.php" method="POST"><b><font color=blue>TGT </font></b>
+<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+<input name="uploadedfile1" type="file" />
+<input type="submit" value=" Upload " />
+</form>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.install.tgt.php" method="post" >
+<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch2`; ?>
+Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" Apply "></FORM>
+<br>
+<img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.uninstall.tgt.php" method="post" >
+<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch2`; ?>
+Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" Undo "></FORM>
+<br>
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
+-->
+
+
 
 </table>
-<br>
-<FORM ACTION="help.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="tools.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 <form action="form.patch.mhvtl.php" method="post" ><input TYPE="submit" style="color: #000000" value=" Refresh "></form>
 </body>
 </html>

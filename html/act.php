@@ -10,7 +10,7 @@ $ACTIVITY=`sudo -u root -S cat /tmp/mhvtl.act.tmp| grep -v mediumx`;
 $cmdout2 = shell_exec ('sudo -u root -S cat /tmp/mhvtl.act.tmp| grep -v mediumx| cut -d ":" -f2,3|cut -c5- | while read eachone; do echo "<img src=images/animated_dot.gif align=top />" "<FONT COLOR=red>$eachone</FONT>" ; done');
 
 $output1=`if [ ! -z "$ACTIVITY" ] ; then echo "$cmdout2" ;fi`;
-$output2=`if [ ! -z "$ACTIVITY" ] ; then sudo -u root -S cat /tmp/mhvtl.act.tmp;else echo "<FONT COLOR=green>STATUS: IDLE</FONT>";fi`;
+$output2=`if [ ! -z "$ACTIVITY" ] ; then sudo -u root -S cat /tmp/mhvtl.act.tmp| awk 'BEGIN{RS="mediumx" } /Data Transfer Element/';else echo "<FONT COLOR=green>STATUS: IDLE</FONT>";fi`;
 echo "<pre><b>$output1</b></pre>";
 echo "<pre><b>$output2</b></pre>";
 ?>

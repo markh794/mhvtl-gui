@@ -16,8 +16,6 @@
 echo "<pre><b>Robot Status :</b></pre>";
 ?>
 
-<hr width="100%" size=1 color="blue">
-
 <TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
 <TR>
 <TD>
@@ -34,10 +32,7 @@ echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 </TABLE>
 
 
-<FORM ACTION="form.robot.status.php">
-<INPUT TYPE=SUBMIT VALUE="Return">
-<a href="Javascript:close();"><INPUT TYPE=SUBMIT VALUE="Close"></a>
-</FORM>
+<FORM ACTION="form.robot.status.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

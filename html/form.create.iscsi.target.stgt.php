@@ -39,26 +39,35 @@ else
 $thost = `sudo -u root -S hostname -s`;
 $miqn = `sudo -u root -S echo iqn.2011-04.com.nia:$thost`;
 }
+
+$nexttarget = `sudo -u root -S ../scripts/build_html_opts.sh nexttarget`;
+if ( $nexttarget == "" )
+{
+echo "<FONT COLOR=#FF0000>Error: is TGT running ?</FONT>";
+echo "</FORM>";
+echo "<br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "</table>";
+}
+else
+{
+echo "<form method='post' action='create.iscsi.target.stgt.php'>";
+echo "Enter Target-iqn : <input name='iqn' type='text' size='50' value='$miqn' required >";
+echo "<input name='mode' value='target' hidden readonly >";
+echo "<br>";
+echo "Enter Identifier1 : <input name='idn1' type='text' value='mhvtl' required >";
+echo "<br>";
+echo "Enter Identifier2 : <input name='idn2' type='text' value='tgt' required >";
+echo "<br>";
+echo "Target ID Number  : $nexttarget";
+echo "<br>";
+echo "<INPUT TYPE=SUBMIT VALUE='Create'></FORM><FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "<br>";
+echo "</table>";
+}
 ?>
 
-<form method="post" action="create.iscsi.target.stgt.php">
-<?php $nexttarget = `sudo -u root -S ../scripts/build_html_opts.sh nexttarget`; ?>
-
-Enter Target-iqn : <input name="iqn" type="text" size="50" value=<?php echo $miqn;?> required >
-<input name="mode" value="target" hidden readonly >
-<br>
-Enter Identifier1 : <input name="idn1" type="text" value="mhvtl" required >
-<br>
-Enter Identifier2 : <input name="idn2" type="text" value="tgt" required >
-<br>
-Target ID Number  : <?php echo $nexttarget;?>
-<br>
-<INPUT TYPE=SUBMIT VALUE="Create">
-</FORM>
-<br>
-<hr width="100%" size=1 color="blue">
-<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
-</table>
 
 </body>
 </html>

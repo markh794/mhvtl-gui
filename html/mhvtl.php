@@ -1,5 +1,3 @@
-
-
 <html>
 <head><title>MHVTL Web Console</title></head>
 <link href="styles.css" rel="stylesheet" type="text/css">

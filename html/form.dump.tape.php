@@ -22,7 +22,7 @@ echo "<pre><b>Dump Tape :</b></pre>";
 Select Volume : <?php echo $cmd;?>
 <input type="submit">
 </form>
-<FORM ACTION="vtlcmd.php">
+<FORM ACTION="tools.php">
 <INPUT TYPE=SUBMIT VALUE="Cancel">
 </FORM>
 

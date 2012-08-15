@@ -25,7 +25,7 @@ echo "<pre><b> Install Patches :</b></pre>";
 
 <table border="0">
 <td>
-<div style="overflow:auto;height:400px;width:600px;">
+<div style="overflow:auto;height:150px;width:450px;">
 
 <?php
 $PATCH = $_REQUEST['patch'];
@@ -40,8 +40,6 @@ $run = system("sudo -u root -S ../scripts/mhvtl.patch.sh install $PATCHFILE ");
 </TR>
 </TD>
 </TABLE>
-
-<FORM ACTION="form.patch.mhvtl.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

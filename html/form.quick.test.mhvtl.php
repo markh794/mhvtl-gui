@@ -45,42 +45,42 @@ getID:function(el)
 </tr>
 
 <?php
-echo "<pre><b>Automatic Configuration :</b></pre>";
+echo "<pre><b>MHVTL Test:</b></pre>";
 ?>
-
-
-<?php
-$filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename))
-{
-echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-exit("<FONT COLOR='#000000'><b>STGT Disabled</b></FONT>");
-}
-?>
-
 
 
 <TABLE BORDER=2 align="left" valign="middle" >
 <tr>
 <td>
 <br>
-<b><font color=red size=2>
-
-(1) Create Targets/LUNS on All Devices<br>
-(2) Enable All Inititator Client Hosts<br>
-(3) Save Configuration<br>
+<b><font color=red size=5>
+* * * Warning : data loss may occur * * * <br>
+This test will mount random tapes and write to them.<br>
+Tapes will get overwritten .. Be careful with this ...<br>
+Do not proceed if any of your tapes already have data that you need.<br>
+<br></b></font>
+<b><font color=blue size=2>
+The following steps will take place:<br>
+<br>
+(1) Create small Test file using dd under tmp<br> 
+(2) Mount random tapes on all devices<br>
+(3) Perform Write using Tar<br>
+(4) Perform Read using Tar verify<br>
+(5) Dismount tapes on all devices<br>
+(6) Report Status<br>
 
 </b></font>
 <br>
 </tr>
 
+<tr>
 <td>
-<form action="stgt.php" method="post" onsubmit="return ray.ajax()">
+<form action="tools.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" style="color: #000000" value=" Cancel "></form>
-<form action="create.auto.iscsi.config.stgt.php" method="post" onsubmit="return ray.ajax()">
+<form action="quick.test.mhvtl.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" style="color: #FF0000" value=" Start "></form>
 </td>
-
+</tr>
 </table>
 </body>
 </html>

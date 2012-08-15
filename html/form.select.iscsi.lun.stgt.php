@@ -25,19 +25,26 @@ if (!file_exists($filename))
 echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
 exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
+
+
+$target = `sudo -u root -S ../scripts/build_html_opts.sh target`;
+
+if ( $target == "" )
+{
+echo "<FONT COLOR=#FF0000>Target not defined, please create first</FONT>";
+echo "</FORM><br>";
+echo "<hr width='100%' size=1 color='blue'>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "</table>";
+}
+else
+{
+echo "<form method='post' action='form.remove.iscsi.lun.stgt.php'>";
+echo "Select Target $target";
+echo "<INPUT TYPE=SUBMIT VALUE='SUBMIT'></FORM>";
+}
 ?>
 
-
-<?php $target = `sudo -u root -S ../scripts/build_html_opts.sh target`; ?>
-
-<form method="post" action="form.remove.iscsi.lun.stgt.php">
-Select Target <?php echo $target;?>
-<INPUT TYPE=SUBMIT VALUE="SUBMIT">
-
-</FORM>
-<br>
-<hr width="100%" size=1 color="blue">
-<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 </table>
 
 </body>

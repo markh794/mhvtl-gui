@@ -31,7 +31,7 @@ echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 </TABLE>
 
 <hr width="100%" size=1 color="blue">
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 
 </body>
 </html>

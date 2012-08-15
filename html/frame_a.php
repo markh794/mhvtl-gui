@@ -3,15 +3,18 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 <body>
 <hr width="100%" size=10 color="blue">
-<b><FONT COLOR=purple > Control Center</FONT><FONT COLOR=black></FONT></b>
+<?php $output = `sudo -u root -S cat ../version`;?>
+<FONT COLOR=purple>Web Console Release : <?php echo $output ;?></FONT>
 <hr width="100%" size=1 color="blue">
 
 <tr>
 <td>
-<img src="images/tux.png" ALIGN="middle" ><b><FONT COLOR=blue size=4> Linux Virtual Tape Library System</FONT></b>
+<img src="images/tux.png" ALIGN="middle" ><b><FONT COLOR=blue size=4> Virtual Tape Library System</FONT></b>
 </td>
 </tr>
-<?php $output = `sudo -u root -S ../scripts/os_release.sh`; echo "<pre><b>$output</b></pre>"; ?>
+<?php $output = shell_exec('sudo -u root -S ../scripts/os_release.sh');?>
+<pre><b><FONT COLOR=purple><?php echo $output ;?></FONT></b></pre>
+
 
 <script type="text/javascript">
 var ray={
@@ -33,7 +36,7 @@ getID:function(el)
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
 
-<table border="0" width="470" >
+<table border="2" width="470"  >
 <td>
 <form action="confirm.start_mhvtl.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" class="sameSize" style="color: #008000" value=" Start ">
@@ -61,22 +64,46 @@ getID:function(el)
 </td>
 
 </table>
-
 <br>
 
-
-<TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" >
+<TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" BORDERCOLOR=grey >
 
 <TR>
 <TD>
-<div style="overflow:auto;height:120px;width:450px;" id="ReloadThis" >
+<div style="overflow:auto;height:110px;width:450px;" id="ReloadThis" >
 <?php
 include 'fdisplay.php' ;
 ?>
+
 </div>
 </table>
 
 
+<script language="javascript">
+function toggle() {
+        var ele = document.getElementById("toggleText");
+        var text = document.getElementById("displayText");
+        if(ele.style.display == "block") {
+                ele.style.display = "none";
+                text.innerHTML = "<input TYPE='submit' value='Show Devices'>";
+        }
+        else {
+                ele.style.display = "block";
+                text.innerHTML = "<input TYPE='submit' value='Hide  Devices'>";
+        }
+}
+</script>
+<table>
+<form action='frame_a.php' method='post' ><input TYPE='submit' style='color: #000000' value=' Refresh '></form>
+<a id='displayText' href='javascript:toggle();'><input TYPE='submit' value='Show Devices'></a>
+<div 
+id="toggleText"  style="display: none;overflow:auto;height:100px;width:500px;">
+<?php
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
+echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
+?>
+</div>
+</table>
 
 
 <?php
@@ -105,35 +132,6 @@ fi');
 echo "<pre>$output</pre>";
 ?>
 
-<form action="frame_a.php" method="post" ><input TYPE="submit" style="color: #000000" value=" Refresh "></form>
-
-<script language="javascript">
-function toggle() {
-        var ele = document.getElementById("toggleText");
-        var text = document.getElementById("displayText");
-        if(ele.style.display == "block") {
-                ele.style.display = "none";
-                text.innerHTML = "Show Virtual Devices";
-        }
-        else {
-                ele.style.display = "block";
-                text.innerHTML = "Hide Virtual Devices";
-        }
-}
-</script>
-
-<a id="displayText" href="javascript:toggle();"><input TYPE="submit" value="Show Virtual Devices"></a>
-
-<table>
-<div id="toggleText"  style="display: none;overflow:auto;height:200px;width:500px;">
-<?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
-echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
-?>
-</div>
-</table>
-
-<?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved. </a></FONT></b></pre>";?>
 
 </body>
 </html>
