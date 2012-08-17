@@ -18,7 +18,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 
 
-<table border="0" ALIGN="left" >
+<table border="1" ALIGN="left" >
 
 
 <tr>
@@ -52,6 +52,8 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </td>
 </tr>
 
+</table>
+<table border="1" ALIGN="left" >
 
 <tr>
 <td>
@@ -72,9 +74,23 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </tr>
 
 
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mount.tape.php'" target="showframe"> Load Drive</a>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.unmount.tape.php'" target="showframe"> Unload Drive</a>
+</td>
+</tr>
+
+
 </table>
 
-<table border="0" ALIGN="left" >
+<table border="1" ALIGN="left" >
 
 
 <tr>
@@ -108,25 +124,8 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </td>
 </tr>
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mount.tape.php'" target="showframe"> Load Drive</a>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.unmount.tape.php'" target="showframe"> Unload Drive</a>
-</td>
-</tr>
-
-
 </table>
 
-<table border="0" ALIGN="left" >
-
-</table>
 
 
 </body>
