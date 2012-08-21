@@ -100,7 +100,7 @@ echo "<pre>$output</pre>";
 <table>
 <div style="overflow:auto; height:100px;width:640px;">
 <?php
-$output = shell_exec('CHECKL=`sudo -u root -S egrep "vtltape|vtllibrary|tgtd" /var/log/messages| egrep -i "warning|fail|error" | tail -100| grep -v sudo| sort -r | cut -d":" -f1,3,4,5`; if [ ! -z "$CHECKL" ] ; then echo "<FONT COLOR="red">$CHECKL</FONT>"; fi');
+$output = shell_exec('CHECKL=`sudo -u root -S tail -100 /var/log/messages | sudo -u root -S egrep "vtltape|vtllibrary|tgtd" | egrep -i "warning|fail|error" | grep -v sudo| sort -r | cut -d":" -f1,3,4,5`; if [ ! -z "$CHECKL" ] ; then echo "<FONT COLOR="red">$CHECKL</FONT>"; fi');
 echo "<pre>$output</pre>";
 ?>
 </div>

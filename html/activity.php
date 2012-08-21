@@ -59,7 +59,7 @@ getID:function(el)
                                         {
                                                 if (/4|^complete$/.test($http.readyState)) {
                                                         document.getElementById('ReloadThis').innerHTML = $http.responseText;
-                                                        setTimeout(function(){$self();}, 1000);
+                                                        setTimeout(function(){$self();}, 100);
                                                 }
                                         };
                                         $http.open('GET', 'act.php' + '?' + new Date().getTime(), true);
@@ -70,12 +70,10 @@ getID:function(el)
 
                 </script>
                 <script type="text/javascript">
-                        setTimeout(function() {Ajax();}, 1000);
+                        setTimeout(function() {Ajax();}, 100);
                 </script>
 <div id="ReloadThis" >
-<?php
-include 'act.php' ;
-?>
+<?php include 'act.php' ; ?>
 </div>
 </body>
 </html>

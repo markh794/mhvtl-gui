@@ -18,7 +18,7 @@ echo "<FONT COLOR=#FFFF00> $NT</FONT><FONT COLOR=#FFFFFF>Cartridge(s)</FONT></FO
 }
 else
 {
-echo "$dm";
+echo "<FONT COLOR=#FFFF00 size=2 ><br><br> $dm</FONT>";
 }
 
 sleep(0);

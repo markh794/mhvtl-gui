@@ -44,7 +44,7 @@ getID:function(el)
                                         {
                                                 if (/4|^complete$/.test($http.readyState)) {
                                                         document.getElementById('ReloadThis').innerHTML = $http.responseText;
-                                                        setTimeout(function(){$self();}, 100);
+                                                        setTimeout(function(){$self();}, 1000);
                                                 }
                                         };
                                         $http.open('GET', 'act.test.php' + '?' + new Date().getTime(), true);
@@ -55,7 +55,7 @@ getID:function(el)
 
                 </script>
                 <script type="text/javascript">
-                        setTimeout(function() {Ajax();}, 100);
+                        setTimeout(function() {Ajax();}, 1000);
                 </script>
 
 <div id="ReloadThis" >
