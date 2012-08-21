@@ -41,9 +41,9 @@ getID:function(el)
 <td>
 
 <?php
-$gitlog = shell_exec('cd ../; sudo -u root -S git log --graph --oneline -20 >/tmp/review_mhvtl-gui_update.sh.tmp; cd html');
-$OUTPUT=`sudo -u root -S cat /tmp/review_mhvtl-gui_update.sh.tmp`;
-echo "<pre><b><FONT COLOR=#FFFFFF>Last 20 commits:<br> $OUTPUT</FONT></b></pre>";
+$gitlog = shell_exec('cd ../; sudo -u root -S git log --graph --pretty=format:"%h %ad %d %s" --date=short -20 >/tmp/review_mhvtl-gui_update.sh.tmp; cd html');
+$OUTPUT=`sudo -u root -S cat /tmp/review_mhvtl-gui_update.sh.tmp;sudo -u root -S rm -f /tmp/review_mhvtl-gui_update.sh.tmp`;
+echo "<pre><b><FONT COLOR=#FFFFFF>Last 20 commits:<br>$OUTPUT</FONT></b></pre>";
 ?>
 
 </td>
