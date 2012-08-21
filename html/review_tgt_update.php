@@ -14,7 +14,7 @@
 </tr>
 
 <?php
-echo "<pre><b> Review TGT Updates :</b></pre>";
+echo "<pre><b> Review MHVTL Updates :</b></pre>";
 ?>
 
 
@@ -40,10 +40,11 @@ getID:function(el)
 <TR>
 <td>
 
+
 <?php
-$gitlog = shell_exec('cd ../stgt.git; sudo -u root -S git log --graph --pretty=format:"%h %ad %d %s" --date=short -20 >/tmp/review_tgt_update.sh.tmp; cd ../html');
-$OUTPUT=`sudo -u root -S cat /tmp/review_tgt_update.sh.tmp`;
-echo "<pre><b><FONT COLOR=#FFFFFF>Last 20 commits:<br>$OUTPUT</FONT></b></pre>";
+$CURR = `sudo -u root -S cat ../LAST_STGT_GIT_UPDATE`;
+$output = `sudo -u root -S ../scripts/review_tgt_update.sh`;
+echo "<pre><b><FONT COLOR=#FFFFFF>Updates since $CURR <br>$output</FONT></b></pre>";
 ?>
 
 </td>

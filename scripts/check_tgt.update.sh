@@ -35,7 +35,7 @@ cd ../html
 
 else
 
-echo "<font color=green>TGT is up-to-date  <a style='float:right;' href="review_tgt_update.php"><font color=blue>$STGTVER_GIT-$GITEXTRAVERSION</font></a>"
+echo "<font color=green>TGT is up-to-date</font><a style='float:right;'<font color=blue>$STGTVER_GIT-$GITEXTRAVERSION</font></a>"
 cd ../html
 exit 1
 fi

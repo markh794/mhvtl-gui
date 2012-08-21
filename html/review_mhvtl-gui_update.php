@@ -40,10 +40,11 @@ getID:function(el)
 <TR>
 <td>
 
+
 <?php
-$gitlog = shell_exec('cd ../; sudo -u root -S git log --graph --pretty=format:"%h %ad %d %s" --date=short -20 >/tmp/review_mhvtl-gui_update.sh.tmp; cd html');
-$OUTPUT=`sudo -u root -S cat /tmp/review_mhvtl-gui_update.sh.tmp;sudo -u root -S rm -f /tmp/review_mhvtl-gui_update.sh.tmp`;
-echo "<pre><b><FONT COLOR=#FFFFFF>Last 20 commits:<br>$OUTPUT</FONT></b></pre>";
+$CURR = `sudo -u root -S cat ../version | cut -d "-" -f2`;
+$output = `sudo -u root -S ../scripts/review_mhvtl-gui_update.sh`;
+echo "<pre><b><FONT COLOR=#FFFFFF>Updates since $CURR <br>$output</FONT></b></pre>";
 ?>
 
 </td>
