@@ -30,12 +30,12 @@ STGTVER_GIT=0000000
 fi
 
 if [ $STGTVER_INSTALLED-$LAST_STGT_GIT_UPDATE != $STGTVER_GIT-$GITEXTRAVERSION ] ; then
-echo "<font color=red>TGT Updates Available</font> : <a style='float:right;' href="review_tgt_update.php"><font color=blue>$STGTVER_GIT-$GITEXTRAVERSION</font></a>"
+echo "<font color=red>TGT Updates Available</font> : <a style='float:right;' href="review_tgt_update.php"><font color=blue>$STGTVER_GIT-$GITEXTRAVERSION </font></a>"
 cd ../html
 
 else
 
-echo "<font color=green>TGT is up-to-date</font><a style='float:right;'<font color=blue>$STGTVER_GIT-$GITEXTRAVERSION</font></a>"
+echo "<font color=green>TGT is up-to-date</font><a style='float:right;'<font color=blue>$STGTVER_GIT-$GITEXTRAVERSION </font></a>"
 cd ../html
 exit 1
 fi
