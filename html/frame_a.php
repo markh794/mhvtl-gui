@@ -77,17 +77,18 @@ include 'fdisplay.php' ;
 </div>
 </table>
 
-<form action="frame_a.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" style="color: #000000" value=" Refresh ">
-</form>
-</td>
-
-
 <table>
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
+
+<td>
+<form action="frame_a.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" style="color: #000000" value=" Refresh ">
+</form>
+</td>
+
 </table>
 
 
