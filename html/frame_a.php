@@ -74,35 +74,20 @@ getID:function(el)
 <?php
 include 'fdisplay.php' ;
 ?>
-
 </div>
 </table>
 
+<form action="frame_a.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" style="color: #000000" value=" Refresh ">
+</form>
+</td>
 
-<script language="javascript">
-function toggle() {
-        var ele = document.getElementById("toggleText");
-        var text = document.getElementById("displayText");
-        if(ele.style.display == "block") {
-                ele.style.display = "none";
-                text.innerHTML = "<input TYPE='submit' value='Show Devices'>";
-        }
-        else {
-                ele.style.display = "block";
-                text.innerHTML = "<input TYPE='submit' value='Hide  Devices'>";
-        }
-}
-</script>
+
 <table>
-<form action='frame_a.php' method='post' ><input TYPE='submit' style='color: #000000' value=' Refresh '></form>
-<a id='displayText' href='javascript:toggle();'><input TYPE='submit' value='Show Devices'></a>
-<div 
-id="toggleText"  style="display: none;overflow:auto;height:100px;width:500px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
-</div>
 </table>
 
 
