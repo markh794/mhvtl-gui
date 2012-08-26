@@ -12,18 +12,18 @@ fi
 
 
 
-NEXTVOLN=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $3}' | grep -v ^$|  sort -u | tail -1|sed 's/..$//'|sed 's/[^0-9]*//g'|awk '{ SUM += $1+1} END { print (SUM)}'`
+NXTVOLN=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $3}' | grep -v ^$|  sort -u | tail -1|sed 's/..$//'|sed 's/[^0-9]*//g'|awk '{ SUM += $1+1} END { print (SUM)}'`
 prefix=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $NF}' | grep -v ^CLN | grep -v ":$" | tail -1|sed 's/..$//'|sed 's/[0-9]*//g'`
 type=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $NF}' | grep -v ^CLN | grep -v ":$" | tail -1|sed 's/.*\(..\)$/\1/'`
 NEXTSLOTn=`grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f1| awk '{print $2}'| tail -1| awk '{ SUM += $1+1} END { print (SUM)}'`
 
 count=0
-
+cprefix=`printf $prefix | wc -c`
 while true; do
 
 NEXTSLOT=$((NEXTSLOTn+count))
-nextvoln=$((NEXTVOLN+count))
 count=$((count+1))
+nextvoln=$((NXTVOLN+count))
 
 if [ $count -gt $total ] ; then
 cat /etc/mhvtl/library_contents.$1 >/tmp/library_contents.tmp.add.more.tapes.in.tmp
@@ -37,15 +37,84 @@ else
 
 
 if [ $nextvoln -lt 10 ]; then
+
+if [ "$cprefix" = 1 ]; then
 media=$prefix'0000'"$nextvoln"$type
-elif [ $nextvoln -lt 100 ]; then
+elif [ "$cprefix" = 2 ]; then
 media=$prefix'000'"$nextvoln"$type
-elif [ $nextvoln -lt 1000 ]; then
+elif [ "$cprefix" = 3 ]; then
 media=$prefix'00'"$nextvoln"$type
-elif [ $nextvoln -lt 10000 ]; then
+elif [ "$cprefix" = 4 ]; then
 media=$prefix'0'"$nextvoln"$type
-elif [ $nextvoln -lt 99998 ]; then
+elif [ "$cprefix" = 5 ]; then
 media=$prefix"$nextvoln"$type
+else
+exit 0
+fi
+
+elif [ $nextvoln -lt 100 ]; then
+if [ "$cprefix" = 1 ]; then
+media=$prefix'000'"$nextvoln"$type
+elif [ "$cprefix" = 2 ]; then
+media=$prefix'00'"$nextvoln"$type
+elif [ "$cprefix" = 3 ]; then
+media=$prefix'0'"$nextvoln"$type
+elif [ "$cprefix" = 4 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 5 ]; then
+media=$prefix"$nextvoln"$type
+else
+exit 0
+fi
+
+elif [ $nextvoln -lt 1000 ]; then
+if [ "$cprefix" = 1 ]; then
+media=$prefix'00'"$nextvoln"$type
+elif [ "$cprefix" = 2 ]; then
+media=$prefix'0'"$nextvoln"$type
+elif [ "$cprefix" = 3 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 4 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 5 ]; then
+media=$prefix"$nextvoln"$type
+else
+exit 0
+fi
+
+
+elif [ $nextvoln -lt 10000 ]; then
+if [ "$cprefix" = 1 ]; then
+media=$prefix'0'"$nextvoln"$type
+elif [ "$cprefix" = 2 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 3 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 4 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 5 ]; then
+media=$prefix"$nextvoln"$type
+else
+exit 0
+fi
+
+
+elif [ $nextvoln -lt 99998 ]; then
+if [ "$cprefix" = 1 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 2 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 3 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 4 ]; then
+media=$prefix"$nextvoln"$type
+elif [ "$cprefix" = 5 ]; then
+media=$prefix"$nextvoln"$type
+else
+exit 0
+fi
+
+
 elif [ $nextvoln -gt 99999 ]; then
 exit 0
 else
