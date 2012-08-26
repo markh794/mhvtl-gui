@@ -34,11 +34,45 @@ echo '</SELECT>'
 
 tape()
 {
+HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
+if [ "$HOMEDIR" = "" ] ; then
+HOMEDIR="/opt/mhvtl"
+fi
+
 echo '<SELECT name="tape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
-find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -n | while read each1; do
-echo '<OPTION>'$each1'</OPTION>'
+find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -u | grep -v ^$ | while read each; do
+echo '<OPTION>'$each'</OPTION>'
 done
 echo '</SELECT>'
+}
+
+exttape()
+{
+HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
+if [ "$HOMEDIR" = "" ] ; then
+HOMEDIR="/opt/mhvtl"
+fi
+
+if [ "$HOMEDIR" = "/opt/mhvtl" ]; then
+cat /etc/mhvtl/library_contents.*| grep ^Slot | cut -d ":" -f2 | sort -u | grep -v ^$ >/tmp/slotedmedia
+find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -u | grep -v ^$ >/tmp/allmedia
+else
+grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f2 | sort -u | grep -v ^$ >/tmp/slotedmedia
+find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -u | grep -v ^$ >/tmp/allmedia
+fi
+
+echo '<SELECT name="exttape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+cat /tmp/allmedia | while read each; do 
+CHECK=`grep $each /tmp/slotedmedia`
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>'$each'</OPTION>'
+else
+#echo '<OPTION>'NONE'</OPTION>'
+echo >/dev/null
+fi
+done
+echo '</SELECT>'
+rm -f /tmp/slotedmedia /tmp/allmedia
 }
 
 

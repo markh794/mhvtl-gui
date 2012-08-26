@@ -14,21 +14,19 @@
 
 
 <?php
-echo "<pre><b>Load Map :</b></pre>";
+echo "<pre><b>Display External Media :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="vtlcmd.load.map.confirm.again.php">
-
+<form method="post" action="form1.display.external.media.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-Select Library <?php echo $cmd;?>
-<br>
-<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh tape junk`; ?>
-Select from any Volume <?php echo $cmd;?>
-<br>
-<input type="submit"></form>
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 
+Select Library <?php echo $cmd ; ?>
+
+<input type="submit">
+</form>
+
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </body>
 </html>

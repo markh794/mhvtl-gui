@@ -1,0 +1,63 @@
+
+libid=$1
+total=$2
+
+HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
+if [ "$HOMEDIR" = "" ] ; then
+HOMEDIR="/opt/mhvtl"
+fi
+
+
+
+
+NEXTVOLN=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $3}' | grep -v ^$|  sort -u | tail -1|sed 's/..$//'|sed 's/[^0-9]*//g'`
+prefix=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $NF}' | grep -v ^CLN | grep -v ":$" | tail -1|sed 's/..$//'|sed 's/[0-9]*//g'`
+type=`grep ^Slot /etc/mhvtl/library_contents.$1 | awk '{print $NF}' | grep -v ^CLN | grep -v ":$" | tail -1|sed 's/.*\(..\)$/\1/'`
+NEXTSLOTn=`grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f1| awk '{print $2}'| tail -1| awk '{ SUM += $1+1} END { print (SUM)}'`
+
+count=0
+
+while true; do
+
+NEXTSLOT=$((NEXTSLOTn+count))
+count=$((count+1))
+
+LZ=`echo $NEXTVOLN|cut -c1-1`
+if [ $LZ -eq 0 ] ;then
+nextvoln=`echo $NEXTVOLN|sed 's/^0*//'`
+nextvoln=$((nextvoln+count))
+nextvol=`echo 0$nextvoln`
+
+else
+nextvol=$((NEXTVOLN+count))
+fi
+
+if [ $count -gt $total ] ; then
+cat /etc/mhvtl/library_contents.$1 >/tmp/library_contents.tmp.add.more.tapes.in.tmp
+cat /etc/mhvtl/library_contents.$1 >/tmp/library_contents.tmp.add.more.tapes.in
+cat /tmp/library_contents.tmp.add.more.tapes >>/tmp/library_contents.tmp.add.more.tapes.in
+cat /tmp/library_contents.tmp.add.more.tapes
+#rm -f /tmp/library_contents.tmp.add.more.tapes
+
+exit 0
+else
+
+
+if [ $nextvoln -lt 10 ]; then
+media=$prefix'000'"$nextvol"$type
+elif [ $nextvoln -lt 100 ]; then
+media=$prefix'00'"$nextvol"$type
+elif [ $nextvoln -lt 1000 ]; then
+media=$prefix'0'"$nextvol"$type
+elif [ $nextvoln -lt 10000 ]; then
+media=$prefix"$nextvol"$type
+elif [ $nextvoln -lt 99998 ]; then
+media=$prefix"$nextvol"$type
+elif [ $nextvoln -gt 99999 ]; then
+exit 0
+else
+exit 0
+fi
+echo "Slot $NEXTSLOT:" $media >>/tmp/library_contents.tmp.add.more.tapes
+fi
+done

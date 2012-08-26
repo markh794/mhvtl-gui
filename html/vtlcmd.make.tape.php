@@ -13,34 +13,52 @@
 </tr>
 
 <?php
-echo "<pre><b>Create additional media :</b></pre>";
+echo "<pre><b>Create additional data tapes :</b></pre>";
 ?>
 
-<hr width="100%" size=1 color="blue">
+<script type="text/javascript">
+var ray={
+ajax:function(st)
+        {
+                this.show('load');
+        },
+show:function(el)
+        {
+                this.getID(el).style.display='';
+        },
+getID:function(el)
+        {
+                return document.getElementById(el);
+        }
+}
+</script>
+<div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<?php $libid = $_REQUEST['libid']; ?>
+
+
+<hr width="100%" size=1 color="blue">
 
 <?php
-$VAR1 = $_REQUEST['size'];
-$VAR2 = $_REQUEST['type'];
-$VAR3 = $_REQUEST['density'];
-$VAR4 = $_REQUEST['pcl'];
-
-$checkunique = `sudo -u root -S find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"|sort -n| sort -u| grep $VAR4 |wc -l`;
-if ($checkunique == 0 )
-{
-$cmd = `sudo -u root -S mktape -l $libid -m $VAR4 -s $VAR1 -t $VAR2 -d $VAR3 >/tmp/vtlcmd.create.tape.tmp 2>&1`;
-$output = shell_exec('cat /tmp/vtlcmd.create.tape.tmp');
-echo "<pre>Created $VAR4 .. $output</pre>";
-}
-else
-{
-echo "<FONT COLOR=red>$VAR4 already exist ! , select different barcode please ...</FONT>";
-}
+$LIBID = $_REQUEST['libid'];
+$LIBIDN = `echo $LIBID | cut -d ":" -f1|awk '{print $1}'`;
+$COUNT = $_REQUEST['ctc'];
+$run1 = `sudo -u vtl -S ../scripts/make_more_library_contents "$LIBIDN" "$COUNT" `;
+$save = `sudo -u vtl -S cp -f /etc/mhvtl/library_contents.$LIBIDN /etc/mhvtl/library_contents.$LIBIDN.save.$$`;
+$run2 = `sudo -u vtl -S cp -f /tmp/library_contents.tmp.add.more.tapes.in /etc/mhvtl/library_contents.$LIBIDN`;
+$output = `sudo -u vtl -S grep -v ^# /tmp/library_contents.tmp.add.more.tapes.in.tmp`;
+$output2 = `sudo -u vtl -S cat /tmp/library_contents.tmp.add.more.tapes ; sudo -u vtl -S rm -f /tmp/library_contents.*`;
+echo "<FONT COLOR=blue><b> ========= LIBRARY CONFIGURATION UPDATED ================ </b></FONT>";
+echo "<pre>$output<FONT COLOR=red>$output2</FONT></pre>";
+echo "<FONT COLOR=blue><b> ========= LIBRARY CONFIGURATION UPDATED ================ </b></FONT>";
 ?>
 
 <hr width="100%" size=1 color="blue">
-<FORM ACTION="form.vtlcmd.make.tape.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
+<br>
+<b><FONT COLOR="red">*** You must restart mhvtl daemons to utilize the new media ***</FONT></b><br>
+<br>
+<FORM ACTION="confirm.stop-start_mhvtl.php"> <INPUT TYPE=SUBMIT style="color: #FF0000" VALUE="Restart"> </FORM>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT style="color: #0000FF" VALUE="Finish"> </FORM>
+<FORM ACTION="form.vtlcmd.make.tape.php"> <INPUT TYPE=SUBMIT style="color: #0000FF" VALUE="Add More"> </FORM>
 
 </body>
 </html>

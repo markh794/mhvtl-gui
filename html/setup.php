@@ -39,10 +39,17 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.make.tape.php'" target="showframe"> Create Media</a>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.make.tape.php'" target="showframe"> Create Additional Data Tapes & Slots</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.make.external.media.php'" target="showframe"> Create External Media</a>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
+
 
 <tr>
 <td>

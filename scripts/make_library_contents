@@ -1,5 +1,6 @@
 #!/bin/sh
 
+libid=$7
 numberofdrives=$4
 countdrive=1
 echo " "
@@ -112,9 +113,17 @@ count=0
 freeslots=5
 totalslots=$(($total+$freeslots))
 
-CHECK_UNIQUE_TYPE=`sudo -u root -S ls -1d $6/$2*$type`
+
+HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$libid'/' /tmp/device.conf.tmp | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
+if [ "$HOMEDIR" = "" ] ; then
+HOMEDIR="/opt/mhvtl"
+fi
+
+CHECK_UNIQUE_TYPE=`sudo -u root -S ls -1d $HOMEDIR/$prefix*$type`
 if [ ! -z "$CHECK_UNIQUE_TYPE" ] ; then
-echo "<b><FONT COLOR="red">#Media barcde is not unique .. You may need to  select a different barcode ..</FONT></b><br>"
+echo "<b><FONT COLOR="red" size=5 ># *** Warning *** </FONT></b><br>"
+echo "<b><FONT COLOR="red" size=5 ># *** Media barcode not unique .. You may need to  select different barcode *** </FONT></b><br>"
+echo "<b><FONT COLOR="red" size=5 ># *** Warning *** </FONT></b><br>"
 fi
 
 while true; do
@@ -130,25 +139,41 @@ elif [ $count -lt 10 ]; then
 if [ $count -eq $total ] ; then
 echo "Slot" $count: CLN'00'"$count"$type
 else
-echo "Slot" $count: $prefix'00'"$count"$type
+echo "Slot" $count: $prefix'0000'"$count"$type
 fi
 
 elif [ $count -lt 100 ]; then
 if [ $count -eq $total ] ; then
 echo "Slot" $count: CLN'0'"$count"$type
 else
+echo "Slot" $count: $prefix'000'"$count"$type
+fi
+
+elif [ $count -lt 1000 ]; then
+if [ $count -eq $total ] ; then
+echo "Slot" $count: CLN"$count"$type
+else
+echo "Slot" $count: $prefix'00'"$count"$type
+fi
+
+elif [ $count -lt 10000 ]; then
+if [ $count -eq $total ] ; then
+echo "Slot" $count: CLN"999"$type
+else
 echo "Slot" $count: $prefix'0'"$count"$type
 fi
 
-elif [ $count -lt 999 ]; then
+
+elif [ $count -lt 99999 ]; then
 if [ $count -eq $total ] ; then
-echo "Slot" $count: CLN"$count"$type
+echo "Slot" $count: CLN"999"$type
 else
 echo "Slot" $count: $prefix"$count"$type
 fi
 
-elif [ $count -gt 998 ]; then
-echo "Slot" 999: CLN"999"$type
+
+elif [ $count -gt 99998 ]; then
+echo "Slot" 99999: CLN"999"$type
 exit
 
 else
