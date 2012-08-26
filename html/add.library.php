@@ -118,7 +118,7 @@ $VR2 = $_REQUEST['mp'];
 $VR3 = $_REQUEST['mc'];
 
 
-$run = `sudo -u root ../scripts/make_library_contents "$VR1" "$VR2" "$VR3" "$VRN" "$VMN" "$V9" >/tmp/library_contents.$VR0`;
+$run = `sudo -u root ../scripts/make_library_contents "$VR1" "$VR2" "$VR3" "$VRN" "$VMN" "$V9" "$VR0" >/tmp/library_contents.$VR0`;
 $checkunique = `sudo -u root grep unique /tmp/library_contents.$VR0|wc -l`;
 $run2 = `sudo -u root cp -f /tmp/library_contents.$VR0 /etc/mhvtl/library_contents.$VR0`;
 $out2 = `sudo -u root cat /etc/mhvtl/library_contents.$VR0`;
@@ -136,8 +136,9 @@ echo "<FORM ACTION=form.setup.complete.php> <INPUT TYPE=SUBMIT VALUE=Cancel> <IN
 else
 {
 echo "<hr width=100% size=1 color=blue>";
+echo "<b><FONT COLOR=red>Media barcode not unique </FONT></b>";
+echo "<FORM ACTION=update.device.conf.library.php> <INPUT TYPE=SUBMIT style='color: #FF0000' VALUE=Overwrite> </FORM>";
 echo "<FORM ACTION=form.setup.complete.php> <INPUT TYPE=SUBMIT VALUE=Cancel> <INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
-echo "<FORM ACTION=update.device.conf.library.php> <INPUT TYPE=SUBMIT VALUE=Overwrite> </FORM>";
 }
 ?>
 

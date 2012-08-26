@@ -68,8 +68,8 @@ Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required M
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number"><br>
 
-Enter Media Barcode Prefix (Any unique 3 char only) i.e QUA : <input name="mp" value="QUA" required MAXLENGTH="3" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
-Enter Media Count MAX 998 : <input name="mc" value="20" min="1" max="998" required SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+Enter Media Barcode Prefix (1 char only) : <input name="mp" value="R" style="text-transform: uppercase" required MAXLENGTH="1" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Count : <input name="mc" value="95" min="1" max="99999" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
 Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
