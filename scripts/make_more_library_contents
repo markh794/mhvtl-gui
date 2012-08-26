@@ -22,8 +22,8 @@ cprefix=`printf $prefix | wc -c`
 while true; do
 
 NEXTSLOT=$((NEXTSLOTn+count))
-count=$((count+1))
 nextvoln=$((NXTVOLN+count))
+count=$((count+1))
 
 if [ $count -gt $total ] ; then
 cat /etc/mhvtl/library_contents.$1 >/tmp/library_contents.tmp.add.more.tapes.in.tmp
