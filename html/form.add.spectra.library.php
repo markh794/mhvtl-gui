@@ -72,6 +72,9 @@ Enter Media Barcode Prefix (1 char only) : <input name="mp" value="R" style="tex
 Enter Media Count : <input name="mc" value="95" min="1" max="99994" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
+Enter Empty Slots : <input name="es" value="5" min="1" max="99994" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+<br>
+
 Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 

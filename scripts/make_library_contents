@@ -110,7 +110,7 @@ esac
 prefix=$2
 total=$3
 count=0
-freeslots=5
+freeslots=$8
 totalslots=$(($total+$freeslots))
 
 

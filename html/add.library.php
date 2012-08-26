@@ -21,6 +21,7 @@ $V8 = $_REQUEST['lusn'];
 $V0 = $_REQUEST['naa'];
 $V9 = $_REQUEST['llp'];
 $VBK = $_REQUEST['bkfv'];
+$VBA = $_REQUEST['es'];
 
 $t0 = `echo "Library: "'$V1'" CHANNEL: "'$V2'" TARGET: "'$V3'" LUN: "'00' >/tmp/device.conf.tmp`;
 $t1 = `echo " Vendor identification: "$V5>>/tmp/device.conf.tmp`;
@@ -73,6 +74,7 @@ $ECRC = $_REQUEST['ecrc'];
 $ECR1C = $_REQUEST['ecr1c'];
 $VCTT = $_REQUEST['ctt'];
 $VBK = $_REQUEST['bkfv'];
+$VBA = $_REQUEST['es'];
 
 $oputa = `echo >>/tmp/device.conf.tmp`;
 $oputd = `echo "Drive: $VARx CHANNEL: $VAR2 TARGET: $VAR3d LUN: $VAR4" >>/tmp/device.conf.tmp`;
@@ -116,9 +118,9 @@ $VR0 = $_REQUEST['li'];
 $VR1 = $_REQUEST['mt'];
 $VR2 = $_REQUEST['mp'];
 $VR3 = $_REQUEST['mc'];
+$VBA = $_REQUEST['es'];
 
-
-$run = `sudo -u root ../scripts/make_library_contents "$VR1" "$VR2" "$VR3" "$VRN" "$VMN" "$V9" "$VR0" >/tmp/library_contents.$VR0`;
+$run = `sudo -u root ../scripts/make_library_contents "$VR1" "$VR2" "$VR3" "$VRN" "$VMN" "$V9" "$VR0" "$VBA" >/tmp/library_contents.$VR0`;
 $checkunique = `sudo -u root grep unique /tmp/library_contents.$VR0|wc -l`;
 $run2 = `sudo -u root cp -f /tmp/library_contents.$VR0 /etc/mhvtl/library_contents.$VR0`;
 $out2 = `sudo -u root cat /etc/mhvtl/library_contents.$VR0`;
