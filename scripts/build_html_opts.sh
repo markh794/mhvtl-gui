@@ -46,6 +46,17 @@ done
 echo '</SELECT>'
 }
 
+stape()
+{
+echo '<SELECT name="tape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f2 | sort -u | grep -v ^$ | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+
+
 exttape()
 {
 HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
@@ -122,9 +133,14 @@ echo '</SELECT>'
 map()
 {
 echo '<SELECT name="map" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+CHECK=`mtx -f $2 status | grep "IMPORT/EXPORT" | grep Full | awk '{print $3,$4,$5}'`
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>'EMPTY'</OPTION>'
+else
 mtx -f $2 status | grep "IMPORT/EXPORT" | grep Full | awk '{print $3,$4,$5}' | while read each; do
 echo '<OPTION>'$each'</OPTION>'
 done
+fi
 echo '</SELECT>'
 }
 
@@ -142,18 +158,28 @@ echo '</SELECT>'
 driveslotf()
 {
 echo '<SELECT name="driveslotf" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+CHECK=`mtx -f $2 status| grep "Data Transfer Element" | grep Empty | awk '{print $1,$2,$3,$4}'`
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>'EMPTY'</OPTION>'
+else
 mtx -f $2 status| grep "Data Transfer Element" | grep Empty | awk '{print $1,$2,$3,$4}' | while read each; do
 echo '<OPTION>'$each'</OPTION>'
 done
+fi
 echo '</SELECT>'
 }
 
 driveslot()
 {
 echo '<SELECT name="driveslot" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+CHECK=`mtx -f $2 status| grep "Data Transfer Element" | grep -v Empty | awk '{print $4,$5,$6,$7,$8,$9,$10}'`
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>'EMPTY'</OPTION>'
+else
 mtx -f $2 status| grep "Data Transfer Element" | grep -v Empty | awk '{print $4,$5,$6,$7,$8,$9,$10}' | while read each; do
 echo '<OPTION>'$each'</OPTION>'
 done
+fi
 echo '</SELECT>'
 }
 

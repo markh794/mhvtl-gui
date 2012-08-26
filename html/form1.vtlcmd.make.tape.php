@@ -38,12 +38,17 @@ getID:function(el)
 
 
 
-<form method="post" action="form1.vtlcmd.make.tape.php" onsubmit="return ray.ajax()" >
+<form method="post" action="vtlcmd.make.tape.php" onsubmit="return ray.ajax()" >
 
-<?php $libid = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-Select Library <?php echo $libid;?>
+<?php $libid = $_REQUEST['libid'];?>
+<?php $libidn = `echo $libid| cut -d ":" -f1`; ?>
+Library Selected <?php echo $libid;?>
+<input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
+<br>
+Enter Count <input name="ctc" type="number" value="" MAXSIZE="3" required >
+<?php echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $libidn`; ?>
 
-<INPUT TYPE=SUBMIT VALUE="Select"></form>
+<INPUT TYPE=SUBMIT VALUE="Create"></form>
 <FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 
 </body>

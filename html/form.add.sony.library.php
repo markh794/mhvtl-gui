@@ -71,7 +71,7 @@ CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?
 
 
 Enter Media Barcode Prefix (1 char only) : <input name="mp" value="Y" style="text-transform: uppercase" required MAXLENGTH="1" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
-Enter Media Count : <input name="mc" value="95" min="1" max="99999" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+Enter Media Count : <input name="mc" value="95" min="1" max="99994" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
 Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>

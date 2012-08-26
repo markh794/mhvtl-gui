@@ -46,7 +46,7 @@ $run1 = `sudo -u vtl -S ../scripts/make_more_library_contents "$LIBIDN" "$COUNT"
 $save = `sudo -u vtl -S cp -f /etc/mhvtl/library_contents.$LIBIDN /etc/mhvtl/library_contents.$LIBIDN.save.$$`;
 $run2 = `sudo -u vtl -S cp -f /tmp/library_contents.tmp.add.more.tapes.in /etc/mhvtl/library_contents.$LIBIDN`;
 $output = `sudo -u vtl -S grep -v ^# /tmp/library_contents.tmp.add.more.tapes.in.tmp`;
-$output2 = `sudo -u vtl -S cat /tmp/library_contents.tmp.add.more.tapes ; sudo -u vtl -S rm -f /tmp/library_contents.*`;
+$output2 = `sudo -u vtl -S cat /tmp/library_contents.tmp.add.more.tapes ; sudo -u root -S rm -f /tmp/library_contents.*`;
 echo "<FONT COLOR=blue><b> ========= LIBRARY CONFIGURATION UPDATED ================ </b></FONT>";
 echo "<pre>$output<FONT COLOR=red>$output2</FONT></pre>";
 echo "<FONT COLOR=blue><b> ========= LIBRARY CONFIGURATION UPDATED ================ </b></FONT>";
