@@ -62,15 +62,20 @@ find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort
 fi
 
 echo '<SELECT name="exttape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+
+CHECK1st=`diff -q -w /tmp/slotedmedia /tmp/allmedia`
+if [ -z "$CHECK1st" ]; then
+echo '<OPTION>'NONE'</OPTION>'
+else
 cat /tmp/allmedia | while read each; do 
 CHECK=`grep $each /tmp/slotedmedia`
 if [ -z "$CHECK" ] ; then
 echo '<OPTION>'$each'</OPTION>'
 else
-#echo '<OPTION>'NONE'</OPTION>'
 echo >/dev/null
 fi
 done
+fi
 echo '</SELECT>'
 rm -f /tmp/slotedmedia /tmp/allmedia
 }
