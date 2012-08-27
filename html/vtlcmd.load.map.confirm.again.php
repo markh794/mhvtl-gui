@@ -24,7 +24,7 @@ echo "<pre><b>Load Map :</b></pre>";
 $VAR = $_REQUEST['libid'];
 $VAR2 = $_REQUEST['tape'];
 $VAR1 = `echo $VAR| cut -d ":" -f1`;
-echo "<pre><b><FONT COLOR=#000000>Load Map for library = $VAR1 </FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#000000>Load $VAR2 in Map for library $VAR </FONT></b></pre>";
 ?>
 
 <table border="0" >

@@ -20,7 +20,6 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <table border="1" ALIGN="left" >
 
-
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.open.map.php'" target="showframe"> Open Map</a>
@@ -51,6 +50,13 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.map.php'" target="showframe"> Empty Map</a>
 </td>
 </tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Not Used</a>
+</td>
+</tr>
+
 
 </table>
 <table border="1" ALIGN="left" >
@@ -84,6 +90,12 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.unmount.tape.php'" target="showframe"> Unload Drive</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Not Used</a>
 </td>
 </tr>
 
@@ -126,14 +138,12 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.display.external.media.php'" target="showframe"> Display External Media</a>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.display.external.media.php'" target="showframe"> External Media</a>
 </td>
 </tr>
 
 
 </table>
-
-
 
 </body>
 </html>

@@ -22,7 +22,7 @@ echo "<pre><b> Tools :</b></pre>";
 
 <tr>
 <td>
-<form action="update.php" method="post" >
+<img src="images/tab_right.png"  ALIGN="left" ><form action="update.php" method="post" >
 <input TYPE="submit" style="color: #008000" value=" Live Update ">
 </form>
 <hr width="100%" size=1 color="blue">
@@ -32,7 +32,7 @@ echo "<pre><b> Tools :</b></pre>";
 
 <tr>
 <td>
-<form action="form.patch.mhvtl.php" method="post" >
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.patch.mhvtl.php" method="post" >
 <input TYPE="submit" style="color: #0000FF" value=" Apply Patch ">
 </form>
 <hr width="100%" size=1 color="blue">

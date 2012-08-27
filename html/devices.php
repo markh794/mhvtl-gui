@@ -41,6 +41,7 @@ echo "<pre><B><FONT COLOR=#FFFFFF>$output</FONT></B></pre>";
 <br>
 <table border="0" >
 <td>
+<form action="devices.php" ><input TYPE="submit" value=" Refresh "></form>
 <FORM ACTION="tools.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 </td>
 </table>

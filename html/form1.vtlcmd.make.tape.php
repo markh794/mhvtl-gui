@@ -42,13 +42,14 @@ getID:function(el)
 
 <?php $libid = $_REQUEST['libid'];?>
 <?php $libidn = `echo $libid| cut -d ":" -f1`; ?>
-Library Selected <?php echo $libid;?>
+Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
 <input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
 <br>
-Enter Count <input name="ctc" type="number" value="" MAXSIZE="3" required >
+Search tape inventory
 <?php echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $libidn`; ?>
-
-<INPUT TYPE=SUBMIT VALUE="Create"></form>
+<br>
+Enter Count <input name="ctc" type="number" value="" MAXSIZE="3" required >
+<INPUT TYPE=SUBMIT VALUE=" Create "></form>
 <FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 
 </body>

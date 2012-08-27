@@ -19,5 +19,9 @@ if [ "$CHECKUNIQUE" = "NO" ] ; then
 echo "<FONT COLOR=red>$PCL already exist in Library ${10} ! , select different barcode please ...</FONT>"
 else
 mktape -l ${10} -m $PCL -s $2 -t $1 -d $DEN
-echo "<pre><FONT COLOR=green>Created $PCL Type $1 as external media for Library ${10}</FONT></pre>"
+if [ $? -eq 0 ]; then
+echo "<pre><FONT COLOR=green>Created : $PCL type=$1 as external media for Library ${10}</FONT></pre>"
+else
+echo "<pre><FONT COLOR=red>Error Occured ! </FONT></pre>"
+fi
 fi

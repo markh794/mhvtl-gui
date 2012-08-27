@@ -14,7 +14,7 @@
 <?php
 $VAR = $_REQUEST['clibid'];
 echo "<pre><b>Display External Media for $VAR:</b></pre>";
-$output = `sudo -u root -S ../scripts/build_html_opts.sh exttape $VAR`;
+$output = `sudo -u root -S ../scripts/build_html_opts.sh exttape $VAR `;
 echo "<pre><FONT COLOR=#000000>$output</FONT></pre>";
 ?>
 

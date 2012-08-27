@@ -22,8 +22,7 @@ echo "<pre><b>Move Tape :</b></pre>";
 
 <?php $robot = $_REQUEST['robotdev']; ?>
 <?php $robot = ` echo $robot| sed -e "s/^.* //" `; ?>
-Library Robot Device : <input type="text" readonly="readonly" value="<?php echo $robot;?>" name="robot" />
-<br>
+<input type="text" READONLY HIDDEN value="<?php echo $robot;?>" name="robot" />
 
 <?php $slot = `sudo -u root -S ../scripts/build_html_opts.sh slot ignore $robot`; ?>
 Select Element - Slot : <?php echo $slot;?>

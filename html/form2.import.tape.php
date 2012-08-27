@@ -24,8 +24,7 @@ echo "<pre><b>Import Volume :</b></pre>";
 <?php $robot = $_REQUEST['robotdev']; ?>
 <?php $robot = ` echo $robot| sed -e "s/^.* //"` ; ?>
 
-Library Robot Device : <input type="text" readonly="readonly" value="<?php echo $robot;?>" name="robot" />
-<br>
+<input type="text" readonly hidden value="<?php echo $robot;?>" name="robot" />
 
 <?php $map = `sudo -u root -S ../scripts/build_html_opts.sh map ignore $robot`; ?>
 Select Element - IMPORT : <?php echo $map;?>

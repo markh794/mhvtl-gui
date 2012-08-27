@@ -68,8 +68,8 @@ if [ "$HOMEDIR" = "/opt/mhvtl" ]; then
 cat /etc/mhvtl/library_contents.*| grep ^Slot | cut -d ":" -f2 | sort -u | grep -v ^$ >/tmp/slotedmedia
 find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -u | grep -v ^$ >/tmp/allmedia
 else
-grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f2 | sort -u | grep -v ^$ >/tmp/slotedmedia
-find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -u | grep -v ^$ >/tmp/allmedia
+grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f2 | awk '{print $1}'| sort -u | grep -v ^$ >/tmp/slotedmedia
+find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| awk '{print $1}'| sort -u | grep -v ^$ >/tmp/allmedia
 fi
 
 echo '<SELECT name="exttape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -77,6 +77,7 @@ echo '<SELECT name="exttape" type="text" style="color:#000000; background-color:
 CHECK1st=`diff -q -w /tmp/slotedmedia /tmp/allmedia`
 if [ -z "$CHECK1st" ]; then
 echo '<OPTION>'NONE'</OPTION>'
+rm -f /tmp/slotedmedia.s /tmp/allmedia.s
 else
 cat /tmp/allmedia | while read each; do 
 CHECK=`grep $each /tmp/slotedmedia`

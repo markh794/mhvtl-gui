@@ -21,11 +21,8 @@ echo "<pre><b>Create External media :</b></pre>";
 <form method="post" action="form1.make.external.media.php">
 
 <?php $libid = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-Select Library <?php echo $libid;?>
-<br>
-<input type="submit">
-</form>
-<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
+Select Library <?php echo $libid;?><input type="submit"></form>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"><INPUT TYPE=SUBMIT VALUE="Cancel"></FORM>
 
 </body>
 </html>

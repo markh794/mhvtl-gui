@@ -6,7 +6,7 @@
 <hr width="100%" size=10 color="blue">
 
 <?php $MHVTLHOST = shell_exec('sudo -u root -S hostname -s');?>
-<img src="images/gear_red.png" ALIGN="top" ><b>Server: <FONT COLOR=purple><?php echo $MHVTLHOST ;?></FONT></b>
+<img src="images/gear_red.png" ALIGN="top" ><b>Server: <FONT COLOR=#008000><?php echo $MHVTLHOST ;?></FONT></b>
 
 <hr width="100%" size=1 color="blue">
 <tr><td align=center valign=middle><img src="images/mhvtl.png" ></td></tr>
@@ -60,6 +60,11 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 <br>
 <td align=center valign=middle><img src='images/gplv2.gif' ></td>
 </center>
+
+<br>
+
+<center><td align=center valign=middle><INPUT TYPE="button" VALUE="Select Theme" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mhvtl-gui.theme.selector.php'" target="showframe"></td></center>
+
 
 </body>
 </html>
