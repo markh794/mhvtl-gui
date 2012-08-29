@@ -28,7 +28,12 @@ Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
 Capacity (Auto-Detected) <input name="size" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number" MAXSIZE="6" required >
 <br>
 Enter Type <SELECT name="type"><option>data</OPTION><option>clean</OPTION><option>WORM</OPTION> </select>
-<br>
+
+<?php
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
+echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
+?>
+
 
 Select Barcode <SELECT name="mp">
 <OPTION>A</OPTION>
@@ -112,7 +117,7 @@ Select Barcode <SELECT name="mp">
 <OPTION>E06:JB</OPTION>
 </select>
 
-Search tape inventory:
+View current tape inventory:
 <?php
 $VAR = `echo $libid| cut -d ":" -f1`;
 echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $VAR`;

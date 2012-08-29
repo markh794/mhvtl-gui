@@ -79,10 +79,10 @@ Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>LTO1</op
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number"><br>
 
 Enter Media Barcode Prefix (1 char only) : <input name="mp" value="M" style="text-transform: uppercase" required MAXLENGTH="1" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
-Enter Media Count : <input name="mc" value="95" min="1" max="99994" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+Enter Full Slots  : <input name="mc" value="95" min="1" max="15000" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
-Enter Empty Slots : <input name="es" value="5" min="1" max="99994" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+Enter Empty Slots : <input name="es" value="5" min="1" max="15000" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
 

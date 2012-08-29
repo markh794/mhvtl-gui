@@ -45,7 +45,14 @@ getID:function(el)
 Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
 <input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
 <br>
-Search tape inventory
+
+<?php
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
+echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
+?>
+
+
+View current tape inventory
 <?php echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $libidn`; ?>
 <br>
 Enter Count <input name="ctc" type="number" value="" MAXSIZE="3" required >

@@ -51,11 +51,27 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </td>
 </tr>
 
+
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Not Used</a>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Show Library </a>
 </td>
 </tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.drive.status.php'" target="showframe"> Show Drive </a>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off </a>
+</td>
+</tr>
+
+
+
 
 
 </table>
@@ -95,37 +111,6 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.php'" target="showframe"> Not Used</a>
-</td>
-</tr>
-
-
-</table>
-
-<table border="1" ALIGN="left" >
-
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Show Library </a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.drive.status.php'" target="showframe"> Show Drive </a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off </a>
-</td>
-</tr>
-
-
-<tr>
-<td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.offline.php'" target="showframe"> Vary Offline</a>
 </td>
 </tr>
@@ -143,7 +128,9 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 </tr>
 
 
+
 </table>
+
 
 </body>
 </html>

@@ -23,6 +23,27 @@ $V9 = $_REQUEST['llp'];
 $VBK = $_REQUEST['bkfv'];
 $VBA = $_REQUEST['es'];
 
+$VR3 = $_REQUEST['mc'];
+$VBA = $_REQUEST['es'];
+
+$sum_total_slots = $VR3 + $VBA;
+if ($sum_total_slots > 15001 )
+{
+echo "<hr width=100% size=1 color=blue>";
+echo "<table border=1>";
+echo "<br>";
+echo "<FONT COLOR=red size=4 >Error !</FONT>";
+echo "<br>";
+echo "<FONT COLOR=red size=3 >Total number of Library Slots exceeded 15000 !</FONT>";
+echo "<br>";
+echo "<FONT COLOR=red size=3 >Both empty and full slot count must not exceed 15000</FONT>";
+echo "<br>";
+echo "<br>";
+echo "<FORM ACTION=form.setup.complete.php><INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
+echo "</table>";
+exit(0);
+}
+
 $t0 = `echo "Library: "'$V1'" CHANNEL: "'$V2'" TARGET: "'$V3'" LUN: "'00' >/tmp/device.conf.tmp`;
 $t1 = `echo " Vendor identification: "$V5>>/tmp/device.conf.tmp`;
 $t2 = `echo " Product identification: "$V6 >>/tmp/device.conf.tmp`;

@@ -100,9 +100,9 @@ CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?
 Select Media Density Type : <SELECT name="mt" ><OPTION SELECTED>AIT4<option>AIT1</OPTION><option>AIT2</OPTION><option>AIT3</OPTION><option>AIT4</OPTION><option>DDS1</OPTION><option>DDS2</OPTION><option>DDS3</OPTION><option>DDS4</OPTION><option>DLT3</OPTION><option>DLT4</OPTION><option>LTO1</OPTION><option>LTO2</OPTION><option>LTO3</OPTION><option>LTO4</OPTION><option>LTO5</OPTION><option>SDLT1</OPTION><option>SDLT2</OPTION><option>SDLT3</OPTION><option>SDLT4</OPTION><option>T10KA</OPTION><option>T10KB</OPTION><option>T10KC</OPTION><option>J1A</OPTION><option>E05</OPTION><option>E06</OPTION></select><br>
 Enter Media Prefix ( 1 Char Only ) : <input name="mp" value="C" required MAXLENGTH="1" type="text"><br>
 
-Enter Media Count : <input name="mc" value="95" min="1" max="99994" required MAXLENGTH="5" type="number"><br>
+Enter Full Slots  : <input name="mc" value="95" min="1" max="15000" required MAXLENGTH="5" type="number"><br>
 
-Enter Empty Slots : <input name="es" value="5" min="1" max="99994" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
+Enter Empty Slots : <input name="es" value="5" min="1" max="15000" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 
 
