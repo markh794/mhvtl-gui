@@ -54,7 +54,7 @@ echo "<br>";
 echo "<FONT COLOR=red size=3 >Total number of Library Slots $sum_total_slots exceeded 15000 !</FONT>";
 echo "<br>";
 echo "<br>";
-echo "<FORM ACTION=form.setup.complete.php><INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
+echo "<FORM ACTION=form.vtlcmd.make.tape.php><INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
 echo "</table>";
 exit(0);
 }
