@@ -42,8 +42,10 @@ getID:function(el)
 
 <?php $libid = $_REQUEST['libid'];?>
 <?php $libidn = `echo $libid| cut -d ":" -f1`; ?>
+
 Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
 <input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
+<input TYPE=HIDDEN name="libidn" value=<?php echo $libidn;?> READONLY >
 <br>
 
 <?php
