@@ -19,28 +19,19 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <table border="0" ALIGN="left" >
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #008000" ONCLICK="parent.frames[1].location.href='form.setup.complete.php'" target="showframe"> Create New (Library/Drives/Media)</a>
-</td>
-</tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #F87217" ONCLICK="parent.frames[1].location.href='form.remove.library.php'" target="showframe"> Remove (Library/Drives/Media)</a>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.complete.php" method="post" >
+<input TYPE="submit" style="color: #008000" value="Create   "><b>  New Library/Drives/Media</b>
+</form>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.options.php'" target="showframe"> Edit Options</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.make.tape.php'" target="showframe"> Create Additional Data Tapes & Slots</a>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.make.tape.php'" target="showframe"> Create Additional Media & Slots</a>
 </td>
 </tr>
 
@@ -51,6 +42,24 @@ echo "<pre><b> Configuration :</b></pre>";
 </td>
 </tr>
 
+
+
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.remove.library.php" method="post" >
+<input TYPE="submit" style="color: #F87217" value="Remove"><b>  Library/Drives/Media</b>
+</form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<hr width="100%" size=1 color="blue">
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.options.php'" target="showframe"> Edit Options</a>
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
 
 <tr>
 <td>
@@ -68,22 +77,30 @@ echo "<pre><b> Configuration :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.options.php'" target="showframe"> View Options</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='confirm.reset_default.php'" target="showframe"> Reset Original Settings (Restore Default)</a>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
+
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe"> Setup iSCSI Target (tgt)</a>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="stgt.php" method="post" >
+<input TYPE="submit" style="color: #0000FF" value="  iSCSI  "><b> Setup iSCSI Target (tgt)</b>
+</form>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="confirm.reset_default.php" method="post" >
+<input TYPE="submit" style="color: #FF0000" value="  Reset  "><b> Restore Default Original Settings</b>
+</form>
+<hr width="100%" size=1 color="blue">
+</td>
+</tr>
+
 
 
 </table>

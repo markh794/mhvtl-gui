@@ -20,18 +20,25 @@ echo "<pre><b>Select configuration type :</b></pre>";
 <table border="0" >
 
 
+
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.standard.next.library.php'" target="showframe"> Standard Configuration<br>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.standard.next.library.php" method="post" >
+<input TYPE="submit" style="color: #008000" value="Standard"><b> Suitable configuration for most users</b>
+</form>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.setup.custom.next.library.php'" target="showframe"> Custom <br>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.custom.next.library.php" method="post" >
+<input TYPE="submit" style="color: #0000FF" value=" Custom "><b> Advanced users  </b>
+</form>
 </td>
 </tr>
+
 
 </table>
 <br>

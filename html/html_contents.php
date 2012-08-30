@@ -63,7 +63,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <br>
 
-<center><td align=center valign=middle><INPUT TYPE="button" VALUE="Select Theme" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mhvtl-gui.theme.selector.php'" target="showframe"></td></center>
+<center><td align=center valign=middle><INPUT TYPE="button" VALUE="Change Color" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mhvtl-gui.theme.selector.php'" target="showframe"></td></center>
 
 
 </body>
