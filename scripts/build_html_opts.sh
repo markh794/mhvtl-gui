@@ -384,6 +384,26 @@ echo '</SELECT>'
 fi
 }
 
+qvendbli()
+{
+echo '<SELECT name="qvendbli" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+echo '<OPTION>'"Device Type | Name | Manufacture | Driver String ID | Firmware"'</OPTION>'
+grep ^Library ../mhvtl.cfg.db | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+qvendbdr()
+{
+echo '<SELECT name="qvendbdr" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+echo '<OPTION>'"Device Type | Name | Manufacture | Driver String ID | Firmware"'</OPTION>'
+grep ^Drive ../mhvtl.cfg.db | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
 
 
 $1 $2 $3

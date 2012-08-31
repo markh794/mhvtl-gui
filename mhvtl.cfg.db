@@ -1,41 +1,42 @@
-Device    : Description                             Vendor    Driver query string Firmware 
-Library   : IBM TS3500 (TotalStorage 3584) L32      IBM       03584L32            4.02     
-Library   : IBM 3582 Ultrium Scalable               IBM       ULT3582-TL          205B
-Library   : HP StorageWorks MLS 6000                HP        MSL6000 Series      0430     
-Library   : HP ESL E-Series                         HP        ESL E-Series        2.00     
-Library   : Sun StorageTek L700                     STK       L700                0315     
-Library   : Sun StorageTek L180                     STK       L180                0100     
-Library   : Sun StorageTek SL500                    STK       SL500               1250     
-Library   : Spectra T950                            SPECTRA   PYTHON              2000     
-Library   : ADIC Scalar i2000                       ADIC      Scalar i2000        300A     
-Library   : SONY StorStation 302                    SONY      LIB-302             0500
-Library   : SONY StorStation 152                    SONY      LIB-152             0600
-Library   : SONY StorStation 152E                   SONY      LIB-152E            0700
-Drive     : IBM Ultrium LTO-1                       IBM       ULTRIUM-TD1         252D     
-Drive     : IBM Ultrium LTO-2                       IBM       ULTRIUM-TD2         4770     
-Drive     : IBM Ultrium LTO-3                       IBM       ULTRIUM-TD3         54K1     
-Drive     : IBM Ultrium LTO-4                       IBM       ULTRIUM-TD4         7381     
-Drive     : IBM 3580 Ultrium IBM LTO-1              IBM       ULT3580-TD1         0BN1     
-Drive     : IBM 3580 Ultrium LTO-2                  IBM       ULT3580-TD2         A02      
-Drive     : IBM 3580 Ultrium LTO-3                  IBM       ULT3580-TD3         59D2     
-Drive     : IBM TS2340                              IBM       ULT3580-TD4         74H1     
-Drive     : IBM TS1050                              IBM       ULT3580-TD5         A3K6     
-Drive     : HP Ultrium 215/230                      HP        Ultrium 1-SCSI      N11G     
-Drive     : HP Ultrium 448                          HP        Ultrium 2-SCSI      S24D     
-Drive     : HP Ultrium 920                          HP        Ultrium 3-SCSI      D21D     
-Drive     : HP Ultrium 1840                         HP        Ultrium 4-SCSI      H13D     
-Drive     : HP Ultrium 3000                         HP        Ultrium 5-SCSI      Z23D     
-Drive     : HP StorageWorks SDLT 600                HP        SDLT600             1919     
-Drive     : Sun StorageTek Titanium 10k-A           STK       T10000A             127      
-Drive     : Sun StorageTek Titanium 10k-B           STK       T10000B             137      
-Drive     : Sun StorageTek 9840                     STK       T9840               1.20     
-Drive     : Sun StorageTek 9840                     STK       T9840B              1.29     
-Drive     : Sun StorageTek 9840                     STK       T9840C              1.33     
-Drive     : Sun StorageTek 9840                     STK       T9840D              1.42     
-Drive     : QUANTUM SDLT320                         QUANTUM   SDLT320             G38W     
-Drive     : QUANTUM SDLT600                         QUANTUM   SDLT600             0A0A     
-Drive     : QUANTUM DLT-S4                          QUANTUM   DLT-S4              1414     
-Drive     : QUANTUM LTO-5                           QUANTUM   ULTRIUM 5           3060
-Drive     : SONY AIT-4 SCSI                         SONY      SDX-900V            0107
-Drive     : SONY AIT-3 SCSI                         SONY      SDX-700C            020a
-Drive     : SONY AIT-2 SCSI                         SONY      SDX-500C            0204
+TYPE	:	NAME					:	VENDOR	:	ID		:	FW
+------------------------------------------------------------------------------------------------------------
+Library	:	IBM TS3500 (TotalStorage 3584) L32	:	IBM	:	03584L32	:	4.02
+Library	:	IBM 3582 Ultrium Scalable		:	IBM	:	ULT3582-TL	:	205B
+Library	:	HP StorageWorks MLS 6000		:	HP	:	MSL6000 Series	:	430
+Library	:	HP ESL E-Series				:	HP	:	ESL E-Series	:	2
+Library	:	Sun StorageTek L700			:	STK	:	L700		:	315
+Library	:	Sun StorageTek L180			:	STK	:	L180		:	100
+Library	:	Sun StorageTek SL500			:	STK	:	SL500		:	1250
+Library	:	Spectra T950				:	SPECTRA	:	PYTHON		:	2000
+Library	:	ADIC Scalar i2000			:	ADIC	:	Scalar i2000	:	300A
+Library	:	SONY StorStation 302			:	SONY	:	LIB-302		:	500
+Library	:	SONY StorStation 152			:	SONY	:	LIB-152		:	600
+Library	:	SONY StorStation 152E			:	SONY	:	LIB-152E	:	700
+Drive	:	IBM Ultrium LTO-1			:	IBM	:	ULTRIUM-TD1	:	252D
+Drive	:	IBM Ultrium LTO-2			:	IBM	:	ULTRIUM-TD2	:	4770
+Drive	:	IBM Ultrium LTO-3			:	IBM	:	ULTRIUM-TD3	:	54K1
+Drive	:	IBM Ultrium LTO-4			:	IBM	:	ULTRIUM-TD4	:	7381
+Drive	:	IBM 3580 Ultrium IBM LTO-1		:	IBM	:	ULT3580-TD1	:	0BN1
+Drive	:	IBM 3580 Ultrium LTO-2			:	IBM	:	ULT3580-TD2	:	A02
+Drive	:	IBM 3580 Ultrium LTO-3			:	IBM	:	ULT3580-TD3	:	59D2
+Drive	:	IBM TS2340				:	IBM	:	ULT3580-TD4	:	74H1
+Drive	:	IBM TS1050				:	IBM	:	ULT3580-TD5	:	A3K6
+Drive	:	HP Ultrium 215/230			:	HP	:	Ultrium 1-SCSI	:	N11G
+Drive	:	HP Ultrium 448				:	HP	:	Ultrium 2-SCSI	:	S24D
+Drive	:	HP Ultrium 920				:	HP	:	Ultrium 3-SCSI	:	D21D
+Drive	:	HP Ultrium 1840				:	HP	:	Ultrium 4-SCSI	:	H13D
+Drive	:	HP Ultrium 3000				:	HP	:	Ultrium 5-SCSI	:	Z23D
+Drive	:	HP StorageWorks SDLT 600		:	HP	:	SDLT600		:	1919
+Drive	:	Sun StorageTek Titanium 10k-A		:	STK	:	T10000A		:	127
+Drive	:	Sun StorageTek Titanium 10k-B		:	STK	:	T10000B		:	137
+Drive	:	Sun StorageTek 9840			:	STK	:	T9840		:	1.2
+Drive	:	Sun StorageTek 9840			:	STK	:	T9840B		:	1.29
+Drive	:	Sun StorageTek 9840			:	STK	:	T9840C		:	1.33
+Drive	:	Sun StorageTek 9840			:	STK	:	T9840D		:	1.42
+Drive	:	QUANTUM SDLT320				:	QUANTUM	:	SDLT320		:	G38W
+Drive	:	QUANTUM SDLT600				:	QUANTUM	:	SDLT600		:	0A0A
+Drive	:	QUANTUM DLT-S4				:	QUANTUM	:	DLT-S4		:	1414
+Drive	:	QUANTUM LTO-5				:	QUANTUM	:	ULTRIUM 5	:	3060
+Drive	:	SONY AIT-4 SCSI				:	SONY	:	SDX-900V	:	107
+Drive	:	SONY AIT-3 SCSI				:	SONY	:	SDX-700C	:	020a
+Drive	:	SONY AIT-2 SCSI				:	SONY	:	SDX-500C	:	204
