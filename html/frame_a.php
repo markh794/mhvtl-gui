@@ -94,7 +94,7 @@ echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 
 </table>
 
-
+<div style="overflow:auto;height:110px;width:550px;float:left;" >
 <?php
 if (!file_exists('/tmp/mhvtl.last.update.check'))
 {
@@ -120,7 +120,7 @@ $output = shell_exec('LASTCHECK=`find /tmp/mhvtl-gui.last.update.check -mtime +1
 fi');
 echo "<pre>$output</pre>";
 ?>
-
+</div>
 
 </body>
 </html>
