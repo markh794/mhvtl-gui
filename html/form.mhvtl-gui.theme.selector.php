@@ -23,6 +23,7 @@ echo "<pre><b>MHVTL-GUI Color Theme Selector :</b></pre>";
 Select Color <SELECT name="theme" >
 <OPTION style=background-color:#EEEEEE;>Default:#EEEEEE</OPTION>
 <OPTION style=background-color:#FFFFFF;>White:#FFFFFF</OPTION>
+<OPTION style=background-color:#DDDDDD;>Gray:#DDDDDD</OPTION>
 <OPTION style=background-color:#F9B7FF;>Plum1:#F9B7FF</OPTION>
 <OPTION style=background-color:#EBDDE2;>Blush2:#EBDDE2</OPTION>
 <OPTION style=background-color:#C8BBBE;>Blush3:#C8BBBE</OPTION>
