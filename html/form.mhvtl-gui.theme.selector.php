@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>MHVTL-GUI Color Theme Selector :</b></pre>";
+echo "<pre><b>MHVTL-GUI Color Selector :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -59,7 +59,7 @@ Select Color <SELECT name="theme" >
 <OPTION style=background-color:#FFF8C6;>Chiffon:#FFF8C6</OPTION>
 
 </SELECT>
-<input type="submit" value="Change" ></form>
+<input type="submit" value=" Set " ></form>
 <FORM ACTION="form.mhvtl-gui.theme.selector.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>

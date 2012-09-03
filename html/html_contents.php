@@ -23,7 +23,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Status " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" System " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
 </td>
 </tr>
 
@@ -36,7 +36,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE="  Operation  " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
+<INPUT TYPE="button" VALUE="  Operator  " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
 </td>
 </tr>
 
@@ -63,7 +63,7 @@ echo "<b><FONT COLOR=#000000 >$output</FONT></b>";
 
 <br>
 
-<center><td align=center valign=middle><INPUT TYPE="button" VALUE="Change Color" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mhvtl-gui.theme.selector.php'" target="showframe"></td></center>
+<center><td align=center valign=middle><INPUT TYPE="button" VALUE=" Themes " style="color:#800080;font-weight:bold" ONCLICK="parent.frames[1].location.href='form.mhvtl-gui.theme.selector.php'" target="showframe"></td></center>
 
 
 </body>

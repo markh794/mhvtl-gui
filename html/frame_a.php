@@ -77,7 +77,7 @@ include 'fdisplay.php' ;
 </div>
 </table>
 
-
+<br>
 <td>
 <form action="frame_a.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" style="color: #000000" value=" Refresh ">
