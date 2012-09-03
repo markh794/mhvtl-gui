@@ -22,108 +22,152 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.open.map.php'" target="showframe"> Open Map</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.load.map.php'" target="showframe"> Load Map</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.close.map.php'" target="showframe"> Close Map</a>
+<form action="form.vtlcmd.open.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Open Map "></form>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.list.map.php'" target="showframe"> List Map</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.empty.map.php'" target="showframe"> Empty Map</a>
+<form action="form.vtlcmd.load.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Load Map "></form>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.robot.status.php'" target="showframe"> Show Library </a>
+<form action="form.vtlcmd.close.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Close Map "></form>
 </td>
 </tr>
+
+
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.drive.status.php'" target="showframe"> Show Drive </a>
+<form action="form.vtlcmd.list.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" List Map "></form>
 </td>
 </tr>
+
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.exit.php'" target="showframe"> Power Off </a>
+<form action="form.vtlcmd.empty.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Empty Map "></form>
 </td>
 </tr>
-
-
-
 
 
 </table>
 <table border="1" ALIGN="left" >
 
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form1.import.tape.php'" target="showframe"> Import</a>
-</td>
-</tr>
+
+
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form1.export.tape.php'" target="showframe"> Export</a>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.move.tape.php'" target="showframe"> Move Cart</a>
+<form action="form1.import.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Import "></form>
 </td>
 </tr>
 
 
+
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mount.tape.php'" target="showframe"> Load Drive</a>
+<form action="form1.export.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Export "></form>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.unmount.tape.php'" target="showframe"> Unload Drive</a>
+<form action="form.move.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Move Cart "></form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<form action="form.mount.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Load Drive "></form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<form action="form.unmount.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Unload Drive "></form>
+</td>
+</tr>
+
+
+</table>
+
+<table border="1" ALIGN="left" >
+
+
+<tr>
+<td>
+<form action="form.vtlcmd.exit.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Power Off "></form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<form action="form.robot.status.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Show Library "></form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<form action="form.drive.status.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Show Drive "></form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<form action="form.vtlcmd.offline.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Vary Offline "></form>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.offline.php'" target="showframe"> Vary Offline</a>
+<form action="form.vtlcmd.online.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Vary Online "></form>
+</td>
+</tr>
+
+</table>
+
+<table border="1" ALIGN="left" >
+
+<tr>
+<td>
+<form action="form.display.external.media.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" External Media "></form>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.vtlcmd.online.php'" target="showframe"> Vary Online</a>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.display.external.media.php'" target="showframe"> External Media</a>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
+</td>
+</tr>
+
+<tr>
+<td>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
 </td>
 </tr>
 
