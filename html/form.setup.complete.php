@@ -24,7 +24,7 @@ echo "<pre><b>Select configuration type :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.standard.next.library.php" method="post" >
-<input TYPE="submit" style="color: #008000" value="Standard"><b> Suitable configuration for most users</b>
+<input TYPE="submit" style="color: #0000FF" value="Standard"><b> Suitable configuration for most users</b>
 </form>
 <hr width="100%" size=1 color="blue">
 </td>
@@ -34,7 +34,7 @@ echo "<pre><b>Select configuration type :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.custom.next.library.php" method="post" >
-<input TYPE="submit" style="color: #0000FF" value=" Custom "><b> Advanced users  </b>
+<input TYPE="submit" style="color: #FF0000" value=" Custom "><b> Advanced users  </b>
 </form>
 </td>
 </tr>
