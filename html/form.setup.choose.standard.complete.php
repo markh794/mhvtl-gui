@@ -22,21 +22,31 @@ echo "<pre><b>Select Brand :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.stk.library.php'" target="showframe"> STK<br>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.add.stk.library.php" method="post" >
+<input TYPE="submit" style="color: #FF0000" value=" STK "><b></b>
+</form>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.ibm.library.php'" target="showframe"> IBM<br>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.add.ibm.library.php" method="post" >
+<input TYPE="submit" style="color: #000000" value=" IBM "><b></b>
+</form>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
+
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.hp.library.php'" target="showframe"> HP<br>
+<img src="images/tab_right.png"  ALIGN="left" ><form action="form.add.hp.library.php" method="post" >
+<input TYPE="submit" style="color: #0000FF" value=" HP "><b></b>
+</form>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
