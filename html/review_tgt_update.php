@@ -52,7 +52,8 @@ echo "<pre><b><FONT COLOR=#FFFFFF>Updates since $CURR <br>$output</FONT></b></pr
 </table>
 
 <br>
-<FORM ACTION="live_update.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="live_update.php"><INPUT TYPE=SUBMIT VALUE="Update"></FORM>
+<FORM ACTION="frame_a.php"><INPUT TYPE=SUBMIT VALUE="Cancel"></FORM>
 
 </body>
 </html>
