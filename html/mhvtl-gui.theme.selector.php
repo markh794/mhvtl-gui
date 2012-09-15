@@ -21,7 +21,6 @@ echo "<pre><b> Console Color Themes  :</b></pre>";
 <?php
 $VAR = $_REQUEST['theme'];
 $run = system(" echo $VAR >/tmp/themes.tmp ; sudo -u root -S ../scripts/change_console_theme ");
-echo "<pre>$run</pre>";
 ?>
 <input type="submit" onclick="parent.location.reload()" value="Refresh">
 

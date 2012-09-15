@@ -20,14 +20,23 @@ echo "<pre><b> Configuration :</b></pre>";
 <table border="0" ALIGN="left" >
 
 
+
 <tr>
 <td>
 <img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.complete.php" method="post" >
-<input TYPE="submit" style="color: #008000" value="Create   "><b>  New Library/Drives/Media</b>
+<input TYPE="submit" style="color:#008000" value=" Add  ">
 </form>
+<form action="form.remove.library.php" method="post" >
+<input TYPE="submit" style="color:#FF0000" value=" Remove ">
+</form>
+<form action="setup.options.php" method="post" >
+<input TYPE="submit" style="color:#0000FF" value=" Options "> Library/Drives/Media
+</form>
+
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
+
 
 <tr>
 <td>
@@ -46,23 +55,6 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="form.remove.library.php" method="post" >
-<input TYPE="submit" style="color: #F87217" value="Remove"><b>  Library/Drives/Media</b>
-</form>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<hr width="100%" size=1 color="blue">
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='setup.options.php'" target="showframe"> Edit Options</a>
-<hr width="100%" size=1 color="blue">
-</td>
-</tr>
-
-<tr>
-<td>
 <img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view_device.conf.php'" target="showframe"> View device.conf </a>
 </td>
 </tr>
@@ -76,27 +68,21 @@ echo "<pre><b> Configuration :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.options.php'" target="showframe"> View Options</a>
+<img src="images/tab_right.png"  ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='view.options.php'" target="showframe"> View Options </a>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
-
-
-<tr>
-<td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="stgt.php" method="post" >
-<input TYPE="submit" style="color: #0000FF" value="  iSCSI  "><b> Setup iSCSI Target (tgt)</b>
-</form>
-<hr width="100%" size=1 color="blue">
-</td>
-</tr>
-
 
 <tr>
 <td>
 <img src="images/tab_right.png"  ALIGN="left" ><form action="confirm.reset_default.php" method="post" >
-<input TYPE="submit" style="color: #FF0000" value="  Reset  "><b> Restore Default Original Settings</b>
+<input TYPE="submit" style="color: #FF0000" value="  Reset  " > Restore Original Default Settings
 </form>
+</td>
+</tr>
+
+<tr>
+<td>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>

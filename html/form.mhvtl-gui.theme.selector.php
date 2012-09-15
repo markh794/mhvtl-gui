@@ -57,10 +57,8 @@ Select Color <SELECT name="theme" >
 <OPTION style=background-color:#FFE87C;>Goldenrod1:#FFE87C</OPTION>
 <OPTION style=background-color:#ECE5B6;>Chiffon2:#ECE5B6</OPTION>
 <OPTION style=background-color:#FFF8C6;>Chiffon:#FFF8C6</OPTION>
-
 </SELECT>
 <input type="submit" value=" Set " ></form>
-<FORM ACTION="form.mhvtl-gui.theme.selector.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

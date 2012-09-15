@@ -35,7 +35,7 @@ echo "<FONT COLOR=#FF0000>No ACL Exist</FONT>";
 echo "</FORM>";
 echo "<br>";
 echo "<hr width='100%' size=1 color='blue'>";
-echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'></FORM>";
 echo "</table>";
 }
 else

@@ -14,7 +14,7 @@
 
 
 <?php
-echo "<pre>Display STGT Targets:</pre>";
+echo "<pre>Display STGT Luns:</pre>";
 ?>
 
 <div style="overflow:auto; height:330px;width:600px;">
@@ -24,8 +24,8 @@ echo "<pre>Display STGT Targets:</pre>";
 
 <?php
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$output = shell_exec("sudo -u root -S $TGTADMCMD --lld iscsi --op show --mode target | grep ^Target >/tmp/display.stgt.target");
-$result = shell_exec('CHECK=`grep ^Target /tmp/display.stgt.target`;if [ -z "$CHECK" ]; then echo No Targets Defined; else cat /tmp/display.stgt.target; fi');
+$output = ` sudo -u root -S $TGTADMCMD --lld iscsi --mode target --op show >/tmp/display.stgt.lun `;
+$result = shell_exec('CHECK=`grep ^Target /tmp/display.stgt.target`;if [ -z "$CHECK" ]; then echo No Luns Defined; else cat /tmp/display.stgt.lun; fi');
 echo "<pre><FONT COLOR=#FFFFFF>$result</FONT></pre>";
 ?>
 

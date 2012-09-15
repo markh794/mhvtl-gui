@@ -22,8 +22,16 @@ echo "<pre><b>Reset all MHVTL Configurations :</b></pre>";
 
 <?php
 $VAR = $_REQUEST['kmed'];
-echo "<pre><b><FONT COLOR=#FF0000>Please Confirm !!!! Remove all exsiting media = $VAR </FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#FF0000>Warrning: Please Confirm !!! </FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#FF0000>Warrning: Remove all configured libraries/drives/media !!!</FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#FF0000>Warrning: Reset MHVTL to Default Setting !!!</FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#FF0000>Warrning: Remove all exsiting media = $VAR </FONT></b></pre>";
 ?>
+<br>
+
+
+
+
 <br>
 
 <table border="0" >

@@ -254,19 +254,26 @@ else
 CMD="../stgt.git/usr/tgtadm"
 fi
 
-CHECK=`$CMD --lld iscsi --op show --mode target | grep ^Target| cut -c7- 2>/dev/null`
-if [ -z "$CHECK" ] ; then
-exit 0
+CHECK=`$CMD --lld iscsi --op show --mode target`
+if [ $? -eq 0 ] ;then
 
-else
 echo '<SELECT name="tid" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>1</OPTION>'
+else
 $CMD --lld iscsi --op show --mode target | grep ^Target| cut -d ":" -f1| tail -1 | awk '{print $NF}' | sort -r | while read each; do
 newvalue=$(($each+1))
 echo '<OPTION>'$newvalue'</OPTION>'
 done
-fi
 echo '</SELECT>'
+fi
+
+else
+exit 0
+fi
 }
+
 
 lun()
 {
@@ -310,6 +317,26 @@ $CMD --lld iscsi --op show --mode target|sed '/System information:/,/ACL informa
 echo '<OPTION>'$each'</OPTION>'
 done
 echo '</SELECT>'
+fi
+}
+
+
+iscsiclient2()
+{
+if [ -f /usr/sbin/tgtadm ]; then
+CMD="/usr/sbin/tgtadm"
+else
+CMD="../stgt.git/usr/tgtadm"
+fi
+
+CHECK=`$CMD --lld iscsi --op show --mode target|sed '/System information:/,/ACL information:/d'`
+if [ -z "$CHECK" ] ; then
+echo '<font color="#FFFFFF">'No initiators enabled'</font>'
+exit 0
+else
+$CMD --lld iscsi --op show --mode target|sed '/System information:/,/ACL information:/d' | while read each; do
+echo '<font color="#FFFFFF">'$each'</font>'
+done
 fi
 }
 

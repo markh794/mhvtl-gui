@@ -4,7 +4,9 @@
 <body>
 <hr width="100%" size=10 color="blue">
 <?php $output = `sudo -u root -S cat ../version`;?>
-<FONT COLOR=purple>Web Console Release : <?php echo $output ;?></FONT>
+<FONT COLOR=#000000 ><b>Console: </FONT><FONT COLOR=#008000><?php echo $output ;?></FONT></b>
+
+
 <hr width="100%" size=1 color="blue">
 
 <tr>
@@ -36,7 +38,7 @@ getID:function(el)
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
 
-<table border="2" width="470"  >
+<table border="0" width="470"  >
 <td>
 <form action="confirm.start_mhvtl.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" class="sameSize" style="color: #008000" value=" Start ">
@@ -49,6 +51,14 @@ getID:function(el)
 </form>
 </td>
 
+
+<td>
+<form action="activity.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" class="sameSize" style="color: #000000" value=" Activity ">
+</form>
+</td>
+
+
 <td>
 <form action="monitor.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" class="sameSize" style="color: #000000" value=" Monitor " >
@@ -57,12 +67,6 @@ getID:function(el)
 
 
 
-<td>
-<form action="activity.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameSize" style="color: #000000" value=" Activity ">
-</form>
-</td>
-
 </table>
 <br>
 
@@ -70,7 +74,7 @@ getID:function(el)
 
 <TR>
 <TD>
-<div style="overflow:auto;height:110px;width:450px;" id="ReloadThis" >
+<div style="overflow:auto;height:140px;width:450px;" id="ReloadThis" >
 <?php
 include 'fdisplay.php' ;
 ?>
@@ -83,15 +87,13 @@ include 'fdisplay.php' ;
 <input TYPE="submit" style="color: #000000" value=" Refresh ">
 </form>
 </td>
-
-
+<br>
 
 <table>
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
-
 </table>
 
 <div style="overflow:auto;height:110px;width:550px;float:left;" >

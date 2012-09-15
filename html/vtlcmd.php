@@ -18,91 +18,73 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 
 
-<table border="1" ALIGN="left" >
+<table border="0" ALIGN="left" style="margin-left:10px;" >
 
 <tr>
 <td>
 <form action="form.vtlcmd.open.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Open Map "></form>
-</td>
 </tr>
-
+</td>
 
 <tr>
 <td>
 <form action="form.vtlcmd.load.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Load Map "></form>
-</td>
 </tr>
-
+</td>
 
 <tr>
 <td>
 <form action="form.vtlcmd.close.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Close Map "></form>
-</td>
 </tr>
-
-
+</td>
 
 <tr>
 <td>
 <form action="form.vtlcmd.list.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" List Map "></form>
-</td>
 </tr>
-
+</td>
 
 <tr>
 <td>
 <form action="form.vtlcmd.empty.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Empty Map "></form>
-</td>
 </tr>
-
-
+</td>
 </table>
-<table border="1" ALIGN="left" >
 
-
-
-
+<table border="0" ALIGN="left" style="margin-left:10px;" >
 <tr>
 <td>
 <form action="form1.import.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Import "></form>
-</td>
 </tr>
-
-
+</td>
 
 <tr>
 <td>
 <form action="form1.export.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Export "></form>
-</td>
 </tr>
-
+</td>
 
 <tr>
 <td>
 <form action="form.move.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Move Cart "></form>
-</td>
 </tr>
-
+</td>
 
 <tr>
 <td>
 <form action="form.mount.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Load Drive "></form>
-</td>
 </tr>
-
+</td>
 
 <tr>
 <td>
 <form action="form.unmount.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Unload Drive "></form>
-</td>
 </tr>
-
-
+</td>
 </table>
 
-<table border="1" ALIGN="left" >
 
-
+<table border="0" ALIGN="left" style="margin-left:10px;" >
 <tr>
 <td>
 <form action="form.vtlcmd.exit.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Power Off "></form>
@@ -138,7 +120,9 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 </table>
 
-<table border="1" ALIGN="left" >
+
+<!--
+<table border="0" ALIGN="left" style="margin-left:10px;" >
 
 <tr>
 <td>
@@ -149,32 +133,30 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 <tr>
 <td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
 </td>
 </tr>
 
 <tr>
 <td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
 </td>
 </tr>
 
 <tr>
 <td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
 </td>
 </tr>
 
 <tr>
 <td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Not Used "></form>
+<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
 </td>
 </tr>
-
-
 
 </table>
-
+-->
 
 </body>
 </html>

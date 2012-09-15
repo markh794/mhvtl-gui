@@ -20,12 +20,13 @@ echo "<pre><b>Reset all MHVTL Configurations :</b></pre>";
 
 
 <?php
-echo "<pre><b><FONT COLOR=#FF0000>Warrning: This will remove all configured libraries/drives/media !!!</FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#FF0000>Warrning: Remove all configured libraries/drives/media !!!</FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#FF0000>Warrning: Reset MHVTL to Default Setting !!!</FONT></b></pre>";
 ?>
 <br>
 
 <form method="post" action="confirm.again.reset_default.php">
->>>> Remove all tape media : <select name="kmed" MAXLENGTH="2" type="text" ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR="red">*</FONT></b>
+>>>> Remove all tape media also ?: <select name="kmed" MAXLENGTH="2" type="text" ><OPTION>NO</option><OPTION>YES</option></select><b><FONT COLOR="red">*</FONT></b>
 <br>
 
 <table border="0" >

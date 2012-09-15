@@ -24,7 +24,7 @@ height:35px;
 padding:0%;
 margin:0%;
 text-align: center;
-font: bold small Tahoma, arial, verdana,'trebuchet ms',helvetica, sans-serif;
+font: bold medium Tahoma, arial, verdana,'trebuchet ms',helvetica, sans-serif;
 display: inline;
 text-decoration:none;
 }
@@ -51,3 +51,30 @@ font-family:"Trebuchet MS", verdana, arial,tahoma;
 font-size:100%;
 }
 .set_width { width:470px; }
+
+
+.textbox,.textarea {
+
+width:300px;
+
+border:solid 2px #00CCFF;
+
+padding:3px;
+
+margin:10px;
+
+}
+
+.error {
+
+background: #FBBFDC;
+
+color:#EF013D;
+
+border:solid 1px;
+
+padding:5px;
+
+margin:5px;
+
+}

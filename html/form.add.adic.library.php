@@ -81,7 +81,9 @@ ENCRYPTION:  <select name="ecr1"><option>LTO4</OPTION></option><option>LTO3</OPT
 Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>LTO1</option><OPTION>LTO2</option><OPTION>LTO3</option><OPTION>LTO4</option><OPTION>LTO5</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
-CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number"><br>
+CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number">
+<a href="#" input style="color: #0000ff" ONCLICK="parent.frames[1].location.href='setup.options.php'" target="showframe"> Edit</a>
+<br>
 
 Enter Media Barcode Prefix (1 char only) : <input name="mp" value="A" style="text-transform: uppercase" required MAXLENGTH="1" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
 Enter Full Slots  : <input name="mc" value="95" min="1" max="15000" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>

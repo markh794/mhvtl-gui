@@ -23,15 +23,15 @@ echo "<pre><b> Support :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://sites.google.com/site/linuxvtl2/'" target="showframe">MHVTL Development Web Site </a>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe"><input TYPE="submit" style="color: #0000FF" value="Support Forum"> </a>
+<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
+
 <tr>
 <td>
-<hr width="100%" size=1 color="blue">
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe"><input TYPE="submit" style="color: #0000FF" value="Support Forum"> </a>
-<hr width="100%" size=1 color="blue">
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='http://sites.google.com/site/linuxvtl2/'" target="showframe">MHVTL Development Web Site </a>
 </td>
 </tr>
 
@@ -46,6 +46,20 @@ echo "<pre><b> Support :</b></pre>";
 <tr>
 <td>
 <img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='about_console.php'" target="showframe">About MHVTL Console
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://stgt.sourceforge.net'" target="showframe">About iSCSI Target (tgt)
+</td>
+</tr>
+
+
+<tr>
+<td>
+<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='sendfeedback.php'" target="showframe">Send Feedback (MHVTL Console)
 </td>
 </tr>
 
