@@ -111,7 +111,7 @@ echo "<td><pre><img src=images/green_light.png align=top /></pre></td>";
 
 <br>
 <FORM ACTION="tools.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
-<form action="live_update.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #000000" value="Recheck" ></a>
+<form action="live_update.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #0000FF" value="Check Again" ></a>
 
 
 </body>

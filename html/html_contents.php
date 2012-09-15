@@ -42,7 +42,7 @@ echo "<FONT COLOR=#000000 ><b>$output</b></FONT>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" iSCSI TGT " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" iSCSI " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
 </td>
 </tr>
 

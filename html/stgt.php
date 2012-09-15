@@ -74,11 +74,10 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <tr>
 <td>
 <form action="form.create.auto.iscsi.config.stgt.php" method="post" >
-<input TYPE="submit" style="background-color:#0000A0; color: #FFFF00; font-weight: bold" value=" Automatic Configuration "></form>
+<input TYPE="submit" style="background-color:#0000A0; color: #FFFFFF; font-weight: bold" value=" Quick Start "></form>
 </tr>
 </td>
 </table>
-<br>
 <br>
 <br>
 
