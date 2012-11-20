@@ -22,20 +22,18 @@ echo "<pre><b>Select Brand :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="form.add.stk.library.php" method="post" >
+<form action="form.add.stk.library.php" method="post" >
 <input TYPE="submit" style="color: #FF0000" value=" STK "><b></b>
 </form>
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="form.add.ibm.library.php" method="post" >
+<form action="form.add.ibm.library.php" method="post" >
 <input TYPE="submit" style="color: #000000" value=" IBM "><b></b>
 </form>
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -43,10 +41,9 @@ echo "<pre><b>Select Brand :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="form.add.hp.library.php" method="post" >
+<form action="form.add.hp.library.php" method="post" >
 <input TYPE="submit" style="color: #0000FF" value=" HP "><b></b>
 </form>
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 
@@ -54,22 +51,14 @@ echo "<pre><b>Select Brand :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.spectra.library.php'" target="showframe"> Spectra<br>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.spectra.library.php'" target="showframe"> Spectra<br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.quantum.library.php'" target="showframe"> Quantum<br>
-</td>
-</tr>
-
-
-
-<tr>
-<td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.adic.library.php'" target="showframe"> ADIC<br>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.quantum.library.php'" target="showframe"> Quantum<br>
 </td>
 </tr>
 
@@ -77,14 +66,22 @@ echo "<pre><b>Select Brand :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.sony.library.php'" target="showframe"> Sony<br>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.adic.library.php'" target="showframe"> ADIC<br>
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.sony.library.php'" target="showframe"> Sony<br>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="images/tab_right.png" ALIGN="left" ><a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.dell.library.php'" target="showframe"> Dell<br>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.dell.library.php'" target="showframe"> Dell<br>
 </td>
 </tr>
 

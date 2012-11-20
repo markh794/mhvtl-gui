@@ -48,7 +48,7 @@ echo "<FONT COLOR=#000000 ><b>$output</b></FONT>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Tools " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='tools.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Utility " class="sameSize"  style="color: #000000" ONCLICK="parent.frames[1].location.href='tools.php'" target="showframe">
 </td>
 </tr>
 

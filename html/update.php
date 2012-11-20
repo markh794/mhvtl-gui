@@ -36,7 +36,8 @@ getID:function(el)
 </script>
 
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
-<table border="0" align="left" valign="middle" >
+
+<table border="0" >
 
 <td>
 <form action="live_update.php" method="post" onsubmit="return ray.ajax()">

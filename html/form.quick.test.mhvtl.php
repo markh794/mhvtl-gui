@@ -49,7 +49,7 @@ echo "<pre><b>MHVTL Test:</b></pre>";
 ?>
 
 
-<TABLE BORDER=2 align="left" valign="middle" >
+<TABLE BORDER=2 >
 <tr>
 <td>
 <br>

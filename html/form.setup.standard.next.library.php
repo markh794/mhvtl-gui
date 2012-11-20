@@ -16,6 +16,7 @@
 echo "<pre><b>Standard configuration type :</b></pre>";
 ?>
 
+<TABLE BORDER=0>
 
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 align="left" valign="middle" >
 <TR>
@@ -30,7 +31,7 @@ This wizard will guide you to create standard library, drives and media
 </td>
 </tr>
 </table>
-
+</table>
 
 </body>
 </html>

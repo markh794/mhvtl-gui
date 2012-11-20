@@ -26,7 +26,6 @@ echo "<pre><b>Select configuration type :</b></pre>";
 <img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.standard.next.library.php" method="post" >
 <input TYPE="submit" style="color: #0000FF" value="Standard" >
 </form>
-<hr width="100%" size=1 color="blue">
 </td>
 </tr>
 

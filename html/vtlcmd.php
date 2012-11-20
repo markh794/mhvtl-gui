@@ -17,7 +17,7 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 ?>
 
 
-
+<table border="0" >
 <table border="0" ALIGN="left" style="margin-left:10px;" >
 
 <tr>
@@ -120,6 +120,8 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 </table>
 
+
+</table>
 
 <!--
 <table border="0" ALIGN="left" style="margin-left:10px;" >
