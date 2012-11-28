@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>HP:</b></pre>";
+echo "<pre><b>OVERLAND:</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -27,9 +27,9 @@ $nextcid = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f3|awk '{
 <input TYPE=HIDDEN name="channel" value=<?php echo $nextcid;?> READONLY MAXLENGTH="2" type="number">
 <input TYPE=HIDDEN name="ltarget" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="lun" value="00" READONLY type="number">
-<input TYPE=HIDDEN name="vi" value="HP" READONLY type="text">
-Select Library Model:<select name="lpi" ><option>MSL G3 Series</OPTION><option>MSL6000 Series</OPTION><option>ESL E-Series</OPTION><option>ThinStor AutoLdr</OPTION><option>1x8 autoloader</OPTION><option>VLS</OPTION></select><b><FONT COLOR="red">*</FONT></b>
-<input TYPE=HIDDEN name="lprl" value="2.00" READONLY type="text">
+<input TYPE=HIDDEN name="vi" value="OVERLAND" READONLY type="text">
+Select Library Model:<select name="lpi" ><option>NEO Series</OPTION><option>REO Series</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+<input TYPE=HIDDEN name="lprl" value="0425" READONLY type="text">
 <input TYPE=HIDDEN name="lusn" value=<?php echo $nextlid+80000000;?> READONLY MAXLENGTH="8" type="text" />
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text">
 
@@ -83,7 +83,7 @@ CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?
 <br>
 
 
-Enter Media Barcode Prefix (1 char only) : <input name="mp" value="H" style="text-transform: uppercase" required MAXLENGTH="1" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Barcode Prefix (1 char only) : <input name="mp" value="O" style="text-transform: uppercase" required MAXLENGTH="1" SIZE=2 type="text"><b><FONT COLOR="red">*</FONT></b><br>
 Enter Full Slots  : <input name="mc" value="95" min="1" max="15000" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
 

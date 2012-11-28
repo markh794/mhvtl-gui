@@ -23,7 +23,7 @@ echo "<pre><b>Select Brand :</b></pre>";
 <tr>
 <td>
 <form action="form.add.stk.library.php" method="post" >
-<input TYPE="submit" style="color: #FF0000" value=" STK "><b></b>
+<input TYPE="submit" style="color: #FF0000" value="STK"><b></b>
 </form>
 </td>
 </tr>
@@ -32,7 +32,7 @@ echo "<pre><b>Select Brand :</b></pre>";
 <tr>
 <td>
 <form action="form.add.ibm.library.php" method="post" >
-<input TYPE="submit" style="color: #000000" value=" IBM "><b></b>
+<input TYPE="submit" style="color: #000000" value="IBM"><b></b>
 </form>
 </td>
 </tr>
@@ -42,11 +42,10 @@ echo "<pre><b>Select Brand :</b></pre>";
 <tr>
 <td>
 <form action="form.add.hp.library.php" method="post" >
-<input TYPE="submit" style="color: #0000FF" value=" HP "><b></b>
+<input TYPE="submit" style="color: #0000FF" value="HP "><b></b>
 </form>
 </td>
 </tr>
-
 
 
 <tr>
@@ -82,6 +81,12 @@ echo "<pre><b>Select Brand :</b></pre>";
 <tr>
 <td>
 <a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.dell.library.php'" target="showframe"> Dell<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.add.overland.library.php'" target="showframe"> Overland<br>
 </td>
 </tr>
 

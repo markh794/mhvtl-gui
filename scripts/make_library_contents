@@ -63,6 +63,8 @@ LTO4) type=L4
 ;;
 LTO5) type=L5
 ;;
+LTO6) type=L6
+;;
 SDLT1) type=S1
 ;;
 SDLT2) type=S2

@@ -46,7 +46,7 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM
 <input TYPE=HIDDEN name="dlid" value=<?php echo $nextlid;?> READONLY type="number">
 <input TYPE=HIDDEN name="sn" value="01" READONLY type="number">
 <input TYPE=HIDDEN name="dvi" value="IBM" READONLY type="text">
-Select Drive Model: <select name="pi"><OPTION>ULT3580-TD1</option><OPTION>ULT3580-TD2</option><OPTION>ULT3580-TD3</option><OPTION>ULT3580-TD4</option><OPTION>ULT3580-TD5</option><OPTION>ULT3580-TD6</option><OPTION>ULT3580-HH4</option><OPTION>ULTRIUM-TD1</option><OPTION>ULTRIUM-TD2</option><OPTION>ULTRIUM-TD3</option><OPTION>ULTRIUM-TD4</option><OPTION>ULTRIUM-TD5</option><OPTION>03592E05</OPTION><OPTION>03592J1</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+Select Drive Model: <select name="pi"><OPTION>ULT3580-TD1</option><OPTION>ULT3580-TD2</option><OPTION>ULT3580-TD3</option><OPTION>ULT3580-TD4</option><OPTION>ULT3580-TD5</option><OPTION>ULT3580-TD6</option><OPTION>ULT3580-HH4</option><OPTION>ULTRIUM-TD1</option><OPTION>ULTRIUM-TD2</option><OPTION>ULTRIUM-TD3</option><OPTION>ULTRIUM-TD4</option><OPTION>ULTRIUM-TD5</option><OPTION>ULTRIUM-TD6</option><OPTION>03592E05</OPTION><OPTION>03592J1</OPTION></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="prl" value="252D" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+70000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
@@ -73,7 +73,7 @@ ENCRYPTION:  <select name="ecr1"><option>LTO4</OPTION></option><option>LTO3</OPT
 <hr width="100%" size=1 color="blue">
 
 <input TYPE=HIDDEN name="li" value=<?php echo $nextlid;?> READONLY type="number">
-Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>LTO1</option><OPTION>LTO2</option><OPTION>LTO3</option><OPTION>LTO4</option><OPTION>LTO5</option><OPTION>J1A</option><OPTION>E05</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>LTO1</option><OPTION>LTO2</option><OPTION>LTO3</option><OPTION>LTO4</option><OPTION>LTO5</option><OPTION>LTO6</option><OPTION>J1A</option><OPTION>E05</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number">
