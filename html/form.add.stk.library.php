@@ -30,8 +30,8 @@ $nextcid = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f3|awk '{
 <input TYPE=HIDDEN name="ltarget" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="lun" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="vi" value="STK" READONLY type="text" >
-Select Library Model:<select name="lpi"><option>SL500</OPTION><option>L700</OPTION><option>L180</OPTION><option>L120</OPTION><OPTION>SL3000</option></select><b><FONT COLOR="red">*</FONT></b>
-<input TYPE=HIDDEN name="lprl" value="3.15" READONLY type="text" />
+Select Library Model:<select name="lpi"><option>SL150</OPTION><OPTION>SL500</option><option>SL3000</OPTION><option>L700</OPTION><option>L180</OPTION><option>L120</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+<input TYPE=HIDDEN name="lprl" value="0016" READONLY type="text" />
 <input TYPE=HIDDEN name="lusn" value=<?php echo $nextlid+90000000;?> READONLY MAXLENGTH="8" type="text" />
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text" />
 
@@ -51,7 +51,7 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{prin
 <input TYPE=HIDDEN name="dvi" value="STK" READONLY type="text">
 Select Drive Vendor: <select name="dvi"><OPTION>STK</option><OPTION>HP</option></select><b><FONT COLOR="red">*</FONT></b>
 <br>
-Select Drive Model: <select name="pi"><OPTION>T10000A</option><OPTION>T10000B</option><OPTION>T10000C</option><OPTION>9940B</option><OPTION>9840B</option><OPTION>Ultrium 4-SCSI</option></select><b><FONT COLOR="red">*</FONT></b>
+Select Drive Model: <select name="pi"><OPTION>T10000A</option><OPTION>T10000B</option><OPTION>T10000C</option><OPTION>9940B</option><OPTION>9840B</option><OPTION>Ultrium 3-SCSI</option><OPTION>Ultrium 4-SCSI</option><OPTION>Ultrium 5-SCSI</option><OPTION>Ultrium 6-SCSI</option></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="prl" value="1.27" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+90000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
@@ -67,7 +67,7 @@ Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required M
 
 <input TYPE=HIDDEN name="li" value=<?php echo $nextlid;?> READONLY type="number">
 
-Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>T10000A</option><OPTION>T10000B</option><OPTION>T10000C</option><OPTION>HP Ultrium 4-SCSI</option><OPTION>9940B</option><OPTION>9840B</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>T10000A</option><OPTION>T10000B</option><OPTION>T10000C</option><OPTION>HP Ultrium 3-SCSI</option><OPTION>HP Ultrium 4-SCSI</option><OPTION>HP Ultrium 5-SCSI</option><OPTION>HP Ultrium 6-SCSI</option><OPTION>9940B</option><OPTION>9840B</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number">
