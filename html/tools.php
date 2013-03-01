@@ -9,7 +9,7 @@
 
 <tr>
 <td>
-<img src="images/help.png" >
+<img src="images/tools.png" >
 </td>
 </tr>
 
@@ -19,12 +19,12 @@ echo "<pre><b> Tools :</b></pre>";
 
 <table border="0" >
 
-<table border="0" ALIGN="left" style="margin-left:10px;" >
+<table border="0" ALIGN="left" style="margin-left:0px;" >
 
 <tr>
 <td>
 <form action="update.php" method="post" >
-<input TYPE="submit" class=sameSize style="color: #008000" value=" Live Update ">
+<input TYPE="submit" class=sameSize style="color: #000000" value=" Live Update ">
 </form>
 </td>
 </tr>
@@ -32,22 +32,22 @@ echo "<pre><b> Tools :</b></pre>";
 
 <tr>
 <td>
-<form action="form.patch.mhvtl.php" method="post" ><input TYPE="submit" class=sameSize style="color: #0000FF" value=" Apply Patch "></form>
+<form action="form.patch.mhvtl.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Apply Patch "></form>
 </td>
 </tr>
-
-<tr>
-<td>
-<form action="form.quick.test.mhvtl.php" method="post" ><input TYPE="submit" class=sameSize style="color: #FF0000" value=" Test Tape "></form>
-</td>
-</tr>
-
 
 <tr>
 <td>
 <form action="form.dump.tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Dump Tape "></form>
 </td>
 </tr>
+
+<tr>
+<td>
+<form action="edit_tape.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Edit Tape "></form>
+</td>
+</tr>
+
 
 <!--
 <tr>
@@ -60,6 +60,12 @@ echo "<pre><b> Tools :</b></pre>";
 <tr>
 <td>
 <form action="devices.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" List Devices "></form>
+</td>
+</tr>
+
+<tr>
+<td>
+<form action="form.quick.test.mhvtl.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Test MHVTL "></form>
 </td>
 </tr>
 

@@ -13,8 +13,27 @@
 </td>
 </tr>
 
+
+<script type="text/javascript">
+var ray={
+ajax:function(st)
+        {
+                this.show('load');
+        },
+show:function(el)
+        {
+                this.getID(el).style.display='';
+        },
+getID:function(el)
+        {
+                return document.getElementById(el);
+        }
+}
+</script>
+<div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
+
 <?php
-echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework (stgt):<a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe>http://stgt.sourceforge.net</a></FONT></b></pre>";
+echo "<pre><b><FONT COLOR=black >iSCSI Target via SCSI target framework :<a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe>TGT</a></FONT></b></pre>";
 ?>
 
 <table border="1" >
@@ -27,7 +46,7 @@ echo "<img src='images/green_light.png' ALIGN='left' /><b><FONT COLOR=#000000 >T
 }
 else
 {
-echo "<img src='images/red_light.png' align=left /><b><FONT COLOR=#000000 size=2>TGT: </><FONT COLOR=red> NO</FONT></b><td><form action='confirm.install.stgt.php' method=post onsubmit=return ray.ajax()><input TYPE=submit style='color: #0000FF' value=' Install ' ></form></td>";
+echo "<img src='images/red_light.png' align=left /><b><FONT COLOR=#000000 size=2>TGT: </><FONT COLOR=red> NO</FONT></b><td><form action='confirm.install.stgt.php' method=post onsubmit=return ray.ajax() ><input TYPE=submit style='color: #0000FF' value=' Install ' ></form></td>";
 
 }
 ?>
@@ -64,8 +83,9 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 ?>
 </td>
 
+
 <td>
-<form action="stgt.php" method="post"><input TYPE="submit" style="color: #000000;font-weight: bold" value="Refresh" ></form>
+<form action="stgt.php" method="post" onsubmit="return ray.ajax()"><input TYPE="submit" style="color: #000000;font-weight: bold" value=" Refresh " ></form>
 </td>
 
 </table>
@@ -74,14 +94,25 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <tr>
 <td>
 <form action="form.create.auto.iscsi.config.stgt.php" method="post" >
-<input TYPE="submit" style="background-color:#0000A0; color: #FFFFFF; font-weight: bold" value=" Quick Start "></form>
+<input TYPE="submit" class=sameSize style="color: #FF0000" value=" Quick Start "></form>
 </tr>
 </td>
-</table>
-<br>
-<br>
 
-<table border="0" ALIGN="left" >
+<tr>
+<td>
+<form action="view.tgt.conf.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Conf.File "></form>
+</td>
+</tr>
+
+<tr>
+<td>
+<form action="display_stgt.initiator.cons.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Sessions "></form>
+</td>
+</tr>
+</table>
+
+
+<table border="0" ALIGN="left" style="margin-left:15px;" >
 <tr>
 <td>
 <form action="display_stgt.target.php" method="post" ><input TYPE="submit" class=sameSize style="color: #0000A0" value=" Targets "></form>
@@ -145,38 +176,8 @@ echo "<td><form action='enable_stgt_scsi_target.php' method=post onsubmit=return
 <form action="form.remove.stgt.iscsi.clients.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Disable "></form>
 </td>
 </tr>
-
 </table>
 
-
-<table border="0" ALIGN="left" style="margin-left:15px;" >
-<tr>
-<td>
-<form action="view.tgt.conf.php" method="post" ><input TYPE="submit" class=sameSize style="color: #0000A0" value=" Configuration "></form>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<form action="save.iscsi.target.config.stgt.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Save "></form>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<form action="reset.iscsi.target.config.stgt.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Clear "></form>
-</td>
-</tr>
-</table>
-
-<table border="0" ALIGN="left" style="margin-left:15px;" >
-<tr>
-<td>
-<form action="display_stgt.initiator.cons.php" method="post" ><input TYPE="submit" class=sameSize style="color: #0000A0" value=" Connections "></form>
-</td>
-</tr>
 </table>
 
 

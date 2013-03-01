@@ -13,10 +13,10 @@
 </tr>
 
 <?php
-echo "<pre><b>View TGT Configuration file  :</b></pre>";
+echo "<pre><b>TGT Configuration file  :</b></pre>";
 ?>
 
-
+<div style="overflow:auto; height:230px;width:500px;">
 <TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
 <TR>
 <TD>
@@ -38,8 +38,12 @@ echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 </TR>
 </TD>
 </TABLE>
-
+</div>
+<br>
 <FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="save.iscsi.target.config.stgt.php"><INPUT TYPE=SUBMIT VALUE="Save"></FORM>
+<FORM ACTION="reset.iscsi.target.config.stgt.php"><INPUT TYPE=SUBMIT VALUE="Clear"></FORM>
+
 
 </body>
 </html>

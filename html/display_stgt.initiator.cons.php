@@ -18,7 +18,7 @@
 echo "<pre>TGT Active Connections:</pre>";
 ?>
 
-<div style="overflow:auto; height:330px;width:600px;">
+<div style="overflow:auto; height:300px;width:650px;">
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>
 <TD>
@@ -31,13 +31,12 @@ echo "<pre><FONT COLOR=#FFFFFF>$result</FONT></pre>";
 </TD>
 </TR>
 </TABLE>
+</div>
 
+<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 <form action="display_stgt.initiator.cons.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" style="color: #0000FF" value=" Refresh ">
 </form>
-
-<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
-</div>
 
 </body>
 </html>

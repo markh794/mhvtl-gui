@@ -17,14 +17,12 @@ echo "<pre><b> Configuration :</b></pre>";
 ?>
 
 
-
 <table border="0" >
-
 <tr>
 <td>
-<form action="form.setup.complete.php" method="post" ><input TYPE="submit" style="color:#008000" value=" Add  "></form>
-<form action="form.remove.library.php" method="post" ><input TYPE="submit" style="color:#FF0000" value=" Remove "></form>
-<form action="setup.options.php" method="post" ><input TYPE="submit" style="color:#0000FF" value=" Options "> Library/Drives/Media</form>
+<form action="form.setup.complete.php" method="post" ><input TYPE="submit" style="color:#000000" value=" Add  "></form>
+<form action="form.remove.library.php" method="post" ><input TYPE="submit" style="color:#000000" value=" Remove "></form>
+<form action="setup.options.php" method="post" ><input TYPE="submit" style="color:#000000" value=" Options "> Library/Drives/Media</form>
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>
@@ -61,6 +59,14 @@ echo "<pre><b> Configuration :</b></pre>";
 </td>
 </tr>
 
+
+<tr>
+<td>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.mhvtl-gui.theme.selector.php'" target="showframe"> Set Background Color </a>
+</td>
+</tr>
+
+
 <tr>
 <td>
 <hr width="100%" size=1 color="blue">
@@ -72,7 +78,6 @@ echo "<pre><b> Configuration :</b></pre>";
 
 
 </table>
-
 
 </body>
 </html>

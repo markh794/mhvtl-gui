@@ -22,12 +22,12 @@ echo "<pre><b>Library Operation - Load Volume :</b></pre>";
 
 $VAR1 = $_REQUEST['robot'];
 $VAR2 = $_REQUEST['slot'];
-$VAR3 = $_REQUEST['driveslotf'];
+$VAR = $_REQUEST['driveslotf'];
+$VAR3 = `echo $VAR| awk '{print $4}'`;
+
 
 settype($VAR2, "integer");
 settype($VAR3, "integer");
-
-
 
 $cmd1 = `sudo -u root -S mtx -f $VAR1 load $VAR2 $VAR3 >/tmp/mount.tape.tmp 2>&1`;
 $cmd2 = `sudo -u root -S mtx -f $VAR1 status | grep Loaded | grep  "Data Transfer Element $VAR3:Full" >/tmp/mount.status.tmp 2>&1`;

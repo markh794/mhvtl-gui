@@ -41,7 +41,7 @@ getID:function(el)
 
 <td>
 <form action="live_update.php" method="post" onsubmit="return ray.ajax()">
-<img src="images/tab_right.png" ALIGN="left" ><input TYPE="submit" style="color: #000000" value="Check" >
+<input TYPE="submit" style="color: #000000" value="Check" >
 </form><FORM ACTION="tools.php"><INPUT TYPE=SUBMIT VALUE="Return"> </FORM>
 </td>
 

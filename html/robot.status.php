@@ -16,6 +16,7 @@
 echo "<pre><b>Robot Status :</b></pre>";
 ?>
 
+<div style="overflow:auto; height:300px;width:675px;">
 <TABLE BORDER='4' CELLSPACING='4' CELLPADDING='4' bgcolor='#000000' <FONT COLOR='#FFFFFF'></FONT>
 <TR>
 <TD>
@@ -30,7 +31,7 @@ echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 </TR>
 </TD>
 </TABLE>
-
+</div>
 
 <FORM ACTION="form.robot.status.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 

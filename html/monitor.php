@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><FONT COLOR=blue><b> Active Monitor</FONT></b></pre>";
+echo "<pre><FONT COLOR=blue><b> System Monitor</FONT></b></pre>";
 ?>
 
 

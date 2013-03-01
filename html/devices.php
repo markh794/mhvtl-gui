@@ -23,7 +23,7 @@ echo "<pre><b>Virtual Tape Devices :</b></pre>";
 
 <table border="0">
 <td>
-<div style="overflow:auto;height:225px;width:600px;">
+<div style="overflow:auto;height:240px;width:650px;">
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S lsscsi -g | egrep "tape|mediumx"`; if [ -z "$DEVICES" ]; then echo "No MHVTL Virtual Devices Present"; else echo "$DEVICES"; fi');
 echo "<pre><B><FONT COLOR=#FFFFFF>$output</FONT></B></pre>";

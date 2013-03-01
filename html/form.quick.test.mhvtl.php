@@ -65,7 +65,7 @@ The following steps will take place:<br>
 (1) Create small Test file using dd under tmp<br> 
 (2) Mount random tapes on all devices<br>
 (3) Perform Write using Tar<br>
-(4) Perform Read using Tar verify<br>
+(4) Perform Read using Tar xtract to tmp location<br>
 (5) Dismount tapes on all devices<br>
 (6) Report Status<br>
 

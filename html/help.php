@@ -23,14 +23,14 @@ echo "<pre><b> Support :</b></pre>";
 
 <tr>
 <td>
-<a href="#" input class="sameLook" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe">Support Forums </a>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com/'" target="showframe">Support Forums </a>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<a href="#" input class="sameLook" style="color: #FF0000" ONCLICK="parent.frames[1].location.href='http://sites.google.com/site/linuxvtl2/'" target="showframe">MHVTL Development Web Site </a>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='http://sites.google.com/site/linuxvtl2/'" target="showframe">MHVTL Development Web Site </a>
 </td>
 </tr>
 
@@ -58,7 +58,7 @@ echo "<pre><b> Support :</b></pre>";
 
 <tr>
 <td>
-<a href="#" input class="sameLook" style="color: #008000" ONCLICK="parent.frames[1].location.href='sendfeedback.php'" target="showframe">Send Feedback (MHVTL Console)
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='sendfeedback.php'" target="showframe">Send Feedback (MHVTL Console)
 </td>
 </tr>
 

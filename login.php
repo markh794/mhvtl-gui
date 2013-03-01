@@ -23,18 +23,11 @@ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.
 <TR>
 <TD>
 
-<div style="overflow:auto;height:200px;width:300px;" >
-
-
+<div style="overflow:auto;height:250px;width:400px;" >
+<br><br>
 <?php $MHVTLHOST = shell_exec('sudo -u root -S hostname');?>
 <?php echo "<b><FONT COLOR=#FFFFFF><center> $MHVTLHOST </center></FONT></b>"; ?>
 <?php $output = `sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2`; echo "<pre><center><b><FONT COLOR=#FFFF00>MHVTL Release $output</FONT></b></center></pre>"; ?>
-
-<?php
-$output = `cat version`;
-echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></center></pre>";
-?>
-
 
 <?php
 
@@ -60,13 +53,23 @@ include 'go.php' ;
 else 
 {
 echo "<pre><FONT COLOR=#FF0000><b>Error: Required Components Not Verified </b></FONT></pre>";
+echo "<pre><b><a style='text-decoration:none; color:#FFFF00;' href='go.php'>Click here to bypass</a></b></pre>";
+echo "<pre><b><a style='text-decoration:none; color:#00FF00;' href='http://mhvtl-linux-virtual-tape-library-community-forums.966029.n3.nabble.com/'>Click here to get help</a></b></pre>";
 }
 ?>
+
+
+<?php
+$output = `cat version`;
+echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></center></pre>";
+?>
+
 
 </div>
 </TR>
 </TD>
 </table>
+
 <br><br>
 <?php echo "<pre><b><FONT size=2><a href='http://www.gnu.org/licenses/gpl-2.0.html'>GNU GENERAL PUBLIC LICENSE : GPLv2 : Copyright (C) 2011. All rights reserved.</a></FONT></b></pre>";?>
 </center>

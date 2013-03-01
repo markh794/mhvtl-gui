@@ -34,14 +34,26 @@ echo "<pre><b> Apply Patches :</b></pre>";
 
 <tr>
 <td>
+<img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.view.mhvtl.php" method="post" >
+<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch`; ?>
+Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" View "></FORM>
+
+<br>
 <img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.install.mhvtl.php" method="post" >
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch`; ?>
 Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" Apply "></FORM>
+
 <br>
 <img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.uninstall.mhvtl.php" method="post" >
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch`; ?>
 Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" Undo "></FORM>
 <br>
+<img src="images/tab_right.png" ALIGN="left" ><form action="form.patch.delete.mhvtl.php" method="post" >
+<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh patch`; ?>
+Select Patch <?php echo $cmd;?><input TYPE="submit" style="color: #000000" value=" Delete "></FORM>
+<br>
+
+
 <hr width="100%" size=1 color="blue">
 </td>
 </tr>

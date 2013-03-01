@@ -18,12 +18,13 @@ done
 
 numberofmaps=$5
 countmap=1
+echo "Picker 1:"
+echo " "
+
 while true; do
 echo "MAP "$countmap":"
 countmap=$((countmap+1))
 if [ $countmap -gt $numberofmaps ] ; then
-echo " "
-echo "Picker 1:"
 echo " "
 break
 fi
@@ -83,6 +84,10 @@ SDLT600) type=S3
 ;;
 DLT-S4) type=S4
 ;;
+DLT7000) type=D7
+;;
+DLT8000) type=D8
+;;
 T10KA) type=TA
 ;;
 T10KB) type=TB
@@ -95,7 +100,17 @@ T10000B) type=TB
 ;;
 T10000C) type=TC
 ;;
-9840B|9940B) type=TA
+9840A) type=TZ
+;;
+9840B) type=TY
+;;
+9840C) type=TX
+;;
+9840D) type=TW
+;;
+9940A) type=TV
+;;
+9940B) type=TU
 ;;
 J1A) type=JA
 ;;

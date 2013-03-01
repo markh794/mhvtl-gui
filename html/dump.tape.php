@@ -22,6 +22,7 @@ echo "<pre><b>Dump Tape :</b></pre>";
 <?php
 $VAR = $_REQUEST['tape'];
 $output = `sudo -u root -S dump_tape -f $VAR`;
+echo "<pre>$VAR</pre>";
 echo "<pre>$output</pre>";
 ?>
 

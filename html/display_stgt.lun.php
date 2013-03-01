@@ -17,7 +17,7 @@
 echo "<pre>Display STGT Luns:</pre>";
 ?>
 
-<div style="overflow:auto; height:330px;width:600px;">
+<div style="overflow:auto; height:230px;width:650px;">
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>
 <TD>
@@ -32,8 +32,8 @@ echo "<pre><FONT COLOR=#FFFFFF>$result</FONT></pre>";
 </TD>
 </TR>
 </TABLE>
-<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </div>
+<FORM ACTION="stgt.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

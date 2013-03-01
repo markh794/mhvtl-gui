@@ -17,7 +17,6 @@ echo "Usage './mhvtl.quick.test.sh GO | grep TESTED' (Brief)"
 exit 0
 fi
 
-
 clear
 echo "******************************************************************************* "
 lsscsi -g | egrep "mediumx|tape"
@@ -65,11 +64,15 @@ STATUS=FAIL
 COLOR="#FF0000"
 fi
 echo '<b><FONT COLOR=#FFFF00>Writing</FONT> : device '$st' :<FONT COLOR='$COLOR'> TESTED '$STATUS'</FONT></b>'
-tar -tvf $st tmp/Test-File.tmp 2>/dev/null
+
+mkdir -p /tmp/mhvtl-tape-test-tar-xtract-work-dir
+cd /tmp/mhvtl-tape-test-tar-xtract-work-dir
+tar -xvf $st tmp/Test-File.tmp 2>/dev/null
 STATUS=$?
 if [ $STATUS -eq 0 ] ; then 
 STATUS=OK
 COLOR="#00FF00"
+rm -f tmp/Test-File.tmp 2>/dev/null
 else
 STATUS=FAIL
 COLOR="#FF0000"
@@ -93,3 +96,12 @@ else
 STATUS=FAIL
 fi
 echo "Removing tmp test file" EXIT $STATUS
+rm -Rf /tmp/mhvtl-tape-test-tar-xtract-work-dir
+STATUS=$?
+if [ $STATUS -eq 0 ] ; then
+STATUS=OK
+else
+STATUS=FAIL
+fi
+echo "Removing tmp work space" EXIT $STATUS
+
