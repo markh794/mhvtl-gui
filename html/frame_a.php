@@ -9,9 +9,7 @@
 
 <hr width="100%" size=1 color="blue">
 
-<tr>
-<td align=left valign=top><img src="images/tux.png" ><FONT COLOR=blue size=4> Linux Virtual Tape Library System</FONT></td>
-</tr>
+<tr><td><img src="images/tux.png" align=middle ><FONT COLOR=blue size=5> Linux Virtual Tape Library System</FONT></td></tr>
 
 <?php $output = shell_exec('sudo -u root -S ../scripts/os_release.sh');?>
 <pre><b><FONT COLOR=#000000><?php echo $output ;?></FONT></b></pre>
