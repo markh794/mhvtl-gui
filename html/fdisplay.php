@@ -26,7 +26,8 @@ echo "<pre>$output$output1</pre>";
 
 $RC=`sudo -u root -S lsscsi -g | grep mediumx| wc -l`;
 $RT=`sudo -u root -S lsscsi -g | grep tape| wc -l`;
-$NT=`sudo -u root -S find /opt/mhvtl -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| wc -l`;
+
+$NT=`sudo -u root -S ../scripts/count_tapes.sh`;
 echo "<FONT COLOR=#FFFF00> $RC</FONT><FONT COLOR=#FFFFFF>Changer(s)</FONT></FONT>";
 echo "<FONT COLOR=#FFFF00> $RT</FONT><FONT COLOR=#FFFFFF>Tape Drive(s)</FONT></FONT>";
 echo "<FONT COLOR=#FFFF00> $NT</FONT><FONT COLOR=#FFFFFF>Cartridge(s)</FONT></FONT>";
