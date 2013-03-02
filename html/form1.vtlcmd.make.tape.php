@@ -43,19 +43,21 @@ getID:function(el)
 <?php $libid = $_REQUEST['libid'];?>
 <?php $libidn = `echo $libid| cut -d ":" -f1`; ?>
 
-Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
-<input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
-<input TYPE=HIDDEN name="libidn" value=<?php echo $libidn;?> READONLY >
-<br>
-
+View current tape Devices:
 <?php
 $output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
 echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
 ?>
-
-
-View current tape inventory
+<br>
+View current media inventory:
 <?php echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $libidn`; ?>
+<br>
+<br>
+<hr width="100%" size=1 color="blue">
+Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
+<input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
+<input TYPE=HIDDEN name="libidn" value=<?php echo $libidn;?> READONLY >
+<br>
 <br>
 Enter Count <input name="ctc" type="number" value="" MAXSIZE="3" required >
 <INPUT TYPE=SUBMIT VALUE=" Create "></form>

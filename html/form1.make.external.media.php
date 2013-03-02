@@ -20,21 +20,30 @@ echo "<pre><b>Create External media :</b></pre>";
 
 <form method="post" action="make.external.media.php">
 
+
+View current tape Devices:
+<?php
+$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
+echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
+?>
+
+View current media inventory:
+<?php
+$VAR = `echo $libid| cut -d ":" -f1`;
+echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $VAR`;
+?>
+<hr width="100%" size=1 color="blue">
+
 <?php $libid = $_REQUEST['libid'];?>
 Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
+<br>
 <input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
 <br>
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 Capacity (Auto-Detected) <input name="size" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number" MAXSIZE="6" required >
 <br>
 Enter Type <SELECT name="type"><option>data</OPTION><option>clean</OPTION><option>WORM</OPTION> </select>
-
-<?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
-echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
-?>
-
-
+<br>
 Select Barcode <SELECT name="mp">
 <OPTION>A</OPTION>
 <OPTION>B</OPTION>
@@ -117,13 +126,6 @@ Select Barcode <SELECT name="mp">
 <OPTION>E05:JB</OPTION>
 <OPTION>E06:JB</OPTION>
 </select>
-
-View current tape inventory:
-<?php
-$VAR = `echo $libid| cut -d ":" -f1`;
-echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $VAR`;
-?>
-
 
 
 <br><br>
