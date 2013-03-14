@@ -45,7 +45,7 @@ getID:function(el)
 </td>
 
 <td>
-<form action="frame_a.php" method="post" onsubmit="return ray.ajax()">
+<form action="console.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" type="submit" class="sameSize" style="color: #008000" value="   Cancel   ">
 </form>
 </td>

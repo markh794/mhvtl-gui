@@ -88,7 +88,6 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 <form action="form.vtlcmd.empty.map.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Empty Map "></form>
 </tr>
 </td>
-</table>
 
 <table border="0" ALIGN="left" style="margin-left:10px;" >
 <tr>
@@ -128,42 +127,6 @@ echo "<pre><b> Library Operator Panel :</b></pre>";
 
 </table>
 
-<!--
-<table border="0" ALIGN="left" style="margin-left:10px;" >
-
-<tr>
-<td>
-<form action="form.display.external.media.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" External Media "></form>
-</td>
-</tr>
-
-
-<tr>
-<td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
-</td>
-</tr>
-
-<tr>
-<td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
-</td>
-</tr>
-
-<tr>
-<td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
-</td>
-</tr>
-
-<tr>
-<td>
-<form action="form.vtlcmd.empty.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value="  "></form>
-</td>
-</tr>
-
-</table>
--->
 
 </body>
 </html>

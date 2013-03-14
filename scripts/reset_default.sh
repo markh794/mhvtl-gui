@@ -10,6 +10,17 @@ fi
 if [ "$1" = "YES" ]; then
 
 echo "<FONT COLOR=#FF0000><b>Removing all existing tape media ...</b></FONT><br>"
+
+if [ -d /opt/mhvtl/external_media ] ; then
+sudo -u vtl -S rm -Rf /opt/mhvtl/external_media
+STATUS=$?
+echo "<FONT COLOR=#FFFFFF>Removed </FONT><FONT COLOR=#FFA500> /opt/mhvtl/external_media </FONT><FONT COLOR=#FFFFFF>EXIT:$STATUS</FONT><br>"
+else
+echo "<pre><FONT COLOR=#FFFF00><b>Unable to remove /opt/mhvtl/external_media </b></FONT>"
+fi
+
+
+
 if [ ! -f /etc/mhvtl/library_contents.* ] ; then
 echo "<pre><FONT COLOR=#FFFF00><b>Error Occured .. Unable to find /etc/mhvtl/library_contents.X files </b></FONT>"
 exit 0
@@ -31,6 +42,8 @@ echo "<FONT COLOR=#FFFFFF>Removed </FONT><FONT COLOR=#FFA500> $each/* </FONT><FO
 else
 echo "<pre><FONT COLOR=#FFFF00><b>Unable to find Home Directory $each </b></FONT>"
 fi
+
+
 
 done
 echo "<FONT COLOR=#008000><b>Done ...</b></FONT>"

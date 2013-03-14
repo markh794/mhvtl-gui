@@ -48,7 +48,7 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM
 <input TYPE=HIDDEN name="dlid" value=<?php echo $nextlid;?> READONLY type="number">
 <input TYPE=HIDDEN name="sn" value="01" READONLY type="number">
 <input TYPE=HIDDEN name="dvi" value="QUANTUM" READONLY type="text">
-Select Drive Model: <select name="pi"><OPTION>SuperDLT1</OPTION><OPTION>SDLT220</OPTION><OPTION>SDLT320</OPTION><OPTION>SDLT600</OPTION><OPTION>DLT-S4</option><OPTION>DLT7000</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+Select Drive Model: <select name="pi"><OPTION>SDLT600</OPTION><OPTION>DLT7000</OPTION></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="prl" value="0A0A" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+60000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
@@ -58,14 +58,12 @@ Compression Type (lzo or zlib) : <SELECT name="ctt" MAXLENGTH="4" ><OPTION>lzo</
 
 Enter Backoff Value (Default:400): <select name="bkfv" MAXLENGTH="7" type="number" ><OPTION>Default</option><OPTION>200</option><OPTION>100</option><OPTION>10</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
-Enter Number of Drives : <input name="nod" value="5" min="1" max="19" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
+Enter Number of Drives : <input name="nod" value="5" min="1" max="19" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
 
 <input TYPE=HIDDEN name="li" value=<?php echo $nextlid;?> READONLY type="number">
 
-<input TYPE=HIDDEN name="mt" value="SDLT4" READONLY MAXLENGTH="2" type="text">
-
-Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>SuperDLT1</option><OPTION>SDLT220</option><OPTION>SDLT320</option><OPTION>SDLT600</option><OPTION>DLT-S4</option><OPTION>DLT7000</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>SDLT600</option><OPTION>DLT7000</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
@@ -86,7 +84,7 @@ Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" 
 
 <hr width="100%" size=1 color="blue">
 
-<br><input type="submit" /> </form>
+<input type="submit" /> </form>
 <FORM ACTION="form.setup.choose.standard.complete.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 
 </body>

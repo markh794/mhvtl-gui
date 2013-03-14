@@ -16,10 +16,6 @@
 echo "<pre><b>Restarting MHVTL :</b></pre>";
 ?>
 
-<hr width="100%" size=1 color="blue">
-
-
-
 <script type="text/javascript">
 var ray={
 ajax:function(st)
@@ -37,11 +33,6 @@ getID:function(el)
 }
 </script>
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
-
-<?php
-echo "<pre><b>Restarting MHVTL:</b></pre>";
-?>
-<br>
 
 <TABLE BORDER=4 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>
@@ -103,7 +94,7 @@ echo "<pre>$output</pre>";
 <input TYPE="submit" type="submit" style="color: #0000FF" value=" Start ">
 </form>
 </td>
-<FORM ACTION="frame_a.php"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="console"><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 
 </body>
 </html>

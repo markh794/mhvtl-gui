@@ -1,3 +1,26 @@
+testphp()
+{
+CHECKPHP=`php html/testphp.php | grep ^"PHP Version"`
+if [ ! -z "$CHECKPHP" ]; then
+echo "PASS" >/tmp/test.required.components.testphp
+else
+echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: PHP not detected</FONT>'
+echo "FAIL" >/tmp/test.required.components.testphp
+fi
+}
+
+testsudo()
+{
+CHECK=`sudo -u root -S date`
+if [ $? = 0 ] ; then
+echo "PASS" >/tmp/test.required.components.testsudo
+else
+echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: sudo not configured</FONT>'
+echo "FAIL" >/tmp/test.required.components.testsudo
+fi
+}
+
+
 testmhvtl()
 {
 if [ ! -f /usr/bin/vtlcmd ] ; then
@@ -23,34 +46,9 @@ fi
 }
 
 
-testphp()
-{
-CHECKPHP=`php html/testphp.php | grep ^"PHP Version"`
-if [ ! -z "$CHECKPHP" ]; then
-echo "PASS" >/tmp/test.required.components.testphp
-else
-echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: PHP not detected</FONT>'
-echo "FAIL" >/tmp/test.required.components.testphp
-fi
-}
-
-
-testsudo()
-{
-CHECK=`sudo -u root -S date`
-if [ $? = 0 ] ; then
-echo "PASS" >/tmp/test.required.components.testsudo
-else
-echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: Sudo Access not configured</FONT>'
-echo "FAIL" >/tmp/test.required.components.testsudo
-fi
-}
-
-
-
 testlsscsi()
 {
-CHECK=`lsscsi`
+CHECK=`sudo -u root -S lsscsi`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testlsscsi
 else
@@ -61,11 +59,11 @@ fi
 
 testmt()
 (
-CHECK=`mt -v 2>/dev/null`
+CHECK=`sudo -u root -S mt -v 2>/dev/null`
 if [ $? = 0 ] ; then 
 echo "PASS" >/tmp/test.required.components.testmt
 else
-CHECK=`mt -V 2>/dev/null`
+CHECK=`sudo -u root -S mt -V 2>/dev/null`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testmt
 else
@@ -78,7 +76,7 @@ fi
 
 testmtx()
 {
-CHECK=`ls /usr/sbin/mtx`
+CHECK=`sudo -u root -S mtx`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testmtx
 else
@@ -89,7 +87,7 @@ fi
 
 testgit()
 (
-CHECK=`git --version`
+CHECK=`sudo -u root -S git --version`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testgit
 else
@@ -106,7 +104,7 @@ fi
 
 testsysstat()
 (
-CHECK=`iostat`
+CHECK=`sudo -u root -S iostat`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testsysstat
 else
@@ -131,7 +129,7 @@ TGTD="stgt.git/usr/tgtd"
 fi
 
 
-CHECK=`$TGTADM --help`
+CHECK=`sudo -u root -S $TGTADM --help`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.teststgt
 else
@@ -142,7 +140,7 @@ fi
 
 testscst()
 (
-CHECK=`ls /usr/local/sbin/iscsi-scstd`
+CHECK=`sudo -u root -S ls /usr/local/sbin/iscsi-scstd`
 if [ $? = 0 ] ; then
 echo "PASS" >/tmp/test.required.components.testscst
 else

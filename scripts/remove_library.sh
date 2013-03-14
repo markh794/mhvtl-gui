@@ -44,6 +44,17 @@ echo "<pre><FONT COLOR=#FFFF00><b>Unable to find Media Path for $each, please re
 fi
 
 done
+
+echo "<FONT COLOR=#FF0000><b>Removing all external tape media ...</b></FONT><br>"
+if [ -d /opt/mhvtl/external_media/$VAR1 ] ; then
+sudo -u vtl -S rm -Rf /opt/mhvtl/external_media/$VAR1/*
+STATUS=$?
+echo "<FONT COLOR=#FFFFFF>Removed </FONT><FONT COLOR=#FFA500> /opt/mhvtl/external_media/$VAR1 </FONT><FONT COLOR=#FFFFFF>EXIT:$STATUS</FONT><br>"
+else
+echo "<pre><FONT COLOR=#FFFF00><b>Unable to find Media Path for $each, please remove manually </b></FONT>"
+fi
+
+
 echo "<FONT COLOR=#008000><b>Done ...</b></FONT><br>"
 
 else

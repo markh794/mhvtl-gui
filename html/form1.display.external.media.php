@@ -13,7 +13,7 @@
 </tr>
 
 <?php
-echo "<pre><b>Display External Media :</b></pre>";
+echo "<pre><b>List External Media :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
@@ -26,11 +26,10 @@ $VAR1 = `echo $VAR| cut -d ":" -f1`;
 ?>
 
 <form method="post" action="display.external.media.php">
-<?php echo "<FONT COLOR=#000000>Display External Media For Library = $VAR1 </FONT>"; ?>
+<?php echo "<FONT COLOR=#000000>List External Media for library = $VAR1 </FONT>"; ?>
 <input TYPE=HIDDEN name="clibid" value=<?php echo $VAR1;?> READONLY >
 <INPUT TYPE="submit" VALUE=" Continue " style="color: #000000" >
 </form>
-<INPUT TYPE=SUBMIT VALUE=" Cancel " input ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">
-
+<INPUT TYPE=SUBMIT VALUE=" Cancel " input ONCLICK="parent.frames[1].location.href='setup.php'" target="showframe">
 </body>
 </html>

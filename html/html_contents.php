@@ -5,18 +5,21 @@
 <center>
 <hr width="100%" size=10 color="blue">
 
+<a href="server_host.php" class="image-link" alt="Server Host Info" ONCLICK="parent.frames[1].location.href='server_host.php'" target="showframe">
 <?php $MHVTLHOST = shell_exec('sudo -u root -S hostname -s');?>
-<img src="images/gear_red.png" ALIGN="top" > <b>Server: <FONT COLOR=#0000FF size=2 ><?php echo $MHVTLHOST ;?></FONT></b>
+<img src="images/gear_red.png" ALIGN="top" border="0" alt="Server Host Info" > <FONT COLOR=#000000 size=3 ><b>Server: </FONT></b><?php echo $MHVTLHOST ;?></a>
+
+
 
 <hr width="100%" size=1 color="blue">
-<a href="http://sites.google.com/site/linuxvtl2/" ONCLICK="parent.frames[1].location.href='http://sites.google.com/site/linuxvtl2/'" target="showframe">
-<tr><td align=center valign=middle><img border="0" src="images/mhvtl.png" alt="http://sites.google.com/site/linuxvtl2" ></td></tr></a>
+<a href="http://sites.google.com/site/linuxvtl2/" class="image-link" ONCLICK="parent.frames[1].location.href='http://sites.google.com/site/linuxvtl2/'" target="showframe">
+<tr><td align=center valign=middle><img border="0" src="images/mhvtl.png" alt="http://sites.google.com/site/linuxvtl2" height="64" width="120" ></td></tr></a>
 
 
 <pre>
 <?php
 $output = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
-echo "<FONT COLOR=#000000 ><b>$output</b></FONT>";
+echo "<b>$output</b>";
 ?>
 </pre>
 
@@ -24,7 +27,7 @@ echo "<FONT COLOR=#000000 ><b>$output</b></FONT>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" Console " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='frame_a.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" Console " class="sameSize" style="color: #0000FF" ONCLICK="parent.frames[1].location.href='console.php'" target="showframe">
 </td>
 </tr>
 
@@ -43,7 +46,7 @@ echo "<FONT COLOR=#000000 ><b>$output</b></FONT>";
 
 <tr>
 <td>
-<INPUT TYPE="button" VALUE=" iSCSI " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
+<INPUT TYPE="button" VALUE=" iSCSI (tgt) " class="sameSize" style="color: #000000" ONCLICK="parent.frames[1].location.href='stgt.php'" target="showframe">
 </td>
 </tr>
 
@@ -64,13 +67,29 @@ echo "<FONT COLOR=#000000 ><b>$output</b></FONT>";
 <br>
 <td align=center valign=middle><img src='images/linux-powered.png' width=120 height=40 ></td>
 
-<br><br>
+<br>
 <a href="http://stgt.sourceforge.net/" ONCLICK="parent.frames[1].location.href='http://stgt.sourceforge.net/'" target="showframe">
 <td align=center valign=middle><img border="0" src='images/tgt.png' alt="http://stgt.sourceforge.net" width=120 height=40 ></td></a>
 
-<br><br>
+<!--
+<br>
+<a href="http://en.wikipedia.org/wiki/Linear_Tape-Open" ONCLICK="parent.frames[1].location.href='http://en.wikipedia.org/wiki/Linear_Tape-Open'" target="showframe">
+<td align=center valign=middle><img border="0" src='images/Lto-ultrium-logo.png' alt="http://en.wikipedia.org/wiki/Linear_Tape-Open" width=120 height=40 ></td></a>
+-->
+
+
+<br>
 <a href="http://www.gnu.org/licenses/gpl-2.0.html" ONCLICK="parent.frames[1].location.href='http://www.gnu.org/licenses/gpl-2.0.html'" target="showframe">
 <td align=center valign=middle><img border="0" src='images/gplv2.gif' alt="http://www.gnu.org/licenses/gpl-2.0.html" ></td></a>
+
+
+<br>
+<br>
+<?php $output = `sudo -u root -S cat ../version`;?>
+<FONT COLOR=#000000 size=1 ><b>Console </FONT><FONT COLOR=#0000ff size=1 ><?php echo $output ;?></FONT></b>
+
+
+
 </center>
 </body>
 </html>

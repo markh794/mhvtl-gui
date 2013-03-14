@@ -19,11 +19,21 @@ echo "<pre><b>Load Map :</b></pre>";
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="form1.vtlcmd.load.map.php">
+<form method="post" action="vtlcmd.load.map.confirm.again.php">
 
-<?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-Select Library <?php echo $cmd;?>
+<?php $libid = $_REQUEST['libid'];?>
+Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
+<br>
+Select External Media:
+<?php
+$libidn = `echo $libid| cut -d ":" -f1`;
+echo $output = `sudo -u root -S ../scripts/build_html_opts.sh lvvault $libidn`;
+?>
 
+<input type="text" readonly hidden value="<?php echo $libid;?>" name="libid" />
+
+<br>
 <input type="submit"></form><FORM ACTION="vtlcmd.php"><INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
+
 </body>
 </html>

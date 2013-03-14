@@ -11,8 +11,11 @@
 <img src="images/activity.png" >
 </td>
 </tr>
-<br>
-<br>
+
+<?php
+echo "<pre><b>MHVTL Testing :</b></pre>";
+?>
+
 
 <TABLE BORDER=4 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>
@@ -24,7 +27,6 @@ $output = shell_exec('cat /tmp/mhvtl.quick.test.tmp');
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 include 'activity.test.php' ;
 ?>
-
 </TABLE>
 <br>
 <FORM ACTION="tools.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>

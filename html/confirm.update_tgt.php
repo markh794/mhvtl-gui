@@ -3,7 +3,7 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 <body>
 <hr width="100%" size=10 color="blue">
-<b><font color=purple size=3>MHVTL LIVE UPDATE</font></b>
+<b><font color=purple size=3>LIVE UPDATE</font></b>
 <hr width="100%" size=1 color="blue">
 
 

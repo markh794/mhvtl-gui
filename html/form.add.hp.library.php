@@ -28,8 +28,8 @@ $nextcid = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f3|awk '{
 <input TYPE=HIDDEN name="ltarget" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="lun" value="00" READONLY type="number">
 <input TYPE=HIDDEN name="vi" value="HP" READONLY type="text">
-Select Library Model:<select name="lpi" ><option>MSL G3 Series</OPTION><option>MSL6000 Series</OPTION><option>ESL E-Series</OPTION><option>ThinStor AutoLdr</OPTION><option>1x8 autoloader</OPTION><option>VLS</OPTION></select><b><FONT COLOR="red">*</FONT></b>
-<input TYPE=HIDDEN name="lprl" value="2.00" READONLY type="text">
+Select Library Model:<select name="lpi" ><option>EML E-Series</OPTION><option>MSL G3 Series</OPTION><option>MSL6000 Series</OPTION><option>ESL E-Series</OPTION><option>ThinStor AutoLdr</OPTION><option>1x8 autoloader</OPTION><option>VLS</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+<input TYPE=HIDDEN name="lprl" value="1068" READONLY type="text">
 <input TYPE=HIDDEN name="lusn" value=<?php echo $nextlid+80000000;?> READONLY MAXLENGTH="8" type="text" />
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text">
 
@@ -47,7 +47,7 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM
 <input TYPE=HIDDEN name="dlid" value=<?php echo $nextlid;?> READONLY type="number">
 <input TYPE=HIDDEN name="sn" value="01" READONLY type="number">
 <input TYPE=HIDDEN name="dvi" value="HP" READONLY type="text">
-Select Drive Model: <select name="pi"><OPTION>Ultrium 1-SCSI</option><OPTION>Ultrium 2-SCSI</option><OPTION>Ultrium 3-SCSI</option><OPTION>Ultrium 4-SCSI</option><OPTION>Ultrium 5-SCSI</option><OPTION>Ultrium 6-SCSI</option></select><b><FONT COLOR="red">*</FONT></b>
+Select Drive Model: <select name="pi"><OPTION>Ultrium 5-SCSI</option><OPTION>Ultrium 4-SCSI</option><OPTION>Ultrium 3-SCSI</option><OPTION>Ultrium 2-SCSI</option><OPTION>Ultrium 1-SCSI</option><OPTION>Ultrium 6-SCSI</option></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="prl" value="N11G" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+80000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
@@ -57,7 +57,7 @@ Compression Type (lzo or zlib) : <SELECT name="ctt" MAXLENGTH="4" ><OPTION>lzo</
 
 Enter Backoff Value (Default:400): <select name="bkfv" MAXLENGTH="7" type="number" ><OPTION>Default</option><OPTION>200</option><OPTION>100</option><OPTION>10</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
-Enter Number of Drives : <input name="nod" value="5" min="1" max="19" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
+Enter Number of Drives : <input name="nod" value="5" min="1" max="19" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
 <!-- Removed for now since it is no longer supported by MHVTL recent release
 <b>LTO DRIVE OPTIONS ONLY (Checked=yes): <INPUT TYPE=checkbox NAME="doi" VALUE="yes" UNCHECKED > </b><br>
@@ -75,7 +75,7 @@ ENCRYPTION:  <select name="ecr1"><option>LTO4</OPTION></option><option>LTO3</OPT
 
 <input TYPE=HIDDEN name="li" value=<?php echo $nextlid;?> READONLY type="number">
 
-Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>LTO1</option><OPTION>LTO2</option><OPTION>LTO3</option><OPTION>LTO4</option><OPTION>LTO5</option><OPTION>LTO6</option></select><b><FONT COLOR="red">*</FONT></b><br>
+Enter Media Type : <select name="mt" MAXLENGTH="2" type="text" ><OPTION>LTO5</option><OPTION>LTO4</option><OPTION>LTO3</option><OPTION>LTO2</option><OPTION>LTO1</option><OPTION>LTO6</option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 <?php $optcap  = `sudo -u root -S grep ^"CAPACITY" /etc/mhvtl/mhvtl.conf| cut -d"=" -f2`; ?>
 CAPACITY in MegaByte (Auto-Detected): <input name="c" value=<?php echo $optcap;?> READONLY style="color: #736F6E" type="number">
@@ -89,14 +89,12 @@ Enter Full Slots  : <input name="mc" value="95" min="1" max="15000" required MAX
 
 Enter Empty Slots : <input name="es" value="5" min="1" max="15000" required MAXLENGTH="5" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 <br>
-
-
 Enter Library Media PATH (Default:/opt/mhvtl): <select name="llp" MAXLENGTH="7" type="text" ><OPTION>/opt/mhvtl</option><OPTION>/opt/mhvtl/<?php echo $nextlid;?></option></select><b><FONT COLOR="red">*</FONT></b><br>
 
 
 <hr width="100%" size=1 color="blue">
 
-<br><input type="submit" /> </form>
+<input type="submit" /> </form>
 <FORM ACTION="form.setup.choose.standard.complete.php"> <INPUT TYPE=SUBMIT VALUE="Return"> <INPUT TYPE=SUBMIT VALUE="Cancel"> </FORM>
 
 </body>

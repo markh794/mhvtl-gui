@@ -13,8 +13,9 @@
 </tr>
 
 <?php
-echo "<pre><b>Testing</b></pre>";
+echo "<pre><b>MHVTL Testing :</b></pre>";
 ?>
+
 
 <TABLE BORDER=4 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>
@@ -24,7 +25,6 @@ echo "<pre><b>Testing</b></pre>";
 $output = shell_exec('cat /tmp/mhvtl.quick.test.tmp; rm -f /tmp/mhvtl.quick.test.tmp');
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 ?>
-
 </TABLE>
 <br>
 <FORM ACTION="tools.php"> <INPUT TYPE=SUBMIT VALUE="Return"> </FORM>

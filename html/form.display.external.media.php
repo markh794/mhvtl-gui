@@ -12,21 +12,17 @@
 </td>
 </tr>
 
-
 <?php
-echo "<pre><b>Display External Media :</b></pre>";
+echo "<pre><b>List External Media :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
 
 <form method="post" action="form1.display.external.media.php">
 <?php $cmd = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
-
-Select Library <?php echo $cmd ; ?>
-
+Select Library <?php echo $cmd;?>
 <input type="submit">
 </form>
-
-<FORM ACTION="vtlcmd.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="setup.php"> <INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </body>
 </html>

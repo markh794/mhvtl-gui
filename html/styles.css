@@ -101,4 +101,7 @@ display: inline;
 text-decoration:none;
 }
 
-
+.image-link
+{
+    text-decoration:none;
+}

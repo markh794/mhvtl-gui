@@ -53,7 +53,7 @@ echo "<pre><b><FONT COLOR=#FFFFFF>Updates since $CURR <br>$output</FONT></b></pr
 
 <br>
 <FORM ACTION="live_update.php"><INPUT TYPE=SUBMIT VALUE="Update"></FORM>
-<FORM ACTION="frame_a.php"><INPUT TYPE=SUBMIT VALUE="Cancel"></FORM>
+<FORM ACTION="console.php"><INPUT TYPE=SUBMIT VALUE="Cancel"></FORM>
 
 </body>
 </html>

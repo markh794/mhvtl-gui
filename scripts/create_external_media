@@ -1,6 +1,15 @@
 DEN=`echo $3 | cut -d ":" -f1`
 EXT=`echo $3 | cut -d ":" -f2`
 
+if [ "$EXT" = "D7" ] ; then
+DEN=DLT4
+fi
+
+if [ "$EXT" = "D8" ] ; then
+DEN=DLT4
+fi
+
+
 if [ "$4" = "CLN" ] ; then
 PCL=`echo "$4$7$8$9$EXT"`
 else
@@ -13,13 +22,16 @@ else
 PCL=`echo "$4$5$6$7$8$9$EXT"`
 fi
 
-
 CHECKUNIQUE=`../scripts/checkuniquemedia.sh ${10} $PCL`
 if [ "$CHECKUNIQUE" = "NO" ] ; then
 echo "<FONT COLOR=red>$PCL already exist in Library ${10} ! , select different barcode please ...</FONT>"
 else
 mktape -l ${10} -m $PCL -s $2 -t $1 -d $DEN
 if [ $? -eq 0 ]; then
+if [ ! -d /opt/mhvtl/external_media/${10} ] ; then
+sudo -u vtl -S  mkdir -p /opt/mhvtl/external_media/${10}
+fi
+sudo -u vtl -S  touch /opt/mhvtl/external_media/${10}/$PCL
 echo "<pre><FONT COLOR=green>Created : $PCL type=$1 as external media for Library ${10}</FONT></pre>"
 else
 echo "<pre><FONT COLOR=red>Error Occured ! </FONT></pre>"

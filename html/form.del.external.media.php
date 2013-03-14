@@ -13,12 +13,12 @@
 </tr>
 
 <?php
-echo "<pre><b>Create External media :</b></pre>";
+echo "<pre><b>Delete External media :</b></pre>";
 ?>
 
 <hr width="100%" size=1 color="blue">
 
-<form method="post" action="form1.make.external.media.php">
+<form method="post" action="form1.del.external.media.php">
 
 <?php $libid = `sudo -u root -S ../scripts/build_html_opts.sh libid`; ?>
 Select Library <?php echo $libid;?><input type="submit"></form>

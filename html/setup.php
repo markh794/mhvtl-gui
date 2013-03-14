@@ -39,6 +39,18 @@ echo "<pre><b> Configuration :</b></pre>";
 </td>
 </tr>
 
+<tr>
+<td>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.display.external.media.php'" target="showframe"> Display External Media </a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="#" input class="sameLook" style="color: #000000" ONCLICK="parent.frames[1].location.href='form.del.external.media.php'" target="showframe"> Delete External Media </a>
+</td>
+</tr>
+
 
 <tr>
 <td>

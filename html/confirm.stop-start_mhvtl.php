@@ -16,7 +16,6 @@
 echo "<pre><b>Restarting MHVTL :</b></pre>";
 ?>
 
-<hr width="100%" size=1 color="blue">
 
 <script type="text/javascript">
 var ray={
@@ -36,10 +35,6 @@ getID:function(el)
 </script>
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<?php
-echo "<pre><b>Confirm:</b></pre>";
-?>
-<br>
 
 <table border="0" >
 

@@ -58,10 +58,8 @@ getID:function(el)
                         setTimeout(function() {Ajax();}, 1000);
                 </script>
 
-<div id="ReloadThis" >
-<?php
-include 'act.test.php' ;
-?>
+<div style="overflow:auto;height:170px;width:625px;font-size:normal" id="ReloadThis" >
+<?php include 'act.test.php' ; ?>
 </div>
 
 </body>

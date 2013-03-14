@@ -34,26 +34,12 @@ getID:function(el)
         }
 }
 </script>
+
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
-
-
-
 <form method="post" action="vtlcmd.make.tape.php" onsubmit="return ray.ajax()" >
 
 <?php $libid = $_REQUEST['libid'];?>
 <?php $libidn = `echo $libid| cut -d ":" -f1`; ?>
-
-View current tape Devices:
-<?php
-$output = shell_exec('DEVICES=`sudo -u root -S ../scripts/plot_devices.sh`; if [ ! -z "$DEVICES" ]; then echo "$DEVICES";fi');
-echo "<pre><p style=\"text-align:left;\"><b>$output</b></p></pre>";
-?>
-<br>
-View current media inventory:
-<?php echo $output = `sudo -u root -S ../scripts/build_html_opts.sh tape $libidn`; ?>
-<br>
-<br>
-<hr width="100%" size=1 color="blue">
 Library Selected <FONT COLOR=blue><?php echo $libid;?></FONT>
 <input TYPE=HIDDEN name="libid" value=<?php echo $libid;?> READONLY >
 <input TYPE=HIDDEN name="libidn" value=<?php echo $libidn;?> READONLY >

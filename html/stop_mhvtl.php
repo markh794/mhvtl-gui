@@ -74,7 +74,7 @@ echo "<pre>$output</pre>";
 
 
 <td>
-<FORM ACTION="frame_a.php"><INPUT TYPE=SUBMIT VALUE=" OK " ></FORM>
+<FORM ACTION="console.php"><INPUT TYPE=SUBMIT VALUE=" OK " ></FORM>
 </td>
 
 </body>

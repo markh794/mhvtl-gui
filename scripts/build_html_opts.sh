@@ -46,6 +46,110 @@ done
 echo '</SELECT>'
 }
 
+density()
+{
+echo '<SELECT name="density" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+grep ^Slot /etc/mhvtl/library_contents.$1| cut -d ":" -f2| cut -c8- | sort -u| grep -v ^$ | while read each; do
+
+case $each in
+
+X1)
+each=AIT1:X1
+;;
+X2)
+each=AIT2:X2
+;;
+X3)
+each=AIT3:X3
+;;
+X4)
+each=AIT4:X4
+;;
+L1)
+each=LTO1:L1
+;;
+L2)
+each=LTO2:L2
+;;
+L3)
+each=LTO3:L3
+;;
+L4)
+each=LTO4:L4
+;;
+L5)
+each=LTO5:L5
+;;
+L6)
+each=LTO6:L6
+;;
+S3)
+each=SDLT600:S3
+;;
+D7)
+each=DLT7000:D7
+;;
+D8)
+each=DLT8000:D8
+;;
+TA)
+each=T10KA:TA
+;;
+TB)
+each=T10KB:TB
+;;
+TC)
+each=T10KC:TC
+;;
+TZ)
+each=9840A:TZ
+;;
+TY)
+each=9840B:TY
+;;
+TX)
+each=9840C:TX
+;;
+TW)
+each=9840D:TW
+;;
+TV)
+each=9940A:TV
+;;
+TU)
+each=9940B:TU
+;;
+JA)
+each=J1A:JA
+;;
+JB)
+each=E05:JB
+;;
+esac
+
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+}
+
+
+lvvault()
+{
+echo '<SELECT name="vmedia" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
+CHECK=`find /opt/mhvtl/external_media/$1/* | cut -d "/" -f6`
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>'EMPTY'</OPTION>'
+else
+ls -ald /opt/mhvtl/external_media/$1/* | cut -d "/" -f6 | while read each; do
+echo '<OPTION>'$each'</OPTION>'
+done
+echo '</SELECT>'
+fi
+}
+
+
+
+
 stape()
 {
 echo '<SELECT name="tape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -125,10 +229,17 @@ echo '</SELECT>'
 slotf()
 {
 echo '<SELECT name="slotf" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
-mtx -f $2 status| grep -v "Data Transfer Element" | grep Empty | grep -v "IMPORT/EXPORT"| grep -v "Storage Changer"| awk '{print $3,$4}' | while read each; do
+CHECK=`mtx -f $2 status| grep -v "Data Transfer Element" | grep Empty | grep  -v "IMPORT/EXPORT"| grep -v "Storage Changer"| awk '{print $3,$4}'`
+
+if [ -z "$CHECK" ] ; then
+echo '<OPTION>'No Empty Slots Available'</OPTION>'
+echo '</SELECT>'
+else
+mtx -f $2 status| grep -v "Data Transfer Element" | grep Empty | grep  -v "IMPORT/EXPORT"| grep -v "Storage Changer"| awk '{print $3,$4}' | while read each; do
 echo '<OPTION>'$each'</OPTION>'
 done
 echo '</SELECT>'
+fi
 }
 
 map()

@@ -23,8 +23,8 @@ echo "<pre><b>Select configuration type :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.standard.next.library.php" method="post" >
-<input TYPE="submit" style="color: #0000FF" value="Standard" >
+<form action="form.setup.standard.next.library.php" method="post" >
+<input TYPE="submit" class=sameSize style="color: #000000" value="Standard" >
 </form>
 </td>
 </tr>
@@ -32,8 +32,8 @@ echo "<pre><b>Select configuration type :</b></pre>";
 
 <tr>
 <td>
-<img src="images/tab_right.png"  ALIGN="left" ><form action="form.setup.custom.next.library.php" method="post" >
-<input TYPE="submit" style="color: #FF0000" value=" Custom " >
+<form action="form.setup.custom.next.library.php" method="post" >
+<input TYPE="submit" class=sameSize style="color: #000000" value=" Custom " >
 </form>
 </td>
 </tr>

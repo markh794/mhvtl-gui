@@ -22,13 +22,22 @@ echo "<pre><b>Load Map :</b></pre>";
 
 <?php
 $VAR = $_REQUEST['libid'];
-$VAR2 = $_REQUEST['tape'];
+$VAR2 = $_REQUEST['vmedia'];
 $VAR1 = `echo $VAR| cut -d ":" -f1`;
+if ( "$VAR2" == "EMPTY" )
+{
+echo "<pre><b><FONT COLOR=#FF0000>None external Media present ... </FONT></b></pre>";
+echo "<pre><b><FONT COLOR=#000000>Please create external media first </FONT></b></pre>";
+echo "<FORM ACTION='vtlcmd.php'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+exit;
+}
+else
+{ 
 echo "<pre><b><FONT COLOR=#000000>Load $VAR2 in Map for library $VAR </FONT></b></pre>";
+}
 ?>
 
 <table border="0" >
-
 <tr>
 <td>
 <INPUT TYPE=SUBMIT VALUE=" Cancel " input ONCLICK="parent.frames[1].location.href='vtlcmd.php'" target="showframe">

@@ -53,7 +53,7 @@ echo "<pre><b>MHVTL Test:</b></pre>";
 <tr>
 <td>
 <br>
-<b><font color=red size=5>
+<b><font color=red size=3>
 * * * Warning : data loss may occur * * * <br>
 This test will mount random tapes and write to them.<br>
 Tapes will get overwritten .. Be careful with this ...<br>
