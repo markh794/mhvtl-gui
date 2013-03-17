@@ -44,8 +44,9 @@ getID:function(el)
 <TD>
 <div style="overflow:auto;height:70px;width:565px;" id="ReloadThis" >
 <?php
-$output = shell_exec('ps -ef | egrep "tgtd"| egrep -v egrep');
-echo "<pre><FONT COLOR=white >$output</FONT></pre>";
+$procs = shell_exec('ps -ef | egrep "tgtd"| egrep -v egrep');
+// $sockets = shell_exec('netstat -tulpn | grep 3260');
+echo "<pre><FONT COLOR=white >$procs</FONT></pre>";
 ?>
 </div>
 </TD>
@@ -55,10 +56,10 @@ echo "<pre><FONT COLOR=white >$output</FONT></pre>";
 
 <table>
 <td>
-<form action="stgt-procs_quick.php" method="post" onsubmit="return ray.ajax()">
+<form action="tgt-procs_quick.php" method="post" onsubmit="return ray.ajax()">
 <input TYPE="submit" type="submit" style="color: #0000FF" value=" Refresh ">
 </form>
-<FORM ACTION="monitor.php" method="post" onsubmit="return ray.ajax()" ><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
+<FORM ACTION="stgt.php" method="post" onsubmit="return ray.ajax()" ><INPUT TYPE=SUBMIT VALUE="Return"></FORM>
 </td>
 </table>
 

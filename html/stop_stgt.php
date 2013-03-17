@@ -17,8 +17,8 @@
 <?php
 echo "<pre>Starting STGT Daemons:</pre>";
 ?>
-<br>
 
+<!-- 
 <?php
 $filename = '../ENABLE_TGTD_SCSI_TARGET';
 if (!file_exists($filename))
@@ -27,7 +27,7 @@ echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
 exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
 ?>
-
+-->
 
 <TABLE BORDER=4 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 

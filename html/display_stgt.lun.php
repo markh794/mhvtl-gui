@@ -24,7 +24,7 @@ echo "<pre>Display STGT Luns:</pre>";
 
 <?php
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
-$output = ` sudo -u root -S $TGTADMCMD --lld iscsi --mode target --op show >/tmp/display.stgt.lun `;
+$output = ` sudo -u root -S $TGTADMCMD --lld iscsi --op show --mode target | awk '/Target|LUN|Type|Online|Backing store path/' >/tmp/display.stgt.lun `;
 $result = shell_exec('CHECK=`grep ^Target /tmp/display.stgt.target`;if [ -z "$CHECK" ]; then echo No Luns Defined; else cat /tmp/display.stgt.lun; fi');
 echo "<pre><FONT COLOR=#FFFFFF>$result</FONT></pre>";
 ?>
