@@ -18,7 +18,7 @@
 $output = shell_exec('sudo -u root -S uptime');
 echo "<pre>MHVTL $output</pre>";
 ?>
-<br>
+
 
 <script type="text/javascript">
 var ray={
@@ -39,28 +39,32 @@ getID:function(el)
 
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table border="0">
-<td>
-<form action="module_quick.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" type="submit" class="sameSize" style="color: #0000FF" value=" Refresh ">
-</form>
-</td>
 
-<td>
-<FORM ACTION="monitor.php" method="post" onsubmit="return ray.ajax()" >
-<INPUT TYPE=SUBMIT VALUE="Return">
-</FORM></td>
-</table>
-
-
-
+<TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" BORDERCOLOR=grey >
+<TR>
+<TD>
+<div style="overflow:auto;height:75px;width:565px;" id="ReloadThis" >
 
 <?php
 $version = `cat /sys/module/mhvtl/version`;
-echo "<pre>Module Version $version</pre>";
+echo "<pre><FONT COLOR=white> Module Version $version</FONT></pre>";
 $lsmod = shell_exec('sudo -u root -S lsmod | grep mhvtl');
-echo "<pre>lsmod : $lsmod</pre>";
+echo "<pre><FONT COLOR=white>lsmod : $lsmod</FONT></pre>";
 ?>
+
+</TD>
+</TR>
+</TABLE>
+
+
+<form action="module_quick.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" type="submit" style="color: #0000FF" value=" Refresh ">
+</form>
+
+<FORM ACTION="monitor.php" method="post" onsubmit="return ray.ajax()" >
+<INPUT TYPE=SUBMIT VALUE="Return">
+</FORM>
+
 
 </body>
 </html>

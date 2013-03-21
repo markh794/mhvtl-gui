@@ -37,23 +37,31 @@ getID:function(el)
         }
 }
 </script>
+
+
+
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
-<table>
-<td>
-<form action="procs_quick.php" method="post" onsubmit="return ray.ajax()">
-<br>
-<input TYPE="submit" type="submit" class="sameSize" style="color: #0000FF" value=" Refresh ">
-</form>
-</td>
-</table>
+
+<TABLE BORDER='1' CELLSPACING='4' CELLPADDING='4' style="background-color: #000000" BORDERCOLOR=grey >
+<TR>
+<TD>
+<div style="overflow:auto;height:175px;width:565px;" id="ReloadThis" >
 
 <?php
-$output = shell_exec('CHECK=`ps -ef | egrep "vtl|vtllibrary"| egrep -v egrep`; if [ -z "$CHECK" ] ; then echo "System Offline"; else ps -ef | egrep "vtl|vtllibrary"| egrep -v egrep; fi');
-echo "<pre>$output</pre>";
+$output = shell_exec('CHECK=`ps -ef | egrep "vtl|vtllibrary"| egrep -v egrep`; if [ -z "$CHECK" ] ; then echo "System Offline"; else ps -ef | egrep "vtl|vtllibrary|tgtd"| egrep -v egrep; fi');
+echo "<pre><FONT COLOR=white>$output</FONT></pre>";
 ?>
+</TD>
+</TR>
+</TABLE>
 
 <table>
+<form action="procs_quick.php" method="post" onsubmit="return ray.ajax()">
+<input TYPE="submit" type="submit" style="color: #0000FF" value=" Refresh ">
+</form>
+
+
 <FORM ACTION="monitor.php" method="post" onsubmit="return ray.ajax()" >
 <INPUT TYPE=SUBMIT VALUE="Return">
 </FORM>

@@ -54,6 +54,8 @@ echo "<pre><FONT COLOR=blue><b> System Monitor</FONT></b></pre>";
                         setTimeout(function() {Ajax();}, 1000);
                 </script>
 
+
+
 <div style="overflow:auto" id="ReloadThis" >
 <?php
 include 'mon.php' ;
