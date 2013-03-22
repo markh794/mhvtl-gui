@@ -35,7 +35,7 @@ echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 
 <?php
 $filename = '../ENABLE_TGTD_SCSI_TARGET';if (file_exists($filename))
 {
-$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
+$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "TGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
 echo "<pre>$output</pre>";
 }
 ?>
@@ -94,7 +94,7 @@ echo "<pre>$output</pre>";
 ?>
 
 <table>
-<div style="overflow:auto; height:25px;width:370px;">
+<div style="overflow:auto; height:100px;width:570px;">
 <?php
 $output = shell_exec('CHECKL=`sudo -u root -S tail -100 /var/log/messages | sudo -u root -S egrep "vtltape|vtllibrary|tgtd" | egrep -i "warning|fail|error" | grep -v sudo| sort -r | cut -d":" -f1,3,4,5`; if [ ! -z "$CHECKL" ] ; then echo "<FONT COLOR="red">$CHECKL</FONT>"; fi');
 echo "<pre>$output</pre>";

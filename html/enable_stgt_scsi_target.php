@@ -15,9 +15,8 @@
 
 
 <?php
-echo "<pre>Enable STGT:</pre>";
+echo "<pre>Enable TGT:</pre>";
 ?>
-<br>
 
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
 <TR>
@@ -27,7 +26,7 @@ echo "<pre>Enable STGT:</pre>";
 $filename = '../ENABLE_SCST_SCSI_TARGET';if (!file_exists($filename))
 {
 $output = shell_exec("sudo -u root -S touch ../ENABLE_TGTD_SCSI_TARGET >/tmp/disable_scsi_target.tmp");
-echo "<pre><FONT COLOR=#FFFFFF>Enabling STGT ... <br>$output</FONT></pre>";
+echo "<pre><FONT COLOR=#FFFFFF>Enabling TGT ... <br>$output</FONT></pre>";
 }
 else
 {

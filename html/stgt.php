@@ -37,6 +37,17 @@ getID:function(el)
 echo "<pre><b><FONT COLOR=black >iSCSI Target via Linux SCSI target framework <a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe> tgt </a></FONT></b></pre>";
 ?>
 
+
+<?php $filename = '../ENABLE_TGTD_SCSI_TARGET';
+if (!file_exists($filename))
+{
+echo "<FONT COLOR=#FF0000>TGT is currently disabled  </FONT>";
+echo "<FORM ACTION=enable_stgt_scsi_target.php><INPUT TYPE=SUBMIT VALUE=Enable></FORM>";
+exit(0);
+}
+?>
+
+
 <table border="0" >
 
 <?php
