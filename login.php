@@ -8,9 +8,10 @@
 
 <tr>
 <td>
-<img src="html/images/mhvtl.png" ALIGN="center" ><br><b><FONT COLOR=purple size=5>Linux Virtual Tape Library System</FONT></b>
+<img src="html/images/mhvtl.png" ALIGN="center" ><br><b><FONT COLOR=#000000 size=5>Linux Virtual Tape Library System</FONT></b>
 </td>
 </tr>
+
 <br>
 <a href="http://sites.google.com/site/linuxvtl2/"><b><font size=1>Developed by Mark Harvey & Community (markh794@gmail.com)<b></a>
 <br>
