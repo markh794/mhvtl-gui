@@ -19,7 +19,7 @@ echo "<pre><b>View SYSLOG  :</b></pre>";
 <hr width="100%" size=1 color="blue">
 
 <?php
-$output = `sudo -u root -S tail -300 /var/log/messages`;
+$output = `sudo -u root -S tail -300 /var/log/messages| sort -r`;
 echo "<pre>$output</pre>";
 ?>
 

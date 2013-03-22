@@ -74,29 +74,26 @@ $output = shell_exec('sudo -u root -S df -h /opt/mhvtl ');
 echo "<pre>$output</pre>";
 ?>
 
+<?php
+$output = shell_exec('CHECKD=`sudo -u root -S ../scripts/host_mon.sh disk 80`; if [ ! -z "$CHECKD" ] ; then echo "<img src="images/alert.png" /> MHVTL Disk FS Threshold Exceeded = $CHECKD %" ; fi');
+echo "<pre>$output</pre>";
+?>
 
 
-<FONT COLOR="blue"><b>Alerts & Error Messages : </b></FONT>
+
 <table>
 <td>
 <form action="view_syslog.php" method="post" onsubmit="return ray.ajax()">
-<input TYPE="submit" class="sameLook" style="color: #000000" value=" View System Log ">
+<input TYPE="submit" class="sameLook" style="color: #000000" value="System Log Messages">
 </form>
 </td>
 </table>
 
 
-
-
-<?php
-$output = shell_exec('CHECKD=`sudo -u root -S ../scripts/host_mon.sh disk 95`; if [ ! -z "$CHECKD" ] ; then echo "<img src="images/alert.png" /> MHVTL Disk FS Threshold Exceeded = $CHECKD %" ; fi');
-echo "<pre>$output</pre>";
-?>
-
 <table>
-<div style="overflow:auto; height:100px;width:570px;">
+<div style="overflow:auto; height:75px;width:570px;">
 <?php
-$output = shell_exec('CHECKL=`sudo -u root -S tail -100 /var/log/messages | sudo -u root -S egrep "vtltape|vtllibrary|tgtd" | egrep -i "warning|fail|error" | grep -v sudo| sort -r | cut -d":" -f1,3,4,5`; if [ ! -z "$CHECKL" ] ; then echo "<FONT COLOR="red">$CHECKL</FONT>"; fi');
+$output = shell_exec('CHECKL=`sudo -u root -S tail -100 /var/log/messages | sudo -u root -S egrep "vtltape|vtllibrary|tgtd" | egrep -i "warning|fail|error" | grep -v sudo| sort -n | cut -d":" -f1,3,4,5`; if [ ! -z "$CHECKL" ] ; then echo "<FONT COLOR="red">$CHECKL</FONT>"; fi');
 echo "<pre>$output</pre>";
 ?>
 </div>

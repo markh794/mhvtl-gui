@@ -34,7 +34,7 @@ getID:function(el)
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
 <?php
-echo "<pre><b><FONT COLOR=black >iSCSI Target via Linux SCSI target framework <a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe> tgt </a></FONT></b></pre>";
+echo "<pre><b><FONT COLOR=black >iSCSI Target via Linux SCSI target framework <a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe class='image-link' > tgt </a></FONT></b></pre>";
 ?>
 
 
@@ -97,10 +97,9 @@ include 'tgt-fdisplay.php' ;
 </td>
 
 
-
 <tr>
 <td>
-<form action="display_stgt.initiator.cons.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Connections "></form>
+<form action="display_stgt.initiator.cons.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Connections " ></form>
 </td>
 </tr>
 
