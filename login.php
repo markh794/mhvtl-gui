@@ -8,7 +8,7 @@
 
 <tr>
 <td>
-<img src="html/images/mhvtl.png" ALIGN="center" ><br><b><FONT COLOR=#000000 size=5>Linux Virtual Tape Library System</FONT></b>
+<img src="html/images/mhvtl.png" ALIGN="center" hieght=128 width=192 ><br><b><FONT COLOR=#000000 size=5>Linux Virtual Tape Library System</FONT></b>
 </td>
 </tr>
 
