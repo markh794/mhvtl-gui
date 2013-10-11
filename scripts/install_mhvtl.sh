@@ -6,7 +6,7 @@ mkdir -p ../mhvtl.git/patches
 chmod 777 ../mhvtl.git/patches
 cd ../mhvtl.git
 git init
-git pull http://github.com/markh794/mhvtl.git
+git pull https://github.com/markh794/mhvtl.git
 cd ../html
 fi
 

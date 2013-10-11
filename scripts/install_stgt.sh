@@ -22,7 +22,7 @@ fi
 fi
 
 cd ../stgt.git
-git pull http://github.com/fujita/tgt.git
+git pull https://github.com/fujita/tgt.git
 if [ $? != 0 ];then
 echo "<FONT COLOR=red>git pull Failed $? ... Exiting ...</FONT>"
 exit 0

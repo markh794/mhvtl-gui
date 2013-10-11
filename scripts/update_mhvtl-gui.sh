@@ -3,7 +3,7 @@
 if [ ! -d ../.git ]; then
 cd ../
 git init
-git pull http://github.com/niadev67/mhvtl-gui.git
+git pull https://github.com/niadev67/mhvtl-gui.git
 cd html
 fi
 

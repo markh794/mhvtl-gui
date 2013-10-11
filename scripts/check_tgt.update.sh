@@ -4,13 +4,13 @@ if [ ! -d ../stgt.git ]; then
 mkdir -p ../stgt.git
 cd ../stgt.git
 git init
-git pull http://github.com/fujita/tgt.git
+git pull https://github.com/fujita/tgt.git
 cd ../html
 fi
 
 cd ../stgt.git
 
-sudo -u root -S git pull http://github.com/fujita/tgt.git > /dev/null 2>&1
+sudo -u root -S git pull https://github.com/fujita/tgt.git > /dev/null 2>&1
 
 GITEXTRAVERSION=`sudo -u root -S git show-ref --head --abbrev|head -1|awk '{print $1}'`
 

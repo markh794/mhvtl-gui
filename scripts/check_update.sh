@@ -6,13 +6,13 @@ mkdir -p ../mhvtl.git/patches
 chmod 777 ../mhvtl.git/patches
 cd ../mhvtl.git
 git init
-git pull http://github.com/markh794/mhvtl.git
+git pull https://github.com/markh794/mhvtl.git
 cd ../html
 fi
 
 cd ../mhvtl.git
 
-sudo -u root -S git pull http://github.com/markh794/mhvtl.git > /dev/null 2>&1
+sudo -u root -S git pull https://github.com/markh794/mhvtl.git > /dev/null 2>&1
 
 VER=`sudo -u root -S grep ^Version ./mhvtl-utils.spec|awk '{print $2}'`
 REL=`sudo -u root -S grep ^Release ./mhvtl-utils.spec|awk '{print $2}'| cut -d"%" -f1`
