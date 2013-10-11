@@ -5,7 +5,12 @@
 <body>
 <center>
 
-<?php session_start();
+<?php
+
+ob_start(); 
+ob_flush();
+@session_start();
+
 if(isset($_POST['login'])) { $password = $_POST['pswd'];
 
 if ( $password == "mhvtl" ) { //Replace with your password
