@@ -46,7 +46,7 @@ $did = `grep ^Library /etc/mhvtl/device.conf | tail -1| cut -d":" -f2|awk '{ SUM
 <input TYPE=HIDDEN name="dlid" value=<?php echo $nextlid;?> READONLY type="number">
 <input TYPE=HIDDEN name="sn" value="01" READONLY type="number">
 <input TYPE=HIDDEN name="dvi" value="IBM" READONLY type="text">
-Select Drive Model: <select name="pi"><OPTION>ULT3580-TD1</option><OPTION>ULT3580-TD2</option><OPTION>ULT3580-TD3</option><OPTION>ULT3580-TD4</option><OPTION>ULT3580-TD5</option><OPTION>ULT3580-TD6</option><OPTION>ULT3580-HH4</option><OPTION>ULTRIUM-TD1</option><OPTION>ULTRIUM-TD2</option><OPTION>ULTRIUM-TD3</option><OPTION>ULTRIUM-TD4</option><OPTION>ULTRIUM-TD5</option><OPTION>ULTRIUM-TD6</option><OPTION>03592E05</OPTION><OPTION>03592J1</OPTION></select><b><FONT COLOR="red">*</FONT></b>
+Select Drive Model: <select name="pi"><OPTION>ULT3580-TD1</option><OPTION>ULT3580-TD2</option><OPTION>ULT3580-TD3</option><OPTION>ULT3580-TD4</option><OPTION>ULT3580-TD5</option><OPTION>ULT3580-TD6</option><OPTION>ULT3580-HH4</option><OPTION>ULTRIUM-TD1</option><OPTION>ULTRIUM-TD2</option><OPTION>ULTRIUM-TD3</option><OPTION>ULTRIUM-TD4</option><OPTION>ULTRIUM-TD5</option><OPTION>ULTRIUM-TD6</option><OPTION>03592E05</OPTION><OPTION>03592J1A</OPTION></select><b><FONT COLOR="red">*</FONT></b>
 <input TYPE=HIDDEN name="prl" value="252D" READONLY type="text">
 <input TYPE=HIDDEN name="usn" value=<?php echo $nextlid+70000001;?>  READONLY type="text"></a>
 <input TYPE=HIDDEN name="naa" value="Auto-Generated" READONLY type="text"><br>
