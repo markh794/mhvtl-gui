@@ -118,13 +118,13 @@ E05) type=JB
 ;;
 E06) type=JB
 ;;
-"HP Ultrium 3-SCSI") type=L3
+"Ultrium 3-SCSI") type=L3
 ;;
-"HP Ultrium 4-SCSI") type=L4
+"Ultrium 4-SCSI") type=L4
 ;;
-"HP Ultrium 5-SCSI") type=L5
+"Ultrium 5-SCSI") type=L5
 ;;
-"HP Ultrium 6-SCSI") type=L6
+"Ultrium 6-SCSI") type=L6
 ;;
 *) type=XX
 ;;
