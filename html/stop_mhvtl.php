@@ -66,7 +66,7 @@ echo "<pre>$output</pre>";
 
 <td>
 <?php
-$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=center /><b>"" STGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=center /><b>"" STGT:<FONT COLOR="red">STOPPED </FONT></b>";fi');
+$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=center /><b>"" STGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=center /><b>"" STGT:<FONT COLOR="red">STOPPED </FONT></b>";fi');
 echo "<pre>$output</pre>";
 ?>
 </td>

@@ -35,7 +35,7 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 <TD>
 
 <?php
-$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green"> RUNNING</FONT> :<FONT COLOR="red"> Shutting down ... </FONT>";sudo -u root -S pkill -9 tgtd >/tmp/stopping.stgt ;else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red"> Already STOPPED : Exiting ... </FONT></a>";fi');
+$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green"> RUNNING</FONT> :<FONT COLOR="red"> Shutting down ... </FONT>";sudo -u root -S pkill -9 tgtd >/tmp/stopping.stgt ;else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red"> Already STOPPED : Exiting ... </FONT></a>";fi');
 $file = "/tmp/starting.stgt";
 $result = file_get_contents($file);
 echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
@@ -54,7 +54,7 @@ sleep(1);
 
 <td>
 <?php
-$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green">RUNNING </FONT>";else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red">STOPPED </FONT></a>";fi');
+$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green">RUNNING </FONT>";else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red">STOPPED </FONT></a>";fi');
 echo "<pre>$output</pre>";
 ?>
 </td>

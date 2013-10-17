@@ -35,7 +35,7 @@ echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 
 <?php
 $filename = '../ENABLE_TGTD_SCSI_TARGET';if (file_exists($filename))
 {
-$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "TGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
+$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "TGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
 echo "<pre>$output</pre>";
 }
 ?>

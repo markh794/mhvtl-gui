@@ -44,7 +44,7 @@ getID:function(el)
 <TD>
 <div style="overflow:auto;height:70px;width:565px;" id="ReloadThis" >
 <?php
-$output = shell_exec('ps -ef | egrep "tgtd"| egrep -v egrep');
+$output = shell_exec('ps -ef | egrep tgtd| egrep -v grep|grep -v scsi_tgtd');
 echo "<pre><FONT COLOR=white >$output</FONT></pre>";
 ?>
 </div>

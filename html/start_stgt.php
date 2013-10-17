@@ -34,7 +34,7 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 <TD>
 
 <?php
-$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green"> Already RUNNING Exiting ... </FONT>";else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red"> STOPPED</FONT> :<FONT COLOR="green"> Starting ... </FONT></a>";if [ -f /usr/sbin/tgtd ]; then sudo -u root -S /usr/sbin/tgtd -d 1; else sudo -u root -S ../stgt.git/usr/tgtd -d 1; fi >/tmp/starting.stgt;fi');
+$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green"> Already RUNNING Exiting ... </FONT>";else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red"> STOPPED</FONT> :<FONT COLOR="green"> Starting ... </FONT></a>";if [ -f /usr/sbin/tgtd ]; then sudo -u root -S /usr/sbin/tgtd -d 1; else sudo -u root -S ../stgt.git/usr/tgtd -d 1; fi >/tmp/starting.stgt;fi');
 $restoreconfig = shell_exec('sudo PATH=/usr/sbin:sudo /usr/sbin/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl');
 $file = "/tmp/starting.stgt";
 $result = file_get_contents($file);
@@ -57,7 +57,7 @@ sleep(1);
 
 <td>
 <?php
-$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green">RUNNING </FONT>";else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red">STOPPED </FONT></a>";fi');
+$output = shell_exec('RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd|  wc -l`; if [ $RUNNING -gt 0 ]; then echo "<img src="images/green_light.png" />" "STATE:<FONT COLOR="green">RUNNING </FONT>";else echo "<img src="images/red_light.png" />" "STATE:<FONT COLOR="red">STOPPED </FONT></a>";fi');
 echo "<pre>$output</pre>";
 ?>
 </td>

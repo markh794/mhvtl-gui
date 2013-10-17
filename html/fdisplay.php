@@ -24,7 +24,7 @@ if ($dm=="")
 $mhvtlver = shell_exec('sudo -u root -S vtlcmd -V| cut -d "-" -f1,3| cut -d ":" -f2| cut -d " " -f2');
 $output = shell_exec('DEVICES=`sudo -u root -S lsscsi -g | egrep "tape|mediumx"`; if [ -z "$DEVICES" ]; then echo "<img src="images/fd_red_light.png" align=center /><FONT COLOR=#ffffff > MHVTL: </FONT><FONT COLOR=#FF0000 >OFFLINE</FONT>"; else echo "<img src="images/fd_green_light.png" align=center /><FONT COLOR=#ffffff > MHVTL: </FONT><FONT COLOR=#00ff00 >ONLINE</FONT>"; fi');
 
-$output1 = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=center /><FONT COLOR="#ffffff" > tgt  : </FONT><FONT COLOR=#00ff00 >ONLINE</FONT>";else echo "<img src="images/red_light.png" align=center /><FONT COLOR="#ffffff" > tgt  : </FONT></FONT><FONT COLOR=#FF0000 >OFFLINE</FONT>";fi');
+$output1 = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=center /><FONT COLOR="#ffffff" > tgt  : </FONT><FONT COLOR=#00ff00 >ONLINE</FONT>";else echo "<img src="images/red_light.png" align=center /><FONT COLOR="#ffffff" > tgt  : </FONT></FONT><FONT COLOR=#FF0000 >OFFLINE</FONT>";fi');
 
 
 echo "<pre>$output$output1</pre>";

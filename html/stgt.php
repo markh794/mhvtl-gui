@@ -53,7 +53,7 @@ exit(0);
 <?php
 $filename = '/usr/sbin/tgtadm';if (file_exists($filename))
 {
-$STGTPROCS = shell_exec('ps -ef | egrep "tgtd"|egrep -v egrep');
+$STGTPROCS = shell_exec('ps -ef | egrep tgtd|egrep -v grep|grep -v scsi_tgtd');
 if ( '' == $STGTPROCS )
 {
 echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Stopped </FONT></b><form action='confirm.start_stgt.php' method=post onsubmit=return ray.ajax()><input TYPE=submit style='color: #008000;font-weight: bold' value=' Start ' ></form>";

@@ -44,7 +44,7 @@ getID:function(el)
 <TD>
 <div style="overflow:auto;height:70px;width:565px;" id="ReloadThis" >
 <?php
-$procs = shell_exec('ps -ef | egrep "tgtd"| egrep -v egrep');
+$procs = shell_exec('ps -ef | egrep "tgtd" | egrep -v egrep | egrep -v "scsi_tgtd" ');
 // $sockets = shell_exec('netstat -tulpn | grep 3260');
 echo "<pre><FONT COLOR=white >$procs</FONT></pre>";
 ?>
