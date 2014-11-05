@@ -1,16 +1,5 @@
 #!/bin/bash
 
-testphp()
-{
-CHECKPHP=`php html/testphp.php | grep ^"PHP Version"`
-if [ ! -z "$CHECKPHP" ]; then
-	echo "PASS" >/tmp/test.required.components.testphp
-else
-	echo '<img src="html/images/red_light.png" align=top /><FONT COLOR=orange> FAIL: PHP not detected</FONT>'
-	echo "FAIL" >/tmp/test.required.components.testphp
-fi
-}
-
 testsudo()
 {
 CHECK=`sudo -u root -S date`

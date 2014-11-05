@@ -4,7 +4,8 @@
 <link href="html/styles.css" rel="stylesheet" type="text/css">
 <body>
 <center>
-<hr width="100%" size=10 color="blue">
+ <?php // <h1> if you read this in your browser php is not enabled on your web server </h1>  ?>
+ <hr width="100%" size=10 color="blue">
 
 <tr>
 <td>
