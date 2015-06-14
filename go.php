@@ -11,13 +11,14 @@ ob_start();
 ob_flush();
 @session_start();
 
-if(isset($_POST['login'])) { $password = $_POST['pswd'];
+if(isset($_POST['login'])) {
+	$password = $_POST['pswd'];
 
-if ( $password == "mhvtl" ) { //Replace with your password
-  $_SESSION['phplogin'] = true;
-    header('Location: html/mhvtl.php');
-    exit;
-   } else {
+	if ( $password == "mhvtl" ) { //Replace with your password
+		$_SESSION['phplogin'] = true;
+		header('Location: html/mhvtl.php');
+		exit;
+	} else {
 ?>
   <script type="text/javascript">
  <!--
@@ -25,9 +26,10 @@ if ( $password == "mhvtl" ) { //Replace with your password
  //-->
  </script>
 <?php
-  }
-   }
+	}
+}
 ?>
+
 <FONT COLOR=green><b>Enter Password </b></FONT>
 <br>
 <form method="post" action="">

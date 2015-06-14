@@ -22,7 +22,9 @@ echo "<pre><b>About MHVTL Web Console:</b></pre>";
 
 <?php
 $gui_ver = `cat ../version`;
-echo "<pre><b><FONT COLOR=purple >Web Console Release </FONT><FONT COLOR=black>$gui_ver <a href=# ONCLICK=parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com' target=showframe> Built by nia</a></FONT></b></pre>";
+echo "<pre><b><FONT COLOR=purple >Web Console Release </FONT><FONT COLOR=black>$gui_ver";
+echo "<a href=# ONCLICK=parent.frames[1].location.href='http://mhvtl-community-forums.966029.n3.nabble.com' target=showframe>Built by nia and Comunity</a> ";
+echo "(This version is a fork of nia work)</FONT></b></pre>";
 ?>
 
 
