@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Detects which OS and if it is Linux then it will detect which Linux Distribution.
 
 OS=`uname -s`
@@ -24,7 +24,6 @@ if [ "${OS}" = "Linux" ] ; then
         elif [ -f /etc/SuSE-release ] ; then
                 DIST=`cat /etc/SuSE-release | tr "\n" ' '| sed s/VERSION.*//`
                 REV=`cat /etc/SuSE-release | tr "\n" ' ' | sed s/.*=\ //`
-
 	elif [ -f /etc/mandrake-release ] ; then
 		DIST='Mandrake'
 		PSUEDONAME=`cat /etc/mandrake-release | sed s/.*\(// | sed s/\)//`
@@ -52,7 +51,6 @@ if [ "${OS}" = "Linux" ] ; then
                 DIST='Gentoo'
                 PSUEDONAME=`cat /etc/gentoo-release | sed s/.*\(// | sed s/\)//`
                 REV=`cat /etc/gentoo-release | sed s/.*release\ // | sed s/\ .*//`
-
         elif [ ! -f /etc/*_version ] ; then
                 DIST="Unknown"
                 PSUEDONAME=""

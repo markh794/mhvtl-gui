@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -d ../mhvtl.git ]; then
-mkdir -p ../mhvtl.git
-mkdir -p ../mhvtl.git/patches
-chmod 777 ../mhvtl.git/patches
-cd ../mhvtl.git
-git init
-git pull https://github.com/markh794/mhvtl.git
-cd ../html
+	mkdir -p ../mhvtl.git
+	mkdir -p ../mhvtl.git/patches
+	chmod 777 ../mhvtl.git/patches
+	cd ../mhvtl.git
+	git init
+	git pull https://github.com/markh794/mhvtl.git
+	cd ../html
 fi
 
 echo "Installing/Updating MHVTL, Please Wait ..."
@@ -17,8 +17,8 @@ echo "Stopping MHVTL, Please Wait ..."
 
 RUNNING=`sudo -u root -S ps -ef | egrep "tgtd"|egrep -v egrep|  wc -l`
 if [ $RUNNING -gt 0 ]; then 
-echo STGT STATE : RUNNING , Shutting down ... 
-pkill -9 tgtd
+	echo STGT STATE : RUNNING , Shutting down ... 
+	pkill -9 tgtd
 fi
 
 
@@ -31,26 +31,26 @@ make distclean
 cd kernel
 make
 if [ $? -ne 0 ] ; then
-echo "Compilation Error ... Exitting ..."
-exit 1
+	echo "Compilation Error ... Exitting ..."
+	exit 1
 fi
 cd ../
 make
 if [ $? -ne 0 ] ; then
-echo "Compilation Error ... Exitting ..."
-exit 1
+	echo "Compilation Error ... Exitting ..."
+	exit 1
 fi
 cd kernel
 make install
 if [ $? -ne 0 ] ; then
-echo "Installation Error ... Exitting ..."
-exit 1
+	echo "Installation Error ... Exitting ..."
+	exit 1
 fi
 cd ../
 make install
 if [ $? -ne 0 ] ; then
-echo "Installation Error ... Exitting ..."
-exit 1
+	echo "Installation Error ... Exitting ..."
+	exit 1
 fi
 
 echo "Starting MHVTL, Please Wait ..."

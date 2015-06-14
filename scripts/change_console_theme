@@ -1,9 +1,11 @@
+#!/bin/bash
+
 VAR1=`cat /tmp/themes.tmp | cut -d ":" -f2|cut -c2- |sed 's/ //g'`
 VAR2=`grep "background-color" styles.css| cut -d ":" -f2| cut -d ";" -f1|cut -c2- |sed 's/ //g'`
 if [ -z "$VAR1" ] || [ -z "$VAR2" ] ; then
-echo "An error occured .. exiting .. "
+	echo "An error occured .. exiting .. "
 else
-perl -p -i -e "s/$VAR2/$VAR1/g" styles.css
-echo Color has been set to $VAR1
+	perl -p -i -e "s/$VAR2/$VAR1/g" styles.css
+	echo Color has been set to $VAR1
 fi
 rm -f /tmp/themes.tmp

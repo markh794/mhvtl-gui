@@ -1,25 +1,27 @@
+#!/bin/bash
+
 start()
 {
-sleep 10
-/sbin/modprobe scst
-/sbin/modprobe qla2x00tgt
-/sbin/modprobe scst_tape
-/sbin/modprobe scst_changer
-/etc/init.d/iscsi-scst start
-/usr/local/sbin/scstadmin -config /etc/scst.conf -force -noprompt
-/usr/local/sbin/scstadmin -list_sessions
+	sleep 10
+	/sbin/modprobe scst
+	/sbin/modprobe qla2x00tgt
+	/sbin/modprobe scst_tape
+	/sbin/modprobe scst_changer
+	/etc/init.d/iscsi-scst start
+	/usr/local/sbin/scstadmin -config /etc/scst.conf -force -noprompt
+	/usr/local/sbin/scstadmin -list_sessions
 }
 
 stop()
 {
-/usr/local/sbin/scstadmin -list_sessions
-/sbin/rmmod scst_changer
-/sbin/rmmod scst_tape
-/sbin/rmmod qla2x00tgt
-/etc/init.d/iscs-iscst stop
+	/usr/local/sbin/scstadmin -list_sessions
+	/sbin/rmmod scst_changer
+	/sbin/rmmod scst_tape
+	/sbin/rmmod qla2x00tgt
+	/etc/init.d/iscs-iscst stop
 }
 
 if [ -f ../ENABLE_SCST_SCSI_TARGET ]; then
-$1
+	$1
 fi
 

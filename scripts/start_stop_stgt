@@ -1,23 +1,23 @@
-
+#!/bin/bash
 
 start()
 {
-sleep 10
-if [ -f /usr/sbin/tgtd ]; then 
-/usr/sbin/tgtd -d 1
-/usr/sbin/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl
-else 
-../stgt.git/usr/tgtd -d 1
-../stgt.git/scripts/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl
-fi
+	sleep 10
+	if [ -f /usr/sbin/tgtd ]; then 
+		/usr/sbin/tgtd -d 1
+		/usr/sbin/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl
+	else 
+		../stgt.git/usr/tgtd -d 1
+		../stgt.git/scripts/tgt-admin -e --conf=/etc/tgt/targets.conf.mhvtl
+	fi
 }
 
 stop()
 {
-echo Stopping STGT ...
-pkill -9 "tgtd"
+	echo Stopping STGT ...
+	pkill -9 "tgtd"
 }
 
 if [ -f ../ENABLE_TGTD_SCSI_TARGET ]; then
-$1
+	$1
 fi

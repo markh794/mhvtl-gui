@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 count=1
@@ -37,57 +37,61 @@ VCTT=${32}
 VBK=${33}
 
 if [ $count -eq $number ] ; then
-exit
+	exit
 fi
 
 
 while true; do
 
-VARx=$((VARx+1))
-VARr=$((VARr+1))
-VAR4=$((VAR4+1))
-VAR8=$((VAR8+1))
+	VARx=$((VARx+1))
+	VARr=$((VARr+1))
+	VAR4=$((VAR4+1))
+	VAR8=$((VAR8+1))
 
-echo >>/tmp/device.conf.tmp
-echo "Drive: "$VARx" CHANNEL: "$VAR2" TARGET: $VAR3 LUN: "$VAR4 >>/tmp/device.conf.tmp
-echo " Library ID: "$VAR1" Slot: "$VARr >>/tmp/device.conf.tmp
-echo " Vendor identification: "$VAR5 >>/tmp/device.conf.tmp
-echo " Product identification: "$VAR6 >>/tmp/device.conf.tmp
-echo " Product revision level: "$VAR7 >>/tmp/device.conf.tmp
-echo " Unit serial number: "$VAR8 >>/tmp/device.conf.tmp
-echo " NAA: $VAR1:11:22:33:ab:$VAR2:$VAR3:$VAR4" >>/tmp/device.conf.tmp
-echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp
-echo " Compression type: "$VCTT >>/tmp/device.conf.tmp
-if [ $VBK != "Default" ] ; then echo " Backoff:" $VBK  >>/tmp/device.conf.tmp; else echo " Backoff:" 400  >>/tmp/device.conf.tmp; fi
+	echo >>/tmp/device.conf.tmp
+	echo "Drive: "$VARx" CHANNEL: "$VAR2" TARGET: $VAR3 LUN: "$VAR4 >>/tmp/device.conf.tmp
+	echo " Library ID: "$VAR1" Slot: "$VARr >>/tmp/device.conf.tmp
+	echo " Vendor identification: "$VAR5 >>/tmp/device.conf.tmp
+	echo " Product identification: "$VAR6 >>/tmp/device.conf.tmp
+	echo " Product revision level: "$VAR7 >>/tmp/device.conf.tmp
+	echo " Unit serial number: "$VAR8 >>/tmp/device.conf.tmp
+	echo " NAA: $VAR1:11:22:33:ab:$VAR2:$VAR3:$VAR4" >>/tmp/device.conf.tmp
+	echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp
+	echo " Compression type: "$VCTT >>/tmp/device.conf.tmp
+	if [ $VBK != "Default" ] ; then
+		echo " Backoff:" $VBK  >>/tmp/device.conf.tmp;
+	else
+		echo " Backoff:" 400  >>/tmp/device.conf.tmp;
+	fi
 
-if [ "$DOI" = "yes" ]&&[ "$ROC" = "yes" ] ; then
-echo " READ_ONLY: "$VARc >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$RO1C" = "yes" ] ; then
-echo " READ_ONLY: "$VARd >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$RWC" = "yes" ] ; then
-echo " READ_WRITE: "$VARe >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$RW1C" = "yes" ] ; then
-echo " READ_WRITE: "$VARf >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$WMC" = "yes" ] ; then
-echo " WORM: "$VARg >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$WM1C" = "yes" ] ; then
-echo " WORM: "$VARh >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$ECRC" = "yes" ] ; then
-echo " ENCRYPTION: "$VARi >>/tmp/device.conf.tmp
-fi
-if [ "$DOI" = "yes" ]&& [ "$ECR1C" = "yes" ] ; then
-echo " ENCRYPTION: "$VARj >>/tmp/device.conf.tmp
-fi
+	if [ "$DOI" = "yes" ]&&[ "$ROC" = "yes" ] ; then
+		echo " READ_ONLY: "$VARc >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$RO1C" = "yes" ] ; then
+		echo " READ_ONLY: "$VARd >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$RWC" = "yes" ] ; then
+		echo " READ_WRITE: "$VARe >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$RW1C" = "yes" ] ; then
+		echo " READ_WRITE: "$VARf >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$WMC" = "yes" ] ; then
+		echo " WORM: "$VARg >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$WM1C" = "yes" ] ; then
+		echo " WORM: "$VARh >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$ECRC" = "yes" ] ; then
+		echo " ENCRYPTION: "$VARi >>/tmp/device.conf.tmp
+	fi
+	if [ "$DOI" = "yes" ]&& [ "$ECR1C" = "yes" ] ; then
+		echo " ENCRYPTION: "$VARj >>/tmp/device.conf.tmp
+	fi
 
-count=$((count+1))
-if [ $count -eq $number ] ; then
-exit
-fi
+	count=$((count+1))
+	if [ $count -eq $number ] ; then
+		exit
+	fi
 
 done

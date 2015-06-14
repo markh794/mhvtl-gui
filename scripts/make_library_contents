@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 libid=$7
 numberofdrives=$4
@@ -6,12 +6,12 @@ countdrive=1
 echo " "
 
 while true; do
-echo "Drive"$countdrive":"
-countdrive=$((countdrive+1))
-if [ $countdrive -gt $numberofdrives ] ; then
-echo " "
-break
-fi
+	echo "Drive"$countdrive":"
+	countdrive=$((countdrive+1))
+	if [ $countdrive -gt $numberofdrives ] ; then
+		echo " "
+	break
+	fi
 
 done
 
@@ -22,112 +22,63 @@ echo "Picker 1:"
 echo " "
 
 while true; do
-echo "MAP "$countmap":"
-countmap=$((countmap+1))
-if [ $countmap -gt $numberofmaps ] ; then
-echo " "
-break
-fi
-
+	echo "MAP "$countmap":"
+	countmap=$((countmap+1))
+	if [ $countmap -gt $numberofmaps ] ; then
+		echo " "
+	break
+	fi
 done
 
 
-
 case $1 in
-AIT1) type=X1
-;;
-AIT2) type=X2
-;;
-AIT3) type=X3
-;;
-AIT4) type=X4
-;;
-DDS1) type=S1
-;;
-DDS2) type=S2
-;;
-DDS3) type=S3
-;;
-DDS4) type=S4
-;;
-DLT3) type=D3
-;;
-DLT4) type=D4
-;;
-LTO1) type=L1
-;;
-LTO2) type=L2
-;;
-LTO3) type=L3
-;;
-LTO4) type=L4
-;;
-LTO5) type=L5
-;;
-LTO6) type=L6
-;;
-SDLT1) type=S1
-;;
-SDLT2) type=S2
-;;
-SDLT3) type=S3
-;;
-SDLT4) type=S4
-;;
-SuperDLT1) type=S1
-;;
-SDLT220) type=S2
-;;
-SDLT320) type=S3
-;;
-SDLT600) type=S3
-;;
-DLT-S4) type=S4
-;;
-DLT7000) type=D7
-;;
-DLT8000) type=D8
-;;
-T10KA) type=TA
-;;
-T10KB) type=TB
-;;
-T10KC) type=TC
-;;
-T10000A) type=TA
-;;
-T10000B) type=TB
-;;
-T10000C) type=TC
-;;
-9840A) type=TZ
-;;
-9840B) type=TY
-;;
-9840C) type=TX
-;;
-9840D) type=TW
-;;
-9940A) type=TV
-;;
-9940B) type=TU
-;;
-J1A) type=JA
-;;
-E05) type=JB
-;;
-E06) type=JB
-;;
-"Ultrium 3-SCSI") type=L3
-;;
-"Ultrium 4-SCSI") type=L4
-;;
-"Ultrium 5-SCSI") type=L5
-;;
-"Ultrium 6-SCSI") type=L6
-;;
-*) type=XX
-;;
+AIT1) type=X1 ;;
+AIT2) type=X2 ;;
+AIT3) type=X3 ;;
+AIT4) type=X4 ;;
+DDS1) type=S1 ;;
+DDS2) type=S2 ;;
+DDS3) type=S3 ;;
+DDS4) type=S4 ;;
+DLT3) type=D3 ;;
+DLT4) type=D4 ;;
+LTO1) type=L1 ;;
+LTO2) type=L2 ;;
+LTO3) type=L3 ;;
+LTO4) type=L4 ;;
+LTO5) type=L5 ;;
+LTO6) type=L6 ;;
+SDLT1) type=S1 ;;
+SDLT2) type=S2 ;;
+SDLT3) type=S3 ;;
+SDLT4) type=S4 ;;
+SuperDLT1) type=S1 ;;
+SDLT220) type=S2 ;;
+SDLT320) type=S3 ;;
+SDLT600) type=S3 ;;
+DLT-S4) type=S4 ;;
+DLT7000) type=D7 ;;
+DLT8000) type=D8 ;;
+T10KA) type=TA ;;
+T10KB) type=TB ;;
+T10KC) type=TC ;;
+T10000A) type=TA ;;
+T10000B) type=TB ;;
+T10000C) type=TC ;;
+9840A) type=TZ ;;
+9840B) type=TY ;;
+9840C) type=TX ;;
+9840D) type=TW ;;
+9940A) type=TV ;;
+9940B) type=TU ;;
+J1A) type=JA ;;
+E05) type=JB ;;
+E06) type=JB ;;
+"Ultrium 3-SCSI") type=L3 ;;
+"Ultrium 4-SCSI") type=L4 ;;
+"Ultrium 5-SCSI") type=L5 ;;
+"Ultrium 6-SCSI") type=L6 ;;
+*) type=XX ;;
 esac
 
 prefix=$2
@@ -139,69 +90,68 @@ totalslots=$(($total+$freeslots))
 
 HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$libid'/' /tmp/device.conf.tmp | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
 if [ "$HOMEDIR" = "" ] ; then
-HOMEDIR="/opt/mhvtl"
+	HOMEDIR="/opt/mhvtl"
 fi
 
 CHECK_UNIQUE_TYPE=`sudo -u root -S ls -1d $HOMEDIR/$prefix*$type`
 if [ ! -z "$CHECK_UNIQUE_TYPE" ] ; then
-echo "<b><FONT COLOR="red" size=5 ># *** Warning *** </FONT></b><br>"
-echo "<b><FONT COLOR="red" size=5 ># *** Media barcode not unique .. You may need to  select different barcode *** </FONT></b><br>"
-echo "<b><FONT COLOR="red" size=5 ># *** Warning *** </FONT></b><br>"
+	echo "<b><FONT COLOR="red" size=5 ># *** Warning *** </FONT></b><br>"
+	echo "<b><FONT COLOR="red" size=5 ># *** Media barcode not unique .. You may need to  select different barcode *** </FONT></b><br>"
+	echo "<b><FONT COLOR="red" size=5 ># *** Warning *** </FONT></b><br>"
 fi
 
 while true; do
-count=$((count+1))
+	count=$((count+1))
 
-if [ $count -gt $totalslots ] ; then
-exit
+	if [ $count -gt $totalslots ] ; then
+		exit
 
-elif [ $count -gt $total ]; then
-echo "Slot" $count:
+	elif [ $count -gt $total ]; then
+		echo "Slot" $count:
 
-elif [ $count -lt 10 ]; then
-if [ $count -eq $total ] ; then
-echo "Slot" $count: CLN'00'"$count"$type
-else
-echo "Slot" $count: $prefix'0000'"$count"$type
-fi
+	elif [ $count -lt 10 ]; then
+		if [ $count -eq $total ] ; then
+			echo "Slot" $count: CLN'00'"$count"$type
+		else
+			echo "Slot" $count: $prefix'0000'"$count"$type
+		fi
 
-elif [ $count -lt 100 ]; then
-if [ $count -eq $total ] ; then
-echo "Slot" $count: CLN'0'"$count"$type
-else
-echo "Slot" $count: $prefix'000'"$count"$type
-fi
+	elif [ $count -lt 100 ]; then
+		if [ $count -eq $total ] ; then
+			echo "Slot" $count: CLN'0'"$count"$type
+		else
+			echo "Slot" $count: $prefix'000'"$count"$type
+		fi
+	
+	elif [ $count -lt 1000 ]; then
+		if [ $count -eq $total ] ; then
+			echo "Slot" $count: CLN"$count"$type
+		else
+			echo "Slot" $count: $prefix'00'"$count"$type
+		fi
 
-elif [ $count -lt 1000 ]; then
-if [ $count -eq $total ] ; then
-echo "Slot" $count: CLN"$count"$type
-else
-echo "Slot" $count: $prefix'00'"$count"$type
-fi
-
-elif [ $count -lt 10000 ]; then
-if [ $count -eq $total ] ; then
-echo "Slot" $count: CLN"999"$type
-else
-echo "Slot" $count: $prefix'0'"$count"$type
-fi
-
-
-elif [ $count -lt 99999 ]; then
-if [ $count -eq $total ] ; then
-echo "Slot" $count: CLN"999"$type
-else
-echo "Slot" $count: $prefix"$count"$type
-fi
+	elif [ $count -lt 10000 ]; then
+		if [ $count -eq $total ] ; then
+			echo "Slot" $count: CLN"999"$type
+		else
+			echo "Slot" $count: $prefix'0'"$count"$type
+		fi
 
 
-elif [ $count -gt 99998 ]; then
-echo "Slot" 99999: CLN"999"$type
-exit
+	elif [ $count -lt 99999 ]; then
+		if [ $count -eq $total ] ; then
+			echo "Slot" $count: CLN"999"$type
+		else
+			echo "Slot" $count: $prefix"$count"$type
+		fi
 
-else
-echo
-fi
+	elif [ $count -gt 99998 ]; then
+		echo "Slot" 99999: CLN"999"$type
+		exit
+
+	else
+		echo
+	fi
 
 done
 fi
