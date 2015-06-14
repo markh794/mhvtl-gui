@@ -23,15 +23,16 @@ echo "<pre>Enable TGT:</pre>";
 <TD>
 
 <?php
-$filename = '../ENABLE_SCST_SCSI_TARGET';if (!file_exists($filename))
-{
-$output = shell_exec("sudo -u root -S touch ../ENABLE_TGTD_SCSI_TARGET >/tmp/disable_scsi_target.tmp");
-echo "<pre><FONT COLOR=#FFFFFF>Enabling TGT ... <br>$output</FONT></pre>";
+
+$filename = '../ENABLE_SCST_SCSI_TARGET';
+
+if (!file_exists($filename)) {
+	$output = shell_exec("sudo -u root -S touch ../ENABLE_TGTD_SCSI_TARGET >/tmp/disable_scsi_target.tmp");
+	echo "<pre><FONT COLOR=#FFFFFF>Enabling TGT ... <br>$output</FONT></pre>";
+} else {
+	echo "<pre><FONT COLOR=#FF0000>SCST Enabled .. Please disable first<br>$output</FONT></pre>";
 }
-else
-{
-echo "<pre><FONT COLOR=#FF0000>SCST Enabled .. Please disable first<br>$output</FONT></pre>";
-}
+
 ?>
 
 </TD>

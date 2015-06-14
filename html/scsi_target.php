@@ -24,14 +24,14 @@ echo "<pre><b> SCSI Target System :</b></pre>";
 <!--
 <tr>
 <td>
-<?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
-{
-echo "<pre><img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3> SCSI Target : </><FONT COLOR=#347C17> Enabled </FONT></b></pre>";
+<?php
+
+if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET")) {
+	echo "<pre><img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3> SCSI Target : </><FONT COLOR=#347C17> Enabled </FONT></b></pre>";
+} else {
+	echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3> SCSI Target : </><FONT COLOR=#FF0000> Disabled </FONT></b></pre>";
 }
-else
-{
-echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3> SCSI Target : </><FONT COLOR=#FF0000> Disabled </FONT></b></pre>";
-}
+
 ?>
 </td>
 </tr>

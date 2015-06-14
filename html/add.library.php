@@ -27,21 +27,20 @@ $VR3 = $_REQUEST['mc'];
 $VBA = $_REQUEST['es'];
 
 $sum_total_slots = $VR3 + $VBA;
-if ($sum_total_slots > 15001 )
-{
-echo "<hr width=100% size=1 color=blue>";
-echo "<table border=1>";
-echo "<br>";
-echo "<FONT COLOR=red size=4 >Error !</FONT>";
-echo "<br>";
-echo "<FONT COLOR=red size=3 >Total number of Library Slots exceeded 15000 !</FONT>";
-echo "<br>";
-echo "<FONT COLOR=red size=3 >Both empty and full slot count must not exceed 15000</FONT>";
-echo "<br>";
-echo "<br>";
-echo "<FORM ACTION=form.setup.complete.php><INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
-echo "</table>";
-exit(0);
+if ($sum_total_slots > 15001 ) {
+	echo "<hr width=100% size=1 color=blue>";
+	echo "<table border=1>";
+	echo "<br>";
+	echo "<FONT COLOR=red size=4 >Error !</FONT>";
+	echo "<br>";
+	echo "<FONT COLOR=red size=3 >Total number of Library Slots exceeded 15000 !</FONT>";
+	echo "<br>";
+	echo "<FONT COLOR=red size=3 >Both empty and full slot count must not exceed 15000</FONT>";
+	echo "<br>";
+	echo "<br>";
+	echo "<FORM ACTION=form.setup.complete.php><INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
+	echo "</table>";
+	exit(0);
 }
 
 $t0 = `echo "Library: "'$V1'" CHANNEL: "'$V2'" TARGET: "'$V3'" LUN: "'00' >/tmp/device.conf.tmp`;
@@ -52,15 +51,11 @@ $t4 = `echo " Unit serial number: "$V8 >>/tmp/device.conf.tmp`;
 $t5 = `echo " NAA: "'$V1:11:22:33:ab:$V2:$V3:00' >>/tmp/device.conf.tmp`;
 $cmd = `echo " Home directory:" $V9 >>/tmp/device.conf.tmp`;
 
-if ( "$VBK" == "Default" )
-{
-$cmd = `echo " Backoff: 400"  >>/tmp/device.conf.tmp`;
+if ( "$VBK" == "Default" ) {
+	$cmd = `echo " Backoff: 400"  >>/tmp/device.conf.tmp`;
+} else {
+	$cmd = `echo " Backoff:" $VBK  >>/tmp/device.conf.tmp`;
 }
-else
-{
-$cmd = `echo " Backoff:" $VBK  >>/tmp/device.conf.tmp`;
-}
-
 
 
 $VRN = $_REQUEST['nod'];
@@ -108,13 +103,10 @@ $oput5 = `echo " NAA: "'$VAR1:11:22:33:ab:$VAR2:$VAR3d:$VAR4' >>/tmp/device.conf
 $oputu = `echo " Compression: factor $VARb enabled $VARa" >>/tmp/device.conf.tmp`;
 $output6 = `echo " Compression type: "'$VCTT' >>/tmp/device.conf.tmp`;
 
-if ( "$VBK" == "Default" )
-{
-$cmd = `echo " Backoff: 400"  >>/tmp/device.conf.tmp`;
-}
-else
-{
-$cmd = `echo " Backoff:" $VBK  >>/tmp/device.conf.tmp`;
+if ( "$VBK" == "Default" ) {
+	$cmd = `echo " Backoff: 400"  >>/tmp/device.conf.tmp`;
+} else {
+	$cmd = `echo " Backoff:" $VBK  >>/tmp/device.conf.tmp`;
 }
 
 
@@ -150,18 +142,15 @@ echo "<pre>$out2</pre>";
 
 
 <?php
-if ($checkunique == 0 )
-{
-echo "<hr width=100% size=1 color=blue>";
-echo "<FORM ACTION=update.device.conf.library.php> <INPUT TYPE=SUBMIT VALUE=Finish> </FORM>";
-echo "<FORM ACTION=form.setup.complete.php> <INPUT TYPE=SUBMIT VALUE=Cancel> <INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
-}
-else
-{
-echo "<hr width=100% size=1 color=blue>";
-echo "<b><FONT COLOR=red>Media barcode not unique </FONT></b>";
-echo "<FORM ACTION=update.device.conf.library.php> <INPUT TYPE=SUBMIT style='color: #FF0000' VALUE=Overwrite> </FORM>";
-echo "<FORM ACTION=form.setup.complete.php> <INPUT TYPE=SUBMIT VALUE=Cancel> <INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
+if ($checkunique == 0 ) {
+	echo "<hr width=100% size=1 color=blue>";
+	echo "<FORM ACTION=update.device.conf.library.php> <INPUT TYPE=SUBMIT VALUE=Finish> </FORM>";
+	echo "<FORM ACTION=form.setup.complete.php> <INPUT TYPE=SUBMIT VALUE=Cancel> <INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
+} else {
+	echo "<hr width=100% size=1 color=blue>";
+	echo "<b><FONT COLOR=red>Media barcode not unique </FONT></b>";
+	echo "<FORM ACTION=update.device.conf.library.php> <INPUT TYPE=SUBMIT style='color: #FF0000' VALUE=Overwrite> </FORM>";
+	echo "<FORM ACTION=form.setup.complete.php> <INPUT TYPE=SUBMIT VALUE=Cancel> <INPUT TYPE=SUBMIT VALUE=Return> </FORM>";
 }
 ?>
 

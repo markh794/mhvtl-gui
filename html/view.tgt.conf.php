@@ -24,14 +24,11 @@ echo "<pre><b>TGT Configuration file  :</b></pre>";
 
 <?php
 $filename = "/etc/tgt/targets.conf.mhvtl";
-if (!file_exists($filename))
-{
-echo "<pre><FONT COLOR=#FFFF00>Configuration not saved</FONT></pre>";
-}
-else
-{
-$output = `sudo -u root -S cat /etc/tgt/targets.conf.mhvtl`;
-echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
+if (!file_exists($filename)) {
+	echo "<pre><FONT COLOR=#FFFF00>Configuration not saved</FONT></pre>";
+} else {
+	$output = `sudo -u root -S cat /etc/tgt/targets.conf.mhvtl`;
+	echo "<pre><FONT COLOR=#FFFFFF>$output</FONT></pre>";
 }
 ?>
 

@@ -9,8 +9,9 @@
 <script type="text/javascript">
 function toggleMe(a){
   var e=document.getElementById(a);
-  if(!e)return true;
-  if(e.style.display=="none"){
+  if (!e)
+	return true;
+  if (e.style.display=="none") {
     e.style.display="block"
   } else {
     e.style.display="none"
@@ -50,12 +51,14 @@ echo "<pre><b>Automatic Configuration :</b></pre>";
 
 
 <?php
+
 $filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename))
-{
-echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-exit("<FONT COLOR='#000000'><b>STGT Disabled</b></FONT>");
+
+if (!file_exists($filename)) {
+	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
+	exit("<FONT COLOR='#000000'><b>STGT Disabled</b></FONT>");
 }
+
 ?>
 
 

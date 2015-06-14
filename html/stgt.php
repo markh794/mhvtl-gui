@@ -39,11 +39,10 @@ echo "<pre><b><FONT COLOR=black >iSCSI Target via Linux SCSI target framework:<a
 
 
 <?php $filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename))
-{
-echo "<FONT COLOR=#FF0000>iSCSI Target (tgt): Disabled  </FONT>";
-echo "<FORM ACTION=enable_stgt_scsi_target.php><INPUT TYPE=SUBMIT VALUE=Enable></FORM>";
-exit(0);
+if (!file_exists($filename)) {
+	echo "<FONT COLOR=#FF0000>iSCSI Target (tgt): Disabled  </FONT>";
+	echo "<FORM ACTION=enable_stgt_scsi_target.php><INPUT TYPE=SUBMIT VALUE=Enable></FORM>";
+	exit(0);
 }
 ?>
 
@@ -51,23 +50,17 @@ exit(0);
 <table border="0" >
 
 <?php
-$filename = '/usr/sbin/tgtadm';if (file_exists($filename))
-{
-$STGTPROCS = shell_exec('ps -ef | egrep tgtd|egrep -v grep|grep -v scsi_tgtd');
-if ( '' == $STGTPROCS )
-{
-echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Stopped </FONT></b><form action='confirm.start_stgt.php' method=post onsubmit=return ray.ajax()><input TYPE=submit style='color: #008000;font-weight: bold' value=' Start ' ></form>";
-exit (0);
-}
-else
-{
-}
+$filename = '/usr/sbin/tgtadm';
 
-}
-else
-{
-echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Not installed  </FONT></b><form action='confirm.install.stgt.php' method=post onsubmit=return ray.ajax() ><input TYPE=submit style='color: #0000FF' value=' Install ' ></form>";
-exit(0);
+if (file_exists($filename)) {
+	$STGTPROCS = shell_exec('ps -ef | egrep tgtd|egrep -v grep|grep -v scsi_tgtd');
+	if ( '' == $STGTPROCS ) {
+		echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Stopped </FONT></b><form action='confirm.start_stgt.php' method=post onsubmit=return ray.ajax()><input TYPE=submit style='color: #008000;font-weight: bold' value=' Start ' ></form>";
+		exit (0);
+	}
+} else {
+	echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Not installed  </FONT></b><form action='confirm.install.stgt.php' method=post onsubmit=return ray.ajax() ><input TYPE=submit style='color: #0000FF' value=' Install ' ></form>";
+	exit(0);
 }
 ?>
 

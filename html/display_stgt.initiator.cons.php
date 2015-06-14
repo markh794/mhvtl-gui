@@ -23,7 +23,13 @@ echo "<pre>TGT Active Connections:</pre>";
 <TR>
 <TD>
 <?php
-$filename = '/usr/sbin/tgtadm';if (file_exists($filename)){$TGTADMCMD = '/usr/sbin/tgtadm';}else{$TGTADMCMD = '../stgt.git/usr/tgtadm';}
+
+$filename = '/usr/sbin/tgtadm';
+if (file_exists($filename)) {
+	$TGTADMCMD = '/usr/sbin/tgtadm';
+} else {
+	$TGTADMCMD = '../stgt.git/usr/tgtadm';
+}
 
 // $output = ` sudo -u root -S $TGTADMCMD --lld iscsi --op show --mode target | awk 'BEGIN{RS="LUN" } /Target/' >/tmp/display.stgt.init `;
 // $result = shell_exec('CHECK=`grep "Initiator: iqn" /tmp/display.stgt.init`;if [ -z "$CHECK" ]; then echo Connections = 0 ; else cat /tmp/display.stgt.init; fi');

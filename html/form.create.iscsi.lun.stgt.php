@@ -20,10 +20,9 @@ echo "<pre><b>Create TGT Logical Unit :</b></pre>";
 
 <?php
 $filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename))
-{
-echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
+if (!file_exists($filename)) {
+	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
+	exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
 ?>
 <?php $target = $_REQUEST['tid']; ?>
@@ -36,23 +35,20 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 LUN <?php echo $nextlun;?>
 
 <?php
-if ( $cmd == "" )
-{
-echo "<FONT COLOR=#FF0000>Tape Devices not online</FONT>";
-echo "</FORM>";
-echo "<br>";
-echo "<hr width='100%' size=1 color='blue'>";
-echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
-echo "</table>";
-}
-else
-{
-echo "Select Device : $cmd";
-echo "<INPUT TYPE=SUBMIT VALUE='Create'></FORM>";
-echo "<br>";
-echo "<hr width='100%' size=1 color='blue'>";
-echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
-echo "</table>";
+if ( $cmd == "" ) {
+	echo "<FONT COLOR=#FF0000>Tape Devices not online</FONT>";
+	echo "</FORM>";
+	echo "<br>";
+	echo "<hr width='100%' size=1 color='blue'>";
+	echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+	echo "</table>";
+} else {
+	echo "Select Device : $cmd";
+	echo "<INPUT TYPE=SUBMIT VALUE='Create'></FORM>";
+	echo "<br>";
+	echo "<hr width='100%' size=1 color='blue'>";
+	echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+	echo "</table>";
 }
 ?>
 

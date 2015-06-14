@@ -19,13 +19,12 @@ echo "<pre>$output</pre>";
 ?>
 </td>
 <td>
-<?php if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET"))
-{
-echo "<pre><img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3 style='text-decoration:none' > iSCSI: </><a href=stgt.php><FONT COLOR=#347C17 size=3 style='text-decoration:none' >ON </FONT></b></pre>";
-}
-else
-{
-echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3 style='text-decoration:none' > iSCSI: </><a href=stgt.php><FONT COLOR=#FF0000 size=3 style='text-decoration:none' >OFF </FONT></b></pre>";
+<?php
+
+if (file_exists("../ENABLE_TGTD_SCSI_TARGET") || file_exists("../ENABLE_SCST_SCSI_TARGET")) {
+	echo "<pre><img src='images/green_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3 style='text-decoration:none' > iSCSI: </><a href=stgt.php><FONT COLOR=#347C17 size=3 style='text-decoration:none' >ON </FONT></b></pre>";
+} else {
+	echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 size=3 style='text-decoration:none' > iSCSI: </><a href=stgt.php><FONT COLOR=#FF0000 size=3 style='text-decoration:none' >OFF </FONT></b></pre>";
 }
 ?>
 
@@ -33,20 +32,21 @@ echo "<pre><img src='images/red_light.png' ALIGN='top' /><b><FONT COLOR=#000000 
 
 <td>
 <?php
-$filename = '../ENABLE_TGTD_SCSI_TARGET';if (file_exists($filename))
-{
-$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "TGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
-echo "<pre>$output</pre>";
+$filename = '../ENABLE_TGTD_SCSI_TARGET';
+
+if (file_exists($filename)) {
+	$output = shell_exec('STGTPROCS=`ps -ef | egrep "tgtd"|egrep -v grep|grep -v scsi_tgtd| wc -l`; if [ $STGTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "TGT:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="stgt-procs_quick.php" style="text-decoration:none" >" "STGT:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
+	echo "<pre>$output</pre>";
 }
 ?>
 </td>
 
 <td>
 <?php
-$filename = '../ENABLE_SCST_SCSI_TARGET';if (file_exists($filename))
-{
-$output = shell_exec('STCTPROCS=`ps -ef | egrep "scst"|egrep -v egrep|  wc -l`; if [ $STCTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="scst-procs_quick.php" style="text-decoration:none" >" "SCST:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="scst-procs_quick.php" style="text-decoration:none" >" "SCST:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
-echo "<pre>$output</pre>";
+$filename = '../ENABLE_SCST_SCSI_TARGET';
+if (file_exists($filename)) {
+	$output = shell_exec('STCTPROCS=`ps -ef | egrep "scst"|egrep -v egrep|  wc -l`; if [ $STCTPROCS -gt 0 ]; then echo "<img src="images/green_light.png" align=top /><b>""<a href="scst-procs_quick.php" style="text-decoration:none" >" "SCST:<FONT COLOR="green">OK </FONT></b>";else echo "<img src="images/red_light.png" align=top /><b>""<a href="scst-procs_quick.php" style="text-decoration:none" >" "SCST:<FONT COLOR="red">STOPPED </FONT></b></a>";fi');
+	echo "<pre>$output</pre>";
 }
 ?>
 </td>

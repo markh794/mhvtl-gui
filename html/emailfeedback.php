@@ -6,7 +6,7 @@ $comments = $_REQUEST["comments"];
 $msg .= "From: $name\n";
 $msg .= "Email: $email\n\n";
 $msg .= "$comments";
-$recipient = "niadev67@gmail.com";
+$recipient = "mhvtl2@gmail.com";
 $subject = "Feedback for MHVTL-GUI";
 $mailheaders .= "From:$email";
 mail($recipient, $subject, $msg, $mailheaders);

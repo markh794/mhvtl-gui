@@ -20,10 +20,9 @@ echo "<pre><b>Remove STGT LUN :</b></pre>";
 
 <?php
 $filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename))
-{
-echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
+if (!file_exists($filename)) {
+	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
+	exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
 ?>
 
@@ -31,23 +30,20 @@ exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 $target = $_REQUEST['tid'];
 $lun = `sudo -u root -S ../scripts/build_html_opts.sh lun $target`;
 
-if ( $lun == "" )
-{
-echo "<FONT COLOR=#FF0000>No LUNS Exist</FONT>";
-echo "</FORM>";
-echo "<br>";
-echo "<hr width='100%' size=1 color='blue'>";
-echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
-echo "</table>";
-}
-else
-{
-echo "<form method='post' action='remove.iscsi.lun.stgt.php'>";
-echo "Target <Select name='tid'><option>$target</OPTION></Select>";
-echo "LUN $lun";
-echo "<INPUT TYPE=SUBMIT VALUE='Remove'></FORM><br>";
-echo "<hr width='100%' size=1 color='blue'>";
-echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'> </FORM>";
+if ( $lun == "" ) {
+	echo "<FONT COLOR=#FF0000>No LUNS Exist</FONT>";
+	echo "</FORM>";
+	echo "<br>";
+	echo "<hr width='100%' size=1 color='blue'>";
+	echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'></FORM>";
+	echo "</table>";
+} else {
+	echo "<form method='post' action='remove.iscsi.lun.stgt.php'>";
+	echo "Target <Select name='tid'><option>$target</OPTION></Select>";
+	echo "LUN $lun";
+	echo "<INPUT TYPE=SUBMIT VALUE='Remove'></FORM><br>";
+	echo "<hr width='100%' size=1 color='blue'>";
+	echo "<FORM ACTION='stgt.php'><INPUT TYPE=SUBMIT VALUE='Return'><INPUT TYPE=SUBMIT VALUE='Cancel'> </FORM>";
 }
 ?>
 

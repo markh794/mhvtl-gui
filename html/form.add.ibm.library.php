@@ -58,18 +58,6 @@ Enter Backoff Value (Default:400): <select name="bkfv" MAXLENGTH="7" type="numbe
 
 Enter Number of Drives : <input name="nod" value="5" min="1" max="19" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b>
 Enter Number of Maps   : <input name="nom" value="5" min="1" max="40" required MAXLENGTH="2" SIZE=2 type="number"><b><FONT COLOR="red">*</FONT></b><br>
-<!-- Removed for now since it is no longer supported by MHVTL recent release
-<b>LTO DRIVE OPTIONS ONLY (Checked=yes): <INPUT TYPE=checkbox NAME="doi" VALUE="yes" UNCHECKED > </b><br>
-
-READ_ONLY: <select name="ro"><option>LTO1</OPTION><option>LTO2</OPTION><OPTION>LTO3</option></select><INPUT TYPE=checkbox NAME="roc" VALUE="yes" UNCHECKED ><br>
-READ_ONLY: <select name="ro1"><option>LTO2</OPTION><option>LTO1</OPTION><OPTION>LTO3</option></select><INPUT TYPE=checkbox NAME="ro1c" VALUE="yes" UNCHECKED ><br>
-READ_WRITE: <select name="rw"><option>LTO3</OPTION><option>LTO2</OPTION><OPTION>LTO1</option><option>LTO4</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="rwc" VALUE="yes" UNCHECKED ><br>
-READ_WRITE: <select name="rw1"><option>LTO4</OPTION><option>LTO2</OPTION><OPTION>LTO3</option><option>LTO1</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="rw1c" VALUE="yes" UNCHECKED ><br>
-WORM:  <select name="wm"><option>LTO3</OPTION><option>LTO4</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="wmc" VALUE="yes" UNCHECKED ><br>
-WORM:  <select name="wm1"><option>LTO4</OPTION><OPTION>LTO3</option><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="wm1c" VALUE="yes" UNCHECKED ><br>
-ENCRYPTION:  <select name="ecr"><option>LTO3</OPTION></option><option>LTO4</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="ecrc" VALUE="yes" UNCHECKED ><br>
-ENCRYPTION:  <select name="ecr1"><option>LTO4</OPTION></option><option>LTO3</OPTION><OPTION>LTO5</option></select><INPUT TYPE=checkbox NAME="ecr1c" VALUE="yes" UNCHECKED ><br>
--->
 <hr width="100%" size=1 color="blue">
 
 <input TYPE=HIDDEN name="li" value=<?php echo $nextlid;?> READONLY type="number">

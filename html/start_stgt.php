@@ -21,10 +21,9 @@ echo "<pre>Starting STGT Daemons:</pre>";
 <!-- 
 <?php 
 $filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename))
-{
-echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
+if (!file_exists($filename)) {
+	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
+	exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
 }
 ?>
 -->
