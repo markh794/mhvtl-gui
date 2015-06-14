@@ -52,12 +52,9 @@ echo "<pre><b>Automatic Configuration :</b></pre>";
 
 <?php
 
-$filename = '../ENABLE_TGTD_SCSI_TARGET';
+include_once "common.php";
 
-if (!file_exists($filename)) {
-	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-	exit("<FONT COLOR='#000000'><b>STGT Disabled</b></FONT>");
-}
+exit_if_tgtd_not_eabled();
 
 ?>
 

@@ -19,11 +19,9 @@ echo "<pre><b>Select TGT Target :</b></pre>";
 <hr width="100%" size=1 color="blue">
 
 <?php
-$filename = '../ENABLE_TGTD_SCSI_TARGET';
-if (!file_exists($filename)) {
-	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-	exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
-}
+include_once "common.php";
+
+exit_if_tgtd_not_eabled();
 
 $target = `sudo -u root -S ../scripts/build_html_opts.sh target`;
 

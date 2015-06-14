@@ -20,12 +20,9 @@ echo "<pre><b>Add ACL :</b></pre>";
 
 <?php
 
-$filename = '../ENABLE_TGTD_SCSI_TARGET';
+include_once "common.php";
 
-if (!file_exists($filename)) {
-	echo "<FORM ACTION=stgt.php><INPUT TYPE=SUBMIT VALUE=Return></FORM>";
-	exit("<FONT COLOR='#000000'>STGT Disabled($filename)</FONT>");
-}
+exit_if_tgtd_not_eabled();
 
 $target = `sudo -u root -S ../scripts/build_html_opts.sh target`;
 if ( $target == "" ) {
