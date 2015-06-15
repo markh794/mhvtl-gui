@@ -6,13 +6,11 @@
 <b><font color=purple size=3>SCSI Target System</font></b>
 <hr width="100%" size=1 color="blue">
 
-
 <tr>
 <td align=left valign=middle>
 <img src="images/scsi_target.png" height="64" width="192" >
 </td>
 </tr>
-
 
 <script type="text/javascript">
 var ray={
@@ -34,27 +32,26 @@ getID:function(el)
 <div id="load" style="display:none;"><img src="images/loading.gif" border=0></div>
 
 <?php
-echo "<pre><b><FONT COLOR=black >iSCSI Target via Linux SCSI target framework:<a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe class='image-link' >tgt </a></FONT></b></pre>";
-?>
 
+echo "<pre><b><FONT COLOR=black >iSCSI Target via Linux SCSI target framework:";
+echo "<a href=# ONCLICK=parent.frames[1].location.href='http://stgt.sourceforge.net' target=showframe class='image-link' >tgt</a>";
+echo "</FONT></b></pre>";
 
-<?php
-include_once "common.php";
+if (!file_exists('../ENABLE_TGTD_SCSI_TARGET')) {
+	echo "<FONT COLOR=#FF0000>iSCSI Target (tgt): Disabled  </FONT>";
+	echo "<FORM ACTION=enable_stgt_scsi_target.php><INPUT TYPE=SUBMIT VALUE=Enable></FORM>";
+	exit(0);
+}
 
-exit_if_tgtd_not_eabled();
-?>
+echo "<table border='0'>";
 
-
-<table border="0" >
-
-<?php
 $filename = '/usr/sbin/tgtadm';
 
 if (file_exists($filename)) {
 	$STGTPROCS = shell_exec('ps -ef | egrep tgtd|egrep -v grep|grep -v scsi_tgtd');
 	if ( '' == $STGTPROCS ) {
 		echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Stopped </FONT></b><form action='confirm.start_stgt.php' method=post onsubmit=return ray.ajax()><input TYPE=submit style='color: #008000;font-weight: bold' value=' Start ' ></form>";
-		exit (0);
+		exit(0);
 	}
 } else {
 	echo "<img src='images/red_light.png' align=center /><b><FONT COLOR=#000000 size=2> SCSI target framework (tgt) : </><FONT COLOR=red> Not installed  </FONT></b><form action='confirm.install.stgt.php' method=post onsubmit=return ray.ajax() ><input TYPE=submit style='color: #0000FF' value=' Install ' ></form>";
@@ -68,17 +65,14 @@ if (file_exists($filename)) {
 <TD>
 <div style="overflow:auto;height:30px;width:565px;" id="ReloadThis" >
 <?php
-include 'tgt-fdisplay.php' ;
+include 'tgt-fdisplay.php';
 ?>
 </div>
 </table>
+
 <br>
 
-
-
-
 <table border="1" ALIGN="left" >
-
 
 <tr>
 <td>
@@ -87,21 +81,17 @@ include 'tgt-fdisplay.php' ;
 </tr>
 </td>
 
-
 <tr>
 <td>
 <form action="display_stgt.initiator.cons.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Connections " ></form>
 </td>
 </tr>
 
-
-
 <tr>
 <td>
 <form action="view.tgt.conf.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" targets.conf "></form>
 </td>
 </tr>
-
 
 </table>
 
@@ -113,8 +103,6 @@ include 'tgt-fdisplay.php' ;
 <form action="display_stgt.target.php" method="post" ><input TYPE="submit" class=sameSize style="color: #0000FF" value=" Targets "></form>
 </td>
 </tr>
-
-
 
 <tr>
 <td>
@@ -142,13 +130,11 @@ include 'tgt-fdisplay.php' ;
 </td>
 </tr>
 
-
 <tr>
 <td>
 <form action="form.select.iscsi.lun.stgt.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Delete "></form>
 </td>
 </tr>
-
 
 <table border="1" ALIGN="left" style="margin-left:15px;" >
 <tr>
@@ -157,22 +143,17 @@ include 'tgt-fdisplay.php' ;
 </td>
 </tr>
 
-
-
 <tr>
 <td>
 <form action="form.add.stgt.iscsi.clients.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Enable "></form>
 </td>
 </tr>
 
-
 <tr>
 <td>
 <form action="form.remove.stgt.iscsi.clients.php" method="post" ><input TYPE="submit" class=sameSize style="color: #000000" value=" Disable "></form>
 </td>
 </tr>
-
-
 
 </table>
 
