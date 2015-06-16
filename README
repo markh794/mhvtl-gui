@@ -62,7 +62,7 @@ Alias /mhvtl "/var/www/html/mhvtl"
 
 4) Log on with password: "mhvtl"
 
-*** To change password, update file ~go.php where it says "if ( $password == "mhvtl" )"
+*** To change password, update file ~html/include/password.php which will not be overwritten by updates
 
 For additional help or to report bugs, please visit MHVTL forums at:
 http://mhvtl-linux-virtual-tape-library-community-forums.966029.n3.nabble.com
