@@ -76,10 +76,8 @@ if ($CMD == 0 ) {
 	echo "<pre><b><a style='text-decoration:none; color:#00FF00;' href='http://mhvtl-linux-virtual-tape-library-community-forums.966029.n3.nabble.com/'>Click here to get help</a></b></pre>";
 }
 
- $version=file_get_contents('version');
-
-
-echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $version</b></FONT></center></pre>";
+$output = `cat version`;
+echo "<pre><center><FONT COLOR=#2B60DE ><b>Console Version $output</b></FONT></center></pre>";
 
 $CLEANUP = shell_exec('sudo -u root -S rm -f  /tmp/test.required.components.*');
 ?>
