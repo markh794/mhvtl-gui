@@ -16,7 +16,7 @@
 <br>
 <a href="http://sites.google.com/site/linuxvtl2/"><b><font size=1>Developed by Mark Harvey & Community (markh794@gmail.com)<b></a>
 <br>
-Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.nabble.com/">mhvtl-community-forums</a>
+Web Console GUI built by (nia) &amp; comunity <a href="http://mhvtl-community-forums.966029.n3.nabble.com/">mhvtl-community-forums</a>
 <hr width="100%" size=1 color="blue">
 <br><br>
 <TABLE BORDER=1 CELLSPACING=4 CELLPADDING=4 bgcolor=#000000 <FONT COLOR="#FFFFFF"></FONT>
@@ -27,6 +27,12 @@ Web Console GUI built by (nia) <a href="http://mhvtl-community-forums.966029.n3.
 
 
 <?php
+
+if (!extension_loaded('sqlite_open')) {
+	echo "<h2>Unfortunately, it appears php is not configured with sqlite3. Please see your docuementation on how to enable php + sqlite3</h2>";
+	exit;
+}
+
 $testsudo = shell_exec('scripts/check_before_use.sh testsudo');
 $CMD = shell_exec('cat /tmp/test.required.components.testsudo | grep -v "PASS" | sort -u|wc -l');
 if ($CMD != 0 ) {
