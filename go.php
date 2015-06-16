@@ -22,7 +22,7 @@ if(isset($_POST['login'])) {
 
 		file_put_contents(dirname(__FILE__).'/html/include/password.php', $FILE_TEMPLATE_PASSWORD);
 		// Since it's the FIRST time we run we show the password on html
-		echo "<font color='white'>Default password is " . $adminpassword
+		echo "<font color='white'>Default password is " . $adminpassword;
 		echo "<br> please change it on <br>";
 		echo dirname(__FILE__) . "/html/include/password.php<br>";
 	}
