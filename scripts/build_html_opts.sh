@@ -4,10 +4,10 @@ libid()
 {
 echo '<SELECT name="libid" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
 grep ^Library /etc/mhvtl/device.conf| cut -d ":" -f2| awk '{print $1}'| while read each; do
-LIBRVI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
-LIBRPI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
-LIBRSN=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
-echo '<OPTION>'$each: $LIBRVI : $LIBRPI : SN: $LIBRSN'</OPTION>'
+	LIBRVI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
+	LIBRPI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
+	LIBRSN=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
+	echo '<OPTION>'$each: $LIBRVI : $LIBRPI : SN: $LIBRSN'</OPTION>'
 done
 echo '</SELECT>'
 }
@@ -17,16 +17,16 @@ libidwd()
 {
 echo '<SELECT name="libidwd" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
 grep ^Library /etc/mhvtl/device.conf| cut -d ":" -f2| awk '{print $1}'| while read each; do
-LIBRVI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
-LIBRPI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
-LIBRSN=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
-echo '<OPTION>'$each: $LIBRVI : $LIBRPI : SN: $LIBRSN'</OPTION>'
-awk 'BEGIN{RS="" } /Library ID: '$each'/' /etc/mhvtl/device.conf|grep ^Drive|cut -d ":" -f2| awk '{print $1}' | while read each1; do
-DRVI=`awk 'BEGIN{RS="" } /Drive: '$each1'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
-DRPI=`awk 'BEGIN{RS="" } /Drive: '$each1'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
-DRSN=`awk 'BEGIN{RS="" } /Drive: '$each1'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
-echo '<OPTION>'$each1: $DRVI : $DRPI : SN: $DRSN'</OPTION>'
-done
+	LIBRVI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
+	LIBRPI=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
+	LIBRSN=`awk 'BEGIN{RS="" } /Library: '$each'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
+	echo '<OPTION>'$each: $LIBRVI : $LIBRPI : SN: $LIBRSN'</OPTION>'
+	awk 'BEGIN{RS="" } /Library ID: '$each'/' /etc/mhvtl/device.conf|grep ^Drive|cut -d ":" -f2| awk '{print $1}' | while read each1; do
+		DRVI=`awk 'BEGIN{RS="" } /Drive: '$each1'/' /etc/mhvtl/device.conf| grep "Vendor identification:" | cut -d ":" -f2|awk '{print $1}'`
+		DRPI=`awk 'BEGIN{RS="" } /Drive: '$each1'/' /etc/mhvtl/device.conf| grep "Product identification" | cut -d ":" -f2|awk '{print $1}'`
+		DRSN=`awk 'BEGIN{RS="" } /Drive: '$each1'/' /etc/mhvtl/device.conf| grep "Unit serial number:" | cut -d ":" -f2|awk '{print $1}'`
+		echo '<OPTION>'$each1: $DRVI : $DRPI : SN: $DRSN'</OPTION>'
+	done
 done
 echo '</SELECT>'
 }
@@ -36,9 +36,8 @@ echo '</SELECT>'
 tape()
 {
 HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
-if [ "$HOMEDIR" = "" ] ; then
-	HOMEDIR="/opt/mhvtl"
-fi
+# Set default if HOMEDIR not set from above
+: ${HOMEDIR:="/opt/mhvtl"}
 
 echo '<SELECT name="tape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
 find $HOMEDIR -type d | cut -d "/" -f4,5 | cut -d "/" -f2 | egrep ^"[A-Z]"| sort -u | grep -v ^$ | while read each; do
@@ -84,7 +83,6 @@ done
 echo '</SELECT>'
 }
 
-
 lvvault()
 {
 echo '<SELECT name="vmedia" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -99,9 +97,6 @@ echo '</SELECT>'
 fi
 }
 
-
-
-
 stape()
 {
 echo '<SELECT name="tape" type="text" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -111,14 +106,11 @@ done
 echo '</SELECT>'
 }
 
-
-
 exttape()
 {
 HOMEDIR=`awk 'BEGIN{RS="" } /Library: '$1'/' /etc/mhvtl/device.conf | grep "Home directory:" | cut -d ":" -f2|awk '{print $1}'`
-if [ "$HOMEDIR" = "" ] ; then
-	HOMEDIR="/opt/mhvtl"
-fi
+# Set default if HOMEDIR not set from above
+: ${HOMEDIR:="/opt/mhvtl"}
 
 if [ "$HOMEDIR" = "/opt/mhvtl" ]; then
 	cat /etc/mhvtl/library_contents.*| grep ^Slot | cut -d ":" -f2 | sort -u | grep -v ^$ >/tmp/slotedmedia
@@ -148,7 +140,6 @@ echo '</SELECT>'
 rm -f /tmp/slotedmedia /tmp/allmedia
 }
 
-
 robotdev()
 {
 echo '<SELECT name="robotdev" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -158,7 +149,6 @@ done
 echo '</SELECT>'
 }
 
-
 drivedev()
 {
 echo '<SELECT name="drivedev" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -167,7 +157,6 @@ lsscsi -g | egrep "tape"|awk '{print $1,$2,$3,$4,$(NF-1)}'  | while read each; d
 done
 echo '</SELECT>'
 }
-
 
 slot()
 {
@@ -208,7 +197,6 @@ fi
 echo '</SELECT>'
 }
 
-
 mapf()
 {
 echo '<SELECT name="mapf" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -217,7 +205,6 @@ mtx -f $2 status | grep "IMPORT/EXPORT" | grep Empty | awk '{print $3,$4}' | whi
 done
 echo '</SELECT>'
 }
-
 
 driveslotf()
 {
@@ -276,7 +263,6 @@ done
 echo '</SELECT>'
 }
 
-
 libdid()
 {
 echo '<SELECT name="libdid" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -334,7 +320,6 @@ else
 	exit 0
 fi
 }
-
 
 lun()
 {
@@ -401,8 +386,6 @@ else
 fi
 }
 
-
-
 nlun()
 {
 echo '<SELECT name="lun" min="1" type="number" style="color:#000000; background-color: #BCB9B9;font-weight:bold;" required >'
@@ -428,7 +411,6 @@ else
 	echo '</SELECT>'
 fi
 }
-
 
 patch()
 {
@@ -487,7 +469,5 @@ grep ^Drive ../mhvtl.cfg.db | while read each; do
 done
 echo '</SELECT>'
 }
-
-
 
 $1 $2 $3
