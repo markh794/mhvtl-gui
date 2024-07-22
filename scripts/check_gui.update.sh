@@ -5,12 +5,12 @@ touch /tmp/mhvtl-gui.last.update.check
 if [ ! -d ../.git ]; then
 	cd ../
 	git init
-	git pull https://github.com/markh794/mhvtl-gui.git
+	git pull https://github.com/dfranco/mhvtl-gui.git
 	cd html
 fi
 
 cd ../
-git pull https://github.com/markh794/mhvtl-gui.git > /dev/null 2>&1
+git pull https://github.com/dfranco/mhvtl-gui.git > /dev/null 2>&1
 RELEASE=`cat version | cut -d "-" -f1`
 ONLINE_VERSION=`sudo -u root -S git log --pretty=oneline | head -1 | cut -c1-7`
 INSTALLED_VERSION=`sudo -u root -S cat version | cut -d "-" -f2`
