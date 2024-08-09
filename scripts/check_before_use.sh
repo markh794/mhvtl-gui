@@ -21,7 +21,7 @@ else
 	MAJORVER="1"
 	MINRELEASE="0"
 	MINVERSION="0"
-	_RELEASE=`sudo -u root -S /usr/bin/vtlcmd -V| awk '{print $2}'|cut -d "-" -f1`
+	_RELEASE=`sudo -u root -S /usr/bin/vtlcmd -V 2>&1| awk '{print $2}'|cut -d "-" -f1`
 	MAJ=`echo $_RELEASE|awk -F. '{print $1}'`
 	RELEASE=`echo $_RELEASE|awk -F. '{print $2}'`
 	VERSION=`echo $_RELEASE|awk -F. '{print $3}'`
